@@ -4,6 +4,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
+import OfficeScreen from './OfficeScreen';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 
@@ -32,6 +33,8 @@ export default function RootLayout() {
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
+        <Stack.Screen name="OfficeScreen" options={{ headerShown: false }} />
+        <Stack.Screen name="RoomScreen" options={{ headerShown: false }} />
       </Stack>
     </ThemeProvider>
   );

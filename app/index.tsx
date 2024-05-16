@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView } from 'react-native';
+import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable } from 'react-native';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
@@ -6,6 +6,7 @@ import { ThemedView } from '@/components/ThemedView';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, HStack, Button } from "native-base";
 import { MaterialIcons } from "@expo/vector-icons";
+import { Link } from "expo-router";
 
 export default function HomeScreen() {
   return (
@@ -53,19 +54,28 @@ export default function HomeScreen() {
                 base: "100%",
                 md: "25%"
               }} InputLeftElement={<Icon as={<MaterialIcons name="lock" />} size={5} ml="2" color="#25699B" />} placeholder="Mot de passe" />
+              <Link href="/OfficeScreen" asChild>
+                <Button size="md">Connexion</Button>
+              </Link>
             </Stack>
           </Center>
 
           <HStack space={10} justifyContent="center">
-            <Image 
-            style={styles.image}
-            source={require('../assets/images/Facebook_logo.png')} />
-            <Image 
-            style={styles.image}
-            source={require('../assets/images/LinkedIn_logo.png')} />
-            <Image 
-            style={styles.image}
-            source={require('../assets/images/google_logo.png')} />
+            <Pressable>
+              <Image 
+              style={styles.image}
+              source={require('../assets/images/Facebook_logo.png')} />
+            </Pressable>
+            <Pressable>
+              <Image 
+              style={styles.image}
+              source={require('../assets/images/LinkedIn_logo.png')} />
+            </Pressable>
+            <Pressable>
+              <Image 
+              style={styles.image}
+              source={require('../assets/images/google_logo.png')} />
+            </Pressable>
           </HStack>
 
           <HStack mb={50} space={10} justifyContent="center">
