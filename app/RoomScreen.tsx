@@ -23,12 +23,14 @@ const RoomScreen = () => {
       [
         {
         name: "Adèle",
+        role: "La Best friend",
         image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
         text: "Salut Anna, tu sembles un peu contrariée. Tout va bien?"
         },
         {
           flag: "green",
           text: "Me confier",
+          increaseBunchNumber: true,
           script: [
             {
               name: "Anna",
@@ -37,6 +39,7 @@ const RoomScreen = () => {
             },
             {
               name: "Adèle",
+              role: "La Best friend",
               image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               text: "Vraiment? Mais tu as tellement travaillé dur cette année. C'est injuste."
             },
@@ -47,6 +50,7 @@ const RoomScreen = () => {
             },
             {
               name: "Adèle",
+              role: "La Best friend",
               image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               text: "Tu ne devrais pas laisser ça te décourager, Anna. Tu es l'une des employées les plus dévouées ici. Ta chance viendra."
             },
@@ -60,6 +64,7 @@ const RoomScreen = () => {
         {
           flag: "blue",
           text: "Rester évasive",
+          increaseBunchNumber: false,
           script: [
             {
               name: "Anna",
@@ -68,6 +73,7 @@ const RoomScreen = () => {
             },
             {
               name: "Adèle",
+              role: "La Best friend",
               image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               text: "Ah, alors… comment ça s’est passé ?"
             },
@@ -78,6 +84,7 @@ const RoomScreen = () => {
             },
             {
               name: "Adèle",
+              role: "La Best friend",
               image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               text: "Comme un lundi matin…"
             }
@@ -86,6 +93,7 @@ const RoomScreen = () => {
         {
           flag: "red",
           text: "Répondre sèchement",
+          increaseBunchNumber: false,
           script: [
             {
               name: "Anna",
@@ -94,6 +102,7 @@ const RoomScreen = () => {
             },
             {
               name: "Adèle",
+              role: "La Best friend",
               image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               text: "D’a-ccord… quelqu’un a eu un mauvais week-end on dirait!"
             },
@@ -104,6 +113,7 @@ const RoomScreen = () => {
             },
             {
               name: "Adèle",
+              role: "La Best friend",
               image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               text: "Je vois, ça a l’air sérieux ! En tout cas, si tu cherches quelqu’un pour en parler… tu sais où se trouve mon bureau."
             },
@@ -121,6 +131,7 @@ const RoomScreen = () => {
         },
         {
          name: "Damien",
+          role: "Le N-2",
          image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
          text: "Anna, on peut se parler un instant?"
          },
@@ -131,12 +142,14 @@ const RoomScreen = () => {
          },
          {
            name: "Damien",
-           image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+            role: "Le N-2",           
+            image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
            text: "Je suis conscient du fait que tu attendais plus de notre entretien mais je veux que tu saches que nous apprécions vraiment ton travail ici. Nous avons des plans pour toi, Anna. Des plans qui pourraient te surprendre."
          },
          {
            flag: "green",
            text: "Me réjouir de la nouvelle",
+           increaseBunchNumber: true,
            script: [
              {
                name: "Anna",
@@ -145,7 +158,8 @@ const RoomScreen = () => {
              },
              {
                name: "Damien",
-               image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+              role: "Le N-2",               
+              image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
                text: "Tu mérites une chance de briller, Anna. Ne perds pas espoir. Nous parlerons plus tard de ce que cela implique. En attendant, pourrais-tu décaler mon rendez-vous de ce soir avec Blue Green Media..?"
              },
              {
@@ -155,7 +169,8 @@ const RoomScreen = () => {
              },
              {
                name: "Damien",
-               image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+              role: "Le N-2",               
+              image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
                text: "Dis-leur que j’avais un rendez-vous important de dernière minute ou quelque chose du genre… T’es la meilleure ! Je te fais confiance."
              }
             ]
@@ -163,6 +178,7 @@ const RoomScreen = () => {
          {
            flag: "red",
            text: "Exprimer mon scepticisme",
+           increaseBunchNumber: false,
            script: [
              {
                name: "Anna",
@@ -171,7 +187,8 @@ const RoomScreen = () => {
              },
              {
                name: "Damien",
-               image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+              role: "Le N-2",               
+              image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
                text: "Et je le pensais mais…euh… comme tu le sais, l’année n’a pas été fameuse pour Innovatech. On n’a pas réussi à remplir les objectifs de Q2, Q3 et Q4 donc… Mais la reprise est là et je suis persuadé que cette année sera meilleure en termes de chiffres."
              },
              {
@@ -181,7 +198,8 @@ const RoomScreen = () => {
              },
              {
                name: "Damien",
-               image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+              role: "Le N-2",               
+              image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
                text: "Je vois. Ce serait vraiment dommage d’en arriver là."
              }
           ]
