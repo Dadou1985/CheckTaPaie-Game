@@ -7,8 +7,19 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, HStack, Button } from "native-base";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Link } from "expo-router";
+import { UserContext } from '@/hooks/UserContext';
+import { useContext } from 'react';
 
 export default function HomeScreen() {
+  const {user, setUser} = useContext<any>(UserContext)
+  
+  const handleLoadUserInfo = () => {
+    setUser({
+      name:"Anna",
+      stage: "Déception après l'évaluation annuelle"
+    })
+  }
+
   return (
     <LinearGradient
         // Background Linear Gradient
@@ -55,7 +66,7 @@ export default function HomeScreen() {
                 md: "25%"
               }} InputLeftElement={<Icon as={<MaterialIcons name="lock" />} size={5} ml="2" color="#25699B" />} placeholder="Mot de passe" />
               <Link href="/OfficeScreen" asChild>
-                <Button size="md">Connexion</Button>
+                <Button onPress={handleLoadUserInfo} size="md">Connexion</Button>
               </Link>
             </Stack>
           </Center>

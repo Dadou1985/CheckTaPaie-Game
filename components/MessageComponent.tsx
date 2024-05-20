@@ -3,15 +3,16 @@ import React, {useState, useEffect} from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Flow } from 'react-native-animated-spinkit'
 import { Avatar } from 'native-base'
+import TextCompent from './TextCompent'
 
 const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
     const [dotLoading, setDotLoading] = useState(true)
 
     useEffect(() => {
-        setMessageTimeLoading(1000)  
+        setMessageTimeLoading(data.timeLoading + 1000)  
         setTimeout(() => {
             setDotLoading(false)
-        }, 1000);
+        }, data.timeLoading);
     }, [])
     
 
