@@ -16,7 +16,7 @@ export default function HomeScreen() {
   const handleLoadUserInfo = () => {
     setUser({
       name:"Anna",
-      stage: "Déception après l'évaluation annuelle"
+      stage: "La déception de trop"
     })
   }
 

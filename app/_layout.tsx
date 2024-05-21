@@ -17,7 +17,7 @@ export default function RootLayout() {
   const [user, setUser] = useState<any>(null)
   const [event, setEvent] = useState<any>(null)
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    SpaceMono: require('../assets/fonts/Roboto-Regular.ttf'),
   });
 
   useEffect(() => {
@@ -40,6 +40,7 @@ export default function RootLayout() {
             <Stack.Screen name="+not-found" />
             <Stack.Screen name="OfficeScreen" options={{ headerShown: false }} />
             <Stack.Screen name="RoomScreen" options={{ headerShown: false }} />
+            <Stack.Screen name="HomeScreen" options={{ headerShown: false }} />
           </Stack>
         </ThemeProvider>
       </EventContext.Provider>

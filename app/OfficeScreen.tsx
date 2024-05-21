@@ -5,12 +5,15 @@ import { Link } from "expo-router";
 import { useEffect, useLayoutEffect, useState, useContext } from 'react';
 import { logger } from "react-native-logs";
 import { EventContext } from '@/hooks/EventContext'
-import { UserContext } from '@/hooks/UserContext';
+import { UserContext } from '@/hooks/UserContext'
+import TransitionScreen from '@/components/TransitionScreen'
 
 export default function OfficeScreen() {  
   const log = logger.createLogger()
   const {event, setEvent} = useContext<any>(EventContext)
   const {user} = useContext<any>(UserContext)
+  const [isShown, setIsShown] = useState<Boolean>(true)
+
   const roomData = [
     {
       backgroundImage: require('/home/daoudda/Documents/Dev/checkTaPaie-Game/assets/images/coffee-machine.png'),
@@ -34,21 +37,13 @@ export default function OfficeScreen() {
     }
   ]
 
-  const mockAvatarUrl = [
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-    "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-    "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-    "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-  ]
-
   const allEvents = [{
-    title: "Déception après l'évaluation annuelle",
+    chapter: 1,
+    title: "La déception de trop",
     story: "Anna est déçue de se voir refuser une promotion et une augmentation de salaire lors de l'évaluation annuelle. Elle avait travaillé dur tout au long de l'année et espérait être reconnue pour ses efforts. Cette déception la pousse à réévaluer sa stratégie de développement professionnel et à envisager de nouvelles approches pour atteindre ses objectifs de carrière.",
     scenes: [
       {
-        place: "Open space",
+        place: "Open Space",
         characters: [
           {
             name: "Adèle",
@@ -336,61 +331,75 @@ export default function OfficeScreen() {
   useEffect(() => {
     const stage: any = allEvents && allEvents.find(event => event.title === (user && user.stage))
     setEvent(stage)
+    setTimeout(() => {
+      setIsShown(false)
+    }, 5000);
   }, [])
-  
-  log.info("+++++++++++++++", event)
 
-  return (
-    <LinearGradient
-        // Background Linear Gradient
-        colors={['#cdffd8', '#94b9ff']}
-        start={[0, 0]}
-        end={[1, 0]}
-        style={styles.background}
-      >
-      <NativeBaseProvider config={config}>
-        <KeyboardAvoidingView style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', height: '100%', position: 'absolute'}}>
-        <Avatar style={{position: "absolute", zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#5DE0E6"}} alignSelf="center" size="2xl" source={
-            require("../assets/images/mario.jpg")
-          }>
-        </Avatar>
-          {roomData.map((room, index) => (
-            <Link href={{
-              pathname: "/RoomScreen",
-              params: {title: room.title, background: room.backgroundImage}
-           }}
-           asChild>
-            <Pressable style={index === (roomData.length - 1) ? styles.imageLastBox : styles.imageBox}>
-              <ImageBackground 
-              style={styles.image}
-              source={room.backgroundImage} resizeMode='cover' />
-              <LinearGradient
-                // Background Linear Gradient
-                colors={['#5DE0E6', 'transparent']}
-                start={[0, 1]}
-                end={[1, 0]}
-                style={styles.imageTextBox}
-              >
-                <Text style={styles.imageText}>{room.title}</Text>
-                <Center mt={2}>
-                  <Avatar.Group _avatar={{
-                  size: "sm"
-                }} max={2}>
-                  {mockAvatarUrl && mockAvatarUrl.map((url) => (
-                    <Avatar bg="green.500" source={{
-                    uri: url}} />
-                  )
-                )}
-                  </Avatar.Group>
-                </Center>
-              </LinearGradient>
+  if (isShown) {
+    return (
+      <TransitionScreen chapter={event && event.chapter} title={event && event.title} />
+    )
+  } else {
+    return (
+      <LinearGradient
+          // Background Linear Gradient
+          colors={['#cdffd8', '#94b9ff']}
+          start={[0, 0]}
+          end={[1, 0]}
+          style={styles.background}
+        >
+        <NativeBaseProvider config={config}>
+          <KeyboardAvoidingView style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', height: '100%', position: 'absolute'}}>
+          <Link href="/HomeScreen" asChild>
+            <Pressable style={{position: "absolute", zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#5DE0E6", borderRadius: 70, alignSelf: "center"}}>
+              <Avatar alignSelf="center" size="2xl" source={
+                  require("../assets/images/mario.jpg")
+                }>
+              </Avatar>
             </Pressable>
-            </Link>
-          ))}
-        </KeyboardAvoidingView>
-      </NativeBaseProvider>
-    </LinearGradient>
-  )
+            
+          </Link>
+            {roomData.map((room, index) => {
+              const isActiveScene = event && event.scenes && event.scenes.length > 0 && event.scenes.find((scene: any) => scene.place === room.title)
+              return <Link href={isActiveScene === undefined ? "OfficeScreen" : {
+                pathname: "/RoomScreen",
+                params: {title: room.title, background: room.backgroundImage}
+              }}
+              asChild>
+                <Pressable style={index === (roomData.length - 1) ? styles.imageLastBox : styles.imageBox}>
+                  <ImageBackground 
+                  style={isActiveScene === undefined ? styles.image : styles.activeImage}
+                  source={room.backgroundImage} resizeMode='cover' />
+                  <LinearGradient
+                    // Background Linear Gradient
+                    colors={['#5DE0E6', 'transparent']}
+                    start={[0, 1]}
+                    end={[1, 0]}
+                    style={styles.imageTextBox}
+                  >
+                    <Text style={isActiveScene === undefined ? styles.imageText : styles.imageTextActive}>{room.title}</Text>
+                    <Center mt={2}>
+                      <Avatar.Group _avatar={{
+                      size: "sm"
+                    }} max={2}>
+                      {isActiveScene && isActiveScene.characters.map((character: any) => (
+                        <Avatar bg="green.500" source={{
+                        uri: character.image}} />
+                      )
+                    )}
+                      </Avatar.Group>
+                    </Center>
+                  </LinearGradient>
+                </Pressable>
+                </Link>
+              }
+            )}
+          </KeyboardAvoidingView>
+        </NativeBaseProvider>
+      </LinearGradient>
+    )
+  }
 }
 
 const config = {
@@ -427,7 +436,11 @@ const styles = StyleSheet.create({
   image: {
     flex: 1, 
     width: "100%",
-    opacity: 0.4,
+    opacity: 0.3,
+  },
+  activeImage: {
+    flex: 1, 
+    width: "100%",
   },
   imageTextBox: {
     position: "absolute",
@@ -436,6 +449,11 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   imageText: {
+    fontSize: 14,
+    textAlign: "center",
+    color: 'gray'
+  },
+  imageTextActive: {
     fontSize: 14,
     textAlign: "center",
     color: '#000'

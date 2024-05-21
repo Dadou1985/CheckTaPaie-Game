@@ -1,28 +1,16 @@
 import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable, ImageBackground } from 'react-native';
 import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, VStack, Button, AspectRatio, Avatar } from "native-base";
-import React, {useState, useRef, useEffect, useContext} from 'react'
+import React from 'react'
 import { Link } from "expo-router";
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation, useRouter, useLocalSearchParams } from "expo-router";
 import { FontAwesome5 } from '@expo/vector-icons';
-import ChatRoomComponent from '@/components/ChatRoomComponent';
-import { logger } from "react-native-logs";
-import { UserContext } from '@/hooks/UserContext';
+import ChatRoomComponent from '@/components/ChatRoomComponent'
 
 const RoomScreen = () => {
   const params = useLocalSearchParams<any>();
   const {title, background}: any = params
-  const [chatData, setchatData] = useState<any>(null)  
-  // const [user, setUser] = useState<any>({
-  //   name: "Anna",
-  //   stage: "Déception après l'évaluation annuelle"
-  // })
-  const log = logger.createLogger()
-  const {user} = useContext<any>(UserContext)
   
-
-  log.info("$$$$$$$$$$$$$$$$$$$$$", chatData)
-
   return (
     <KeyboardAvoidingView style={{ 
       flexDirection: 'column', 
