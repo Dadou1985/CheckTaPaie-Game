@@ -16,7 +16,16 @@ export default function HomeScreen() {
   const handleLoadUserInfo = () => {
     setUser({
       name:"Anna",
-      stage: "La déception de trop"
+      job: "Assistante de direction",
+      stage: "La déception de trop",
+      keyPerformanceIndicator: {
+        skills: 0,
+        lifeBalance: 50,
+        relationship: 80,
+        righteousness: 90,
+        audacity: 20,
+        personalBranding: 10
+      }
     })
   }
 
