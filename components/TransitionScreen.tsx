@@ -17,10 +17,10 @@ const TransitionScreen = ({chapter, title}: any) => {
         <Image 
             style={styles.image}
             source={require('../assets/images/CTP_logo.png')} />
-            <Animated.View entering={FadeIn.duration(3000)} exiting={FadeOut.duration(1000)}>
+            <Animated.View entering={FadeIn.duration(3000)} exiting={FadeOut.duration(500)}>
                 <Text style={{fontWeight: 700, marginBottom: 10, fontSize: 32, color: "#022845"}}>Chapitre {chapter}</Text>
             </Animated.View>
-            <Animated.View entering={FadeInUp.duration(3000)} exiting={FadeOutDown.duration(1000)}>
+            <Animated.View entering={FadeInUp.duration(3000)} exiting={FadeOut.duration(500)}>
                 <Text style={{fontWeight: 300, fontSize: 24, color: "#DDF7F9", textShadowColor: 'rgba(0, 0, 0, 0.75)',
                 textShadowOffset: {width: -1, height: 1},
                 textShadowRadius: 10}}>{title}</Text>

@@ -41,6 +41,7 @@ export default function RootLayout() {
             <Stack.Screen name="OfficeScreen" options={{ headerShown: false }} />
             <Stack.Screen name="RoomScreen" options={{ headerShown: false }} />
             <Stack.Screen name="HomeScreen" options={{ headerShown: false }} />
+            <Stack.Screen name="KpiScreen" options={{ headerShown: false }} />
           </Stack>
         </ThemeProvider>
       </EventContext.Provider>

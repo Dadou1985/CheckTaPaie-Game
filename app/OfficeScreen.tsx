@@ -7,6 +7,7 @@ import { logger } from "react-native-logs";
 import { EventContext } from '@/hooks/EventContext'
 import { UserContext } from '@/hooks/UserContext'
 import TransitionScreen from '@/components/TransitionScreen'
+import Animated, { FadeIn } from 'react-native-reanimated';
 
 export default function OfficeScreen() {  
   const log = logger.createLogger()
@@ -350,7 +351,7 @@ export default function OfficeScreen() {
           style={styles.background}
         >
         <NativeBaseProvider config={config}>
-          <KeyboardAvoidingView style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', height: '100%', position: 'absolute'}}>
+          <Animated.View entering={FadeIn.duration(2000)} style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', height: '100%', position: 'absolute'}}>
           <Link href="/HomeScreen" asChild>
             <Pressable style={{position: "absolute", zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#5DE0E6", borderRadius: 70, alignSelf: "center"}}>
               <Avatar alignSelf="center" size="2xl" source={
@@ -395,7 +396,7 @@ export default function OfficeScreen() {
                 </Link>
               }
             )}
-          </KeyboardAvoidingView>
+          </Animated.View>
         </NativeBaseProvider>
       </LinearGradient>
     )
@@ -456,6 +457,7 @@ const styles = StyleSheet.create({
   imageTextActive: {
     fontSize: 14,
     textAlign: "center",
-    color: '#000'
+    color: '#000', textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 1
   }
 });

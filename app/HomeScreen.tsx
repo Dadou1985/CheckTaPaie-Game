@@ -10,6 +10,7 @@ import TransitionScreen from '@/components/TransitionScreen';
 import { AnimatedView } from 'react-native-reanimated/lib/typescript/reanimated2/component/View';
 import Animated, { FadeIn } from 'react-native-reanimated';
 import AnimatedProgressWheel from 'react-native-progress-wheel';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 export default function HomeScreen() {  
   const log = logger.createLogger()
@@ -22,15 +23,15 @@ export default function HomeScreen() {
       return "#FF2525"
     }
 
-    if ((kpi > 25) && (kpi < 50)) {
+    if ((kpi >= 25) && (kpi < 50)) {
       return "#FF8200"
     }
 
-    if ((kpi > 50) && (kpi < 75)) {
+    if ((kpi >= 50) && (kpi < 75)) {
       return "#FFCF00"
     }
 
-    if (kpi > 75) {
+    if (kpi >= 75) {
       return "#00BF69"
     }
   }
@@ -39,130 +40,50 @@ export default function HomeScreen() {
         <ImageBackground source={require("../assets/images/home.png")} style={{width: "100%", height: "100%", position: "relative"}} resizeMode='cover'>
             <KeyboardAvoidingView style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', width: "100%", height: '100%', position: 'absolute', zIndex: 10}}>
                 <NativeBaseProvider config={config}>
+                  <Link style={{position: "absolute", left: 30, top: 70}} href={"/OfficeScreen"}>
+                    <FontAwesome5 name="arrow-circle-left" size={35} color="#25699B" />
+                  </Link>
                     <View style={{width: "100%", height: "50%", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", marginBottom: "10%"}}>
-                        <Animated.View entering={FadeIn.duration(3000)}>
-                            <Avatar style={{zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#5DE0E6", marginBottom: 15}} alignSelf="center" size="200" source={
+                        <Animated.View entering={FadeIn.duration(1000)}>
+                            <Avatar style={{zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#25699B", marginBottom: 15}} alignSelf="center" size="200" source={
                                     require("../assets/images/mario.jpg")
                                 }>
                             </Avatar>
                         </Animated.View>
-                        <Text style={{fontSize: 25}}>{user.name} Bellamy</Text>
-                        <Text style={{}}>{user.job}</Text>
+                        <Text style={{fontSize: 25, textShadowOffset: {width: 1, height: 1},
+                textShadowRadius: 1}}>{user.name} Bellamy</Text>
+                        <Text style={{width: "80%", textShadowColor: 'gray', textShadowOffset: {width: 1, height: 1},
+                textShadowRadius: 1, borderBottomWidth: 5, borderBottomColor: "#25699B", borderStyle: "solid", textAlign: "center", paddingBottom: 20}}>{user.job}</Text>
                     </View>
-                    <View style={{width: "100%", height: "30%", flexDirection: "column", paddingHorizontal: "5%"}}>
-                      <Animated.View entering={FadeIn.duration(3000)} style={{width: "100%", height: "50%", flexDirection: "row", justifyContent: "space-around", alignItems: "center"}}>
-                        <Pressable style={{width: "30%", height: "100%", flexDirection: "column", justifyContent: "space-around", alignItems: "center"}}>
+                    <Animated.View entering={FadeIn.duration(2000)} style={{width: "100%", height: "50%", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-around"}}>
+                      {user && user.keyPerformanceIndicator.length > 0 && user.keyPerformanceIndicator.map((kpi: any) => (
+                        <Link href={{
+                          pathname: "/KpiScreen",
+                          params: {kpiSelectedTitle: kpi.title}
+                        }}
+                        asChild>
+                          <Pressable style={{width: "30%", height: "30%", flexDirection: "column", justifyContent: "space-around", alignItems: "center", marginBottom: "5%"}}>
                           <Image 
                             style={styles.image}
-                            source={require('../assets/images/logo_skillz.png')} />
+                            source={kpi.img} />
                           <AnimatedProgressWheel
-                            progress={user.keyPerformanceIndicator.skills}
+                            progress={kpi.level}
                             animateFromValue={0}
-                            duration={3000} color={'#00BF69'} 
+                            duration={3000} color={handleKeyPerformanceIndicatorLevel(kpi.level) as string} 
                             backgroundColor={'transparent'} 
                             size={50} 
-                            width={10}
+                            width={5}
                             rotation={'180deg'}
                             max={100}
                             showProgressLabel
-                            labelStyle={{fontSize: 15, color: "#00BF63", fontWeight: "bold"}}
+                            labelStyle={{fontSize: 15, color: handleKeyPerformanceIndicatorLevel(kpi.level) as string, fontWeight: "bold", textShadowOffset: {width: 1, height: 1},
+                            textShadowRadius: 1}}
                             showPercentageSymbol
                             />
                         </Pressable>
-                        <Pressable style={{width: "30%", height: "100%", flexDirection: "column", justifyContent: "space-around", alignItems: "center"}}>
-                          <Image 
-                            style={styles.image}
-                            source={require('../assets/images/logo_wellness.png')} />
-                          <AnimatedProgressWheel
-                            progress={user.keyPerformanceIndicator.lifeBalance}
-                            animateFromValue={0}
-                            duration={3000} color={'#00BF63'} 
-                            backgroundColor={'transparent'} 
-                            size={50} 
-                            width={10}
-                            rotation={'180deg'}
-                            max={100}
-                            showProgressLabel
-                            labelStyle={{fontSize: 15, color: "#00BF63", fontWeight: "bold"}}
-                            showPercentageSymbol
-                            />
-                        </Pressable>
-                        <Pressable style={{width: "30%", height: "100%", flexDirection: "column", justifyContent: "space-around", alignItems: "center"}}>
-                          <Image 
-                            style={styles.image}
-                            source={require('../assets/images/logo_relationship.png')} />
-                          <AnimatedProgressWheel
-                            progress={user.keyPerformanceIndicator.relationship}
-                            animateFromValue={0}
-                            duration={3000} color={'#00BF63'} 
-                            backgroundColor={'transparent'} 
-                            size={50} 
-                            width={10}
-                            rotation={'180deg'}
-                            max={100}
-                            showProgressLabel
-                            labelStyle={{fontSize: 15, color: "#00BF63", fontWeight: "bold"}}
-                            showPercentageSymbol
-                            />
-                        </Pressable>
-                      </Animated.View>
-                      <Animated.View entering={FadeIn.duration(3000)} style={{width: "100%", height: "50%", flexDirection: "row", justifyContent: "space-around", alignItems: "center"}}>
-                        <Pressable style={{width: "30%", height: "100%", flexDirection: "column", justifyContent: "space-around", alignItems: "center"}}>
-                          <Image 
-                            style={styles.image}
-                            source={require('../assets/images/logo_righteousness.png')} />
-                          <AnimatedProgressWheel
-                            progress={user.keyPerformanceIndicator.righteousness}
-                            animateFromValue={0}
-                            duration={3000} color={'#00BF63'} 
-                            backgroundColor={'transparent'} 
-                            size={50} 
-                            width={10}
-                            rotation={'180deg'}
-                            max={100}
-                            showProgressLabel
-                            labelStyle={{fontSize: 15, color: "#00BF63", fontWeight: "bold"}}
-                            showPercentageSymbol
-                            />
-                        </Pressable>
-                        <Pressable style={{width: "30%", height: "100%", flexDirection: "column", justifyContent: "space-around", alignItems: "center"}}>
-                          <Image 
-                            style={styles.image}
-                            source={require('../assets/images/logo_audacity.png')} />
-                          <AnimatedProgressWheel
-                            progress={user.keyPerformanceIndicator.audacity}
-                            animateFromValue={0}
-                            duration={3000} color={'#00BF63'} 
-                            backgroundColor={'transparent'} 
-                            size={50} 
-                            width={10}
-                            rotation={'180deg'}
-                            max={100}
-                            showProgressLabel
-                            labelStyle={{fontSize: 15, color: "#00BF63", fontWeight: "bold"}}
-                            showPercentageSymbol
-                            />
-                        </Pressable>
-                        <Pressable style={{width: "30%", height: "100%", flexDirection: "column", justifyContent: "space-around", alignItems: "center"}}>
-                          <Image 
-                            style={styles.image}
-                            source={require('../assets/images/logo_branding.png')} />
-                          <AnimatedProgressWheel
-                            progress={user.keyPerformanceIndicator.personalBranding}
-                            animateFromValue={0}
-                            duration={3000} color={'#00BF63'} 
-                            backgroundColor={'transparent'} 
-                            size={50} 
-                            width={10}
-                            rotation={'180deg'}
-                            max={100}
-                            showProgressLabel
-                            labelStyle={{fontSize: 15, color: "#00BF63", fontWeight: "bold"}}
-                            showPercentageSymbol
-                            />
-                        </Pressable>
-                      </Animated.View>
-                    </View>
+                      </Link>
+                      ))}
+                    </Animated.View>
                 </NativeBaseProvider>
             </KeyboardAvoidingView>
             <LinearGradient
