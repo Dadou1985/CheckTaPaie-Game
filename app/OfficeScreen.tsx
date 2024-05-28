@@ -7,14 +7,18 @@ import { logger } from "react-native-logs";
 import { EventContext } from '@/hooks/EventContext'
 import { UserContext } from '@/hooks/UserContext'
 import TransitionScreen from '@/components/TransitionScreen'
-import Animated, { FadeIn } from 'react-native-reanimated';
+import Animated, { FadeIn } from 'react-native-reanimated'
+import { Keyframe } from 'react-native-reanimated';
+import {Dimensions} from 'react-native'
 
 export default function OfficeScreen() {  
   const log = logger.createLogger()
   const {event, setEvent} = useContext<any>(EventContext)
   const {user} = useContext<any>(UserContext)
   const [isShown, setIsShown] = useState<Boolean>(true)
-
+  const windowHeight = Math.round(Dimensions.get('window').height);
+  
+  log.info("++++++++++", windowHeight)
   const roomData = [
     {
       backgroundImage: require('/home/daoudda/Documents/Dev/checkTaPaie-Game/assets/images/coffee-machine.png'),
@@ -337,6 +341,26 @@ export default function OfficeScreen() {
     }, 5000);
   }, [])
 
+  const enteringAnimation = new Keyframe({
+    0: {
+      transform: [{translateY: (windowHeight / 2)}],
+      opacity: 0
+    },
+    10: {
+      opacity: 1,
+    },
+    50: {
+      transform: [{translateY: 0}],
+    },
+    90: {
+      opacity: 1,
+    },
+    100: {
+      transform: [{translateY: -(windowHeight + 100)}],
+      opacity: 0,
+    },
+  }).duration(50000);
+
   if (isShown) {
     return (
       <TransitionScreen chapter={event && event.chapter} title={event && event.title} />
@@ -354,9 +378,7 @@ export default function OfficeScreen() {
           <Animated.View entering={FadeIn.duration(2000)} style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', height: '100%', position: 'absolute'}}>
           <Link href="/HomeScreen" asChild>
             <Pressable style={{position: "absolute", zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#5DE0E6", borderRadius: 70, alignSelf: "center"}}>
-              <Avatar alignSelf="center" size="2xl" source={
-                  require("../assets/images/mario.jpg")
-                }>
+              <Avatar alignSelf="center" size="2xl" source={user.img}>
               </Avatar>
             </Pressable>
             
@@ -397,6 +419,23 @@ export default function OfficeScreen() {
               }
             )}
           </Animated.View>
+          <Animated.View style={{position: "absolute", width: "100%", height: "100%"}}>
+            <ImageBackground style={{width: "100%", height: "100%"}} source={require('../assets/images/anna_portrait.jpg')}>
+            <ScrollView contentContainerStyle={{height: "100%", flexDirection: "column", justifyContent: "flex-end"}}>
+              <LinearGradient
+                // Background Linear Gradient
+                colors={['transparent', '#94b9ff']}
+                start={[0, 0]}
+                end={[1, 1]}
+                style={{flex: 1}}
+                >
+                  <Animated.View style={styles.slidingText} entering={enteringAnimation.withCallback(() => {})} >
+                    <Text style={{textAlign: "center", fontSize: 18, lineHeight: 30, textShadowOffset: {width: 1, height: 1}, textShadowRadius: 1, color: 'white'}}>On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes).</Text>
+                  </Animated.View>
+                </LinearGradient>
+            </ScrollView>
+            </ImageBackground>
+          </Animated.View>
         </NativeBaseProvider>
       </LinearGradient>
     )
@@ -407,12 +446,12 @@ const config = {
   dependencies: {
     'linear-gradient': LinearGradient
   }
-};
-
+}
 
 const styles = StyleSheet.create({
   background: {
     flex: 1,
+    position: "relative"
   },
   imageBox: {
     width: "50%",
@@ -459,5 +498,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: '#000', textShadowOffset: {width: 1, height: 1},
     textShadowRadius: 1
+  },
+  slidingText: {
+    flex: 1, 
+    position: "absolute",
+    bottom: "0%", 
+    paddingHorizontal: "10%"
   }
 });

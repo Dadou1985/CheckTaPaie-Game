@@ -19,6 +19,7 @@ export default function HomeScreen() {
       name:"Anna",
       job: "Assistante de direction",
       stage: "La déception de trop",
+      img: require('../assets/images/anna_portrait.jpg'),
       keyPerformanceIndicator: [
         {
           title: "Les compétences",

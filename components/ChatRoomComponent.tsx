@@ -34,7 +34,7 @@ export default function ChatRoomComponent() {
     }, [currentChatData, messageTimeLoading])
 
   return (
-     <View style={{flex: 1}}>
+     <View style={{flex: 1, position: "relative"}}>
       <NativeBaseProvider>
         <VStack space={5} px={5} py={5}>
             {currentChatData && currentChatData.length > 0 && currentChatData.slice(0, count).map((data: any) =>{
@@ -57,6 +57,7 @@ export default function ChatRoomComponent() {
             })}
             </VStack>
         </NativeBaseProvider>
+        
      </View>
   )
 }
