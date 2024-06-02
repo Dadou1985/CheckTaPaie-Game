@@ -1,15 +1,17 @@
 import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable, ImageBackground } from 'react-native';
 import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, VStack, Button, AspectRatio, Avatar } from "native-base";
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from "expo-router";
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation, useRouter, useLocalSearchParams } from "expo-router";
 import { FontAwesome5 } from '@expo/vector-icons';
 import ChatRoomComponent from '@/components/ChatRoomComponent'
+import Animated from 'react-native-reanimated';
 
 const RoomScreen = () => {
   const params = useLocalSearchParams<any>();
   const {title, background}: any = params
+  const [showExitButton, setShowExitButton] = useState(false)
   
   return (
     <KeyboardAvoidingView style={{ 
@@ -34,15 +36,15 @@ const RoomScreen = () => {
             width: "100%", 
             position: "relative",
             }}>
-              <Link style={{position: "absolute", left: 20, paddingTop: 20}} href={"/OfficeScreen"}>
+              {showExitButton && <Link style={{position: "absolute", left: 20, paddingTop: 20}} href={"/OfficeScreen"}>
                 <FontAwesome5 name="arrow-circle-left" size={35} color="#022845" />
-              </Link>
+              </Link>}
             <Text style={{fontSize: 18, color:"#022845"}}>{title}</Text>
           </View>
         </LinearGradient>
-          <ScrollView style={{width: "100%", height: "70%"}}>
-              <ChatRoomComponent />
-          </ScrollView>
+          <Animated.ScrollView style={{width: "100%", height: "70%"}}>
+              <ChatRoomComponent setShowExitButton={setShowExitButton} />
+          </Animated.ScrollView>
         </ImageBackground>
     </KeyboardAvoidingView>
   )

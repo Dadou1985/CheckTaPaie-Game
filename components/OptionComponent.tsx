@@ -4,7 +4,7 @@ import Animated, { FadeInRight } from 'react-native-reanimated'
 import { LinearGradient } from 'expo-linear-gradient'
 import { logger } from "react-native-logs";
 
-const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, bunchNumber, setBunchNumber, setMessageTimeLoading}: any) => {
+const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, bunchNumber, setBunchNumber, setMessageTimeLoading, setShowExitButton, setcurrentScrollviewHeight, currentScrollviewHeight}: any) => {
     const log = logger.createLogger()
 
     const handleChooseScriptOption = (optionScript: any) => {
@@ -15,6 +15,7 @@ const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, b
         if (bunchNumber < chatData.length) {
             return setCurrentChatData(newChatData)
         } else {
+            setShowExitButton(true)
             return setCurrentChatData(newChatDataLast)
         }
     }
@@ -27,7 +28,9 @@ const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, b
     }, [])
     
 
-    return <Animated.View entering={FadeInRight} style={{width: "100%", flexDirection: "row", justifyContent: "flex-end"}}>
+    return <Animated.View onLayout={(event) => {
+        const {height} = event.nativeEvent.layout;
+        setcurrentScrollviewHeight(currentScrollviewHeight + height)      }} entering={FadeInRight} style={{width: "100%", flexDirection: "row", justifyContent: "flex-end"}}>
         <LinearGradient
         // Background Linear Gradient
         colors={['#FFDE59', '#FF914D']}

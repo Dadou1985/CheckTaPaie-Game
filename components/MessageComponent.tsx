@@ -3,9 +3,8 @@ import React, {useState, useEffect} from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Flow } from 'react-native-animated-spinkit'
 import { Avatar } from 'native-base'
-import TextCompent from './TextCompent'
 
-const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
+const MessageComponent = ({data, user, setMessageTimeLoading, setcurrentScrollviewHeight, currentScrollviewHeight}: any) => {
     const [dotLoading, setDotLoading] = useState(true)
 
     useEffect(() => {
@@ -17,7 +16,10 @@ const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
     
 
     if (data.name === user.name) {
-        return <View style={{flexDirection: "row", justifyContent: "flex-end", alignItems: "flex-end", width: "100%"}}>
+        return <View onLayout={(event) => {
+            const {height} = event.nativeEvent.layout;
+            setcurrentScrollviewHeight(currentScrollviewHeight + height)
+          }} style={{flexDirection: "row", justifyContent: "flex-end", alignItems: "flex-end", width: "100%"}}>
             <LinearGradient
             // Background Linear Gradient
             colors={['#cdffd8', '#94b9ff']}
@@ -33,7 +35,10 @@ const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
                 </Avatar>
         </View>
     } else {
-        return <View style={{flexDirection: "row", alignItems: "flex-end", width: "100%"}}>
+        return <View onLayout={(event) => {
+            const {height} = event.nativeEvent.layout;
+            setcurrentScrollviewHeight(currentScrollviewHeight + height)
+          }} style={{flexDirection: "row", alignItems: "flex-end", width: "100%"}}>
             <Avatar style={{marginRight: 10}} size="xs" source={{uri: data.image}}>
             </Avatar>
             <View style={{flexDirection: "column", alignItems: "flex-end", maxWidth: "70%"}}>
