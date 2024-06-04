@@ -21,9 +21,7 @@ export default function ChatRoomComponent({setShowExitButton}: any) {
     const [count, setCount] = useState<number>(0)
     const [bunchNumber, setBunchNumber] = useState<any>(0)
     const [messageTimeLoading, setMessageTimeLoading] = useState(1000)
-    const [currentScrollviewHeight, setcurrentScrollviewHeight] = useState(0)
     const [scrollViewHeight, setscrollViewHeight] = useState(0)
-    const log = logger.createLogger()
 
     useEffect(() => {
         let counter = count;
@@ -39,13 +37,14 @@ export default function ChatRoomComponent({setShowExitButton}: any) {
     }, [currentChatData, messageTimeLoading])
 
     const animatedStyles = useAnimatedStyle(() => {
-      const value = withTiming(Math.round(-(currentScrollviewHeight - (windowHeight - 100))))
+      const value = withTiming(Math.round(-(scrollViewHeight - (windowHeight - 100))))
       if (scrollViewHeight > (windowHeight - 100)) {
         return { transform: [{translateY: value}] };
       } else {
         return { transform: [{translateY: 0}] };
       }
-    });    
+    })
+
 
   return (
      <Animated.ScrollView onLayout={(event) => {
@@ -65,16 +64,15 @@ export default function ChatRoomComponent({setShowExitButton}: any) {
                     bunchNumber={bunchNumber} 
                     setBunchNumber={setBunchNumber}
                     setMessageTimeLoading={setMessageTimeLoading}
-                    setShowExitButton={setShowExitButton}
-                    currentScrollviewHeight={currentScrollviewHeight}
-                    setcurrentScrollviewHeight={setcurrentScrollviewHeight} />
+                    setShowExitButton={setShowExitButton} />
                 } 
 
                 if (data.banner) {
                     return <BannerMessage 
                     key={index}
                     data={data} 
-                    setMessageTimeLoading={setMessageTimeLoading} />
+                    setMessageTimeLoading={setMessageTimeLoading}
+                    />
                 }
 
                 if (data.scene) {
@@ -90,9 +88,7 @@ export default function ChatRoomComponent({setShowExitButton}: any) {
                 data={data} 
                 user={user} 
                 messageTimeLoading={messageTimeLoading} 
-                setMessageTimeLoading={setMessageTimeLoading}
-                currentScrollviewHeight={currentScrollviewHeight}
-                setcurrentScrollviewHeight={setcurrentScrollviewHeight} />
+                setMessageTimeLoading={setMessageTimeLoading} />
             })}
             </VStack>
         </NativeBaseProvider> 
@@ -103,6 +99,7 @@ export default function ChatRoomComponent({setShowExitButton}: any) {
 const styles = StyleSheet.create({
   container: {
     height: "100%", 
-    position: "relative"
+    position: "relative", 
+    paddingBottom: 30
   }
 })

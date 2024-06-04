@@ -251,21 +251,46 @@ export default function OfficeScreen() {
         },
         {
          name: "Damien",
-          role: "Le N-2",
+         role: "Le N-2",
          image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-         text: "Anna, on peut se parler un instant?"
+         text: "Anna, on peut se parler un instant?",
+         timeLoading: 500
+
          },
          {
            name: "Anna",
            image: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-           text: "Bien sûr, Damien. Qu'y a-t-il?"
+           text: "Bien sûr, Damien. Qu'y a-t-il?",
+           timeLoading: 500
          },
          {
            name: "Damien",
             role: "Le N-2",           
             image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-           text: "Je suis conscient du fait que tu attendais plus de notre entretien mais je veux que tu saches que nous apprécions vraiment ton travail ici. Nous avons des plans pour toi, Anna. Des plans qui pourraient te surprendre."
+           text: "Je suis conscient du fait que tu attendais plus de notre entretien...",
+           timeLoading: 1000
          },
+         {
+          name: "Damien",
+           role: "Le N-2",           
+           image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+          text: "...mais je veux que tu saches que nous apprécions vraiment ton travail ici.",
+          timeLoading: 1000
+        },
+        {
+          name: "Damien",
+           role: "Le N-2",           
+           image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+          text: "Nous avons des plans pour toi, Anna.",
+          timeLoading: 500
+        },
+        {
+          name: "Damien",
+           role: "Le N-2",           
+           image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+          text: "Des plans qui pourraient te surprendre.",
+          timeLoading: 500
+        },
          {
            flag: "green",
            text: "Me réjouir de la nouvelle",
