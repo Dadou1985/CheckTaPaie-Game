@@ -1,11 +1,10 @@
 import { NativeBaseProvider, VStack } from "native-base";
 import React, {useState, useEffect, useContext, useRef} from 'react'
-import { logger } from "react-native-logs";
 import MessageComponent from './MessageComponent'
 import OptionComponent from './OptionComponent'
 import BannerMessage from './BannerMessage';
-import { EventContext } from '@/hooks/EventContext'
-import { UserContext } from '@/hooks/UserContext'
+import { EventContext } from '@/context/EventContext'
+import { UserContext } from '@/context/UserContext'
 import SceneScreen from '@/components/SceneScreen'
 import Animated, {Easing, ReduceMotion, useAnimatedStyle, withTiming} from 'react-native-reanimated'
 import { StyleSheet } from "react-native";
@@ -70,7 +69,8 @@ export default function ChatRoomComponent({setShowExitButton}: any) {
                 if (data.banner) {
                     return <BannerMessage 
                     key={index}
-                    data={data} 
+                    text={data.text} 
+                    timeLoading={data.timeLoading}
                     setMessageTimeLoading={setMessageTimeLoading}
                     />
                 }
@@ -81,6 +81,10 @@ export default function ChatRoomComponent({setShowExitButton}: any) {
                   duration={data.duration} 
                   displayStatus={data.displayStatus} 
                   text={data.text} />
+                }
+
+                if (data.eventStatus === 'end') {
+                  setShowExitButton(true)
                 }
 
                 return <MessageComponent 

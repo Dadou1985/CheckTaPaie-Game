@@ -1,19 +1,15 @@
 import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable } from 'react-native';
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, HStack, Button } from "native-base";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Link } from "expo-router";
-import { UserContext } from '@/hooks/UserContext';
+import { UserContext } from '@/context/UserContext';
 import { useContext } from 'react';
 import Animated, { FadeIn } from 'react-native-reanimated';
 
 export default function HomeScreen() {
-  const {user, setUser} = useContext<any>(UserContext)
-  
+  const {setUser} = useContext<any>(UserContext)
+
   const handleLoadUserInfo = () => {
     setUser({
       name:"Anna",

@@ -5,8 +5,8 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState } from 'react';
 import 'react-native-reanimated';
 import OfficeScreen from './OfficeScreen';
-import { UserContext } from '@/hooks/UserContext';
-import { EventContext } from '@/hooks/EventContext';
+import { UserContext } from '@/context/UserContext';
+import { EventContext } from '@/context/EventContext';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.

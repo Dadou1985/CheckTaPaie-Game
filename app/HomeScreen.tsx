@@ -3,17 +3,13 @@ import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack,
 import { LinearGradient } from 'expo-linear-gradient';
 import { Link } from "expo-router";
 import { useEffect, useLayoutEffect, useState, useContext } from 'react';
-import { logger } from "react-native-logs";
-import { EventContext } from '@/hooks/EventContext'
-import { UserContext } from '@/hooks/UserContext'
-import TransitionScreen from '@/components/TransitionScreen';
-import { AnimatedView } from 'react-native-reanimated/lib/typescript/reanimated2/component/View';
+import { EventContext } from '@/context/EventContext'
+import { UserContext } from '@/context/UserContext'
 import Animated, { FadeIn } from 'react-native-reanimated';
 import AnimatedProgressWheel from 'react-native-progress-wheel';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 export default function HomeScreen() {  
-  const log = logger.createLogger()
   const {event, setEvent} = useContext<any>(EventContext)
   const {user} = useContext<any>(UserContext)
   const [isShown, setIsShown] = useState<Boolean>(true)
@@ -51,9 +47,9 @@ export default function HomeScreen() {
                             </Avatar>
                         </Animated.View>
                         <Text style={{fontSize: 25, textShadowOffset: {width: 1, height: 1},
-                textShadowRadius: 1}}>{user.name} Bellamy</Text>
+                          textShadowRadius: 1}}>{user.name} Bellamy</Text>
                         <Text style={{width: "80%", textShadowColor: 'gray', textShadowOffset: {width: 1, height: 1},
-                textShadowRadius: 1, borderBottomWidth: 5, borderBottomColor: "#25699B", borderStyle: "solid", textAlign: "center", paddingBottom: 20}}>{user.job}</Text>
+                          textShadowRadius: 1, borderBottomWidth: 5, borderBottomColor: "#25699B", borderStyle: "solid", textAlign: "center", paddingBottom: 20}}>{user.job}</Text>
                     </View>
                     <Animated.View entering={FadeIn.duration(2000)} style={{width: "100%", height: "50%", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-around"}}>
                       {user && user.keyPerformanceIndicator.length > 0 && user.keyPerformanceIndicator.map((kpi: any) => (

@@ -3,16 +3,12 @@ import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack,
 import { LinearGradient } from 'expo-linear-gradient';
 import { Link, useLocalSearchParams } from "expo-router";
 import { useEffect, useLayoutEffect, useState, useContext } from 'react';
-import { logger } from "react-native-logs";
-import { UserContext } from '@/hooks/UserContext'
-import TransitionScreen from '@/components/TransitionScreen';
-import { AnimatedView } from 'react-native-reanimated/lib/typescript/reanimated2/component/View';
+import { UserContext } from '@/context/UserContext'
 import Animated, { FadeIn } from 'react-native-reanimated';
 import AnimatedProgressWheel from 'react-native-progress-wheel';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 export default function KpiScreen() {  
-  const log = logger.createLogger()
   const {user} = useContext<any>(UserContext)
   const params = useLocalSearchParams<any>()
   const {kpiSelectedTitle} = params
@@ -36,8 +32,6 @@ export default function KpiScreen() {
       return "#00BF69"
     }
   }
-
-  log.info("+++++++++++++", kpiSelectedTitle)
 
     return (        
         <ImageBackground source={require("../assets/images/home.png")} style={{width: "100%", height: "100%", position: "relative", flex: 1}} resizeMode='cover'>

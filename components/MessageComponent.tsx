@@ -15,7 +15,6 @@ const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
 
         return () => clearTimeout(timeout)
     }, [])
-    
 
     if (data.name === user.name) {
         return <View style={{flexDirection: "row", justifyContent: "flex-end", alignItems: "flex-end", width: "100%"}}>
