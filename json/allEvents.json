@@ -3,9 +3,13 @@
     "chapter": 1,
     "title": "La déception de trop",
     "story": "Anna est déçue de se voir refuser une promotion et une augmentation de salaire lors de l'évaluation annuelle. Elle avait travaillé dur tout au long de l'année et espérait être reconnue pour ses efforts. Cette déception la pousse à réévaluer sa stratégie de développement professionnel et à envisager de nouvelles approches pour atteindre ses objectifs de carrière.",
+    "duration": 50000,
+    "displayStatus": true,
+    "nextEvent": "Une simple erreur de paie",
     "scenes": [
       {
         "place": "Open Space",
+        "status": "active",
         "characters": [
           {
             "name": "Adèle",
@@ -17,10 +21,8 @@
             "role": "Le N-2",               
             "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
           }
-        ]
-      }
-    ],
-    "script": [
+        ],
+        "script": [
       [
         {
           "name": "Adèle",
@@ -359,7 +361,7 @@
                 "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
                "text": "T’es la meilleure ! Je te fais confiance.",
                "timeLoading": 1000
-             },
+             }, 
              {
               "eventStatus": "end"
              }
@@ -435,13 +437,42 @@
               "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
                "text": "Ce serait vraiment dommage d’en arriver là.",
                "timeLoading": 1000
-             },
+             }, 
              {
               "eventStatus": "end"
              }
           ]
         }
       ]
+    ]
+      }
+    ]
+   },
+   {
+    "chapter": 2,
+    "title": "Une simple erreur de paie",
+    "story": "Anna décide de vérifier sa paie mensuellement pour s'assurer qu'elle est correctement rémunérée pour son travail. En examinant attentivement ses relevés de paie, elle découvre une erreur en sa faveur, où elle a été payée pour des heures supplémentaires non effectuées. Elle contacte immédiatement le service des ressources humaines pour rectifier l'erreur et rembourser le montant excédentaire. Cette expérience lui rappelle l'importance de surveiller de près sa rémunération et de signaler tout problème éventuel.",
+    "nextEvent": "",
+    "scenes": [
+      {
+        "place": "Open Space",
+        "status": "active",
+        "characters": [
+          {
+            "name": "Adèle",
+            "role": "La Best friend",
+            "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+          },
+          {
+            "name": "Tibault",
+            "role": "Employé RH",               
+            "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+          }
+        ],
+        "script": [
+
+        ]
+      }
     ]
    }
   ]

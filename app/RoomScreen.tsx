@@ -1,18 +1,27 @@
 import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable, ImageBackground } from 'react-native';
 import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, VStack, Button, AspectRatio, Avatar } from "native-base";
-import React, { useState } from 'react'
-import { Link } from "expo-router";
+import React, { useContext, useState } from 'react'
+import { Link, router } from "expo-router";
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation, useRouter, useLocalSearchParams } from "expo-router";
 import { FontAwesome5 } from '@expo/vector-icons';
 import ChatRoomComponent from '@/components/ChatRoomComponent'
 import Animated from 'react-native-reanimated';
+import { EventContext } from '@/context/EventContext'
 
 const RoomScreen = () => {
   const params = useLocalSearchParams<any>();
   const {title, background}: any = params
   const [showExitButton, setShowExitButton] = useState(false)
-  
+  const {event} = useContext<any>(EventContext)
+
+  const currentScene = event && event.scenes && event.scenes.find((currentEvent:  any) => currentEvent.place === title)
+  const handleGoBackToOfficeScreen = () => {
+    setTimeout(() => {
+      return router.navigate('OfficeScreen')
+    }, 5000);
+  }
+
   return (
     <KeyboardAvoidingView style={{ 
       flexDirection: 'column', 
@@ -43,7 +52,7 @@ const RoomScreen = () => {
           </View>
         </LinearGradient>
           <Animated.ScrollView style={{width: "100%", height: "70%"}}>
-              <ChatRoomComponent setShowExitButton={setShowExitButton} />
+              <ChatRoomComponent setShowExitButton={setShowExitButton} currentScene={currentScene} goBack={handleGoBackToOfficeScreen} />
           </Animated.ScrollView>
         </ImageBackground>
     </KeyboardAvoidingView>

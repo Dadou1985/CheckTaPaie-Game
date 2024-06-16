@@ -9,14 +9,15 @@ import SceneScreen from '@/components/SceneScreen'
 import Animated, {Easing, ReduceMotion, useAnimatedStyle, withTiming} from 'react-native-reanimated'
 import { StyleSheet } from "react-native";
 import {Dimensions} from 'react-native'
+import { router } from "expo-router";
 
-export default function ChatRoomComponent({setShowExitButton}: any) {
+export default function ChatRoomComponent({setShowExitButton, currentScene, goBack}: any) {
     const {event, setEvent} = useContext<any>(EventContext)
-    const {user} = useContext<any>(UserContext)
+    const {user, setUser} = useContext<any>(UserContext)
     const animatedScrollView = useRef<any>()
     const windowHeight = Math.round(Dimensions.get('window').height);
 
-    const [currentChatData, setCurrentChatData] = useState<any>(event && event.script && event.script[0])
+    const [currentChatData, setCurrentChatData] = useState<any>(currentScene && currentScene.script[0])
     const [count, setCount] = useState<number>(0)
     const [bunchNumber, setBunchNumber] = useState<any>(0)
     const [messageTimeLoading, setMessageTimeLoading] = useState(1000)
@@ -57,7 +58,7 @@ export default function ChatRoomComponent({setShowExitButton}: any) {
                     return <OptionComponent 
                     key={index}
                     data={data} 
-                    chatData={event && event.script} 
+                    chatData={currentScene && currentScene.script} 
                     currentChatData={currentChatData} 
                     setCurrentChatData={setCurrentChatData} 
                     bunchNumber={bunchNumber} 
@@ -84,7 +85,8 @@ export default function ChatRoomComponent({setShowExitButton}: any) {
                 }
 
                 if (data.eventStatus === 'end') {
-                  setShowExitButton(true)
+                  // setUser({...user, stage: event && event.nextEvent})
+                  return goBack()
                 }
 
                 return <MessageComponent 

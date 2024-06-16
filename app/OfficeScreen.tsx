@@ -11,7 +11,7 @@ import SceneScreen from '@/components/SceneScreen'
 import allEvents from '@/json/allEvents.json'
 
 export default function OfficeScreen() {  
-  const {user} = useContext<any>(UserContext)  
+  const {user, setUser} = useContext<any>(UserContext)  
   const {event, setEvent} = useContext<any>(EventContext)
   const [isShown, setIsShown] = useState<Boolean>(true)
   
@@ -45,7 +45,7 @@ export default function OfficeScreen() {
     setTimeout(() => {
       setIsShown(false)
     }, 5000);
-  }, [])
+  }, [user.stage])
 
   if (isShown) {
     return (
@@ -54,7 +54,6 @@ export default function OfficeScreen() {
   } else {
     return (
       <LinearGradient
-          // Background Linear Gradient
           colors={['#cdffd8', '#94b9ff']}
           start={[0, 0]}
           end={[1, 0]}
@@ -70,42 +69,44 @@ export default function OfficeScreen() {
             
           </Link>
             {roomData.map((room, index) => {
-              const isActiveScene = event && event.scenes && event.scenes.length > 0 && event.scenes.find((scene: any) => scene.place === room.title)
-              return <Link href={isActiveScene === undefined ? "OfficeScreen" : {
-                pathname: "/RoomScreen",
-                params: {title: room.title, background: room.backgroundImage}
-              }}
-              asChild>
-                <Pressable style={index === (roomData.length - 1) ? styles.imageLastBox : styles.imageBox}>
-                  <ImageBackground 
-                  style={isActiveScene === undefined ? styles.image : styles.activeImage}
-                  source={room.backgroundImage} resizeMode='cover' />
-                  <LinearGradient
-                    // Background Linear Gradient
-                    colors={['#5DE0E6', 'transparent']}
-                    start={[0, 1]}
-                    end={[1, 0]}
-                    style={styles.imageTextBox}
-                  >
-                    <Text style={isActiveScene === undefined ? styles.imageText : styles.imageTextActive}>{room.title}</Text>
-                    <Center mt={2}>
-                      <Avatar.Group _avatar={{
-                      size: "sm"
-                    }} max={2}>
-                      {isActiveScene && isActiveScene.characters.map((character: any) => (
-                        <Avatar bg="green.500" source={{
-                        uri: character.image}} />
-                      )
-                    )}
-                      </Avatar.Group>
-                    </Center>
-                  </LinearGradient>
-                </Pressable>
-                </Link>
-              }
+              const isActiveScene = event && event.scenes && event.scenes.length > 0 && event.scenes.find((scene: any) => (scene.place === room.title) && (scene.status === 'active'))
+                  // if (!isActiveScene) {
+                  //   return setUser({...user, stage: event && event.nextEvent})
+                  // }
+                  return <Link href={isActiveScene === undefined ? "OfficeScreen" : {
+                    pathname: "/RoomScreen",
+                    params: {title: room.title, background: room.backgroundImage}
+                  }}
+                  asChild>
+                    <Pressable style={index === (roomData.length - 1) ? styles.imageLastBox : styles.imageBox}>
+                      <ImageBackground 
+                      style={isActiveScene === undefined ? styles.image : styles.activeImage}
+                      source={room.backgroundImage} resizeMode='cover' />
+                      <LinearGradient
+                        colors={['#5DE0E6', 'transparent']}
+                        start={[0, 1]}
+                        end={[1, 0]}
+                        style={styles.imageTextBox}
+                      >
+                        <Text style={isActiveScene === undefined ? styles.imageText : styles.imageTextActive}>{room.title}</Text>
+                        <Center mt={2}>
+                          <Avatar.Group _avatar={{
+                          size: "sm"
+                        }} max={3}>
+                          {isActiveScene && isActiveScene.characters.map((character: any) => (
+                            <Avatar bg="green.500" source={{
+                            uri: character.image}} />
+                          )
+                        )}
+                          </Avatar.Group>
+                        </Center>
+                      </LinearGradient>
+                    </Pressable>
+                  </Link>
+                }
             )}
           </Animated.View>
-          <SceneScreen duration={event.scene && event.scene.duration} displayStatus={event.scene && event.scene.displayStatus} text={event.scene && event.scene.text} />
+          {/* <SceneScreen duration={event && event.duration} displayStatus={event && event.displayStatus} text={event && event.story} /> */}
         </NativeBaseProvider>
       </LinearGradient>
     )
