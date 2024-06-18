@@ -10,40 +10,29 @@
       {
         "place": "Open Space",
         "status": "active",
-        "characters": [
-          {
-            "name": "Adèle",
-            "role": "La Best friend",
-            "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-          },
-          {
-            "name": "Damien",
-            "role": "Le N-2",               
-            "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-          }
-        ],
+        "characters": ["Adèle", "Damien"],
         "script": [
       [
         {
           "name": "Adèle",
-          "role": "La Best friend",
-          "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
           "text": "Salut Anna !",
           "timeLoading": 500
         },
         {
           "name": "Adèle",
-          "role": "La Best friend",
-          "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
           "text": "Tu sembles un peu contrariée...",
           "timeLoading": 1000
         },
         {
           "name": "Adèle",
-          "role": "La Best friend",
-          "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
           "text": "Tout va bien ?",
           "timeLoading": 500
+        },
+        {
+          "eventStatus": "scene",
+          "characterName": "Adèle",
+          "text": "Voir le profil d'Adèle",
+          "displayStatus": true
         },
         {
           "flag": "green",
@@ -52,92 +41,72 @@
           "script": [
             {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "Salut Adèle !",
               "timeLoading": 500
             },
             {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "C'est juste...",
               "timeLoading": 500
             },
             {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "...encore une année sans promotion ni augmentation.",
               "timeLoading": 1000
             },
             {
               "name": "Adèle",
-              "role": "La Best friend",
-              "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               "text": "Vraiment?",
               "timeLoading": 500
             },
             {
               "name": "Adèle",
-              "role": "La Best friend",
-              "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               "text": "Mais tu as tellement travaillé dur cette année.",
               "timeLoading": 1000
             },
             {
               "name": "Adèle",
-              "role": "La Best friend",
-              "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               "text": "C'est injuste.",
               "timeLoading": 500
             },
             {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "Je sais...",
               "timeLoading": 500
             },
             {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "J'avais espéré que cette fois ce serait différent.",
               "timeLoading": 1000
             },
 
             {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "Mais bon, c'est la vie de bureau, n'est-ce pas?",
               "timeLoading": 1000
             },
             {
               "name": "Adèle",
-              "role": "La Best friend",
-              "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               "text": "Tu ne devrais pas laisser ça te décourager, Anna.",
               "timeLoading": 1000
             },
             {
               "name": "Adèle",
-              "role": "La Best friend",
-              "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               "text": "Tu es l'une des employées les plus dévouées ici.",
               "timeLoading": 1000
             },
             {
               "name": "Adèle",
-              "role": "La Best friend",
-              "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               "text": "Ta chance viendra.",
               "timeLoading": 500
             },
             {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "Merci, Adèle.",
               "timeLoading": 500
             },
             {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "J'apprécie tes mots d'encouragement.",
               "timeLoading": 1000
             }
@@ -150,27 +119,21 @@
           "script": [
             {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "Salut Adèle, c’est rien. Je repensais juste à mon entretien annuel…",
               "timeLoading": 1000
             },
             {
               "name": "Adèle",
-              "role": "La Best friend",
-              "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               "text": "Ah, alors… comment ça s’est passé ?",
               "timeLoading": 500
             },
             {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "Comme un entretien annuel ! Sinon, toi ça va ?",
               "timeLoading": 1000
             },
             {
               "name": "Adèle",
-              "role": "La Best friend",
-              "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               "text": "Comme un lundi matin…",
               "timeLoading": 500
             }
@@ -183,60 +146,46 @@
           "script": [
             {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "A ton avis, ça à l’air d’aller d’après toi..?",
               "timeLoading": 1000
             },
             {
               "name": "Adèle",
-              "role": "La Best friend",
-              "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               "text": "D’ac-cord…",
               "timeLoading": 500
             },
             {
               "name": "Adèle",
-              "role": "La Best friend",
-              "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               "text": "…quelqu’un a eu un mauvais week-end on dirait!",
               "timeLoading": 1000
             },
             {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "Désolé !",
               "timeLoading": 500
             },
             {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "C’est juste que j’ai pas trop la tête à discuter en ce moment.",
               "timeLoading": 1000
             },
             {
               "name": "Adèle",
-              "role": "La Best friend",
-              "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               "text": "Je vois, ça a l’air sérieux !",
               "timeLoading": 500
             },
             {
               "name": "Adèle",
-              "role": "La Best friend",
-              "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               "text": "En tout cas, si tu cherches quelqu’un pour en parler…",
               "timeLoading": 1000
             },
             {
               "name": "Adèle",
-              "role": "La Best friend",
-              "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
               "text": "...tu sais où se trouve mon bureau.",
               "timeLoading": 1000
             },
             {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "Merci Adèle.",
               "timeLoading": 500
             }
@@ -251,42 +200,31 @@
         },
         {
          "name": "Damien",
-         "role": "Le N-2",
-         "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
          "text": "Anna, on peut se parler un instant?",
          "timeLoading": 500
          },
          {
            "name": "Anna",
-           "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
            "text": "Bien sûr, Damien. Qu'y a-t-il?",
            "timeLoading": 500
          },
          {
-           "name": "Damien",
-            "role": "Le N-2",           
-            "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+           "name": "Damien",           
            "text": "Je suis conscient du fait que tu attendais plus de notre entretien...",
            "timeLoading": 1000
          },
          {
-          "name": "Damien",
-           "role": "Le N-2",           
-           "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+          "name": "Damien",           
           "text": "...mais je veux que tu saches que nous apprécions vraiment ton travail ici.",
           "timeLoading": 1000
         },
         {
-          "name": "Damien",
-           "role": "Le N-2",           
-           "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+          "name": "Damien",           
           "text": "Nous avons des plans pour toi, Anna.",
           "timeLoading": 500
         },
         {
-          "name": "Damien",
-           "role": "Le N-2",           
-           "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+          "name": "Damien",           
           "text": "Des plans qui pourraient te surprendre.",
           "timeLoading": 500
         },
@@ -297,68 +235,52 @@
            "script": [
              {
                "name": "Anna",
-               "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
                "text": "Je n’en doute pas.",
                "timeLoading": 500
              },
              {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "Je suis heureuse de savoir que tu as pris en considération mes attentes.",
               "timeLoading": 1000
             },
              {
-               "name": "Damien",
-              "role": "Le N-2",               
-              "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+               "name": "Damien",               
                "text": "Tu mérites une chance de briller, Anna.",
                "timeLoading": 500
              },
              {
-              "name": "Damien",
-             "role": "Le N-2",               
-             "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+              "name": "Damien",               
               "text": "Ne perds pas espoir.",
               "timeLoading": 500
             },
 
             {
-              "name": "Damien",
-             "role": "Le N-2",               
-             "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+              "name": "Damien",               
               "text": "Nous parlerons plus tard de ce que cela implique.",
               "timeLoading": 1000
             },
             {
-              "name": "Damien",
-             "role": "Le N-2",               
-             "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+              "name": "Damien",               
               "text": "En attendant, pourrais-tu décaler mon rendez-vous de ce soir avec Blue Green Media..?",
               "timeLoading": 1000
             },
              {
                "name": "Anna",
-               "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
                "text": "C’est la 3ème fois qu’on décale ce rendez-vous…",
                "timeLoading": 1000
              },
              {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "Au bout d’un moment, ils vont finir par mal le prendre.",
               "timeLoading": 1000
             },
              {
-               "name": "Damien",
-              "role": "Le N-2",               
-              "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+               "name": "Damien",               
                "text": "Dis-leur que j’avais un rendez-vous important de dernière minute ou quelque chose du genre…",
                "timeLoading": 1500
              },
              {
-               "name": "Damien",
-                "role": "Le N-2",               
-                "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+               "name": "Damien",               
                "text": "T’es la meilleure ! Je te fais confiance.",
                "timeLoading": 1000
              }, 
@@ -374,67 +296,51 @@
            "script": [
              {
                "name": "Anna",
-               "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
                "text": "C’est ce que tu m’as dit l’an dernier…",
                "timeLoading": 500
              },
              {
-              "name": "Damien",
-              "role": "Le N-2",               
-              "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+              "name": "Damien",               
                "text": "Et je le pensais mais…euh…",
                "timeLoading": 500
              },
              {
-              "name": "Damien",
-              "role": "Le N-2",               
-              "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+              "name": "Damien",               
                "text": "...comme tu le sais, l’année n’a pas été fameuse pour Innovatech.",
                "timeLoading": 1000
              },
              {
-              "name": "Damien",
-              "role": "Le N-2",               
-              "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+              "name": "Damien",               
                "text": "On n’a pas réussi à remplir les objectifs de Q2, Q3 et Q4 donc…",
                "timeLoading": 1000
              },
              {
-              "name": "Damien",
-              "role": "Le N-2",               
-              "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+              "name": "Damien",               
                "text": "Mais la reprise est là et je suis persuadé que cette année sera meilleure en termes de chiffres.",
                "timeLoading": 1500
              },
              {
                "name": "Anna",
-               "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
                "text": "Je l’espère.",
                "timeLoading": 500
              },
              {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "Quoiqu’il en soit, si les choses ne changent pas, il va falloir que j’envisage d’autres options.",
               "timeLoading": 1000
             },
             {
               "name": "Anna",
-              "image": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
               "text": "Je tenais à ce que les choses soient claires entre nous Damien.",
               "timeLoading": 1000
             },
              {
-               "name": "Damien",
-              "role": "Le N-2",               
-              "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+               "name": "Damien",               
                "text": "Je vois.",
                "timeLoading": 500
              },
              {
-               "name": "Damien",
-              "role": "Le N-2",               
-              "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+               "name": "Damien",               
                "text": "Ce serait vraiment dommage d’en arriver là.",
                "timeLoading": 1000
              }, 
@@ -457,18 +363,7 @@
       {
         "place": "Open Space",
         "status": "active",
-        "characters": [
-          {
-            "name": "Adèle",
-            "role": "La Best friend",
-            "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-          },
-          {
-            "name": "Tibault",
-            "role": "Employé RH",               
-            "image": "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-          }
-        ],
+        "characters": ["Adèle", "Thibault"],
         "script": [
 
         ]

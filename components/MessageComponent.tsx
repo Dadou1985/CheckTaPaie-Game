@@ -3,9 +3,11 @@ import React, {useState, useEffect} from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Flow } from 'react-native-animated-spinkit'
 import { Avatar } from 'native-base'
+import characters from '@/json/characters.json'
 
 const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
     const [dotLoading, setDotLoading] = useState(true)
+    const currentCharacter = characters.find((character: any) => character.name === data.name)
 
     useEffect(() => {
         setMessageTimeLoading(data.timeLoading + 1000)  
@@ -29,12 +31,10 @@ const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
                     {dotLoading ? <Flow size={30} color="#FFF" /> : <Text style={{fontSize: 12, textAlign: "right"}}>{data.text}</Text>}
                 </View>
             </LinearGradient>
-            <Avatar style={{marginLeft: 10}} size="xs" source={{uri: data.image}}>
-                </Avatar>
         </View>
     } else {
         return <View style={{flexDirection: "row", alignItems: "flex-end", width: "100%"}}>
-            <Avatar style={{marginRight: 10}} size="xs" source={{uri: data.image}}>
+            <Avatar style={{marginRight: 10}} size="xs" source={{uri: currentCharacter && currentCharacter.image}}>
             </Avatar>
             <View style={{flexDirection: "column", alignItems: "flex-end", maxWidth: "70%"}}>
                 <LinearGradient
@@ -46,7 +46,7 @@ const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
                     >
                     <View style={{flexDirection: "column", padding: 10}}>
                         {dotLoading ? <Flow size={30} color="#FFF" /> : <Text style={{fontSize: 12}}>{data.text}</Text>}
-                        <Text style={{width: "100%", textAlign: "right", fontSize: 12, color: "gray"}}>{data.name} - {data.role}</Text>
+                        <Text style={{width: "100%", textAlign: "right", fontSize: 12, color: "gray"}}>{data.name} - {currentCharacter && currentCharacter.role}</Text>
 
                     </View>
                 </LinearGradient>

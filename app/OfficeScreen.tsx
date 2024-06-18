@@ -9,6 +9,7 @@ import TransitionScreen from '@/components/TransitionScreen'
 import Animated, { FadeIn } from 'react-native-reanimated'
 import SceneScreen from '@/components/SceneScreen'
 import allEvents from '@/json/allEvents.json'
+import characters from '@/json/characters.json'
 
 export default function OfficeScreen() {  
   const {user, setUser} = useContext<any>(UserContext)  
@@ -93,10 +94,11 @@ export default function OfficeScreen() {
                           <Avatar.Group _avatar={{
                           size: "sm"
                         }} max={3}>
-                          {isActiveScene && isActiveScene.characters.map((character: any) => (
-                            <Avatar bg="green.500" source={{
-                            uri: character.image}} />
-                          )
+                          {isActiveScene && isActiveScene.characters.map((character: any) => {
+                            const currentCharacter = characters.find((currentCharacter: any) => currentCharacter.name === character)
+                            return <Avatar bg="green.500" source={{
+                            uri: currentCharacter && currentCharacter.image}} />
+                          }
                         )}
                           </Avatar.Group>
                         </Center>

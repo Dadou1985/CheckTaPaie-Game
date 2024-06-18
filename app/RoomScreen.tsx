@@ -6,20 +6,32 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation, useRouter, useLocalSearchParams } from "expo-router";
 import { FontAwesome5 } from '@expo/vector-icons';
 import ChatRoomComponent from '@/components/ChatRoomComponent'
-import Animated from 'react-native-reanimated';
+import Animated, { FadeOut } from 'react-native-reanimated';
 import { EventContext } from '@/context/EventContext'
+import characters from '@/json/characters.json'
+import SceneScreen from '@/components/SceneScreen'
 
 const RoomScreen = () => {
   const params = useLocalSearchParams<any>();
   const {title, background}: any = params
   const [showExitButton, setShowExitButton] = useState(false)
   const {event} = useContext<any>(EventContext)
+  const [currentCharacter, setCurrentCharacter] = useState<any>({
+    duration: 50000, 
+    displayStatus: false, 
+    story: ""
+  })
 
   const currentScene = event && event.scenes && event.scenes.find((currentEvent:  any) => currentEvent.place === title)
   const handleGoBackToOfficeScreen = () => {
     setTimeout(() => {
       return router.navigate('OfficeScreen')
     }, 5000);
+  }
+
+  const handleSceneScrene = (characterName: any) => {
+    const actualCharacter = characters.find(char => char.name === characterName)
+    return setCurrentCharacter(actualCharacter && actualCharacter)
   }
 
   return (
@@ -52,9 +64,14 @@ const RoomScreen = () => {
           </View>
         </LinearGradient>
           <Animated.ScrollView style={{width: "100%", height: "70%"}}>
-              <ChatRoomComponent setShowExitButton={setShowExitButton} currentScene={currentScene} goBack={handleGoBackToOfficeScreen} />
+              <ChatRoomComponent setShowExitButton={setShowExitButton} currentScene={currentScene} goBack={handleGoBackToOfficeScreen} handleSceneScrene={handleSceneScrene} />
           </Animated.ScrollView>
-        </ImageBackground>
+          <SceneScreen 
+              duration={currentCharacter.duration} 
+              displayStatus={currentCharacter.displayStatus} 
+              text={currentCharacter.story}
+              img={currentCharacter.image} />
+        </ImageBackground> 
     </KeyboardAvoidingView>
   )
 }

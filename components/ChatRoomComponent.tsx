@@ -2,16 +2,15 @@ import { NativeBaseProvider, VStack } from "native-base";
 import React, {useState, useEffect, useContext, useRef} from 'react'
 import MessageComponent from './MessageComponent'
 import OptionComponent from './OptionComponent'
+import SceneComponent from "./SceneComponent";
 import BannerMessage from './BannerMessage';
 import { EventContext } from '@/context/EventContext'
 import { UserContext } from '@/context/UserContext'
-import SceneScreen from '@/components/SceneScreen'
 import Animated, {Easing, ReduceMotion, useAnimatedStyle, withTiming} from 'react-native-reanimated'
 import { StyleSheet } from "react-native";
 import {Dimensions} from 'react-native'
-import { router } from "expo-router";
 
-export default function ChatRoomComponent({setShowExitButton, currentScene, goBack}: any) {
+export default function ChatRoomComponent({setShowExitButton, currentScene, goBack, handleSceneScrene}: any) {
     const {event, setEvent} = useContext<any>(EventContext)
     const {user, setUser} = useContext<any>(UserContext)
     const animatedScrollView = useRef<any>()
@@ -45,7 +44,6 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
       }
     })
 
-
   return (
      <Animated.ScrollView onLayout={(event) => {
       const {height} = event.nativeEvent.layout;
@@ -76,12 +74,12 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
                     />
                 }
 
-                if (data.scene) {
-                  return <SceneScreen 
-                  key={index}
-                  duration={data.duration} 
-                  displayStatus={data.displayStatus} 
-                  text={data.text} />
+                if (data.eventStatus === "scene") {
+                  return <SceneComponent
+                  data={data}
+                  handleSceneScrene={handleSceneScrene}
+                  setMessageTimeLoading={setMessageTimeLoading}
+                  />
                 }
 
                 if (data.eventStatus === 'end') {
@@ -97,7 +95,7 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
                 setMessageTimeLoading={setMessageTimeLoading} />
             })}
             </VStack>
-        </NativeBaseProvider> 
+        </NativeBaseProvider>   
      </Animated.ScrollView>
   )
 }

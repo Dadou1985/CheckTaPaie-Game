@@ -1,20 +1,26 @@
 import { View, Text, ImageBackground, ScrollView, StyleSheet } from 'react-native'
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Animated, { FadeOut, Keyframe } from 'react-native-reanimated'
 import { LinearGradient } from 'expo-linear-gradient';
 import {Dimensions} from 'react-native'
 
-const SceneScreen = ({duration = 50000, displayStatus = false, text} : any) => {
-  const [isShow, setisShow] = useState(displayStatus)
-  const windowHeight = Math.round(Dimensions.get('window').height);
+const SceneScreen = ({duration = 50000, displayStatus = false, text, img} : any) => {
+  const [isShow, setisShow] = useState(false)
+  const windowHeight = Math.round(Dimensions.get('window').height);  
+  console.log("+++++++++++++++", windowHeight)
 
   const handleIsShow = () => setisShow(false)
+
+  useEffect(() => {
+    setisShow(displayStatus)
+  }, [displayStatus])
+  
 
   const enteringAnimation = new Keyframe({
     0: {
       transform: [
         {
-          translateY: (windowHeight / 2)
+          translateY: (windowHeight + 500)
         }
       ],
       opacity: 0
@@ -40,8 +46,8 @@ const SceneScreen = ({duration = 50000, displayStatus = false, text} : any) => {
 
   if (isShow) {
     return (
-      <Animated.View exiting={FadeOut.duration(3000)} style={{position: "absolute", width: "100%", height: "100%"}}>
-        <ImageBackground style={{width: "100%", height: "100%"}} source={require('../assets/images/anna_portrait.jpg')}>
+      <Animated.View exiting={FadeOut.duration(3000)} style={{position: "absolute", width: "100%", height: "100%", zIndex: 10}}>
+        <ImageBackground style={{width: "100%", height: "100%"}} source={{uri: img}}>
         <ScrollView contentContainerStyle={{height: "100%", flexDirection: "column", justifyContent: "flex-end"}}>
           <LinearGradient
             // Background Linear Gradient
