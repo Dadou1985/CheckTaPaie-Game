@@ -17,9 +17,13 @@ const RoomScreen = () => {
   const [showExitButton, setShowExitButton] = useState(false)
   const {event} = useContext<any>(EventContext)
   const [currentCharacter, setCurrentCharacter] = useState<any>({
-    duration: 50000, 
     displayStatus: false, 
-    story: ""
+    story: "",
+    name: "",
+    job: "",
+    role: "", 
+    age: "",
+    img: ""
   })
 
   const currentScene = event && event.scenes && event.scenes.find((currentEvent:  any) => currentEvent.place === title)
@@ -67,10 +71,14 @@ const RoomScreen = () => {
               <ChatRoomComponent setShowExitButton={setShowExitButton} currentScene={currentScene} goBack={handleGoBackToOfficeScreen} handleSceneScrene={handleSceneScrene} />
           </Animated.ScrollView>
           <SceneScreen 
-              duration={currentCharacter.duration} 
               displayStatus={currentCharacter.displayStatus} 
               text={currentCharacter.story}
-              img={currentCharacter.image} />
+              img={currentCharacter.image}
+              name={currentCharacter.name}
+              lastName={currentCharacter.lastName}
+              age={currentCharacter.age}
+              role={currentCharacter.role}
+              job={currentCharacter.job} />
         </ImageBackground> 
     </KeyboardAvoidingView>
   )

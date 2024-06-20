@@ -1,52 +1,23 @@
-import { View, Text, ImageBackground, ScrollView, StyleSheet } from 'react-native'
+import { View, Text, ImageBackground, ScrollView, StyleSheet, Pressable } from 'react-native'
 import React, {useEffect, useState} from 'react'
-import Animated, { FadeOut, Keyframe } from 'react-native-reanimated'
+import Animated, { FadeIn, FadeOut, Keyframe } from 'react-native-reanimated'
 import { LinearGradient } from 'expo-linear-gradient';
-import {Dimensions} from 'react-native'
 
-const SceneScreen = ({duration = 50000, displayStatus = false, text, img} : any) => {
+const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job} : any) => {
   const [isShow, setisShow] = useState(false)
-  const windowHeight = Math.round(Dimensions.get('window').height);  
-  console.log("+++++++++++++++", windowHeight)
+  const [story, setStory] = useState([])
+  const [storyBunchNumber, setStoryBunchNumber] = useState<any>(0)
 
-  const handleIsShow = () => setisShow(false)
+  const handleIsHidden = () => setisShow(false)
 
   useEffect(() => {
+    setStory(text)
     setisShow(displayStatus)
   }, [displayStatus])
-  
-
-  const enteringAnimation = new Keyframe({
-    0: {
-      transform: [
-        {
-          translateY: (windowHeight + 500)
-        }
-      ],
-      opacity: 0
-    },
-    10: {
-      opacity: 1,
-    },
-    50: {
-      transform: [{translateY: 0}],
-    },
-    90: {
-      opacity: 1,
-    },
-    100: {
-      transform: [{translateY: -(windowHeight + 100)}],
-      opacity: 0,
-    },
-  }).duration(duration);
-
-  setTimeout(() => {
-    handleIsShow()
-  }, duration + 500);
 
   if (isShow) {
     return (
-      <Animated.View exiting={FadeOut.duration(3000)} style={{position: "absolute", width: "100%", height: "100%", zIndex: 10}}>
+      <Animated.View exiting={FadeOut.duration(5000)} style={{position: "absolute", width: "100%", height: "100%", zIndex: 10}}>
         <ImageBackground style={{width: "100%", height: "100%"}} source={{uri: img}}>
         <ScrollView contentContainerStyle={{height: "100%", flexDirection: "column", justifyContent: "flex-end"}}>
           <LinearGradient
@@ -56,8 +27,20 @@ const SceneScreen = ({duration = 50000, displayStatus = false, text, img} : any)
             end={[1, 1]}
             style={{flex: 1}}
             >
-              <Animated.ScrollView style={styles.slidingText} entering={enteringAnimation}>
-                <Text style={{textAlign: "center", fontSize: 18, lineHeight: 30, textShadowOffset: {width: 1, height: 1}, textShadowRadius: 1, color: 'white'}}>{text}</Text>
+              <Animated.ScrollView style={styles.slidingText} entering={FadeIn.duration(3000)} exiting={FadeOut.duration(1000)}>
+                <Text style={[styles.textStyle, styles.textHeadingFont]}>{name} {lastName}</Text>
+                <Text style={[styles.textStyle, styles.textFont]}>{job} - {age}</Text>
+                <Text style={[styles.textStyle, styles.textFont]}>{role}</Text>
+                <Text style={[styles.textStyle]}>{story && story.length > 0 && story[storyBunchNumber]}</Text>
+                  <Pressable onPress={() => {
+                    if (storyBunchNumber > (text.length - 2)) {
+                      return handleIsHidden()
+                    } else {
+                      return setStoryBunchNumber(storyBunchNumber + 1)
+                    }
+                    }}>
+                    <Text style={{width: "90%", textAlign: "right"}}>{storyBunchNumber > (text.length - 2) ? 'Fermer' : 'Continuer'}</Text>
+                  </Pressable>
               </Animated.ScrollView>
             </LinearGradient>
         </ScrollView>
@@ -79,7 +62,27 @@ const styles = StyleSheet.create({
   slidingText: {
     flex: 1, 
     position: "absolute",
-    bottom: "0%", 
+    bottom: "5%", 
     paddingHorizontal: "10%"
+  },
+  textStyle: {
+    textAlign: "center", 
+    lineHeight: 20, 
+    textShadowOffset: {
+      width: 1, 
+      height: 1
+    }, 
+    textShadowRadius: 1, 
+    color: 'white', 
+    marginBottom: "5%"
+  },
+  textFont: {
+    fontSize: 14,
+    fontWeight: 700
+  },
+  textHeadingFont: {
+    fontSize: 22, 
+    marginBottom: 0, 
+    fontWeight: 700
   }
-});
+})
