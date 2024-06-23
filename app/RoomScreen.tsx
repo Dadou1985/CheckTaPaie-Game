@@ -8,6 +8,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import ChatRoomComponent from '@/components/ChatRoomComponent'
 import Animated, { FadeOut } from 'react-native-reanimated';
 import { EventContext } from '@/context/EventContext'
+import { UserContext } from '@/context/UserContext';
 import characters from '@/json/characters.json'
 import SceneScreen from '@/components/SceneScreen'
 
@@ -16,6 +17,7 @@ const RoomScreen = () => {
   const {title, background}: any = params
   const [showExitButton, setShowExitButton] = useState(false)
   const {event} = useContext<any>(EventContext)
+  const {user, setUser} = useContext<any>(UserContext)
   const [currentCharacter, setCurrentCharacter] = useState<any>({
     displayStatus: false, 
     story: "",
@@ -29,14 +31,37 @@ const RoomScreen = () => {
   const currentScene = event && event.scenes && event.scenes.find((currentEvent:  any) => currentEvent.place === title)
   const handleGoBackToOfficeScreen = () => {
     setTimeout(() => {
-      return router.navigate('OfficeScreen')
-    }, 5000);
+      const scenesUpdate = user && user.scenes && user.scenes.length > 0 && user.scenes.map((scene: any) => {
+        if (scene.place === title) {
+          return {...scene, status: "inactive"}
+        } else {
+          return scene
+        }
+      })
+      router.navigate('OfficeScreen')
+      return setUser({...user, scenes: scenesUpdate})
+    }, 3000);
   }
 
   const handleSceneScrene = (characterName: any) => {
     const actualCharacter = characters.find(char => char.name === characterName)
-    return setCurrentCharacter(actualCharacter && actualCharacter)
+      return setCurrentCharacter(actualCharacter && actualCharacter)
   }
+
+  const handleSceneScreneHint = (data: any) => {
+      return setCurrentCharacter({
+        displayStatus: data.displayStatus,
+        story: data.text,
+        name: data.title,
+        img: data.image,
+        job: "",
+        role: "", 
+        age: ""
+      })
+  }
+
+  console.log('++++++++++++', currentCharacter)
+
 
   return (
     <KeyboardAvoidingView style={{ 
@@ -68,7 +93,7 @@ const RoomScreen = () => {
           </View>
         </LinearGradient>
           <Animated.ScrollView style={{width: "100%", height: "70%"}}>
-              <ChatRoomComponent setShowExitButton={setShowExitButton} currentScene={currentScene} goBack={handleGoBackToOfficeScreen} handleSceneScrene={handleSceneScrene} />
+              <ChatRoomComponent setShowExitButton={setShowExitButton} currentScene={currentScene} goBack={handleGoBackToOfficeScreen} handleSceneScrene={handleSceneScrene} handleSceneScreneHint={handleSceneScreneHint} />
           </Animated.ScrollView>
           <SceneScreen 
               displayStatus={currentCharacter.displayStatus} 

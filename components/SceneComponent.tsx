@@ -2,8 +2,9 @@ import { Pressable, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import Animated, { FadeInRight } from 'react-native-reanimated'
 import { LinearGradient } from 'expo-linear-gradient'
+import { Avatar } from 'native-base'
 
-const SceneComponent = ({data, handleSceneScrene, setMessageTimeLoading}: any) => {
+const SceneComponent = ({data, handleSceneScrene, setMessageTimeLoading, handleSceneScreneHint}: any) => {
     const [isShow, setIsShow] = useState(false)
 
     useEffect(() => {
@@ -12,7 +13,8 @@ const SceneComponent = ({data, handleSceneScrene, setMessageTimeLoading}: any) =
     }, [])
     
         if (isShow) {
-            return <Animated.View entering={FadeInRight} style={{width: "100%", flexDirection: "row", justifyContent: "flex-start"}}>
+            if (data.eventStatus === 'character introduction') {
+                return <Animated.View entering={FadeInRight} style={{width: "100%", flexDirection: "row", justifyContent: "flex-start"}}>
                 <LinearGradient
                 // Background Linear Gradient
                 colors={['#0097B2', '#598EC8']}
@@ -28,6 +30,26 @@ const SceneComponent = ({data, handleSceneScrene, setMessageTimeLoading}: any) =
                     </Pressable>
                 </LinearGradient>
             </Animated.View>
+            } else {
+                return <Animated.View entering={FadeInRight} style={{width: "100%", flexDirection: "row", justifyContent: "flex-end"}}>
+                <LinearGradient
+                // Background Linear Gradient
+                colors={['#FF66C4', '#FFDE59']}
+                start={[0, 0]}
+                end={[1, 0]}
+                style={{width: "60%", padding: 10, flexDirection: 'row', justifyContent: "flex-end", borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomLeftRadius: 20}}
+                >
+                    <Pressable onPress={() => {
+                        setIsShow(false)
+                        handleSceneScreneHint(data)
+                        }} style={{width:"80%"}}>
+                        <Text style={{textAlign: "center", fontSize: 12}}>Besoin de moi ?</Text>
+                    </Pressable>
+                    <Avatar style={{marginRight: 10}} size="xs" source={{uri: data && data.image}}>
+                    </Avatar>
+                </LinearGradient>
+            </Animated.View>
+            }
         }
         
 }

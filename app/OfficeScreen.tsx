@@ -39,14 +39,25 @@ export default function OfficeScreen() {
     }
   ]
 
+  useEffect(() => {
+    const checkSceneStatus = (scene: any) => {
+      return scene.status === "inactive"
+    }
+    if (user && user.scenes && user.scenes.length > 0 && user.scenes.every(checkSceneStatus)) {
+      setUser({...user, stage: event && event.nextEvent})
+      setIsShown(true)
+    }
+  }, [user.scenes])
 
   useEffect(() => {
     const stage: any = allEvents && allEvents.find(event => event.title === (user && user.stage))
     setEvent(stage)
+    setUser({...user, scenes: stage && stage.scenes})
     setTimeout(() => {
       setIsShown(false)
     }, 5000);
   }, [user.stage])
+
 
   if (isShown) {
     return (
@@ -70,10 +81,7 @@ export default function OfficeScreen() {
             
           </Link>
             {roomData.map((room, index) => {
-              const isActiveScene = event && event.scenes && event.scenes.length > 0 && event.scenes.find((scene: any) => (scene.place === room.title) && (scene.status === 'active'))
-                  // if (!isActiveScene) {
-                  //   return setUser({...user, stage: event && event.nextEvent})
-                  // }
+              const isActiveScene = user && user.scenes && user.scenes.length > 0 && user.scenes.find((scene: any) => (scene.place === room.title) && (scene.status === 'active'))
                   return <Link href={isActiveScene === undefined ? "OfficeScreen" : {
                     pathname: "/RoomScreen",
                     params: {title: room.title, background: room.backgroundImage}

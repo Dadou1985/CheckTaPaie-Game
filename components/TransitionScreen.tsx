@@ -1,4 +1,4 @@
-import { View, Text, ImageBackground, StyleSheet, Image } from 'react-native'
+import { View, Text, StyleSheet, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import Animated, { FadeInUp, FadeIn, FadeOut, FadeOutDown } from 'react-native-reanimated'

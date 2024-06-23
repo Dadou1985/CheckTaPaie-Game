@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react'
 import Animated, { FadeIn, FadeOut, Keyframe } from 'react-native-reanimated'
 import { LinearGradient } from 'expo-linear-gradient';
 
-const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job} : any) => {
+const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, title} : any) => {
   const [isShow, setisShow] = useState(false)
   const [story, setStory] = useState([])
   const [storyBunchNumber, setStoryBunchNumber] = useState<any>(0)
@@ -21,16 +21,15 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job} 
         <ImageBackground style={{width: "100%", height: "100%"}} source={{uri: img}}>
         <ScrollView contentContainerStyle={{height: "100%", flexDirection: "column", justifyContent: "flex-end"}}>
           <LinearGradient
-            // Background Linear Gradient
             colors={['transparent', '#94b9ff']}
             start={[0, 0]}
             end={[1, 1]}
             style={{flex: 1}}
             >
-              <Animated.ScrollView style={styles.slidingText} entering={FadeIn.duration(3000)} exiting={FadeOut.duration(1000)}>
-                <Text style={[styles.textStyle, styles.textHeadingFont]}>{name} {lastName}</Text>
-                <Text style={[styles.textStyle, styles.textFont]}>{job} - {age}</Text>
-                <Text style={[styles.textStyle, styles.textFont]}>{role}</Text>
+              <Animated.ScrollView style={styles.slidingText} entering={FadeIn.duration(3000)} exiting={FadeOut.duration(3000)}>
+                {(name || lastName || title) && <Text style={[styles.textStyle, styles.textHeadingFont]}>{name} {lastName} {title}</Text>}
+                {(age || job) && <Text style={[styles.textStyle, styles.textFont]}>{job} - {age}</Text>}
+                {role && <Text style={[styles.textStyle, styles.textFont]}>{role}</Text>}
                 <Text style={[styles.textStyle]}>{story && story.length > 0 && story[storyBunchNumber]}</Text>
                   <Pressable onPress={() => {
                     if (storyBunchNumber > (text.length - 2)) {

@@ -10,7 +10,7 @@ import Animated, {Easing, ReduceMotion, useAnimatedStyle, withTiming} from 'reac
 import { StyleSheet } from "react-native";
 import {Dimensions} from 'react-native'
 
-export default function ChatRoomComponent({setShowExitButton, currentScene, goBack, handleSceneScrene}: any) {
+export default function ChatRoomComponent({setShowExitButton, currentScene, goBack, handleSceneScrene, handleSceneScreneHint}: any) {
     const {event, setEvent} = useContext<any>(EventContext)
     const {user, setUser} = useContext<any>(UserContext)
     const animatedScrollView = useRef<any>()
@@ -74,7 +74,7 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
                     />
                 }
 
-                if (data.eventStatus === "scene") {
+                if (data.eventStatus === "character introduction") {
                   return <SceneComponent
                   data={data}
                   handleSceneScrene={handleSceneScrene}
@@ -82,8 +82,15 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
                   />
                 }
 
+                if (data.eventStatus === "hint") {
+                  return <SceneComponent
+                  data={data}
+                  handleSceneScreneHint={handleSceneScreneHint}
+                  setMessageTimeLoading={setMessageTimeLoading}
+                  />
+                }
+
                 if (data.eventStatus === 'end') {
-                  // setUser({...user, stage: event && event.nextEvent})
                   return goBack()
                 }
 
