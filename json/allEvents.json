@@ -236,6 +236,12 @@
               "timeLoading": 500
             },
             {
+              "eventStatus": "character introduction",
+              "characterName": "Damien",
+              "text": "Voir le profil de Damien",
+              "displayStatus": true
+            },
+            {
               "flag": "green",
               "text": "Me réjouir de la nouvelle",
               "bunchNumber": 1,
@@ -365,14 +371,301 @@
     "chapter": 2,
     "title": "Une simple erreur de paie",
     "story": "Anna décide de vérifier sa paie mensuellement pour s'assurer qu'elle est correctement rémunérée pour son travail. En examinant attentivement ses relevés de paie, elle découvre une erreur en sa faveur, où elle a été payée pour des heures supplémentaires non effectuées. Elle contacte immédiatement le service des ressources humaines pour rectifier l'erreur et rembourser le montant excédentaire. Cette expérience lui rappelle l'importance de surveiller de près sa rémunération et de signaler tout problème éventuel.",
-    "nextEvent": "",
+    "nextEvent": "Une fausse promotion",
+    "duration": 50000,
     "scenes": [
       {
         "place": "Open Space",
         "status": "active",
-        "characters": ["Adèle", "Thibault"],
+        "characters": ["Adèle", "Ghislaine"],
         "script": [
-
+          [
+            {
+              "banner": true,
+              "text": "Anna est assise devant son ordinateur, examinant attentivement ses relevés de paie.",
+              "timeLoading": 3000
+            },
+            {
+              "name": "Anna",               
+              "text": "Alors, voyons voir !",
+              "timeLoading": 500
+            }, 
+            {
+              "name": "Anna",               
+              "text": "Tout semble en ordre jusqu'à présent...",
+              "timeLoading": 1000
+            },
+            {
+              "name": "Anna",               
+              "text": "Attendez, qu'est-ce que c'est ?",
+              "timeLoading": 1000
+            },
+            {
+              "banner": true,
+              "text": "Anna remarque une entrée pour des heures supplémentaires qu'elle n'a pas travaillées.",
+              "timeLoading": 3000
+            },
+            {
+              "name": "Anna",               
+              "text": "Oh, il semble qu'il y ait eu une erreur dans ma paie !",
+              "timeLoading": 1000
+            },
+            {
+              "flag": "green",
+              "text": "Contacter le service RH",
+              "bunchNumber": 0,
+              "script": [
+                {
+                  "banner": true,
+                  "text": "Anna compose rapidement le numéro du service des ressources humaines et attend qu'on réponde.",
+                  "timeLoading": 3000
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Bonjour, c'est Anna de l'équipe du développement logiciel.",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Je viens de remarquer une erreur dans mes relevés de paie.",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Il semble qu'on m'ait payée pour des heures supplémentaires que je n'ai pas effectuées.",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Ghislaine",               
+                  "text": "Bonjour Anna !",
+                  "timeLoading": 500
+                },
+                {
+                  "name": "Ghislaine",               
+                  "text": "Merci de nous avoir contactés à ce sujet !",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Ghislaine",               
+                  "text": "Nous allons vérifier cela immédiatement pour vous.",
+                  "timeLoading": 1000
+                },
+                {
+                  "banner": true,
+                  "text": "Anna est mise en attente quelques minutes...",
+                  "timeLoading": 10000
+                },
+                {
+                  "name": "Ghislaine",               
+                  "text": "Effectivement, il semble y avoir eu une erreur dans le système de paie.",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Ghislaine",               
+                  "text": "Nous sommes désolés pour ce désagrément.",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Ghislaine",               
+                  "text": "Nous allons rectifier cela immédiatement et vous rembourser le montant excédentaire sur votre prochain salaire.",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Merci beaucoup pour votre réactivité.",
+                  "timeLoading": 500
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Je suis reconnaissante que vous ayez pu résoudre ce problème si rapidement.",
+                  "timeLoading": 500
+                },
+                {
+                  "name": "Ghislaine",               
+                  "text": "Bien sûr, c'est notre devoir de veiller à ce que votre rémunération soit correcte.",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Ghislaine",               
+                  "text": "N'hésitez pas à nous contacter si vous rencontrez d'autres problèmes à l'avenir.",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Merci, je le ferai.",
+                  "timeLoading": 500
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Merci encore pour votre aide.",
+                  "timeLoading": 500
+                }, 
+                {
+                  "eventStatus": "end"
+                }
+              ]
+            },
+            {
+              "flag": "blue",
+              "text": "Demander conseil à Adèle",
+              "bunchNumber": 0,
+              "script": [
+                {
+                  "banner": true,
+                  "text": "Anna se rend aussitôt au bureau d’Adèle",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Adèle, t’as 2 secondes..?",
+                  "timeLoading": 500
+                },
+                {
+                  "name": "Anna",               
+                  "text": "J’ai besoin de ton avis sur quelque chose.",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Adèle",               
+                  "text": "Bien sûr ! De quoi s’agit-il ?",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Eh bien, il se trouve que l’on m’a payé ce mois-ci pour des heures supp’ que je n’ai pas effectuées.",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Adèle",               
+                  "text": "Et..?",
+                  "timeLoading": 500
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Ben, je sais pas…",
+                  "timeLoading": 500
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Je sais que je ne dois pas le garder mais en même temps je suis un peu serrée ce mois-ci…",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Argh ! Qu’est-ce que tu ferais à ma place ?",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Adèle",               
+                  "text": "Je serai toi, je le signalerais au RH histoire de ne pas avoir de problèmes avec la direction. ",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Adèle",               
+                  "text": "Maintenant, il me semble que s’ils veulent récupérer leurs sous, ils ne peuvent pas le prendre d’un seul coup où quelque chose du genre…",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Adèle",               
+                  "text": "Ce sera échelonné comme pour un crédit sans frais.",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Ah...Top !",
+                  "timeLoading": 500
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Enfin, je veux dire depuis quand t’es devenue une pro de la paie, toi ?",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Adèle",               
+                  "text": "C’est pas ça.",
+                  "timeLoading": 500
+                },
+                {
+                  "name": "Adèle",               
+                  "text": "Je me suis abonné à un compte sur Insta: ça s’appelle CheckTaPaie.",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Adèle",               
+                  "text": "C’est une spécialiste de la paie qui te donne tout pleins de tips du genre apprendre à lire sa fiche de paie…",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Adèle",               
+                  "text": "C’est super intéressant !",
+                  "timeLoading": 500
+                },
+                {
+                  "name": "Adèle",               
+                  "text": "Je suis tombé dessus parce que Julien avait été confronté au même problème que toi.",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Anna",               
+                  "text": "CheckTaPaie tu dis?",
+                  "timeLoading": 500
+                },
+                {
+                  "name": "Anna",               
+                  "text": "On va checker ça !",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Adèle",               
+                  "text": "Ha-ha-ha, trop marrant !",
+                  "timeLoading": 500
+                },
+                {
+                  "name": "Adèle",               
+                  "text": "En tous cas, fais le bon choix, ma belle.",
+                  "timeLoading": 1000
+                }, 
+                {
+                  "eventStatus": "end"
+                }
+              ]
+            },
+            {
+              "flag": "red",
+              "text": "Faire comme si de rien n'était",
+              "bunchNumber": 0,
+              "script": [
+                {
+                  "name": "Anna",               
+                  "text": "Mais… impossible !",
+                  "timeLoading": 500
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Ces idiots m’ont payé pour des heures supp’ que je n’ai jamais faites.",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Anna",               
+                  "text": "En même temps, c’est pas comme si je ne les avais pas méritées.",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Anna",               
+                  "text": "C’est vrai ! Après toutes ces années où je me suis fait mener en bâteau.",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Anna",               
+                  "text": "Qu’ils viennent me voir s’ils veulent récupérer leurs sous, ce n’est pas moi qui vais les contacter pour une faute qu’ils ont commise.",
+                  "timeLoading": 1500
+                }, 
+                {
+                  "eventStatus": "end"
+                }
+              ]
+            }
+          ]
         ]
       }
     ]

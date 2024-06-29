@@ -58,6 +58,9 @@ export default function OfficeScreen() {
     }, 5000);
   }, [user.stage])
 
+  console.log('++++++++++++', event)
+
+
 
   if (isShown) {
     return (

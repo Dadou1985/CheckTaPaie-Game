@@ -57,9 +57,6 @@ const RoomScreen = () => {
       })
   }
 
-  console.log('++++++++++++', currentCharacter)
-
-
   return (
     <KeyboardAvoidingView style={{ 
       flexDirection: 'column', 

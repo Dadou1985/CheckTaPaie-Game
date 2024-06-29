@@ -44,6 +44,8 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
       }
     })
 
+    console.log("================================", bunchNumber)
+
   return (
      <Animated.ScrollView onLayout={(event) => {
       const {height} = event.nativeEvent.layout;
