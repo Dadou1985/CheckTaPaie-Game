@@ -13,7 +13,10 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, 
   useEffect(() => {
     setStory(text)
     setisShow(displayStatus)
-  }, [displayStatus])
+    setStoryBunchNumber(0)
+  }, [text])
+
+  console.log("&&&&&&&&&&&&&&&&&&&", story)
 
   if (isShow) {
     return (
@@ -27,7 +30,8 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, 
             style={{flex: 1}}
             >
               <Animated.ScrollView style={styles.slidingText} entering={FadeIn.duration(3000)} exiting={FadeOut.duration(3000)}>
-                {(name || lastName || title) && <Text style={[styles.textStyle, styles.textHeadingFont]}>{name} {lastName} {title}</Text>}
+                {(name || lastName) && <Text style={[styles.textStyle, styles.textHeadingFont]}>{name} {lastName}</Text>}
+                {(title) && <Text style={[styles.textStyle, styles.textHeadingFont]}>{title}</Text>}
                 {(age || job) && <Text style={[styles.textStyle, styles.textFont]}>{job} - {age}</Text>}
                 {role && <Text style={[styles.textStyle, styles.textFont]}>{role}</Text>}
                 <Text style={[styles.textStyle]}>{story && story.length > 0 && story[storyBunchNumber]}</Text>
@@ -62,7 +66,8 @@ const styles = StyleSheet.create({
     flex: 1, 
     position: "absolute",
     bottom: "5%", 
-    paddingHorizontal: "10%"
+    paddingHorizontal: "10%",
+    width: "100%",
   },
   textStyle: {
     textAlign: "center", 
@@ -73,7 +78,8 @@ const styles = StyleSheet.create({
     }, 
     textShadowRadius: 1, 
     color: 'white', 
-    marginBottom: "5%"
+    marginBottom: "5%",
+    width: "100%",
   },
   textFont: {
     fontSize: 14,

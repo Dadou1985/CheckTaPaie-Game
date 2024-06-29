@@ -53,10 +53,7 @@ const RoomScreen = () => {
         displayStatus: data.displayStatus,
         story: data.text,
         name: data.title,
-        img: data.image,
-        job: "",
-        role: "", 
-        age: ""
+        image: data.image
       })
   }
 
