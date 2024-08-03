@@ -1,9 +1,11 @@
 import { Pressable, Text, View } from 'react-native'
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import Animated, { FadeInRight } from 'react-native-reanimated'
 import { LinearGradient } from 'expo-linear-gradient'
+import { UserContext } from '@/context/UserContext'
 
 const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, bunchNumber, setBunchNumber, setMessageTimeLoading, setShowExitButton}: any) => {
+    const {user, setUser} = useContext<any>(UserContext)
 
     const handleChooseScriptOption = (optionScript: any) => {
         const arrayFromChatData = Array.from(currentChatData)
@@ -19,6 +21,14 @@ const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, b
         }
     }
 
+    const handleUpdateUserKpi = () => {
+        data && data.points && data.points.map((point: any) => {
+            const targetKpi = user && user.keyPerformanceIndicator && user.keyPerformanceIndicator.find((kpi: any) => kpi.title === point.title)
+
+            return targetKpi.level += point.point
+        })
+    }
+
     useEffect(() => {
         setMessageTimeLoading(500)
     }, [])
@@ -32,7 +42,10 @@ const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, b
             end={[1, 0]}
             style={{width: "70%", padding: 10}}
             >
-            <Pressable onPress={() => handleChooseScriptOption(data.script)} style={{width:"100%"}}>
+            <Pressable onPress={() => {
+                handleUpdateUserKpi()
+                handleChooseScriptOption(data.script)
+                }} style={{width:"100%"}}>
                 <Text style={{textAlign: "center", fontSize: 12}}>{data.text}</Text>
             </Pressable>
             </LinearGradient>
