@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Flow } from 'react-native-animated-spinkit'
 import { Avatar } from 'native-base'
-import characters from '@/json/characters.json'
+import { characters } from '@/utils/characters'
 
 const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
     const [dotLoading, setDotLoading] = useState(true)
@@ -34,7 +34,7 @@ const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
         </View>
     } else {
         return <View style={{flexDirection: "row", alignItems: "flex-end", width: "100%"}}>
-            <Avatar style={{marginRight: 10}} size="xs" source={{uri: currentCharacter && currentCharacter.image}}>
+            <Avatar style={{marginRight: 10}} size="xs" source={currentCharacter && currentCharacter.image.small}>
             </Avatar>
             <View style={{flexDirection: "column", alignItems: "flex-end", maxWidth: "70%"}}>
                 <LinearGradient

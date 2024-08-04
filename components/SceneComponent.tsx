@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Animated, { FadeInRight } from 'react-native-reanimated'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Avatar } from 'native-base'
+import { characters } from '@/utils/characters'
 
 const SceneComponent = ({data, handleSceneScrene, setMessageTimeLoading, handleSceneScreneHint}: any) => {
     const [isShow, setIsShow] = useState(false)
@@ -45,7 +46,7 @@ const SceneComponent = ({data, handleSceneScrene, setMessageTimeLoading, handleS
                         }} style={{width:"80%"}}>
                         <Text style={{textAlign: "center", fontSize: 12}}>Besoin de moi ?</Text>
                     </Pressable>
-                    <Avatar style={{marginRight: 10}} size="xs" source={{uri: data && data.image}}>
+                    <Avatar style={{marginRight: 10}} size="xs" source={characters[0].image.small}>
                     </Avatar>
                 </LinearGradient>
             </Animated.View>

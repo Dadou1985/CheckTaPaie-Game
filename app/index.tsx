@@ -15,7 +15,10 @@ export default function HomeScreen() {
       name:"Anna",
       job: "Assistante de direction",
       stage: "La déception de trop",
-      img: require('../assets/images/anna_portrait.jpg'),
+      img: {
+        office: require('../assets/images/anna_portrait_resized.png'),
+        home: require('../assets/images/anna_home_portrait_resized.png')
+      },
       scenes: [],
       keyPerformanceIndicator: [
         {

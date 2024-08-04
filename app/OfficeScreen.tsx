@@ -9,7 +9,7 @@ import TransitionScreen from '@/components/TransitionScreen'
 import Animated, { FadeIn } from 'react-native-reanimated'
 import SceneScreen from '@/components/SceneScreen'
 import allEvents from '@/json/allEvents.json'
-import characters from '@/json/characters.json'
+import { characters } from '@/utils/characters'
 
 export default function OfficeScreen() {  
   const {user, setUser} = useContext<any>(UserContext)  
@@ -58,7 +58,7 @@ export default function OfficeScreen() {
     }, 5000);
   }, [user.stage])
 
-  console.log('++++++++++++', event)
+  // console.log('++++++++++++', event)
 
 
 
@@ -78,7 +78,7 @@ export default function OfficeScreen() {
           <Animated.View entering={FadeIn.duration(2000)} style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', height: '100%', position: 'absolute'}}>
           <Link href="/HomeScreen" asChild>
             <Pressable style={{position: "absolute", zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#5DE0E6", borderRadius: 70, alignSelf: "center"}}>
-              <Avatar alignSelf="center" size="2xl" source={user.img}>
+              <Avatar alignSelf="flex-start" size="2xl" source={user.img.office}>
               </Avatar>
             </Pressable>
             
@@ -107,8 +107,7 @@ export default function OfficeScreen() {
                         }} max={3}>
                           {isActiveScene && isActiveScene.characters.map((character: any) => {
                             const currentCharacter = characters.find((currentCharacter: any) => currentCharacter.name === character)
-                            return <Avatar bg="green.500" source={{
-                            uri: currentCharacter && currentCharacter.image}} />
+                            return <Avatar bg="green.500" source={currentCharacter && currentCharacter.image.small} />
                           }
                         )}
                           </Avatar.Group>

@@ -9,7 +9,7 @@ import ChatRoomComponent from '@/components/ChatRoomComponent'
 import Animated, { FadeOut } from 'react-native-reanimated';
 import { EventContext } from '@/context/EventContext'
 import { UserContext } from '@/context/UserContext';
-import characters from '@/json/characters.json'
+import { characters } from '@/utils/characters'
 import SceneScreen from '@/components/SceneScreen'
 
 const RoomScreen = () => {
@@ -53,7 +53,7 @@ const RoomScreen = () => {
         displayStatus: data.displayStatus,
         story: data.text,
         name: data.title,
-        image: data.image
+        image: characters[0].image
       })
   }
 

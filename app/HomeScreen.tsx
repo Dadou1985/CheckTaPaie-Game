@@ -41,9 +41,7 @@ export default function HomeScreen() {
                   </Link>
                     <View style={{width: "100%", height: "50%", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", marginBottom: "10%"}}>
                         <Animated.View entering={FadeIn.duration(1000)}>
-                            <Avatar style={{zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#25699B", marginBottom: 15}} alignSelf="center" size="200" source={
-                                    require("../assets/images/mario.jpg")
-                                }>
+                            <Avatar style={{zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#25699B", marginBottom: 15}} alignSelf="center" size="200" source={user.img.home}>
                             </Avatar>
                         </Animated.View>
                         <Text style={{fontSize: 25, textShadowOffset: {width: 1, height: 1},
