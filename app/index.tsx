@@ -1,14 +1,25 @@
-import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable } from 'react-native';
+import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable, NativeSyntheticEvent, TextInputChangeEventData } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, HStack, Button } from "native-base";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import { UserContext } from '@/context/UserContext';
-import { useContext } from 'react';
-import Animated, { FadeIn } from 'react-native-reanimated';
+import { useContext, useState } from 'react';
+import Animated, { FadeIn, SlideOutLeft, SlideInRight } from 'react-native-reanimated';
+import { CreateUser } from '@/firebase/functions'
 
 export default function HomeScreen() {
   const {setUser} = useContext<any>(UserContext)
+  const [isConnexionUI, setIsConnexionUI] = useState(true)
+  const [formValue, setFormValue] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",    
+    passwordConfirmation: "",
+    phone: ""
+  })
+  const [stepNumber, setStepNumber] = useState(0)
 
   const handleLoadUserInfo = () => {
     setUser({
@@ -61,6 +72,76 @@ export default function HomeScreen() {
     })
   }
 
+  const stepDetails = [
+    {
+      quote: "Quel est votre prénom ?",
+      property: "firstName",
+      value: formValue.firstName,
+      placeholder: "Camille"
+    },
+    {
+      quote: "Quelle est votre nom ?",
+      property: "lastName",
+      value: formValue.lastName,
+      placeholder: "Marchand"
+    },
+    {
+      quote: "Veuillez entrer une adresse e-mail",
+      property: "email",
+      value: formValue.email,
+      placeholder: "camille.marchand@gmail.com"
+    },
+    {
+      quote: "A présent, créez votre mot de passe",
+      property: "password",
+      value: formValue.password,
+      placeholder: "Mot de passe"
+    },
+    {
+      quote: "Veuillez confirmer votre mot de passe",
+      property: "passwordConfirmation",
+      value: formValue.passwordConfirmation,
+      placeholder: "Confirmation du mot de passe"
+    },
+    {
+      quote: "Avez-vous un numéro de téléphone ?",
+      property: "phone",
+      value: formValue.phone,
+      placeholder: "0687249631"
+    }
+  ]
+
+  const handleChange = (e: NativeSyntheticEvent<TextInputChangeEventData>, property: string) => {
+    e.persist()
+        return setFormValue(currentValue =>({
+        ...currentValue,
+        [property]: e.nativeEvent.text
+        }))
+  }
+
+  const handleRegistrationSteps = (stepDetails: any) => {
+    return <>
+      <Text style={{color: '#DDF7F9', fontSize: 20}}>{stepDetails.quote}</Text>
+      <Input bg={{
+      linearGradient: {
+        colors: ['transparent', '#94b9ff'],
+        start: [0, 0],
+        end: [1, 0],
+      },
+    } as any} variant={'unstyled'} w={{
+        base: "100%",
+        md: "25%"
+      }} 
+      value={stepDetails.value}
+      onChange={(e) => handleChange(e, stepDetails.property)}
+      placeholder={stepDetails.placeholder} />
+    </>
+  }
+
+  const handleSubmit = () => {
+    return CreateUser(formValue)
+  }
+
   return (
     <LinearGradient
         // Background Linear Gradient
@@ -85,35 +166,45 @@ export default function HomeScreen() {
             <Text style={{color: '#DDF7F9', fontSize: 52}}>Login</Text>
           </Box>
           
-          <Center>
-            <Stack space={5} w="75%" mx="auto">
-              <Input bg={{
-              linearGradient: {
-                colors: ['transparent', '#94b9ff'],
-                start: [0, 0],
-                end: [1, 0],
-              },
-            } as any} variant={'unstyled'} w={{
-                base: "100%",
-                md: "25%"
-              }} InputLeftElement={<Icon as={<MaterialIcons name="email" />} size={5} ml="2" color="#25699B" />} placeholder="E-mail" />
-              <Input bg={{
-              linearGradient: {
-                colors: ['transparent', '#94b9ff'],
-                start: [0, 0],
-                end: [1, 0],
-              },
-            } as any} variant={'unstyled'} w={{
-                base: "100%",
-                md: "25%"
-              }} InputLeftElement={<Icon as={<MaterialIcons name="lock" />} size={5} ml="2" color="#25699B" />} placeholder="Mot de passe" />
-              <Link href="/OfficeScreen" asChild>
-                <Button onPress={handleLoadUserInfo} size="md">Connexion</Button>
-              </Link>
-            </Stack>
-          </Center>
+          {isConnexionUI ? <Animated.View entering={SlideInRight.duration(500)} exiting={SlideOutLeft.duration(500)}>
+            <Center>
+              <Stack space={5} w="75%" mx="auto">
+                <Input bg={{
+                linearGradient: {
+                  colors: ['transparent', '#94b9ff'],
+                  start: [0, 0],
+                  end: [1, 0],
+                },
+              } as any} variant={'unstyled'} w={{
+                  base: "100%",
+                  md: "25%"
+                }} InputLeftElement={<Icon as={<MaterialIcons name="email" />} size={5} ml="2" color="#25699B" />} placeholder="E-mail" />
+                <Input bg={{
+                linearGradient: {
+                  colors: ['transparent', '#94b9ff'],
+                  start: [0, 0],
+                  end: [1, 0],
+                },
+              } as any} variant={'unstyled'} w={{
+                  base: "100%",
+                  md: "25%"
+                }} InputLeftElement={<Icon as={<MaterialIcons name="lock" />} size={5} ml="2" color="#25699B" />} placeholder="Mot de passe" />
+                <Link href="/OfficeScreen" asChild>
+                  <Button onPress={handleLoadUserInfo} size="md">Connexion</Button>
+                </Link>
+              </Stack>
+            </Center>
+          </Animated.View> : 
+          <Animated.View entering={SlideInRight.duration(500)} exiting={SlideOutLeft.duration(500)}>
+            <Center>
+              <Stack space={5} w="75%" mx="auto">
+                {handleRegistrationSteps(stepDetails[stepNumber])}
+                  {stepNumber === 5 ? <Button onPress={() => handleSubmit()} size="md">Terminer</Button> : <Button onPress={() => setStepNumber(stepNumber + 1)} size="md">Suivant</Button>}
+              </Stack>
+            </Center>
+          </Animated.View>}
 
-          <HStack space={10} justifyContent="center">
+          {/* {isConnexionUI && <HStack space={10} justifyContent="center">
             <Pressable>
               <Image 
               style={styles.image}
@@ -129,13 +220,13 @@ export default function HomeScreen() {
               style={styles.image}
               source={require('../assets/images/google_logo.png')} />
             </Pressable>
-          </HStack>
+          </HStack>} */}
 
           <HStack mb={50} space={10} justifyContent="center">
-            <Button size="sm">Créer un compte</Button>
-            <Button size="sm">
+            {isConnexionUI ? <Button onPress={() => setIsConnexionUI(false)} size="sm">Créer un compte</Button> : <Button onPress={() => setIsConnexionUI(true)} size="sm">Se connecter</Button>}
+            {isConnexionUI && <Button size="sm">
               Mot de passe oublié
-            </Button>
+            </Button>}
           </HStack>
           </Animated.View>
         </KeyboardAvoidingView>
