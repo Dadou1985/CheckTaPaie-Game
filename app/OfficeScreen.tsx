@@ -10,6 +10,7 @@ import Animated, { FadeIn } from 'react-native-reanimated'
 import SceneScreen from '@/components/SceneScreen'
 import allEvents from '@/json/allEvents.json'
 import { characters } from '@/utils/characters'
+import { UpdateUserInfo } from '@/firebase/functions';
 
 export default function OfficeScreen() {  
   const {user, setUser} = useContext<any>(UserContext)  
@@ -45,6 +46,7 @@ export default function OfficeScreen() {
     }
     if (user && user.scenes && user.scenes.length > 0 && user.scenes.every(checkSceneStatus)) {
       setUser({...user, stage: event && event.nextEvent})
+      UpdateUserInfo({stage: event && event.nextEvent})
       setIsShown(true)
     }
   }, [user.scenes])

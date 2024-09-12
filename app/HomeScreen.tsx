@@ -8,6 +8,7 @@ import { UserContext } from '@/context/UserContext'
 import Animated, { FadeIn } from 'react-native-reanimated';
 import AnimatedProgressWheel from 'react-native-progress-wheel';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { keyPerformanceIndicator } from '@/utils/kpi'
 
 export default function HomeScreen() {  
   const {event, setEvent} = useContext<any>(EventContext)
@@ -50,16 +51,17 @@ export default function HomeScreen() {
                           textShadowRadius: 1, borderBottomWidth: 5, borderBottomColor: "#25699B", borderStyle: "solid", textAlign: "center", paddingBottom: 20}}>{user.job}</Text>
                     </View>
                     <Animated.View entering={FadeIn.duration(2000)} style={{width: "100%", height: "50%", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-around"}}>
-                      {user && user.keyPerformanceIndicator.length > 0 && user.keyPerformanceIndicator.map((kpi: any) => (
-                        <Link href={{
+                      {user && user.keyPerformanceIndicator.length > 0 && user.keyPerformanceIndicator.map((kpi: any) => {
+                        const currentKpi = keyPerformanceIndicator.length > 0 && keyPerformanceIndicator.find((kpi: any) => kpi.title === kpi.title)
+                        return <Link href={{
                           pathname: "/KpiScreen",
-                          params: {kpiSelectedTitle: kpi.title}
+                          params: {kpiSelectedTitle: currentKpi && currentKpi, kpiSelectedLeve: kpi.level} as any
                         }}
                         asChild>
                           <Pressable style={{width: "30%", height: "30%", flexDirection: "column", justifyContent: "space-around", alignItems: "center", marginBottom: "5%"}}>
                           <Image 
                             style={styles.image}
-                            source={kpi.img} />
+                            source={currentKpi && currentKpi.img} />
                           <AnimatedProgressWheel
                             progress={kpi.level}
                             animateFromValue={0}
@@ -76,7 +78,7 @@ export default function HomeScreen() {
                             />
                         </Pressable>
                       </Link>
-                      ))}
+                    })}
                     </Animated.View>
                 </NativeBaseProvider>
             </KeyboardAvoidingView>

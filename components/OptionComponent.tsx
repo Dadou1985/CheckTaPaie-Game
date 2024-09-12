@@ -3,6 +3,7 @@ import React, { useEffect, useContext } from 'react'
 import Animated, { FadeInRight } from 'react-native-reanimated'
 import { LinearGradient } from 'expo-linear-gradient'
 import { UserContext } from '@/context/UserContext'
+import { UpdateUserInfo } from '@/firebase/functions'
 
 const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, bunchNumber, setBunchNumber, setMessageTimeLoading, setShowExitButton}: any) => {
     const {user, setUser} = useContext<any>(UserContext)
@@ -21,8 +22,8 @@ const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, b
         }
     }
 
-    const handleUpdateUserKpi = () => {
-        data && data.points && data.points.map((point: any) => {
+    const handleUpdateUserKpi = async () => {
+        data && data.points && data.points.map(async (point: any) => {
             const targetKpi = user && user.keyPerformanceIndicator && user.keyPerformanceIndicator.find((kpi: any) => kpi.title === point.title)
 
             return targetKpi.level += point.point
@@ -42,9 +43,10 @@ const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, b
             end={[1, 0]}
             style={{width: "70%", padding: 10}}
             >
-            <Pressable onPress={() => {
-                handleUpdateUserKpi()
+            <Pressable onPress={async () => {
+                await handleUpdateUserKpi()
                 handleChooseScriptOption(data.script)
+                return UpdateUserInfo(user.userId, {keyPerformanceIndicator: user.keyPerformanceIndicator})
                 }} style={{width:"100%"}}>
                 <Text style={{textAlign: "center", fontSize: 12}}>{data.text}</Text>
             </Pressable>

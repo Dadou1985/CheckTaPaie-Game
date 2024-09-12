@@ -39,7 +39,8 @@ export function CreateUser(userData) {
                     title: "Le personal branding",
                     level: 20
                 }
-                ]
+            ],
+            userId: user.uid
         }).then((docRef) => {
             console.log("Document written with ID: ", docRef.id);
         })
@@ -52,4 +53,15 @@ export function CreateUser(userData) {
         const errorMessage = error.message;
         // ..
     });
+}
+
+export async function UpdateUserInfo(userId, newData) {
+    const docRef = await db.collection("users")
+        .doc(userId)
+        .update(newData).then((docRef) => {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch((error) => {
+            console.error("Error adding document: ", error);
+        })
 }

@@ -11,9 +11,10 @@ import { FontAwesome5 } from '@expo/vector-icons';
 export default function KpiScreen() {  
   const {user} = useContext<any>(UserContext)
   const params = useLocalSearchParams<any>()
-  const {kpiSelectedTitle} = params
+  const {kpiSelectedTitle, kpiSelectedLevel} = params
 
-  const currentKpi = user && user.keyPerformanceIndicator.length > 0 && user.keyPerformanceIndicator.find((kpi: any) => kpi.title === kpiSelectedTitle)
+  const currentKpi = kpiSelectedTitle
+  const currentKpiLevel = kpiSelectedLevel
 
   const handleKeyPerformanceIndicatorLevel = (kpi : any) => {
     if (kpi < 25) {
@@ -49,16 +50,16 @@ export default function KpiScreen() {
                     <Animated.View entering={FadeIn.duration(2000)} style={{width: "100%", height: "50%", flexDirection: "column", justifyContent: "space-around", paddingHorizontal: 20}}>
                         <View style={{width: "100%", flexDirection: "column", justifyContent: "space-around", alignItems: "center", marginBottom: "10%"}}>
                           <AnimatedProgressWheel
-                            progress={currentKpi && currentKpi.level}
+                            progress={kpiSelectedLevel && kpiSelectedLevel}
                             animateFromValue={0}
-                            duration={3000} color={handleKeyPerformanceIndicatorLevel(currentKpi && currentKpi.level) as string} 
+                            duration={3000} color={handleKeyPerformanceIndicatorLevel(kpiSelectedLevel && kpiSelectedLevel) as string} 
                             backgroundColor={'transparent'} 
                             size={70} 
                             width={8}
                             rotation={'180deg'}
                             max={100}
                             showProgressLabel
-                            labelStyle={{fontSize: 15, color: handleKeyPerformanceIndicatorLevel(currentKpi && currentKpi.level) as string, fontWeight: "bold", textShadowOffset: {width: 1, height: 1},
+                            labelStyle={{fontSize: 15, color: handleKeyPerformanceIndicatorLevel(kpiSelectedLevel && kpiSelectedLevel) as string, fontWeight: "bold", textShadowOffset: {width: 1, height: 1},
                             textShadowRadius: 1}}
                             showPercentageSymbol
                             />

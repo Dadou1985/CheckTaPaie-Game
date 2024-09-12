@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable, NativeSyntheticEvent, TextInputChangeEventData } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, HStack, Button } from "native-base";
+import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, HStack, Button, FormControl, WarningOutlineIcon } from "native-base";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import { UserContext } from '@/context/UserContext';
@@ -20,6 +20,7 @@ export default function HomeScreen() {
     phone: ""
   })
   const [stepNumber, setStepNumber] = useState(0)
+  const [showErrorMessage, setShowErrorMessage] = useState(false)
 
   const handleLoadUserInfo = () => {
     setUser({
@@ -77,37 +78,49 @@ export default function HomeScreen() {
       quote: "Quel est votre prénom ?",
       property: "firstName",
       value: formValue.firstName,
-      placeholder: "Camille"
+      placeholder: "Camille",
+      type: "text",
+      errorMessage: "Vous avez oublié de renseigner votre prénom"
     },
     {
       quote: "Quelle est votre nom ?",
       property: "lastName",
       value: formValue.lastName,
-      placeholder: "Marchand"
+      placeholder: "Marchand",
+      type: "text",
+      errorMessage: "Vous avez oublié de renseigner votre nom"
+
     },
     {
       quote: "Veuillez entrer une adresse e-mail",
       property: "email",
       value: formValue.email,
-      placeholder: "camille.marchand@gmail.com"
+      placeholder: "camille.marchand@gmail.com",
+      type: "email",
+      errorMessage: "Vous avez oublié de renseigner votre adresse e-mail"
     },
     {
       quote: "A présent, créez votre mot de passe",
       property: "password",
       value: formValue.password,
-      placeholder: "Mot de passe"
+      placeholder: "Mot de passe",
+      type: "password",
+      errorMessage: "Vous n'avez pas entré de mot de passe"
     },
     {
       quote: "Veuillez confirmer votre mot de passe",
       property: "passwordConfirmation",
       value: formValue.passwordConfirmation,
-      placeholder: "Confirmation du mot de passe"
+      placeholder: "Confirmation du mot de passe",
+      type: "password",
+      errorMessage: "Ce mot de passe ne correspond pas au précédent"
     },
     {
       quote: "Avez-vous un numéro de téléphone ?",
-      property: "phone",
+      property: "text",
       value: formValue.phone,
-      placeholder: "0687249631"
+      placeholder: "0687249631",
+      type: "number",
     }
   ]
 
@@ -121,25 +134,34 @@ export default function HomeScreen() {
 
   const handleRegistrationSteps = (stepDetails: any) => {
     return <>
-      <Text style={{color: '#DDF7F9', fontSize: 20}}>{stepDetails.quote}</Text>
-      <Input bg={{
-      linearGradient: {
-        colors: ['transparent', '#94b9ff'],
-        start: [0, 0],
-        end: [1, 0],
-      },
-    } as any} variant={'unstyled'} w={{
-        base: "100%",
-        md: "25%"
-      }} 
-      value={stepDetails.value}
-      onChange={(e) => handleChange(e, stepDetails.property)}
-      placeholder={stepDetails.placeholder} />
+      <Text style={{color: '#94b9ff', fontSize: 18, textAlign: "center"}}>{stepDetails.quote}</Text>
+      <FormControl>
+        <Input bg={{
+        linearGradient: {
+          colors: ['transparent', '#94b9ff'],
+          start: [0, 0],
+          end: [1, 0],
+        },
+      } as any} variant={'unstyled'} w={{
+          base: "100%",
+          md: "25%"
+        }} 
+        value={stepDetails.value}
+        onChange={(e) => handleChange(e, stepDetails.property)}
+        placeholder={stepDetails.placeholder}
+        type={stepDetails.type}
+        isRequired />
+      </FormControl>
+      {showErrorMessage && (stepDetails.value === "") && <Text style={{color: 'red', fontSize: 10, textAlign: "center"}}>
+          {stepDetails.errorMessage && stepDetails.errorMessage}
+        </Text>}
     </>
   }
 
   const handleSubmit = () => {
-    return CreateUser(formValue)
+    CreateUser(formValue)
+    return handleLoadUserInfo()
+
   }
 
   return (
@@ -199,7 +221,16 @@ export default function HomeScreen() {
             <Center>
               <Stack space={5} w="75%" mx="auto">
                 {handleRegistrationSteps(stepDetails[stepNumber])}
-                  {stepNumber === 5 ? <Button onPress={() => handleSubmit()} size="md">Terminer</Button> : <Button onPress={() => setStepNumber(stepNumber + 1)} size="md">Suivant</Button>}
+                  {stepNumber === 5 ? <Button onPress={() => handleSubmit()} size="md">Terminer</Button> : <Button onPress={() => {
+                    if (stepDetails[stepNumber].value !== "") {
+                      if (showErrorMessage) {
+                        setShowErrorMessage(false)
+                      }
+                      setStepNumber(stepNumber + 1)
+                    } else {
+                      setShowErrorMessage(true)
+                    }
+                }} size="md">Suivant</Button>}
               </Stack>
             </Center>
           </Animated.View>}
@@ -223,7 +254,19 @@ export default function HomeScreen() {
           </HStack>} */}
 
           <HStack mb={50} space={10} justifyContent="center">
-            {isConnexionUI ? <Button onPress={() => setIsConnexionUI(false)} size="sm">Créer un compte</Button> : <Button onPress={() => setIsConnexionUI(true)} size="sm">Se connecter</Button>}
+            {isConnexionUI ? <Button onPress={() => setIsConnexionUI(false)} size="sm">Créer un compte</Button> : <Button onPress={() => {
+              setIsConnexionUI(true)
+              setStepNumber(0)
+              setShowErrorMessage(false)
+              setFormValue({
+                firstName: "",
+                lastName: "",
+                email: "",
+                password: "",    
+                passwordConfirmation: "",
+                phone: ""
+              })
+              }} size="sm">Se connecter</Button>}
             {isConnexionUI && <Button size="sm">
               Mot de passe oublié
             </Button>}
