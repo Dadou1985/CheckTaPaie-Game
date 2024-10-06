@@ -1,11 +1,17 @@
 export const characters = [
     {
         name:"Anna",
+        lastName: "Bellamy",
+        role: "La Level Up Girl",
         job: "Assistante de direction",
         img: {
             office: require('../assets/images/anna_portrait_resized.png'),
             home: require('../assets/images/anna_home_portrait_resized.png')
         },
+        age: '34 ans',
+        story: [
+            "Anna est une femme de 30 ans, dynamique, persévérante et engagée dans sa carrière professionnelle. Titulaire d'un Bac +2, elle travaille depuis plusieurs années dans le secteur tertiaire, où elle s'est forgée une solide expérience, notamment dans des rôles à responsabilités administratives. Anna occupe actuellement le poste de directrice administrative adjointe, un rôle qu'elle a mérité après avoir longuement prouvé sa valeur au sein de son entreprise. Cette promotion est le fruit de ses compétences, de son sens du leadership et de sa capacité à surmonter les nombreux obstacles auxquels elle a été confrontée.","Sur le plan personnel, Anna vit en couple et est mère de deux jeunes enfants. Elle habite en banlieue, où elle jongle habilement entre sa vie familiale et ses responsabilités professionnelles. Malgré son emploi du temps chargé, elle fait en sorte de consacrer du temps à sa famille, tout en prenant soin de s'occuper de l'administratif de la maison, en plus de ses tâches au travail. Elle est également une personne très organisée, soucieuse de maintenir un équilibre entre sa carrière, ses enfants et son couple.","En termes de loisirs, Anna s'accorde des moments de détente avec ses amis ou collègues, que ce soit autour d'un verre dans un bar ou au restaurant. Sportive, elle pratique également des activités collectives comme la zumba, ce qui lui permet de se ressourcer et de rester active physiquement. Toujours à la recherche de bons plans, elle fait preuve d'une grande économie dans sa gestion des dépenses, que ce soit dans sa vie quotidienne ou dans sa gestion de projets professionnels.","Au sein de l'entreprise, Anna est reconnue pour son éthique de travail irréprochable et son intégrité. Elle est une figure de confiance, à la fois pour ses supérieurs et ses subordonnés. Cependant, son parcours n'a pas toujours été sans embûches. Elle a dû composer avec un manager toxique, un défi qu'elle a su relever avec beaucoup de dignité et de stratégie. Ce manager, qui remettait sans cesse en question ses décisions et ses compétences, a finalement été licencié pour insuffisance professionnelle, ouvrant la voie à la promotion d'Anna, qui, de facto, assurait déjà depuis un certain temps la gestion des équipes."
+        ]
     },
     {
         name: "Adèle",
@@ -39,14 +45,19 @@ export const characters = [
     {
         name: "Ghislaine",
         role: "Employée RH",               
-        image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+        image: {
+            small: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+            large: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+        }
     },
     {
         name: "Sophie",
         role: "La pote du taf",
         age: "44 ans", 
         job: "Consultante en gestion de projet",
-        image: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        image: {
+            small:"https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+            large:"https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"},
         story: ["Sophie est une professionnelle organisée et méthodique avec qui Anna entretient une relation de confiance et de collaboration au travail. En tant que Consultante en gestion de projet, elle apporte une grande expertise en matière de planification et de suivi des projets, ce qui en fait une interlocutrice privilégiée pour discuter des défis et des opportunités de développement de l'entreprise.", "Sophie est passionnée par son travail et aime relever de nouveaux défis et explorer de nouvelles perspectives pour améliorer les processus et les résultats de l'entreprise. Elle est toujours à l'écoute des besoins et des objectifs de ses clients, et elle met un point d'honneur à trouver des solutions pragmatiques et efficaces pour atteindre les objectifs fixés.", "En dehors du travail, Sophie est une sportive accomplie et une voyageuse invétérée, et elle aime partager ses expériences et ses découvertes avec ses collègues. Sa détermination et son enthousiasme en font une source d'inspiration et un modèle à suivre pour ceux qui aspirent à exceller dans leur carrière.", "En résumé, Sophie est une professionnelle compétente et motivée qui apporte une grande valeur ajoutée à l'entreprise grâce à son expertise en matière de gestion de projet. Sa rigueur et son engagement font d'elle un partenaire de confiance pour ses collègues et un atout précieux pour l'entreprise."],
         duration: 50000,
         displayStatus: true

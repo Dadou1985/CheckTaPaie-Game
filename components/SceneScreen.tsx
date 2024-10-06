@@ -2,6 +2,7 @@ import { View, Text, ImageBackground, ScrollView, StyleSheet, Pressable } from '
 import React, {useEffect, useState} from 'react'
 import Animated, { FadeIn, FadeOut, Keyframe } from 'react-native-reanimated'
 import { LinearGradient } from 'expo-linear-gradient';
+import { characters } from '@/utils/characters';
 
 const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, title} : any) => {
   const [isShow, setisShow] = useState(false)
@@ -19,7 +20,7 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, 
   if (isShow) {
     return (
       <Animated.View exiting={FadeOut.duration(5000)} style={{position: "absolute", width: "100%", height: "100%", zIndex: 10}}>
-        <ImageBackground style={{width: "100%", height: "100%"}} source={img.large}>
+        <ImageBackground style={{width: "100%", height: "100%"}} source={name === characters[0].name ? img.office : img.large}>
         <ScrollView contentContainerStyle={{height: "100%", flexDirection: "column", justifyContent: "flex-end"}}>
           <LinearGradient
             colors={['transparent', '#94b9ff']}

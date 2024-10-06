@@ -86,7 +86,7 @@ export default function OfficeScreen() {
                         style={styles.imageTextBox}
                       >
                         <Text style={isActiveScene === undefined ? styles.imageText : styles.imageTextActive}>{room.title}</Text>
-                        <Center mt={2}>
+                        <Center>
                           <Avatar.Group _avatar={{
                           size: "sm"
                         }} max={3}>
@@ -103,7 +103,16 @@ export default function OfficeScreen() {
                 }
             )}
           </Animated.View>
-          {/* <SceneScreen duration={event && event.duration} displayStatus={event && event.displayStatus} text={event && event.story} /> */}
+          {user.stage === allEvents[0].title && <SceneScreen 
+            displayStatus={true}
+            text={characters[0].story}
+            img={characters[0].img}
+            name={characters[0].name}
+            lastName={characters[0].lastName}
+            role={characters[0].role}
+            age={characters[0].age}
+            job={characters[0].job}
+            title />}
         </NativeBaseProvider>
       </LinearGradient>
     )
@@ -144,14 +153,12 @@ const styles = StyleSheet.create({
   image: {
     flex: 1, 
     width: "100%",
-
     height: "100%",
-    opacity: 0.3,
+    opacity: 0.2,
   },
   activeImage: {
     flex: 1, 
     width: "100%",
-
     height: "100%",
   },
   imageTextBox: {
