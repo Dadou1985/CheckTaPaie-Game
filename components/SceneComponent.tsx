@@ -38,15 +38,15 @@ const SceneComponent = ({data, handleSceneScrene, setMessageTimeLoading, handleS
                 colors={['#FF66C4', '#FFDE59']}
                 start={[0, 0]}
                 end={[1, 0]}
-                style={{width: "60%", padding: 10, flexDirection: 'row', justifyContent: "flex-end", borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomLeftRadius: 20}}
+                style={{width: "60%", padding: 10, flexDirection: 'row', justifyContent: "flex-end", borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomLeftRadius: 20, alignItems: "center"}}
                 >
                     <Pressable onPress={() => {
                         setIsShow(false)
                         handleSceneScreneHint(data)
                         }} style={{width:"80%"}}>
-                        <Text style={{textAlign: "center", fontSize: 12}}>Besoin de moi ?</Text>
+                        <Text style={{flex: 1, textAlign: "center", fontSize: 12}}>Besoin d'aide ?</Text>
                     </Pressable>
-                    <Avatar style={{marginRight: 10}} size="xs" source={characters[0].image.small}>
+                    <Avatar style={{marginRight: 10}} size="xs" source={characters[8].image?.small}>
                     </Avatar>
                 </LinearGradient>
             </Animated.View>

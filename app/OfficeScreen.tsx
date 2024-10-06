@@ -11,42 +11,27 @@ import SceneScreen from '@/components/SceneScreen'
 import allEvents from '@/json/allEvents.json'
 import { characters } from '@/utils/characters'
 import { UpdateUserInfo } from '@/firebase/functions';
+import { roomData } from '@/utils/room'
+import { keyPerformanceIndicator } from '@/utils/kpi';
 
 export default function OfficeScreen() {  
   const {user, setUser} = useContext<any>(UserContext)  
   const {event, setEvent} = useContext<any>(EventContext)
   const [isShown, setIsShown] = useState<Boolean>(true)
-  
-  const roomData = [
-    {
-      backgroundImage: require('/home/daoudda/Documents/Dev/checkTaPaie-Game/assets/images/coffee-machine.png'),
-      title: "Machine à café"
-    },
-    {
-      backgroundImage: require('/home/daoudda/Documents/Dev/checkTaPaie-Game/assets/images/desk-manager.png'),
-      title: "Bureau de la direction"
-    },
-    {
-      backgroundImage: require('/home/daoudda/Documents/Dev/checkTaPaie-Game/assets/images/meet-room.png'),
-      title: "Réunion"
-    },
-    {
-      backgroundImage: require('/home/daoudda/Documents/Dev/checkTaPaie-Game/assets/images/cantine.png'),
-      title: "Cantine"
-    },
-    {
-      backgroundImage: require('/home/daoudda/Documents/Dev/checkTaPaie-Game/assets/images/open-space.png'),
-      title: "Open Space"
-    }
-  ]
 
   useEffect(() => {
     const checkSceneStatus = (scene: any) => {
       return scene.status === "inactive"
     }
+
+      console.log('++++++++++++', user)
+
     if (user && user.scenes && user.scenes.length > 0 && user.scenes.every(checkSceneStatus)) {
       setUser({...user, stage: event && event.nextEvent})
-      UpdateUserInfo({stage: event && event.nextEvent})
+      UpdateUserInfo(user.userId, {
+        stage: event && event.nextEvent,
+        keyPerformanceIndicator: user.keyPerformanceIndicator
+      })
       setIsShown(true)
     }
   }, [user.scenes])
@@ -62,8 +47,6 @@ export default function OfficeScreen() {
 
   // console.log('++++++++++++', event)
 
-
-
   if (isShown) {
     return (
       <TransitionScreen chapter={event && event.chapter} title={event && event.title} />
@@ -77,10 +60,10 @@ export default function OfficeScreen() {
           style={styles.background}
         >
         <NativeBaseProvider config={config}>
-          <Animated.View entering={FadeIn.duration(2000)} style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', height: '100%', position: 'absolute'}}>
+          <Animated.View entering={FadeIn.duration(2000)} style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', height: '100%', width: "100%", position: 'absolute'}}>
           <Link href="/HomeScreen" asChild>
-            <Pressable style={{position: "absolute", zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#5DE0E6", borderRadius: 70, alignSelf: "center"}}>
-              <Avatar alignSelf="flex-start" size="2xl" source={user.img.office}>
+            <Pressable style={{position: "absolute", zIndex: 10, borderWidth: 2, borderStyle: "solid", borderColor: "#5DE0E6", borderRadius: 70, alignSelf: "center"}}>
+              <Avatar alignSelf="flex-start" size="2xl" source={characters[0].img?.office}>
               </Avatar>
             </Pressable>
             
@@ -89,7 +72,7 @@ export default function OfficeScreen() {
               const isActiveScene = user && user.scenes && user.scenes.length > 0 && user.scenes.find((scene: any) => (scene.place === room.title) && (scene.status === 'active'))
                   return <Link href={isActiveScene === undefined ? "OfficeScreen" : {
                     pathname: "/RoomScreen",
-                    params: {title: room.title, background: room.backgroundImage}
+                    params: {index: index}
                   }}
                   asChild>
                     <Pressable style={index === (roomData.length - 1) ? styles.imageLastBox : styles.imageBox}>
@@ -109,7 +92,7 @@ export default function OfficeScreen() {
                         }} max={3}>
                           {isActiveScene && isActiveScene.characters.map((character: any) => {
                             const currentCharacter = characters.find((currentCharacter: any) => currentCharacter.name === character)
-                            return <Avatar bg="green.500" source={currentCharacter && currentCharacter.image.small} />
+                            return <Avatar bg="green.500" source={currentCharacter && currentCharacter.image?.small} />
                           }
                         )}
                           </Avatar.Group>
@@ -161,11 +144,15 @@ const styles = StyleSheet.create({
   image: {
     flex: 1, 
     width: "100%",
+
+    height: "100%",
     opacity: 0.3,
   },
   activeImage: {
     flex: 1, 
     width: "100%",
+
+    height: "100%",
   },
   imageTextBox: {
     position: "absolute",

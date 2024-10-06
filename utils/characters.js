@@ -1,11 +1,11 @@
 export const characters = [
     {
-        name: "Hawa",
-        job: "Experte en paie et négciation salariale",               
-        image: {
-            small: require("../assets/images/hawa_portrait_resized.png"),
-            large: require("../assets/images/hawa_background.png")
-        }
+        name:"Anna",
+        job: "Assistante de direction",
+        img: {
+            office: require('../assets/images/anna_portrait_resized.png'),
+            home: require('../assets/images/anna_home_portrait_resized.png')
+        },
     },
     {
         name: "Adèle",
@@ -92,5 +92,13 @@ export const characters = [
         story: ["Micheline Lefebvre est le mentor d'Anna, un cadre expérimenté et respecté au sein de l'entreprise. Avec des décennies d'expérience dans le domaine, Micheline a gravi les échelons pour devenir Directrice des opérations, où elle supervise l'ensemble des activités de l'entreprise.", "Doté d'une grande sagesse et d'une expertise approfondie dans son domaine, Micheline est un guide précieux pour Anna, l'aidant à naviguer dans les défis de sa carrière et à tirer parti de ses forces. Elle partage volontiers ses connaissances et son expérience avec elle, lui fournissant des conseils perspicaces et des perspectives éclairantes sur les enjeux complexes auxquels elle est confrontée.", "En plus de son rôle de mentor, Micheline est également un leader inspirant pour toute l'entreprise. Son approche équilibrée et sa capacité à prendre des décisions éclairées font de lui un modèle pour ses collègues et ses subordonnés. Elle incarne les valeurs de l'entreprise et cherche toujours à promouvoir un environnement de travail positif et collaboratif.", "Grâce à la guidance et au soutien de Micheline, Anna est en mesure de relever les défis avec confiance et détermination, sachant qu'elle peut compter sur son mentor pour la conseiller dans les moments difficiles et la guider vers le succès."],
         duration: 50000,
         displayStatus: true
+    },
+    {
+        name: "Hawa",
+        job: "Experte en paie et négciation salariale",               
+        image: {
+            small: require("../assets/images/hawa_portrait_resized.png"),
+            large: require("../assets/images/hawa_background.png")
+        }
     }
 ]

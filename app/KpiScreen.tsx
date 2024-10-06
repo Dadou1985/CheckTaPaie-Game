@@ -7,13 +7,13 @@ import { UserContext } from '@/context/UserContext'
 import Animated, { FadeIn } from 'react-native-reanimated';
 import AnimatedProgressWheel from 'react-native-progress-wheel';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { keyPerformanceIndicator } from '@/utils/kpi'
 
 export default function KpiScreen() {  
   const {user} = useContext<any>(UserContext)
   const params = useLocalSearchParams<any>()
-  const {kpiSelectedTitle, kpiSelectedLevel} = params
+  const {index, kpiSelectedLevel} = params
 
-  const currentKpi = kpiSelectedTitle
   const currentKpiLevel = kpiSelectedLevel
 
   const handleKeyPerformanceIndicatorLevel = (kpi : any) => {
@@ -34,6 +34,8 @@ export default function KpiScreen() {
     }
   }
 
+  console.log("LEVEL:::", index)
+
     return (        
         <ImageBackground source={require("../assets/images/home.png")} style={{width: "100%", height: "100%", position: "relative", flex: 1}} resizeMode='cover'>
             <KeyboardAvoidingView style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', width: "100%", height: '100%', position: 'absolute', zIndex: 10}}>
@@ -42,31 +44,31 @@ export default function KpiScreen() {
                     <FontAwesome5 name="arrow-circle-left" size={35} color="#25699B" />
                   </Link>
                       <Animated.View style={{width: "100%", height: "50%", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", marginBottom: "5%"}} entering={FadeIn.duration(1500)}>
-                          <Avatar style={{zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#25699B", marginBottom: 15}} alignSelf="center" size="200" source={currentKpi && currentKpi.img}>
+                          <Avatar style={{zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#25699B", marginBottom: 15}} alignSelf="center" size="200" source={keyPerformanceIndicator[index].img}>
                           </Avatar>
                           <Text style={{width: "80%", fontSize: 25, textShadowColor: 'gray', textShadowOffset: {width: 1, height: 1},
-                            textShadowRadius: 1, borderBottomWidth: 5, borderBottomColor: "#25699B", borderStyle: "solid", textAlign: "center", paddingBottom: 20}}>{currentKpi && currentKpi.title}</Text>
+                            textShadowRadius: 1, borderBottomWidth: 5, borderBottomColor: "#25699B", borderStyle: "solid", textAlign: "center", paddingBottom: 20}}>{keyPerformanceIndicator[index].title}</Text>
                       </Animated.View>
                     <Animated.View entering={FadeIn.duration(2000)} style={{width: "100%", height: "50%", flexDirection: "column", justifyContent: "space-around", paddingHorizontal: 20}}>
                         <View style={{width: "100%", flexDirection: "column", justifyContent: "space-around", alignItems: "center", marginBottom: "10%"}}>
                           <AnimatedProgressWheel
                             progress={kpiSelectedLevel && kpiSelectedLevel}
                             animateFromValue={0}
-                            duration={3000} color={handleKeyPerformanceIndicatorLevel(kpiSelectedLevel && kpiSelectedLevel) as string} 
+                            duration={3000} color={handleKeyPerformanceIndicatorLevel(currentKpiLevel && currentKpiLevel) as string} 
                             backgroundColor={'transparent'} 
                             size={70} 
                             width={8}
                             rotation={'180deg'}
                             max={100}
                             showProgressLabel
-                            labelStyle={{fontSize: 15, color: handleKeyPerformanceIndicatorLevel(kpiSelectedLevel && kpiSelectedLevel) as string, fontWeight: "bold", textShadowOffset: {width: 1, height: 1},
+                            labelStyle={{fontSize: 15, color: handleKeyPerformanceIndicatorLevel(currentKpiLevel && currentKpiLevel) as string, fontWeight: "bold", textShadowOffset: {width: 1, height: 1},
                             textShadowRadius: 1}}
                             showPercentageSymbol
                             />
                       </View>
                       <ScrollView>
                         <Text style={{textAlign: "center", fontSize: 14, lineHeight: 20, textShadowColor: 'gray', textShadowOffset: {width: 1, height: 1},
-                textShadowRadius: 1, paddingBottom: 50}}>{currentKpi && currentKpi.text}</Text>
+                textShadowRadius: 1, paddingBottom: 50}}>{keyPerformanceIndicator[index].text}</Text>
                       </ScrollView>
                     </Animated.View>
                 </NativeBaseProvider>

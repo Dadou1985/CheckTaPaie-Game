@@ -9,6 +9,7 @@ import Animated, { FadeIn } from 'react-native-reanimated';
 import AnimatedProgressWheel from 'react-native-progress-wheel';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { keyPerformanceIndicator } from '@/utils/kpi'
+import { characters } from '@/utils/characters';
 
 export default function HomeScreen() {  
   const {event, setEvent} = useContext<any>(EventContext)
@@ -37,31 +38,31 @@ export default function HomeScreen() {
         <ImageBackground source={require("../assets/images/home.png")} style={{width: "100%", height: "100%", position: "relative"}} resizeMode='cover'>
             <KeyboardAvoidingView style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', width: "100%", height: '100%', position: 'absolute', zIndex: 10}}>
                 <NativeBaseProvider config={config}>
-                  <Link style={{position: "absolute", left: 30, top: 70}} href={"/OfficeScreen"}>
+                  <Link style={{position: "absolute", left: 30, top: 70, zIndex: 10}} href={"/OfficeScreen"}>
                     <FontAwesome5 name="arrow-circle-left" size={35} color="#25699B" />
                   </Link>
                     <View style={{width: "100%", height: "50%", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", marginBottom: "10%"}}>
                         <Animated.View entering={FadeIn.duration(1000)}>
-                            <Avatar style={{zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#25699B", marginBottom: 15}} alignSelf="center" size="200" source={user.img.home}>
+                            <Avatar style={{zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#25699B", marginBottom: 15}} alignSelf="center" size="200" source={characters[0].img?.home}>
                             </Avatar>
                         </Animated.View>
                         <Text style={{fontSize: 25, textShadowOffset: {width: 1, height: 1},
-                          textShadowRadius: 1}}>{user.name} Bellamy</Text>
+                          textShadowRadius: 1}}>{characters[0].name} Bellamy</Text>
                         <Text style={{width: "80%", textShadowColor: 'gray', textShadowOffset: {width: 1, height: 1},
-                          textShadowRadius: 1, borderBottomWidth: 5, borderBottomColor: "#25699B", borderStyle: "solid", textAlign: "center", paddingBottom: 20}}>{user.job}</Text>
+                          textShadowRadius: 1, borderBottomWidth: 5, borderBottomColor: "#25699B", borderStyle: "solid", textAlign: "center", paddingBottom: 20}}>{characters[0].job}</Text>
                     </View>
                     <Animated.View entering={FadeIn.duration(2000)} style={{width: "100%", height: "50%", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-around"}}>
-                      {user && user.keyPerformanceIndicator.length > 0 && user.keyPerformanceIndicator.map((kpi: any) => {
-                        const currentKpi = keyPerformanceIndicator.length > 0 && keyPerformanceIndicator.find((kpi: any) => kpi.title === kpi.title)
+                      {user && user.keyPerformanceIndicator.length > 0 && user.keyPerformanceIndicator.map((kpi: any, index: number) => {
+                        // const currentKpi = keyPerformanceIndicator.length > 0 && keyPerformanceIndicator.find((kpi: any) => kpi.title === kpi.title)
                         return <Link href={{
                           pathname: "/KpiScreen",
-                          params: {kpiSelectedTitle: currentKpi && currentKpi, kpiSelectedLeve: kpi.level} as any
+                          params: {index: index, kpiSelectedLevel: kpi.level} as any
                         }}
                         asChild>
                           <Pressable style={{width: "30%", height: "30%", flexDirection: "column", justifyContent: "space-around", alignItems: "center", marginBottom: "5%"}}>
                           <Image 
                             style={styles.image}
-                            source={currentKpi && currentKpi.img} />
+                            source={keyPerformanceIndicator[index].img} />
                           <AnimatedProgressWheel
                             progress={kpi.level}
                             animateFromValue={0}

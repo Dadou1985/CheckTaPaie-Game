@@ -2,14 +2,16 @@ import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingVi
 import { LinearGradient } from 'expo-linear-gradient';
 import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, HStack, Button, FormControl, WarningOutlineIcon } from "native-base";
 import { MaterialIcons } from "@expo/vector-icons";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import { UserContext } from '@/context/UserContext';
 import { useContext, useState } from 'react';
-import Animated, { FadeIn, SlideOutLeft, SlideInRight } from 'react-native-reanimated';
-import { CreateUser } from '@/firebase/functions'
+import Animated, { FadeIn, SlideOutLeft, SlideInRight, FadeOut } from 'react-native-reanimated';
+import { CreateUser, Login } from '@/firebase/functions'
+import {keyPerformanceIndicator} from '@/utils/kpi'
+import { characters } from '@/utils/characters';
 
 export default function HomeScreen() {
-  const {setUser} = useContext<any>(UserContext)
+  const {user, setUser} = useContext<any>(UserContext)
   const [isConnexionUI, setIsConnexionUI] = useState(true)
   const [formValue, setFormValue] = useState({
     firstName: "",
@@ -24,53 +26,38 @@ export default function HomeScreen() {
 
   const handleLoadUserInfo = () => {
     setUser({
-      name:"Anna",
-      job: "Assistante de direction",
+      name: characters[0].name,
+      job: characters[0].job,
       stage: "La déception de trop",
-      img: {
-        office: require('../assets/images/anna_portrait_resized.png'),
-        home: require('../assets/images/anna_home_portrait_resized.png')
-      },
       scenes: [],
       keyPerformanceIndicator: [
         {
           title: "Les compétences",
-          text: "La montée en compétences d’Anna est primordiale pour sécuriser son emploi, accroître ses opportunités de carrière, s’adapter aux évolutions de son secteur, et améliorer son épanouissement personnel. Cette démarche proactive lui permettra de rester compétitive et de trouver un équilibre satisfaisant entre sa vie professionnelle et personnelle. Investir dans ses compétences est une stratégie gagnante pour garantir un avenir professionnel réussi et épanouissant.",
-          img: require('../assets/images/logo_skillz.png'),
           level: 0
         },
         {
-          title: "L'épanouissement",
-          text: "L’épanouissement personnel d’Anna est fondamental pour son bien-être et son bonheur global. En investissant du temps dans ses intérêts personnels, en entretenant ses relations sociales et familiales, et en adoptant une gestion efficace de son temps et de ses finances, Anna peut atteindre un équilibre harmonieux entre sa vie professionnelle et personnelle. Cet épanouissement personnel lui permet de rester motivée, positive et résiliente face aux défis, tout en profitant pleinement de sa vie quotidienne.",
-          img: require('../assets/images/logo_wellness.png'),
-          level: 40
+            title: "L'épanouissement",
+            level: 40
         },
         {
-          title: "Le lien social",
-          text: "Le développement et l'entretien d'un réseau solide sont essentiels pour l'épanouissement d'Anna. Un réseau bien structuré lui offre un soutien émotionnel, ouvre des opportunités professionnelles, enrichit ses connaissances, et renforce ses compétences en communication et en leadership. En participant activement à des activités de réseautage, en restant en contact avec des personnes clés, et en s'engageant dans des échanges constructifs, Anna peut non seulement progresser dans sa carrière mais aussi trouver un équilibre satisfaisant entre sa vie professionnelle et personnelle. Cette stratégie lui permet de rester motivée, résiliente et bien préparée à relever les défis futurs, tout en cultivant des relations enrichissantes et durables.",
-          img: require('../assets/images/logo_relationship.png'),
-          level: 50
+            title: "Le lien social",
+            level: 50
         },
         {
-          title: "L'intégrité",
-          text: "L'éthique et l'intégrité d'Anna sont des piliers essentiels de sa vie personnelle et professionnelle. Elles lui permettent de gagner la confiance et la crédibilité de ses collègues et de sa famille, de bâtir une réputation professionnelle solide, de prendre des décisions éclairées, de gérer les conflits de manière juste, et de vivre en accord avec ses valeurs. En maintenant des standards éthiques élevés, Anna se positionne comme une leader respectée et une personne intègre, ce qui favorise son épanouissement global et assure un avenir prometteur et harmonieux.",
-          img: require('../assets/images/logo_righteousness.png'),
-          level: 90
+            title: "L'intégrité",
+            level: 90
         },
         {
-          title: "L'audace",
-          text: "L’audace d’Anna est une qualité essentielle qui enrichit sa vie à bien des égards. Elle lui permet de prendre des initiatives et d’innover dans son travail, de progresser dans sa carrière, de faire face aux échecs avec résilience, de développer de nouvelles compétences, de renforcer ses relations professionnelles, et de trouver un équilibre satisfaisant entre sa vie professionnelle et personnelle. En cultivant son audace, Anna se donne les moyens de réaliser ses ambitions et de vivre une vie plus épanouie et réussie.",
-          img: require('../assets/images/logo_audacity.png'),
-          level: 10,
+            title: "L'audace",
+            level: 10,
         },
         {
-          title: "Le personal branding",
-          text: "Le personal branding est une composante essentielle de la réussite professionnelle et personnelle d'Anna. En travaillant activement sur sa marque personnelle, elle peut augmenter sa visibilité, créer des réseaux solides, aligner ses actions avec ses valeurs, renforcer sa confiance en soi, se différencier dans un marché concurrentiel, et saisir de nombreuses opportunités de développement. En définitive, un personal branding fort permet à Anna de prendre en main son avenir professionnel, d'attirer des opportunités précieuses, et de réaliser ses aspirations avec clarté, motivation et détermination.",
-          img: require('../assets/images/logo_branding.png'),
-          level: 20
+            title: "Le personal branding",
+            level: 20
         }
       ]
     })
+    return router.navigate("/OfficeScreen")
   }
 
   const stepDetails = [
@@ -117,7 +104,7 @@ export default function HomeScreen() {
     },
     {
       quote: "Avez-vous un numéro de téléphone ?",
-      property: "text",
+      property: "phone",
       value: formValue.phone,
       placeholder: "0687249631",
       type: "number",
@@ -158,11 +145,21 @@ export default function HomeScreen() {
     </>
   }
 
-  const handleSubmit = () => {
+  const handleNavigateToHomePage = (freshUserData: any) => {
+    setUser(freshUserData)
+    router.navigate("/OfficeScreen")
+  }
+
+  const handleLoginSubmit = () => {
+    Login(formValue.email, formValue.password, handleNavigateToHomePage)
+  }
+
+  const handleRegistrationSubmit = () => {
     CreateUser(formValue)
     return handleLoadUserInfo()
-
   }
+
+  // console.log("USER:::", user)
 
   return (
     <LinearGradient
@@ -188,40 +185,50 @@ export default function HomeScreen() {
             <Text style={{color: '#DDF7F9', fontSize: 52}}>Login</Text>
           </Box>
           
-          {isConnexionUI ? <Animated.View entering={SlideInRight.duration(500)} exiting={SlideOutLeft.duration(500)}>
+          {isConnexionUI ? <Animated.View entering={FadeIn.duration(500)} exiting={FadeOut.duration(500)}>
             <Center>
               <Stack space={5} w="75%" mx="auto">
-                <Input bg={{
-                linearGradient: {
-                  colors: ['transparent', '#94b9ff'],
-                  start: [0, 0],
-                  end: [1, 0],
-                },
-              } as any} variant={'unstyled'} w={{
-                  base: "100%",
-                  md: "25%"
-                }} InputLeftElement={<Icon as={<MaterialIcons name="email" />} size={5} ml="2" color="#25699B" />} placeholder="E-mail" />
-                <Input bg={{
-                linearGradient: {
-                  colors: ['transparent', '#94b9ff'],
-                  start: [0, 0],
-                  end: [1, 0],
-                },
-              } as any} variant={'unstyled'} w={{
-                  base: "100%",
-                  md: "25%"
-                }} InputLeftElement={<Icon as={<MaterialIcons name="lock" />} size={5} ml="2" color="#25699B" />} placeholder="Mot de passe" />
-                <Link href="/OfficeScreen" asChild>
-                  <Button onPress={handleLoadUserInfo} size="md">Connexion</Button>
-                </Link>
+                <FormControl>
+                  <Input bg={{
+                  linearGradient: {
+                    colors: ['transparent', '#94b9ff'],
+                    start: [0, 0],
+                    end: [1, 0],
+                  },
+                } as any} variant={'unstyled'} w={{
+                    base: "100%",
+                    md: "25%"
+                  }} InputLeftElement={<Icon as={<MaterialIcons name="email" />} size={5} ml="2" color="#25699B" />} 
+                  value={formValue.email}
+                  onChange={(e) => handleChange(e, "email")}
+                  placeholder="E-mail"
+                  isRequired />
+                </FormControl>
+                <FormControl>
+                  <Input bg={{
+                  linearGradient: {
+                    colors: ['transparent', '#94b9ff'],
+                    start: [0, 0],
+                    end: [1, 0],
+                  },
+                } as any} variant={'unstyled'} w={{
+                    base: "100%",
+                    md: "25%"
+                  }} InputLeftElement={<Icon as={<MaterialIcons name="lock" />} size={5} ml="2" color="#25699B" />} 
+                  value={formValue.password}
+                  onChange={(e) => handleChange(e, "password")}
+                  placeholder="Mot de passe"
+                  isRequired />
+                </FormControl>
+                  <Button onPress={handleLoginSubmit} size="md">Connexion</Button>
               </Stack>
             </Center>
           </Animated.View> : 
-          <Animated.View entering={SlideInRight.duration(500)} exiting={SlideOutLeft.duration(500)}>
+          <Animated.View entering={FadeIn.duration(500)} exiting={FadeOut.duration(500)}>
             <Center>
               <Stack space={5} w="75%" mx="auto">
                 {handleRegistrationSteps(stepDetails[stepNumber])}
-                  {stepNumber === 5 ? <Button onPress={() => handleSubmit()} size="md">Terminer</Button> : <Button onPress={() => {
+                  {stepNumber === 5 ? <Button onPress={() => handleRegistrationSubmit()} size="md">Terminer</Button> : <Button onPress={() => {
                     if (stepDetails[stepNumber].value !== "") {
                       if (showErrorMessage) {
                         setShowErrorMessage(false)

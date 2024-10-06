@@ -45,8 +45,7 @@ const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, b
             >
             <Pressable onPress={async () => {
                 await handleUpdateUserKpi()
-                handleChooseScriptOption(data.script)
-                return UpdateUserInfo(user.userId, {keyPerformanceIndicator: user.keyPerformanceIndicator})
+                return handleChooseScriptOption(data.script)
                 }} style={{width:"100%"}}>
                 <Text style={{textAlign: "center", fontSize: 12}}>{data.text}</Text>
             </Pressable>

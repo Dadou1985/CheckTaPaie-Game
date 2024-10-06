@@ -11,10 +11,12 @@ import { EventContext } from '@/context/EventContext'
 import { UserContext } from '@/context/UserContext';
 import { characters } from '@/utils/characters'
 import SceneScreen from '@/components/SceneScreen'
+import { roomData } from '@/utils/room'
+import { UpdateUserInfo } from '@/firebase/functions';
 
 const RoomScreen = () => {
   const params = useLocalSearchParams<any>();
-  const {title, background}: any = params
+  const {index}: any = params
   const [showExitButton, setShowExitButton] = useState(false)
   const {event} = useContext<any>(EventContext)
   const {user, setUser} = useContext<any>(UserContext)
@@ -28,19 +30,21 @@ const RoomScreen = () => {
     img: ""
   })
 
-  const currentScene = event && event.scenes && event.scenes.find((currentEvent:  any) => currentEvent.place === title)
+  const currentScene = event && event.scenes && event.scenes.find((currentEvent:  any) => currentEvent.place === roomData[index].title)
   const handleGoBackToOfficeScreen = () => {
     setTimeout(() => {
       const scenesUpdate = user && user.scenes && user.scenes.length > 0 && user.scenes.map((scene: any) => {
-        if (scene.place === title) {
+        if (scene.place === roomData[index].title) {
           return {...scene, status: "inactive"}
         } else {
           return scene
         }
       })
       router.navigate('OfficeScreen')
+      // UpdateUserInfo(user.userId, { scenes: scenesUpdate})
       return setUser({...user, scenes: scenesUpdate})
     }, 3000);
+
   }
 
   const handleSceneScrene = (characterName: any) => {
@@ -53,7 +57,7 @@ const RoomScreen = () => {
         displayStatus: data.displayStatus,
         story: data.text,
         name: data.title,
-        image: characters[0].image
+        image: characters[8].image
       })
   }
 
@@ -63,7 +67,7 @@ const RoomScreen = () => {
       justifyContent: 'center', 
       height: '100%', 
       }}>
-        <ImageBackground source={background as any} style={{width: "100%", height: "100%"}} resizeMode='cover'>
+        <ImageBackground source={roomData[index].backgroundImage as any} style={{width: "100%", height: "100%"}} resizeMode='cover'>
         <LinearGradient
         // Background Linear Gradient
         colors={['#cdffd8', '#94b9ff']}
@@ -83,7 +87,7 @@ const RoomScreen = () => {
               {showExitButton && <Link style={{position: "absolute", left: 20, paddingTop: 20}} href={"/OfficeScreen"}>
                 <FontAwesome5 name="arrow-circle-left" size={35} color="#022845" />
               </Link>}
-            <Text style={{fontSize: 18, color:"#022845"}}>{title}</Text>
+            <Text style={{fontSize: 18, color:"#022845"}}>{roomData[index].title}</Text>
           </View>
         </LinearGradient>
           <Animated.ScrollView style={{width: "100%", height: "70%"}}>

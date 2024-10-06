@@ -18,7 +18,7 @@ const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
         return () => clearTimeout(timeout)
     }, [])
 
-    if (data.name === user.name) {
+    if (data.name === characters[0].name) {
         return <View style={{flexDirection: "row", justifyContent: "flex-end", alignItems: "flex-end", width: "100%"}}>
             <LinearGradient
             // Background Linear Gradient
@@ -34,7 +34,7 @@ const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
         </View>
     } else {
         return <View style={{flexDirection: "row", alignItems: "flex-end", width: "100%"}}>
-            <Avatar style={{marginRight: 10}} size="xs" source={currentCharacter && currentCharacter.image.small}>
+            <Avatar style={{marginRight: 10}} size="xs" source={currentCharacter && currentCharacter.image?.small}>
             </Avatar>
             <View style={{flexDirection: "column", alignItems: "flex-end", maxWidth: "70%"}}>
                 <LinearGradient
