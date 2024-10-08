@@ -97,3 +97,18 @@ export function UpdateUserInfo(userId, newData) {
             console.error("Error adding document: ", error);
         })
 }
+
+export function ResetEmail(email) {
+    auth.sendPasswordResetEmail(email)
+    .then(() => {
+        // Password reset email sent!
+        // ..
+        console.log("Success:::::")
+
+    })
+    .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log("Error:::::", errorMessage)
+    });
+}

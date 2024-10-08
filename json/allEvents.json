@@ -1,6 +1,13 @@
 [
   {
-    "chapter": 1,
+    "title": "Le contexte",
+    "duration": 50000,
+    "displayStatus": true,
+    "nextEvent": "La déception de trop",
+    "scenes": [{"status":"active"}]
+  },
+  {
+    "chapter": 2,
     "title": "La déception de trop",
     "story": "Anna est déçue de se voir refuser une promotion et une augmentation de salaire lors de l'évaluation annuelle. Elle avait travaillé dur tout au long de l'année et espérait être reconnue pour ses efforts. Cette déception la pousse à réévaluer sa stratégie de développement professionnel et à envisager de nouvelles approches pour atteindre ses objectifs de carrière.",
     "duration": 50000,
@@ -407,1057 +414,1057 @@
         ]
       }
     ]
-   },
-   {
-    "chapter": 2,
-    "title": "Une simple erreur de paie",
-    "story": "Anna décide de vérifier sa paie mensuellement pour s'assurer qu'elle est correctement rémunérée pour son travail. En examinant attentivement ses relevés de paie, elle découvre une erreur en sa faveur, où elle a été payée pour des heures supplémentaires non effectuées. Elle contacte immédiatement le service des ressources humaines pour rectifier l'erreur et rembourser le montant excédentaire. Cette expérience lui rappelle l'importance de surveiller de près sa rémunération et de signaler tout problème éventuel.",
-    "nextEvent": "Une fausse promotion",
-    "duration": 50000,
-    "scenes": [
-      {
-        "place": "Open Space",
-        "status": "active",
-        "characters": ["Adèle", "Ghislaine"],
-        "script": [
-          [
-            {
-              "banner": true,
-              "text": "Anna est assise devant son ordinateur, examinant attentivement ses relevés de paie.",
-              "timeLoading": 3000
-            },
-            {
-              "name": "Anna",               
-              "text": "Alors, voyons voir !",
-              "timeLoading": 500
-            }, 
-            {
-              "name": "Anna",               
-              "text": "Tout semble en ordre jusqu'à présent...",
-              "timeLoading": 1000
-            },
-            {
-              "name": "Anna",               
-              "text": "Attendez, qu'est-ce que c'est ?",
-              "timeLoading": 1000
-            },
-            {
-              "banner": true,
-              "text": "Anna remarque une entrée pour des heures supplémentaires qu'elle n'a pas travaillées.",
-              "timeLoading": 3000
-            },
-            {
-              "name": "Anna",               
-              "text": "Oh, il semble qu'il y ait eu une erreur dans ma paie !",
-              "timeLoading": 1000
-            },
-            {
-              "flag": "green",
-              "text": "Contacter le service RH",
-              "bunchNumber": 0,
-              "points": [
-                {
-                  "title": "L'intégrité",
-                  "point": 10
-                }
-              ],
-              "script": [
-                {
-                  "banner": true,
-                  "text": "Anna compose rapidement le numéro du service des ressources humaines et attend qu'on réponde.",
-                  "timeLoading": 3000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Bonjour, c'est Anna de l'équipe du développement logiciel.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Je viens de remarquer une erreur dans mes relevés de paie.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Il semble qu'on m'ait payée pour des heures supplémentaires que je n'ai pas effectuées.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Ghislaine",               
-                  "text": "Bonjour Anna !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Ghislaine",               
-                  "text": "Merci de nous avoir contactés à ce sujet !",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Ghislaine",               
-                  "text": "Nous allons vérifier cela immédiatement pour vous.",
-                  "timeLoading": 1000
-                },
-                {
-                  "banner": true,
-                  "text": "Anna est mise en attente quelques minutes...",
-                  "timeLoading": 10000
-                },
-                {
-                  "name": "Ghislaine",               
-                  "text": "Effectivement, il semble y avoir eu une erreur dans le système de paie.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Ghislaine",               
-                  "text": "Nous sommes désolés pour ce désagrément.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Ghislaine",               
-                  "text": "Nous allons rectifier cela immédiatement et vous rembourser le montant excédentaire sur votre prochain salaire.",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Merci beaucoup pour votre réactivité.",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Je suis reconnaissante que vous ayez pu résoudre ce problème si rapidement.",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Ghislaine",               
-                  "text": "Bien sûr, c'est notre devoir de veiller à ce que votre rémunération soit correcte.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Ghislaine",               
-                  "text": "N'hésitez pas à nous contacter si vous rencontrez d'autres problèmes à l'avenir.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Merci, je le ferai.",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Merci encore pour votre aide.",
-                  "timeLoading": 500
-                }, 
-                {
-                  "eventStatus": "end"
-                }
-              ]
-            },
-            {
-              "flag": "blue",
-              "text": "Demander conseil à Adèle",
-              "bunchNumber": 0,
-              "points": [
-                {
-                  "title": "L'intégrité",
-                  "point": 10
-                },
-                {
-                  "title": "Les compétences",
-                  "point": 2
-                },
-                {
-                  "title": "Le lien social",
-                  "point": 2
-                }
-              ],
-              "script": [
-                {
-                  "banner": true,
-                  "text": "Anna se rend aussitôt au bureau d’Adèle",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Adèle, t’as 2 secondes..?",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "J’ai besoin de ton avis sur quelque chose.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Adèle",               
-                  "text": "Bien sûr ! De quoi s’agit-il ?",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Eh bien, il se trouve que l’on m’a payé ce mois-ci pour des heures supp’ que je n’ai pas effectuées.",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Adèle",               
-                  "text": "Et..?",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Ben, je sais pas…",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Je sais que je ne dois pas le garder mais en même temps je suis un peu serrée ce mois-ci…",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Argh ! Qu’est-ce que tu ferais à ma place ?",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Adèle",               
-                  "text": "Je serai toi, je le signalerais au RH histoire de ne pas avoir de problèmes avec la direction. ",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Adèle",               
-                  "text": "Maintenant, il me semble que s’ils veulent récupérer leurs sous, ils ne peuvent pas le prendre d’un seul coup où quelque chose du genre…",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Adèle",               
-                  "text": "Ce sera échelonné comme pour un crédit sans frais.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Ah...Top !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Enfin, je veux dire depuis quand t’es devenue une pro de la paie, toi ?",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Adèle",               
-                  "text": "C’est pas ça.",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Adèle",               
-                  "text": "Je me suis abonné à un compte sur Insta: ça s’appelle CheckTaPaie.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Adèle",               
-                  "text": "C’est une spécialiste de la paie qui te donne tout pleins de tips du genre apprendre à lire sa fiche de paie…",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Adèle",               
-                  "text": "C’est super intéressant !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Adèle",               
-                  "text": "Je suis tombé dessus parce que Julien avait été confronté au même problème que toi.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "CheckTaPaie tu dis?",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "On va checker ça !",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Adèle",               
-                  "text": "Ha-ha-ha, trop marrant !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Adèle",               
-                  "text": "En tous cas, fais le bon choix, ma belle.",
-                  "timeLoading": 1000
-                }, 
-                {
-                  "eventStatus": "end"
-                }
-              ]
-            },
-            {
-              "flag": "red",
-              "text": "Faire comme si de rien n'était",
-              "bunchNumber": 0,
-              "points": [
-                {
-                  "title": "L'intégrité",
-                  "point": -10
-                },
-                {
-                  "title": "L'audace",
-                  "point": 5
-                }
-              ],
-              "script": [
-                {
-                  "name": "Anna",               
-                  "text": "Mais… impossible !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Ces idiots m’ont payé pour des heures supp’ que je n’ai jamais faites.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "En même temps, c’est pas comme si je ne les avais pas méritées.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "C’est vrai ! Après toutes ces années où je me suis fait mener en bâteau.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Qu’ils viennent me voir s’ils veulent récupérer leurs sous, ce n’est pas moi qui vais les contacter pour une faute qu’ils ont commise.",
-                  "timeLoading": 1500
-                }, 
-                {
-                  "eventStatus": "end"
-                }
-              ]
-            }
-          ]
+  },
+  {
+  "chapter": 3,
+  "title": "Une simple erreur de paie",
+  "story": "Anna décide de vérifier sa paie mensuellement pour s'assurer qu'elle est correctement rémunérée pour son travail. En examinant attentivement ses relevés de paie, elle découvre une erreur en sa faveur, où elle a été payée pour des heures supplémentaires non effectuées. Elle contacte immédiatement le service des ressources humaines pour rectifier l'erreur et rembourser le montant excédentaire. Cette expérience lui rappelle l'importance de surveiller de près sa rémunération et de signaler tout problème éventuel.",
+  "nextEvent": "Une fausse promotion",
+  "duration": 50000,
+  "scenes": [
+    {
+      "place": "Open Space",
+      "status": "active",
+      "characters": ["Adèle", "Ghislaine"],
+      "script": [
+        [
+          {
+            "banner": true,
+            "text": "Anna est assise devant son ordinateur, examinant attentivement ses relevés de paie.",
+            "timeLoading": 3000
+          },
+          {
+            "name": "Anna",               
+            "text": "Alors, voyons voir !",
+            "timeLoading": 500
+          }, 
+          {
+            "name": "Anna",               
+            "text": "Tout semble en ordre jusqu'à présent...",
+            "timeLoading": 1000
+          },
+          {
+            "name": "Anna",               
+            "text": "Attendez, qu'est-ce que c'est ?",
+            "timeLoading": 1000
+          },
+          {
+            "banner": true,
+            "text": "Anna remarque une entrée pour des heures supplémentaires qu'elle n'a pas travaillées.",
+            "timeLoading": 3000
+          },
+          {
+            "name": "Anna",               
+            "text": "Oh, il semble qu'il y ait eu une erreur dans ma paie !",
+            "timeLoading": 1000
+          },
+          {
+            "flag": "green",
+            "text": "Contacter le service RH",
+            "bunchNumber": 0,
+            "points": [
+              {
+                "title": "L'intégrité",
+                "point": 10
+              }
+            ],
+            "script": [
+              {
+                "banner": true,
+                "text": "Anna compose rapidement le numéro du service des ressources humaines et attend qu'on réponde.",
+                "timeLoading": 3000
+              },
+              {
+                "name": "Anna",               
+                "text": "Bonjour, c'est Anna de l'équipe du développement logiciel.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Je viens de remarquer une erreur dans mes relevés de paie.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Il semble qu'on m'ait payée pour des heures supplémentaires que je n'ai pas effectuées.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Ghislaine",               
+                "text": "Bonjour Anna !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Ghislaine",               
+                "text": "Merci de nous avoir contactés à ce sujet !",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Ghislaine",               
+                "text": "Nous allons vérifier cela immédiatement pour vous.",
+                "timeLoading": 1000
+              },
+              {
+                "banner": true,
+                "text": "Anna est mise en attente quelques minutes...",
+                "timeLoading": 10000
+              },
+              {
+                "name": "Ghislaine",               
+                "text": "Effectivement, il semble y avoir eu une erreur dans le système de paie.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Ghislaine",               
+                "text": "Nous sommes désolés pour ce désagrément.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Ghislaine",               
+                "text": "Nous allons rectifier cela immédiatement et vous rembourser le montant excédentaire sur votre prochain salaire.",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Anna",               
+                "text": "Merci beaucoup pour votre réactivité.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Je suis reconnaissante que vous ayez pu résoudre ce problème si rapidement.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Ghislaine",               
+                "text": "Bien sûr, c'est notre devoir de veiller à ce que votre rémunération soit correcte.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Ghislaine",               
+                "text": "N'hésitez pas à nous contacter si vous rencontrez d'autres problèmes à l'avenir.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Merci, je le ferai.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Merci encore pour votre aide.",
+                "timeLoading": 500
+              }, 
+              {
+                "eventStatus": "end"
+              }
+            ]
+          },
+          {
+            "flag": "blue",
+            "text": "Demander conseil à Adèle",
+            "bunchNumber": 0,
+            "points": [
+              {
+                "title": "L'intégrité",
+                "point": 10
+              },
+              {
+                "title": "Les compétences",
+                "point": 2
+              },
+              {
+                "title": "Le lien social",
+                "point": 2
+              }
+            ],
+            "script": [
+              {
+                "banner": true,
+                "text": "Anna se rend aussitôt au bureau d’Adèle",
+                "timeLoading": 2000
+              },
+              {
+                "name": "Anna",               
+                "text": "Adèle, t’as 2 secondes..?",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "J’ai besoin de ton avis sur quelque chose.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Adèle",               
+                "text": "Bien sûr ! De quoi s’agit-il ?",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Eh bien, il se trouve que l’on m’a payé ce mois-ci pour des heures supp’ que je n’ai pas effectuées.",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Adèle",               
+                "text": "Et..?",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Ben, je sais pas…",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Je sais que je ne dois pas le garder mais en même temps je suis un peu serrée ce mois-ci…",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Argh ! Qu’est-ce que tu ferais à ma place ?",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Adèle",               
+                "text": "Je serai toi, je le signalerais au RH histoire de ne pas avoir de problèmes avec la direction. ",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Adèle",               
+                "text": "Maintenant, il me semble que s’ils veulent récupérer leurs sous, ils ne peuvent pas le prendre d’un seul coup où quelque chose du genre…",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Adèle",               
+                "text": "Ce sera échelonné comme pour un crédit sans frais.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Ah...Top !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Enfin, je veux dire depuis quand t’es devenue une pro de la paie, toi ?",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Adèle",               
+                "text": "C’est pas ça.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Adèle",               
+                "text": "Je me suis abonné à un compte sur Insta: ça s’appelle CheckTaPaie.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Adèle",               
+                "text": "C’est une spécialiste de la paie qui te donne tout pleins de tips du genre apprendre à lire sa fiche de paie…",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Adèle",               
+                "text": "C’est super intéressant !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Adèle",               
+                "text": "Je suis tombé dessus parce que Julien avait été confronté au même problème que toi.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "CheckTaPaie tu dis?",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "On va checker ça !",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Adèle",               
+                "text": "Ha-ha-ha, trop marrant !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Adèle",               
+                "text": "En tous cas, fais le bon choix, ma belle.",
+                "timeLoading": 1000
+              }, 
+              {
+                "eventStatus": "end"
+              }
+            ]
+          },
+          {
+            "flag": "red",
+            "text": "Faire comme si de rien n'était",
+            "bunchNumber": 0,
+            "points": [
+              {
+                "title": "L'intégrité",
+                "point": -10
+              },
+              {
+                "title": "L'audace",
+                "point": 5
+              }
+            ],
+            "script": [
+              {
+                "name": "Anna",               
+                "text": "Mais… impossible !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Ces idiots m’ont payé pour des heures supp’ que je n’ai jamais faites.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "En même temps, c’est pas comme si je ne les avais pas méritées.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "C’est vrai ! Après toutes ces années où je me suis fait mener en bâteau.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Qu’ils viennent me voir s’ils veulent récupérer leurs sous, ce n’est pas moi qui vais les contacter pour une faute qu’ils ont commise.",
+                "timeLoading": 1500
+              }, 
+              {
+                "eventStatus": "end"
+              }
+            ]
+          }
         ]
-      }
-    ]
-   },
-   {
-    "chapter": 3,
-    "title": "Une fausse promotion",
-    "story": "Anna décide de vérifier sa paie mensuellement pour s'assurer qu'elle est correctement rémunérée pour son travail. En examinant attentivement ses relevés de paie, elle découvre une erreur en sa faveur, où elle a été payée pour des heures supplémentaires non effectuées. Elle contacte immédiatement le service des ressources humaines pour rectifier l'erreur et rembourser le montant excédentaire. Cette expérience lui rappelle l'importance de surveiller de près sa rémunération et de signaler tout problème éventuel.",
-    "nextEvent": "Mentorat et développement professionnel",
-    "duration": 50000,
-    "scenes": [
-      {
-        "place": "Bureau de la direction",
-        "status": "active",
-        "characters": ["Damien"],
-        "script": [
-          [
-            {
-              "banner": true,
-              "text": "Anna entre dans le bureau de Damien, son manager. Elle prend place sur une chaise face à ce dernier.",
-              "timeLoading": 3000
-            },
-            {
-              "name": "Damien",               
-              "text": "Anna, j'ai une bonne nouvelle à t'annoncer.",
-              "timeLoading": 1000
-            },
-            {
-              "name": "Anna",               
-              "text": "Vraiment ? Qu'est-ce qui se passe ?",
-              "timeLoading": 500
-            },
-            {
-              "name": "Damien",               
-              "text": "Eh bien, ton travail exceptionnel n'est pas passé inaperçu.",
-              "timeLoading": 1000
-            },
-            {
-              "name": "Damien",               
-              "text": "Tu as été un atout précieux pour l'entreprise, et en reconnaissance de tes efforts, j'ai le plaisir de t'annoncer que tu es promue au poste d'Office Manager.",
-              "timeLoading": 1500
-            },
-            {
-              "name": "Anna",               
-              "text": "Sérieusement ? Je ne sais pas quoi dire...",
-              "timeLoading": 1000
-            },
-            {
-              "name": "Damien",               
-              "text": "C'est mérité, Anna.",
-              "timeLoading": 500
-            },
-            {
-              "name": "Damien",               
-              "text": "Tu as fait preuve d'un dévouement et d'une compétence exceptionnels dans tout ce que tu as entrepris.",
-              "timeLoading": 1500
-            },
-            {
-              "flag": "green",
-              "text": "Partager son enthousiasme",
-              "bunchNumber": 0,
-              "points": [
-                {
-                  "title": "Le lien social",
-                  "point": 5
-                }
-              ],
-              "script": [
-                {
-                  "name": "Anna",               
-                  "text": "Wow, je ne m'attendais pas du tout à ça.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Merci beaucoup, Damien.",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "C'est vraiment une grande opportunité pour moi.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Tu le mérites amplement, Anna.",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Nous avons pleinement confiance en tes capacités pour endosser ce nouveau rôle.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Je suis convaincue que tu continueras à exceller et à apporter une contribution exceptionnelle à notre équipe.",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Je ferai de mon mieux, Damien.",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Je suis vraiment reconnaissante pour cette promotion et pour la confiance que vous avez en moi.",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Encore félicitations, Anna.",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Profite de ce moment et prépare-toi à relever de nouveaux défis passionnants.",
-                  "timeLoading": 500
-                }, 
-                {
-                  "banner": true,
-                  "text": "Anna se lève pour quitter le bureau lorsque Damien l'interpèle...",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "J'y pense tant que je t'ai sous la main...",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Je vais pas pouvoir assurer la réunion de ce soir avec les équipes.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Je compte sur toi pour gérer au mieux.",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Compte sur moi, je ferai au mieux",
-                  "timeLoading": 500
-                },
-                {
-                  "eventStatus": "end"
-                }
-              ]
-            },
-            {
-              "flag": "blue",
-              "text": "Faire preuve de méfiance",
-              "bunchNumber": 0,
-              "points": [
-                {
-                  "title": "L'audace",
-                  "point": 2
-                },
-                {
-                  "title": "Le lien social",
-                  "point": 2
-                }
-              ],
-              "script": [
-                {
-                  "name": "Anna",               
-                  "text": "Wow, je ne m'attendais pas du tout à ça.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Merci beaucoup, Damien.",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Cela semble vraiment intéressant mais en quoi consiste réellement ce nouveau poste ?",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Oh ! Euh…",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Je pensais que tu serais plus enthousiaste.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Oui, le poste…",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Eh bien euh.. tu continueras à être mon assistante mais euh...",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Disons que tes responsabilités s’étendront également à l’organisation de la vie et du bien-être au bureau de façon générale.",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Dans le cadre de notre programme RSE, nous avons pour objectif d’obtenir la certification B-Corp et pour cela, nous avons penser à quelqu'un comme toi qui représente l’âme d’Innovatech.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Alors qu’est-ce que t’en dit?",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "J’en dis que ça a l’air super !",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Et j’imagine que cette promotion s’accompagne d’une augmentation salariale, n’est-ce pas?",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Je vais essayer d’en discuter plus haut mais je ne te promets rien…",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "e ne te cache pas qu’on hésitait entre toi et Julie mais j’ai beaucoup insisté pour que ton profil soit choisi.",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Eh bien, écoute !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Je te laisse voir avec la direction et quand vous aurez une offre claire et définitive, tu pourras me l’envoyer par mail afin que je vous réponde rapidement.",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Qu'est-ce que t'en dis ?",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Oui, pourquoi pas !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Mais tu sais, Anna, dans la vie il faut savoir saisir rapidement les opportunités qui s’offrent à nous…",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Et c’est très exactement ce que je compte faire, Damien.",
-                  "timeLoading": 1000
-                }, 
-                {
-                  "banner": true,
-                  "text": "Anna quitte le bureau en laissant son manager sans voix.",
-                  "timeLoading": 2000
-                },
-                {
-                  "eventStatus": "end"
-                }
-              ]
-            },
-            {
-              "flag": "red",
-              "text": "Refuser l'offre",
-              "bunchNumber": 0,
-              "points": [
-                {
-                  "title": "L'audace",
-                  "point": 5
-                },
-                {
-                  "title": "Le lien social",
-                  "point": -5
-                }
-              ],
-              "script": [
-                {
-                  "name": "Anna",               
-                  "text": "C'est...intéressant !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "En quoi consiste exactement ce nouveau...poste ?",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Oh ! Euh…",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Je pensais que tu serais plus enthousiaste.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Oui, le poste…",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Eh bien euh.. tu continueras à être mon assistante mais euh...",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Disons que tes responsabilités s’étendront également à l’organisation de la vie et du bien-être au bureau de façon générale.",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Dans le cadre de notre programme RSE, nous avons pour objectif d’obtenir la certification B-Corp et pour cela, nous avons penser à quelqu'un comme toi qui représente l’âme d’Innovatech.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Alors qu’est-ce que t’en dit?",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "J’apprécie grandement le geste mais je ne suis pas très fan des “évolutions horizontales”",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Je ne comprends pas.",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Des évolutions quoi ?",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Oui, c’est comme ça que j’appelle les promotions qui alourdissent ton périmètre de responsabilités sans pour autant faire gonfler ta rémunération ou ton statut.",
-                  "timeLoading": 1500
-                }, 
-                {
-                  "name": "Damien",               
-                  "text": "Ah...ok !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Je ne te cache pas que je suis déçu…",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Après tout ce que j’ai fait pour que ton profil soit sélectionné au détriment de celui de Julie.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Damien",               
-                  "text": "Je pensais que tu aurais su saisir cette magnifique opportunité!",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Entre nous, je pense que le profil de Julie colle parfaitement au poste.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Et puis, je t’ai déjà fait part de mes aspirations en termes d’évolution de carrière…",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "On est plutôt dans la verticalité pour le coup !",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Merci, pour l’offre mais non merci.",
-                  "timeLoading": 500
-                },
-                {
-                  "banner": true,
-                  "text": "Anna quitte le bureau en laissant son manager dépité.",
-                  "timeLoading": 2000
-                },
-                {
-                  "eventStatus": "end"
-                }
-              ]
-            }
-          ]
-        ]
-      }
-    ]
-   },
-   {
-    "chapter": 4,
-    "title": "Mentorat et développement professionnel",
-    "story": "Anna recherche des opportunités de mentorat et de développement professionnel pour continuer à progresser dans sa carrière. Elle identifie des mentors potentiels dans son entreprise et dans son réseau professionnel, et cherche à établir des relations significatives avec eux. Elle participe également à des programmes de développement professionnel et à des formations pour renforcer ses compétences et acquérir de nouvelles perspectives. Ce mentorat et ce développement professionnel lui permettent de bénéficier de conseils avisés et de conseils d'experts pour guider sa croissance professionnelle.",
-    "nextEvent": "Licenciement massif dans l'entreprise",
-    "duration": 50000,
-    "scenes": [
-      {
-        "place": "Machine à café",
-        "status": "active",
-        "characters": ["Sophie"],
-        "script": [
-          [
-            {
-              "banner": true,
-              "text": "Sophie du service paie arrive à la machine à café. Elle y trouve une Anna perdue dans ses pensées.",
-              "timeLoading": 3000
-            },
-            {
-              "name": "Sophie",               
-              "text": "Salut Anna, comment ça se passe dans ton service ?",
-              "timeLoading": 1000
-            },
-            {
-              "name": "Anna",               
-              "text": "Oh…salut Emily !",
-              "timeLoading": 500
-            },
-            {
-              "name": "Anna",               
-              "text": "Euh… oui, ça se passe bien !",
-              "timeLoading": 500
-            },
-            {
-              "name": "Sophie",               
-              "text": "Wow, toi t’as besoin d’un café, t’as vraiment une sale mine !",
-              "timeLoading": 1500
-            },
-            {
-              "flag": "green",
-              "text": "Se livrer",
-              "bunchNumber": 0,
-              "points": [
-                {
-                  "title": "Le personal branding",
-                  "point": 3
-                },
-                {
-                  "title": "Le lien social",
-                  "point": 3
-                }
-              ],
-              "script": [
-                {
-                  "name": "Anna",               
-                  "text": "Je suis juste perdu dans mes pensées.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "En fait, j’ai assisté récemment à une conférence professionnelle pendant laquelle un intervenant préconisait à quiconque souhaite booster sa carrière de trouver un mentor qui le fera avancer plus vite…",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "T’as pensé au programme LeadHer que propose la boîte !",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "C'est un programme conçu afin de promouvoir le leadership féminin en milieu professionnel.",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "As-tu envisagé de contacter certaines des personnes plus expérimentées dans notre entreprise ?",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "Ils pourraient être d'excellents mentors.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "LeadHer ?",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Jamais entendu parlé !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "En gros, tu contactes un profil expérimenté au sein de la boîte qui accepte de te prendre sous son aile et la boîte vous aménage des temps d’échanges et des sessions de mentorship afin que tu puisses monter en compétence le plus rapidement possible et dans les meilleures conditions.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "Ils ont mis ça en place l’an dernier, c’est assez récent.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "C'est une bonne idée.",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "J'ai déjà quelques noms en tête. Tu connais des gens qui y ont participé ?",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "Ben, il se trouve que j’étais l’une des seuls à y participer.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "De mémoire, on devait être 3 ou 4 inscrits pour la première promotion.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Top !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Je vais y jeter un œil. Merci pour l’info Sophie.",
-                  "timeLoading": 500
-                },
-                {
-                  "eventStatus": "end"
-                }
-              ]
-            },
-            {
-              "flag": "blue",
-              "text": "Partager son stress",
-              "bunchNumber": 0,
-              "points": [
-                {
-                  "title": "Le lien social",
-                  "point": 3
-                }
-              ],
-              "script": [
-                {
-                  "name": "Anna",               
-                  "text": "Mdr, non mais tu t’es regardé ?",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "Oookay !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "Madame n’a pas l’air d’être dans un bon jour…",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Désolé !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "C’est juste que je suis un peu stressée en ce moment…",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "T’as essayé de participer aux ateliers de gestion du stress proposés par la boîte..?",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "J’ai commencé l’an dernier et je t’avoue qu’au début j’y suis allée à reculons mais au bout de quelques séances…",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "ça m’a fait un bien fou, je t’assure !",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "Tu devrais essayer…",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Ouais, pourquoi pas !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Après tout, ça ne peut pas me faire de mal.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "C’est quel jour ?",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "On fait ça tous les mercredi soir à partir de 19h dans la salle de réunion.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "Si ça t’intéresse, passe nous voir un de ces soirs.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "J’y penserais.",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Merci pour l’info, Sophie.",
-                  "timeLoading": 500
-                },
-                {
-                  "eventStatus": "end"
-                }
-              ]
-            },
-            {
-              "flag": "red",
-              "text": "L'envoyer ballader",
-              "bunchNumber": 0,
-              "points": [
-                {
-                  "title": "Le lien social",
-                  "point": -3
-                }
-              ],
-              "script": [
-                {
-                  "name": "Anna",               
-                  "text": "J’ai pas la tête à supporter tes remarques déplacées, Sophie !",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "Oookay !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "Madame n’a pas l’air d’être dans un bon jour…",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Sans blague !",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Et t’as déduis ça toute seule..?",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "Tu sais, Anna…la boîte dispense des ateliers de gestion des émotions en milieu professionnel !",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "Je dis ça…",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Laisse-moi deviner !",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anna",               
-                  "text": "Ils ont eu cette brillante idée après avoir eu une conversation avec toi, j’imagine ?!",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "J’ai compris !",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Sophie",               
-                  "text": "Je vais te laisser, Anna.",
-                  "timeLoading": 500
-                },
-                {
-                  "name": "Anna",               
-                  "text": "C’est ça !",
-                  "timeLoading": 500
-                },
-                {
-                  "eventStatus": "end"
-                }
-              ]
-            }
-          ]
-        ]
-      }
-    ]
-   }
+      ]
+    }
   ]
+  },
+  {
+  "chapter": 4,
+  "title": "Une fausse promotion",
+  "story": "Anna décide de vérifier sa paie mensuellement pour s'assurer qu'elle est correctement rémunérée pour son travail. En examinant attentivement ses relevés de paie, elle découvre une erreur en sa faveur, où elle a été payée pour des heures supplémentaires non effectuées. Elle contacte immédiatement le service des ressources humaines pour rectifier l'erreur et rembourser le montant excédentaire. Cette expérience lui rappelle l'importance de surveiller de près sa rémunération et de signaler tout problème éventuel.",
+  "nextEvent": "Mentorat et développement professionnel",
+  "duration": 50000,
+  "scenes": [
+    {
+      "place": "Bureau de la direction",
+      "status": "active",
+      "characters": ["Damien"],
+      "script": [
+        [
+          {
+            "banner": true,
+            "text": "Anna entre dans le bureau de Damien, son manager. Elle prend place sur une chaise face à ce dernier.",
+            "timeLoading": 3000
+          },
+          {
+            "name": "Damien",               
+            "text": "Anna, j'ai une bonne nouvelle à t'annoncer.",
+            "timeLoading": 1000
+          },
+          {
+            "name": "Anna",               
+            "text": "Vraiment ? Qu'est-ce qui se passe ?",
+            "timeLoading": 500
+          },
+          {
+            "name": "Damien",               
+            "text": "Eh bien, ton travail exceptionnel n'est pas passé inaperçu.",
+            "timeLoading": 1000
+          },
+          {
+            "name": "Damien",               
+            "text": "Tu as été un atout précieux pour l'entreprise, et en reconnaissance de tes efforts, j'ai le plaisir de t'annoncer que tu es promue au poste d'Office Manager.",
+            "timeLoading": 1500
+          },
+          {
+            "name": "Anna",               
+            "text": "Sérieusement ? Je ne sais pas quoi dire...",
+            "timeLoading": 1000
+          },
+          {
+            "name": "Damien",               
+            "text": "C'est mérité, Anna.",
+            "timeLoading": 500
+          },
+          {
+            "name": "Damien",               
+            "text": "Tu as fait preuve d'un dévouement et d'une compétence exceptionnels dans tout ce que tu as entrepris.",
+            "timeLoading": 1500
+          },
+          {
+            "flag": "green",
+            "text": "Partager son enthousiasme",
+            "bunchNumber": 0,
+            "points": [
+              {
+                "title": "Le lien social",
+                "point": 5
+              }
+            ],
+            "script": [
+              {
+                "name": "Anna",               
+                "text": "Wow, je ne m'attendais pas du tout à ça.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Merci beaucoup, Damien.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "C'est vraiment une grande opportunité pour moi.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Damien",               
+                "text": "Tu le mérites amplement, Anna.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Damien",               
+                "text": "Nous avons pleinement confiance en tes capacités pour endosser ce nouveau rôle.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Damien",               
+                "text": "Je suis convaincue que tu continueras à exceller et à apporter une contribution exceptionnelle à notre équipe.",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Anna",               
+                "text": "Je ferai de mon mieux, Damien.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Je suis vraiment reconnaissante pour cette promotion et pour la confiance que vous avez en moi.",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Damien",               
+                "text": "Encore félicitations, Anna.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Damien",               
+                "text": "Profite de ce moment et prépare-toi à relever de nouveaux défis passionnants.",
+                "timeLoading": 500
+              }, 
+              {
+                "banner": true,
+                "text": "Anna se lève pour quitter le bureau lorsque Damien l'interpèle...",
+                "timeLoading": 2000
+              },
+              {
+                "name": "Damien",               
+                "text": "J'y pense tant que je t'ai sous la main...",
+                "timeLoading": 500
+              },
+              {
+                "name": "Damien",               
+                "text": "Je vais pas pouvoir assurer la réunion de ce soir avec les équipes.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Damien",               
+                "text": "Je compte sur toi pour gérer au mieux.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Compte sur moi, je ferai au mieux",
+                "timeLoading": 500
+              },
+              {
+                "eventStatus": "end"
+              }
+            ]
+          },
+          {
+            "flag": "blue",
+            "text": "Faire preuve de méfiance",
+            "bunchNumber": 0,
+            "points": [
+              {
+                "title": "L'audace",
+                "point": 2
+              },
+              {
+                "title": "Le lien social",
+                "point": 2
+              }
+            ],
+            "script": [
+              {
+                "name": "Anna",               
+                "text": "Wow, je ne m'attendais pas du tout à ça.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Merci beaucoup, Damien.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Cela semble vraiment intéressant mais en quoi consiste réellement ce nouveau poste ?",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Damien",               
+                "text": "Oh ! Euh…",
+                "timeLoading": 500
+              },
+              {
+                "name": "Damien",               
+                "text": "Je pensais que tu serais plus enthousiaste.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Damien",               
+                "text": "Oui, le poste…",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Damien",               
+                "text": "Eh bien euh.. tu continueras à être mon assistante mais euh...",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Damien",               
+                "text": "Disons que tes responsabilités s’étendront également à l’organisation de la vie et du bien-être au bureau de façon générale.",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Damien",               
+                "text": "Dans le cadre de notre programme RSE, nous avons pour objectif d’obtenir la certification B-Corp et pour cela, nous avons penser à quelqu'un comme toi qui représente l’âme d’Innovatech.",
+                "timeLoading": 2000
+              },
+              {
+                "name": "Damien",               
+                "text": "Alors qu’est-ce que t’en dit?",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "J’en dis que ça a l’air super !",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Et j’imagine que cette promotion s’accompagne d’une augmentation salariale, n’est-ce pas?",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Damien",               
+                "text": "Je vais essayer d’en discuter plus haut mais je ne te promets rien…",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Damien",               
+                "text": "e ne te cache pas qu’on hésitait entre toi et Julie mais j’ai beaucoup insisté pour que ton profil soit choisi.",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Anna",               
+                "text": "Eh bien, écoute !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Je te laisse voir avec la direction et quand vous aurez une offre claire et définitive, tu pourras me l’envoyer par mail afin que je vous réponde rapidement.",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Anna",               
+                "text": "Qu'est-ce que t'en dis ?",
+                "timeLoading": 500
+              },
+              {
+                "name": "Damien",               
+                "text": "Oui, pourquoi pas !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Damien",               
+                "text": "Mais tu sais, Anna, dans la vie il faut savoir saisir rapidement les opportunités qui s’offrent à nous…",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Et c’est très exactement ce que je compte faire, Damien.",
+                "timeLoading": 1000
+              }, 
+              {
+                "banner": true,
+                "text": "Anna quitte le bureau en laissant son manager sans voix.",
+                "timeLoading": 2000
+              },
+              {
+                "eventStatus": "end"
+              }
+            ]
+          },
+          {
+            "flag": "red",
+            "text": "Refuser l'offre",
+            "bunchNumber": 0,
+            "points": [
+              {
+                "title": "L'audace",
+                "point": 5
+              },
+              {
+                "title": "Le lien social",
+                "point": -5
+              }
+            ],
+            "script": [
+              {
+                "name": "Anna",               
+                "text": "C'est...intéressant !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "En quoi consiste exactement ce nouveau...poste ?",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Damien",               
+                "text": "Oh ! Euh…",
+                "timeLoading": 500
+              },
+              {
+                "name": "Damien",               
+                "text": "Je pensais que tu serais plus enthousiaste.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Damien",               
+                "text": "Oui, le poste…",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Damien",               
+                "text": "Eh bien euh.. tu continueras à être mon assistante mais euh...",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Damien",               
+                "text": "Disons que tes responsabilités s’étendront également à l’organisation de la vie et du bien-être au bureau de façon générale.",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Damien",               
+                "text": "Dans le cadre de notre programme RSE, nous avons pour objectif d’obtenir la certification B-Corp et pour cela, nous avons penser à quelqu'un comme toi qui représente l’âme d’Innovatech.",
+                "timeLoading": 2000
+              },
+              {
+                "name": "Damien",               
+                "text": "Alors qu’est-ce que t’en dit?",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "J’apprécie grandement le geste mais je ne suis pas très fan des “évolutions horizontales”",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Damien",               
+                "text": "Je ne comprends pas.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Damien",               
+                "text": "Des évolutions quoi ?",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Oui, c’est comme ça que j’appelle les promotions qui alourdissent ton périmètre de responsabilités sans pour autant faire gonfler ta rémunération ou ton statut.",
+                "timeLoading": 1500
+              }, 
+              {
+                "name": "Damien",               
+                "text": "Ah...ok !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Damien",               
+                "text": "Je ne te cache pas que je suis déçu…",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Damien",               
+                "text": "Après tout ce que j’ai fait pour que ton profil soit sélectionné au détriment de celui de Julie.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Damien",               
+                "text": "Je pensais que tu aurais su saisir cette magnifique opportunité!",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Entre nous, je pense que le profil de Julie colle parfaitement au poste.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Et puis, je t’ai déjà fait part de mes aspirations en termes d’évolution de carrière…",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "On est plutôt dans la verticalité pour le coup !",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Merci, pour l’offre mais non merci.",
+                "timeLoading": 500
+              },
+              {
+                "banner": true,
+                "text": "Anna quitte le bureau en laissant son manager dépité.",
+                "timeLoading": 2000
+              },
+              {
+                "eventStatus": "end"
+              }
+            ]
+          }
+        ]
+      ]
+    }
+  ]
+  },
+  {
+  "chapter": 5,
+  "title": "Mentorat et développement professionnel",
+  "story": "Anna recherche des opportunités de mentorat et de développement professionnel pour continuer à progresser dans sa carrière. Elle identifie des mentors potentiels dans son entreprise et dans son réseau professionnel, et cherche à établir des relations significatives avec eux. Elle participe également à des programmes de développement professionnel et à des formations pour renforcer ses compétences et acquérir de nouvelles perspectives. Ce mentorat et ce développement professionnel lui permettent de bénéficier de conseils avisés et de conseils d'experts pour guider sa croissance professionnelle.",
+  "nextEvent": "Licenciement massif dans l'entreprise",
+  "duration": 50000,
+  "scenes": [
+    {
+      "place": "Machine à café",
+      "status": "active",
+      "characters": ["Sophie"],
+      "script": [
+        [
+          {
+            "banner": true,
+            "text": "Sophie du service paie arrive à la machine à café. Elle y trouve une Anna perdue dans ses pensées.",
+            "timeLoading": 3000
+          },
+          {
+            "name": "Sophie",               
+            "text": "Salut Anna, comment ça se passe dans ton service ?",
+            "timeLoading": 1000
+          },
+          {
+            "name": "Anna",               
+            "text": "Oh…salut Emily !",
+            "timeLoading": 500
+          },
+          {
+            "name": "Anna",               
+            "text": "Euh… oui, ça se passe bien !",
+            "timeLoading": 500
+          },
+          {
+            "name": "Sophie",               
+            "text": "Wow, toi t’as besoin d’un café, t’as vraiment une sale mine !",
+            "timeLoading": 1500
+          },
+          {
+            "flag": "green",
+            "text": "Se livrer",
+            "bunchNumber": 0,
+            "points": [
+              {
+                "title": "Le personal branding",
+                "point": 3
+              },
+              {
+                "title": "Le lien social",
+                "point": 3
+              }
+            ],
+            "script": [
+              {
+                "name": "Anna",               
+                "text": "Je suis juste perdu dans mes pensées.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "En fait, j’ai assisté récemment à une conférence professionnelle pendant laquelle un intervenant préconisait à quiconque souhaite booster sa carrière de trouver un mentor qui le fera avancer plus vite…",
+                "timeLoading": 2000
+              },
+              {
+                "name": "Sophie",               
+                "text": "T’as pensé au programme LeadHer que propose la boîte !",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Sophie",               
+                "text": "C'est un programme conçu afin de promouvoir le leadership féminin en milieu professionnel.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Sophie",               
+                "text": "As-tu envisagé de contacter certaines des personnes plus expérimentées dans notre entreprise ?",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Sophie",               
+                "text": "Ils pourraient être d'excellents mentors.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "LeadHer ?",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Jamais entendu parlé !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Sophie",               
+                "text": "En gros, tu contactes un profil expérimenté au sein de la boîte qui accepte de te prendre sous son aile et la boîte vous aménage des temps d’échanges et des sessions de mentorship afin que tu puisses monter en compétence le plus rapidement possible et dans les meilleures conditions.",
+                "timeLoading": 2000
+              },
+              {
+                "name": "Sophie",               
+                "text": "Ils ont mis ça en place l’an dernier, c’est assez récent.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "C'est une bonne idée.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "J'ai déjà quelques noms en tête. Tu connais des gens qui y ont participé ?",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Sophie",               
+                "text": "Ben, il se trouve que j’étais l’une des seuls à y participer.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Sophie",               
+                "text": "De mémoire, on devait être 3 ou 4 inscrits pour la première promotion.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Top !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Je vais y jeter un œil. Merci pour l’info Sophie.",
+                "timeLoading": 500
+              },
+              {
+                "eventStatus": "end"
+              }
+            ]
+          },
+          {
+            "flag": "blue",
+            "text": "Partager son stress",
+            "bunchNumber": 0,
+            "points": [
+              {
+                "title": "Le lien social",
+                "point": 3
+              }
+            ],
+            "script": [
+              {
+                "name": "Anna",               
+                "text": "Mdr, non mais tu t’es regardé ?",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Sophie",               
+                "text": "Oookay !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Sophie",               
+                "text": "Madame n’a pas l’air d’être dans un bon jour…",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Désolé !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "C’est juste que je suis un peu stressée en ce moment…",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Sophie",               
+                "text": "T’as essayé de participer aux ateliers de gestion du stress proposés par la boîte..?",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Sophie",               
+                "text": "J’ai commencé l’an dernier et je t’avoue qu’au début j’y suis allée à reculons mais au bout de quelques séances…",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Sophie",               
+                "text": "ça m’a fait un bien fou, je t’assure !",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Sophie",               
+                "text": "Tu devrais essayer…",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Ouais, pourquoi pas !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Après tout, ça ne peut pas me faire de mal.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "C’est quel jour ?",
+                "timeLoading": 500
+              },
+              {
+                "name": "Sophie",               
+                "text": "On fait ça tous les mercredi soir à partir de 19h dans la salle de réunion.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Sophie",               
+                "text": "Si ça t’intéresse, passe nous voir un de ces soirs.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "J’y penserais.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Merci pour l’info, Sophie.",
+                "timeLoading": 500
+              },
+              {
+                "eventStatus": "end"
+              }
+            ]
+          },
+          {
+            "flag": "red",
+            "text": "L'envoyer ballader",
+            "bunchNumber": 0,
+            "points": [
+              {
+                "title": "Le lien social",
+                "point": -3
+              }
+            ],
+            "script": [
+              {
+                "name": "Anna",               
+                "text": "J’ai pas la tête à supporter tes remarques déplacées, Sophie !",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Sophie",               
+                "text": "Oookay !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Sophie",               
+                "text": "Madame n’a pas l’air d’être dans un bon jour…",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Sans blague !",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Et t’as déduis ça toute seule..?",
+                "timeLoading": 500
+              },
+              {
+                "name": "Sophie",               
+                "text": "Tu sais, Anna…la boîte dispense des ateliers de gestion des émotions en milieu professionnel !",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Sophie",               
+                "text": "Je dis ça…",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "Laisse-moi deviner !",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anna",               
+                "text": "Ils ont eu cette brillante idée après avoir eu une conversation avec toi, j’imagine ?!",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Sophie",               
+                "text": "J’ai compris !",
+                "timeLoading": 500
+              },
+              {
+                "name": "Sophie",               
+                "text": "Je vais te laisser, Anna.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Anna",               
+                "text": "C’est ça !",
+                "timeLoading": 500
+              },
+              {
+                "eventStatus": "end"
+              }
+            ]
+          }
+        ]
+      ]
+    }
+  ]
+  }
+]

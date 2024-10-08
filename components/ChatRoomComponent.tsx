@@ -76,6 +76,7 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
 
                 if (data.eventStatus === "character introduction") {
                   return <SceneComponent
+                  key={index}
                   data={data}
                   handleSceneScrene={handleSceneScrene}
                   setMessageTimeLoading={setMessageTimeLoading}
@@ -84,6 +85,7 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
 
                 if (data.eventStatus === "hint") {
                   return <SceneComponent
+                  key={index}
                   data={data}
                   handleSceneScreneHint={handleSceneScreneHint}
                   setMessageTimeLoading={setMessageTimeLoading}

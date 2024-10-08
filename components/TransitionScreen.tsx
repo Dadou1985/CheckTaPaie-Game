@@ -13,19 +13,19 @@ const TransitionScreen = ({chapter, title}: any) => {
         end={[1, 0]}
         style={styles.background}
       >
-        <View style={{width: "100%", height: "100%", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
-        <Image 
+        <Animated.View entering={FadeIn.duration(3000)}  exiting={FadeOut.duration(3000)} style={{width: "100%", height: "100%", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+          <Image 
             style={styles.image}
             source={require('../assets/images/CTP_logo.png')} />
-            <Animated.View entering={FadeIn.duration(3000)} exiting={FadeOut.duration(500)}>
+            {chapter && <Animated.View entering={FadeIn.duration(3000)} exiting={FadeOut.duration(3000)}>
                 <Text style={{fontWeight: 700, marginBottom: 10, fontSize: 32, color: "#022845"}}>Chapitre {chapter}</Text>
-            </Animated.View>
-            <Animated.View entering={FadeInUp.duration(3000)} exiting={FadeOut.duration(500)}>
+            </Animated.View>}
+            <Animated.View entering={FadeInUp.duration(3000)} exiting={FadeOut.duration(3000)}>
                 <Text style={{fontWeight: 300, fontSize: 24, color: "#DDF7F9", textShadowColor: 'rgba(0, 0, 0, 0.75)',
                 textShadowOffset: {width: -1, height: 1},
                 textShadowRadius: 10}}>{title}</Text>
             </Animated.View>
-        </View>
+        </Animated.View>
     </LinearGradient>
   )
 }

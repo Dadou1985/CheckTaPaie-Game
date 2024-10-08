@@ -42,7 +42,7 @@ export default function OfficeScreen() {
     setUser({...user, scenes: stage && stage.scenes})
     setTimeout(() => {
       setIsShown(false)
-    }, 5000);
+    }, 10000);
   }, [user.stage])
 
   // console.log('++++++++++++', event)
@@ -70,7 +70,7 @@ export default function OfficeScreen() {
           </Link>
             {roomData.map((room, index) => {
               const isActiveScene = user && user.scenes && user.scenes.length > 0 && user.scenes.find((scene: any) => (scene.place === room.title) && (scene.status === 'active'))
-                  return <Link href={isActiveScene === undefined ? "OfficeScreen" : {
+                  return <Link key={index} href={isActiveScene === undefined ? "OfficeScreen" : {
                     pathname: "/RoomScreen",
                     params: {index: index}
                   }}
@@ -175,7 +175,8 @@ const styles = StyleSheet.create({
   imageTextActive: {
     fontSize: 14,
     textAlign: "center",
-    color: '#000', textShadowOffset: {width: 1, height: 1},
+    color: '#000', 
+    textShadowOffset: {width: 1, height: 1},
     textShadowRadius: 1
   },
   slidingText: {

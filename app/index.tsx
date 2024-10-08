@@ -5,14 +5,16 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { Link, router } from "expo-router";
 import { UserContext } from '@/context/UserContext';
 import { useContext, useState } from 'react';
-import Animated, { FadeIn, SlideOutLeft, SlideInRight, FadeOut, SlideInUp, SlideInDown } from 'react-native-reanimated';
-import { CreateUser, Login } from '@/firebase/functions'
+import Animated, { FadeIn, SlideOutLeft, SlideInRight, FadeOut, SlideInUp, SlideInDown, FadeInUp, FadeInDown } from 'react-native-reanimated';
+import { CreateUser, Login, ResetEmail } from '@/firebase/functions'
 import {keyPerformanceIndicator} from '@/utils/kpi'
 import { characters } from '@/utils/characters';
 
 export default function HomeScreen() {
   const {user, setUser} = useContext<any>(UserContext)
   const [isConnexionUI, setIsConnexionUI] = useState(true)
+  const [isRegistrationUI, setIsRegistrationUI] = useState(false)
+  const [isResetPasswordUI, setIsResetPasswordUI] = useState(false)
   const [formValue, setFormValue] = useState({
     firstName: "",
     lastName: "",
@@ -24,7 +26,8 @@ export default function HomeScreen() {
   const [stepNumber, setStepNumber] = useState(0)
   const [showErrorMessage, setShowErrorMessage] = useState({
     login: false,
-    registration: false
+    registration: false,
+    resetPassword: false
   })
 
   const handleLoadUserInfo = () => {
@@ -124,7 +127,7 @@ export default function HomeScreen() {
 
   const handleRegistrationSteps = (stepDetails: any) => {
     return <>
-      <Text style={{color: '#94b9ff', fontSize: 18, textAlign: "center"}}>{stepDetails.quote}</Text>
+      <Text style={{color: 'rgb(8, 145, 178)', fontSize: 18, textAlign: "center"}}>{stepDetails.quote}</Text>
       <FormControl>
         <Input 
         // bg={{
@@ -176,7 +179,7 @@ export default function HomeScreen() {
       <NativeBaseProvider config={config}>
         <KeyboardAvoidingView style={{ flexDirection: 'column', justifyContent: 'space-between', height: '100%'}}>
         <Animated.View entering={FadeIn.duration(3500)} style={{ flexDirection: 'column', justifyContent: 'space-between', height: '100%'}}>
-        <Animated.View entering={SlideInUp.duration(3000)} exiting={FadeOut.duration(500)}>
+        <Animated.View entering={FadeInUp.duration(3000)} exiting={FadeOut.duration(500)}>
         <Box style={styles.titleContainer} bg={{
           linearGradient: {
             colors: ['#5DE0E6', '#004AAD'],
@@ -191,8 +194,7 @@ export default function HomeScreen() {
           </Box>
         </Animated.View>
           
-          
-          {isConnexionUI ? <Animated.View entering={FadeIn.duration(3000)} exiting={FadeOut.duration(500)}>
+          {isConnexionUI && <Animated.View entering={FadeIn.duration(3000)} exiting={FadeOut.duration(500)}>
             <Center>
               <Stack space={5} w="75%" mx="auto">
                 <FormControl>
@@ -250,8 +252,8 @@ export default function HomeScreen() {
                   }} size="md">Connexion</Button>
               </Stack>
             </Center>
-          </Animated.View> : 
-          <Animated.View entering={FadeIn.duration(3000)} exiting={FadeOut.duration(500)}>
+          </Animated.View>}
+          {isRegistrationUI && <Animated.View entering={FadeIn.duration(3000)} exiting={FadeOut.duration(500)}>
             <Center>
               <Stack space={5} w="75%" mx="auto">
                 {handleRegistrationSteps(stepDetails[stepNumber])}
@@ -268,10 +270,48 @@ export default function HomeScreen() {
               </Stack>
             </Center>
           </Animated.View>}
-          <Animated.View entering={SlideInDown.duration(3000)} exiting={FadeOut.duration(500)}>
+
+          {isResetPasswordUI && <Animated.View entering={FadeIn.duration(3000)} exiting={FadeOut.duration(500)}>
+            <Center>
+              <Stack space={5} w="75%" mx="auto">
+                <Text style={{color: 'rgb(8, 145, 178)', fontSize: 18, textAlign: "center", textShadowOffset: {width: 3, height: 3}}}>Vous avez oublié votre mot de passe ?</Text>
+                <FormControl>
+                  <Input  
+                  variant={'underlined'} 
+                  w={{
+                    base: "100%",
+                    md: "25%"
+                  }} 
+                  InputLeftElement={<Icon as={<MaterialIcons />}
+                  name="email" 
+                  size={5} 
+                  ml="2"
+                  mr="2" 
+                  color="#25699B" />} 
+                  value={formValue.email}
+                  type='text'
+                  onChange={(e) => handleChange(e, "email")}
+                  placeholder="Veuillez renseigner votre e-mail"
+                  isRequired />
+                </FormControl>
+                {showErrorMessage.resetPassword && (formValue.email === "") && <Text style={{color: 'red', fontSize: 10, textAlign: "center"}}>Ce champs est obligatoire</Text>}
+                <Button onPress={() => {
+                  if(formValue.email === "") {
+                    setShowErrorMessage({...showErrorMessage, resetPassword: true})
+                  } else {
+                    return ResetEmail(formValue.email)
+                  }
+                }} size="md">Envoyer un e-mail de réinitialisation</Button>
+              </Stack>
+            </Center>
+          </Animated.View>}
+
+          <Animated.View entering={FadeInDown.duration(3000)} exiting={FadeOut.duration(500)}>
             <HStack mb={50} space={10} justifyContent="center">
               {isConnexionUI ? <Button onPress={() => {
+                setIsRegistrationUI(true)
                 setIsConnexionUI(false)
+                setIsResetPasswordUI(false)
                 setShowErrorMessage({...showErrorMessage,
                   login: false
                 })
@@ -281,7 +321,8 @@ export default function HomeScreen() {
                 })
               }} size="sm">Créer un compte</Button> : <Button onPress={() => {
                 setIsConnexionUI(true)
-                setStepNumber(0)
+                setIsRegistrationUI(false)
+                setIsResetPasswordUI(false)
                 setShowErrorMessage({...showErrorMessage,
                   registration: false
                 })
@@ -294,7 +335,23 @@ export default function HomeScreen() {
                   phone: ""
                 })
                 }} size="sm">Se connecter</Button>}
-              {isConnexionUI && <Button size="sm">
+              {isConnexionUI && <Button onPress={() => {
+                setIsResetPasswordUI(true)
+                setIsConnexionUI(false)
+                setIsRegistrationUI(false)
+                setShowErrorMessage({...showErrorMessage,
+                  registration: false,
+                  login: false,
+                })
+                setFormValue({
+                  firstName: "",
+                  lastName: "",
+                  email: "",
+                  password: "",    
+                  passwordConfirmation: "",
+                  phone: ""
+                })
+              }} size="sm">
                 Mot de passe oublié
               </Button>}
             </HStack>
