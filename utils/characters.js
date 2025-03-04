@@ -16,7 +16,7 @@ export const characters = [
     {
         name: "Adèle",
         lastName: "Monteiro",
-        role: "La Best friend",
+        role: "La Bestie",
         age: "38 ans",
         job: "Analyste financier senior",
         image: {
@@ -32,7 +32,7 @@ export const characters = [
         name: "Damien",
         lastname: "Vernier",
         role: "Le N-2",  
-        age: "36 ans",   
+        age: "46 ans",   
         job: "Directeur marketing et communication",                         
         image: {
             small: require('../assets/images/damien_portrait_resized.png'),
@@ -80,7 +80,7 @@ export const characters = [
         name: "Julie",
         lastname: "Nguyen",
         role: "La rivale",
-        age: "32 ans", 
+        age: "36 ans", 
         job: "Assistante exécutive",
         image: {
             small: require('../assets/images/julie_portrait_resized.png'),

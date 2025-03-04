@@ -2,7 +2,10 @@ import { Pressable, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import Animated, { FadeInRight } from 'react-native-reanimated'
 import { LinearGradient } from 'expo-linear-gradient'
-import { Avatar } from 'native-base'
+import {
+    Avatar,
+    AvatarImage,
+} from '@gluestack-ui/themed';
 import { characters } from '@/utils/characters'
 
 const SceneComponent = ({data, handleSceneScrene, setMessageTimeLoading, handleSceneScreneHint}: any) => {
@@ -46,7 +49,11 @@ const SceneComponent = ({data, handleSceneScrene, setMessageTimeLoading, handleS
                         }} style={{width:"80%"}}>
                         <Text style={{flex: 1, textAlign: "center", fontSize: 12}}>Besoin d'aide ?</Text>
                     </Pressable>
-                    <Avatar style={{marginRight: 10}} size="xs" source={characters[8].image?.small}>
+                    <Avatar>
+                        <AvatarImage style={{ width: 40, height: 40, zIndex: 10, marginLeft: 15 }}
+                        source={characters[8].image?.small}
+                        borderRadius={150}
+                        />
                     </Avatar>
                 </LinearGradient>
             </Animated.View>

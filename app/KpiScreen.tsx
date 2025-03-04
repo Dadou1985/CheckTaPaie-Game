@@ -1,5 +1,5 @@
 import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable, ImageBackground } from 'react-native';
-import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, VStack, Button, AspectRatio, Avatar } from "native-base";
+import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, VStack, Button, AspectRatio } from "@gluestack-ui/themed-native-base";
 import { LinearGradient } from 'expo-linear-gradient';
 import { Link, useLocalSearchParams } from "expo-router";
 import { useEffect, useLayoutEffect, useState, useContext } from 'react';
@@ -8,6 +8,10 @@ import Animated, { FadeIn } from 'react-native-reanimated';
 import AnimatedProgressWheel from 'react-native-progress-wheel';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { keyPerformanceIndicator } from '@/utils/kpi'
+import {
+  Avatar,
+  AvatarImage,
+} from '@gluestack-ui/themed';
 
 export default function KpiScreen() {  
   const {user} = useContext<any>(UserContext)
@@ -44,7 +48,11 @@ export default function KpiScreen() {
                     <FontAwesome5 name="arrow-circle-left" size={35} color="#25699B" />
                   </Link>
                       <Animated.View style={{width: "100%", height: "50%", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", marginBottom: "5%"}} entering={FadeIn.duration(1500)}>
-                          <Avatar style={{zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#25699B", marginBottom: 15}} alignSelf="center" size="200" source={keyPerformanceIndicator[index].img}>
+                          <Avatar>
+                            <AvatarImage style={{ width: 300, height: 300, zIndex: 10, borderWidth: 5, borderColor: "#25699B", marginBottom: 15 }}
+                              source={keyPerformanceIndicator[index].img}
+                              borderRadius={150}
+                            />
                           </Avatar>
                           <Text style={{width: "80%", fontSize: 25, textShadowColor: 'gray', textShadowOffset: {width: 1, height: 1},
                             textShadowRadius: 1, borderBottomWidth: 5, borderBottomColor: "#25699B", borderStyle: "solid", textAlign: "center", paddingBottom: 20}}>{keyPerformanceIndicator[index].title}</Text>

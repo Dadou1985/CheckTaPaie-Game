@@ -2,7 +2,10 @@ import { View, Text } from 'react-native'
 import React, {useState, useEffect} from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Flow } from 'react-native-animated-spinkit'
-import { Avatar } from 'native-base'
+import {
+    Avatar,
+    AvatarImage,
+} from '@gluestack-ui/themed';
 import { characters } from '@/utils/characters'
 
 const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
@@ -34,7 +37,11 @@ const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
         </View>
     } else {
         return <View style={{flexDirection: "row", alignItems: "flex-end", width: "100%"}}>
-            <Avatar style={{marginRight: 10}} size="xs" source={currentCharacter && currentCharacter.image?.small}>
+            <Avatar>
+                <AvatarImage style={{ width: 40, height: 40, zIndex: 10, borderWidth: 1, borderColor: "#25699B", marginRight: 15 }}
+                source={currentCharacter && currentCharacter.image?.small}
+                borderRadius={150}
+                />
             </Avatar>
             <View style={{flexDirection: "column", alignItems: "flex-end", maxWidth: "70%"}}>
                 <LinearGradient

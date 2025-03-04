@@ -1,5 +1,5 @@
 import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable, ImageBackground } from 'react-native';
-import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, VStack, Button, AspectRatio, Avatar } from "native-base";
+import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, VStack, Button, AspectRatio, Avatar } from "@gluestack-ui/themed-native-base";
 import React, { useContext, useState } from 'react'
 import { Link, router } from "expo-router";
 import { LinearGradient } from 'expo-linear-gradient';
@@ -40,7 +40,7 @@ const RoomScreen = () => {
           return scene
         }
       })
-      router.navigate('OfficeScreen')
+      router.navigate('/OfficeScreen')
       // UpdateUserInfo(user.userId, { scenes: scenesUpdate})
       return setUser({...user, scenes: scenesUpdate})
     }, 3000);

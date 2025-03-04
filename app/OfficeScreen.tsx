@@ -1,8 +1,12 @@
-import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable, ImageBackground } from 'react-native';
-import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, VStack, Button, AspectRatio, Avatar } from "native-base";
+import { StyleSheet, Text, Pressable, ImageBackground } from 'react-native';
+import { Center, HStack, NativeBaseProvider } from "@gluestack-ui/themed-native-base";
+import {
+  Avatar,
+  AvatarImage,
+} from '@gluestack-ui/themed';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Link } from "expo-router";
-import { useEffect, useLayoutEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { EventContext } from '@/context/EventContext'
 import { UserContext } from '@/context/UserContext'
 import TransitionScreen from '@/components/TransitionScreen'
@@ -11,8 +15,7 @@ import SceneScreen from '@/components/SceneScreen'
 import allEvents from '@/json/allEvents.json'
 import { characters } from '@/utils/characters'
 import { UpdateUserInfo } from '@/firebase/functions';
-import { roomData } from '@/utils/room'
-import { keyPerformanceIndicator } from '@/utils/kpi';
+import { roomData } from '@/utils/room';
 
 export default function OfficeScreen() {  
   const {user, setUser} = useContext<any>(UserContext)  
@@ -24,9 +27,8 @@ export default function OfficeScreen() {
       return scene.status === "inactive"
     }
 
-      console.log('++++++++++++', user)
-
     if (user && user.scenes && user.scenes.length > 0 && user.scenes.every(checkSceneStatus)) {
+
       setUser({...user, stage: event && event.nextEvent})
       UpdateUserInfo(user.userId, {
         stage: event && event.nextEvent,
@@ -35,6 +37,9 @@ export default function OfficeScreen() {
       setIsShown(true)
     }
   }, [user.scenes])
+
+  console.log('++++++++++++', user)
+
 
   useEffect(() => {
     const stage: any = allEvents && allEvents.find(event => event.title === (user && user.stage))
@@ -62,15 +67,20 @@ export default function OfficeScreen() {
         <NativeBaseProvider config={config}>
           <Animated.View entering={FadeIn.duration(2000)} style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', height: '100%', width: "100%", position: 'absolute'}}>
           <Link href="/HomeScreen" asChild>
-            <Pressable style={{position: "absolute", zIndex: 10, borderWidth: 2, borderStyle: "solid", borderColor: "#5DE0E6", borderRadius: 70, alignSelf: "center"}}>
-              <Avatar alignSelf="flex-start" size="2xl" source={characters[0].img?.office}>
+            <Pressable style={{position: "absolute", zIndex: 10, borderWidth: 2, borderStyle: "solid", borderColor: "#5DE0E6", borderRadius: 100, alignSelf: "center"}}>
+              <Avatar>
+                <AvatarImage style={{ width: 150, height: 150 }}
+                  source={characters[0].img?.office}
+                  borderRadius={100}
+                />
               </Avatar>
             </Pressable>
             
           </Link>
             {roomData.map((room, index) => {
               const isActiveScene = user && user.scenes && user.scenes.length > 0 && user.scenes.find((scene: any) => (scene.place === room.title) && (scene.status === 'active'))
-                  return <Link key={index} href={isActiveScene === undefined ? "OfficeScreen" : {
+                console.log('$$$$$$$$$$$', roomData.length) 
+                return <Link key={index} href={isActiveScene === undefined ? "/OfficeScreen" : {
                     pathname: "/RoomScreen",
                     params: {index: index}
                   }}
@@ -87,15 +97,18 @@ export default function OfficeScreen() {
                       >
                         <Text style={isActiveScene === undefined ? styles.imageText : styles.imageTextActive}>{room.title}</Text>
                         <Center>
-                          <Avatar.Group _avatar={{
-                          size: "sm"
-                        }} max={3}>
-                          {isActiveScene && isActiveScene.characters.map((character: any) => {
-                            const currentCharacter = characters.find((currentCharacter: any) => currentCharacter.name === character)
-                            return <Avatar bg="green.500" source={currentCharacter && currentCharacter.image?.small} />
-                          }
-                        )}
-                          </Avatar.Group>
+                          <HStack space="md" reversed={false}>
+                            {isActiveScene && isActiveScene.characters.map((character: any) => {
+                              const currentCharacter = characters.find((currentCharacter: any) => currentCharacter.name === character)
+                              return <Avatar>
+                                    <AvatarImage style={{ width: 25, height: 25, backgroundColor: 'green.500' }}
+                                      source={currentCharacter && currentCharacter.image?.small}
+                                      borderRadius={100}
+                                    />
+                                  </Avatar>
+                                }
+                              )}
+                            </HStack>
                         </Center>
                       </LinearGradient>
                     </Pressable>

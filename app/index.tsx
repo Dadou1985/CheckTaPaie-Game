@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable, NativeSyntheticEvent, TextInputChangeEventData } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, HStack, Button, FormControl, WarningOutlineIcon } from "native-base";
+import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, HStack, Button, FormControl, WarningOutlineIcon } from "@gluestack-ui/themed-native-base";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Link, router } from "expo-router";
 import { UserContext } from '@/context/UserContext';
@@ -34,7 +34,7 @@ export default function HomeScreen() {
     setUser({
       name: characters[0].name,
       job: characters[0].job,
-      stage: "La déception de trop",
+      stage: "Le contexte",
       scenes: [],
       keyPerformanceIndicator: [
         {
@@ -118,10 +118,9 @@ export default function HomeScreen() {
   ]
 
   const handleChange = (e: NativeSyntheticEvent<TextInputChangeEventData>, property: string) => {
-    e.persist()
         return setFormValue(currentValue =>({
         ...currentValue,
-        [property]: e.nativeEvent.text
+        [property]: e
         }))
   }
 

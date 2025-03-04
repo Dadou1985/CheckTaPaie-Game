@@ -1,4 +1,4 @@
-import { NativeBaseProvider, VStack } from "native-base";
+import { NativeBaseProvider, VStack } from "@gluestack-ui/themed-native-base";
 import React, {useState, useEffect, useContext, useRef} from 'react'
 import MessageComponent from './MessageComponent'
 import OptionComponent from './OptionComponent'

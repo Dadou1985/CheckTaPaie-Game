@@ -21,6 +21,8 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, 
     setStoryBunchNumber(0)
   }, [text])
 
+  console.log("TEXT++++++++++", story)
+
   if (isShow) {
     return (
       <Animated.View exiting={FadeOut.duration(3000)} style={{position: "absolute", width: "100%", height: "100%", zIndex: 10}}>

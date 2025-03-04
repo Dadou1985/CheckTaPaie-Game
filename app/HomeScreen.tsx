@@ -1,5 +1,9 @@
 import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable, ImageBackground } from 'react-native';
-import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, VStack, Button, AspectRatio, Avatar } from "native-base";
+import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, VStack, Button, AspectRatio } from "@gluestack-ui/themed-native-base";
+import {
+  Avatar,
+  AvatarImage,
+} from '@gluestack-ui/themed';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Link } from "expo-router";
 import { useEffect, useLayoutEffect, useState, useContext } from 'react';
@@ -43,7 +47,11 @@ export default function HomeScreen() {
                   </Link>
                     <View style={{width: "100%", height: "50%", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", marginBottom: "10%"}}>
                         <Animated.View entering={FadeIn.duration(1000)}>
-                            <Avatar style={{zIndex: 10, borderWidth: 5, borderStyle: "solid", borderColor: "#25699B", marginBottom: 15}} alignSelf="center" size="200" source={characters[0].img?.home}>
+                            <Avatar>
+                              <AvatarImage style={{ width: 300, height: 300, zIndex: 10, borderWidth: 5, borderColor: "#25699B", marginBottom: 15 }}
+                                source={characters[0].img?.home}
+                                borderRadius={150}
+                              />
                             </Avatar>
                         </Animated.View>
                         <Text style={{fontSize: 25, textShadowOffset: {width: 1, height: 1},
@@ -51,7 +59,7 @@ export default function HomeScreen() {
                         <Text style={{width: "80%", textShadowColor: 'gray', textShadowOffset: {width: 1, height: 1},
                           textShadowRadius: 1, borderBottomWidth: 5, borderBottomColor: "#25699B", borderStyle: "solid", textAlign: "center", paddingBottom: 20}}>{characters[0].job}</Text>
                     </View>
-                    <Animated.View entering={FadeIn.duration(2000)} style={{width: "100%", height: "50%", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-around"}}>
+                    <Animated.View entering={FadeIn.duration(2000)} style={{width: "100%", height: "35%", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-around"}}>
                       {user && user.keyPerformanceIndicator.length > 0 && user.keyPerformanceIndicator.map((kpi: any, index: number) => {
                         // const currentKpi = keyPerformanceIndicator.length > 0 && keyPerformanceIndicator.find((kpi: any) => kpi.title === kpi.title)
                         return <Link href={{
