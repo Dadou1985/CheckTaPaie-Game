@@ -7,9 +7,9 @@
     "scenes": [{"status":"active"}]
   },
   {
-    "chapter": 2,
+    "chapter": 1,
     "title": "La déception de trop",
-    "story": "Anna est déçue de se voir refuser une promotion et une augmentation de salaire lors de l'évaluation annuelle. Elle avait travaillé dur tout au long de l'année et espérait être reconnue pour ses efforts. Cette déception la pousse à réévaluer sa stratégie de développement professionnel et à envisager de nouvelles approches pour atteindre ses objectifs de carrière.",
+    "story": "Anne est déçue de se voir refuser une promotion et une augmentation de salaire lors de l'évaluation annuelle. Elle avait travaillé dur tout au long de l'année et espérait être reconnue pour ses efforts. Cette déception la pousse à réévaluer sa stratégie de développement professionnel et à envisager de nouvelles approches pour atteindre ses objectifs de carrière.",
     "duration": 50000,
     "displayStatus": true,
     "nextEvent": "Une simple erreur de paie",
@@ -22,7 +22,7 @@
           [
             {
               "name": "Adèle",
-              "text": "Salut Anna !",
+              "text": "Salut Anne !",
               "timeLoading": 500
             },
             {
@@ -53,17 +53,17 @@
               ],
               "script": [
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "Salut Adèle !",
                   "timeLoading": 500
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "C'est juste...",
                   "timeLoading": 500
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "...encore une année sans promotion ni augmentation.",
                   "timeLoading": 1000
                 },
@@ -83,24 +83,24 @@
                   "timeLoading": 500
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "Je sais...",
                   "timeLoading": 500
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "J'avais espéré que cette fois ce serait différent.",
                   "timeLoading": 1000
                 },
 
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "Mais bon, c'est la vie de bureau, n'est-ce pas?",
                   "timeLoading": 1000
                 },
                 {
                   "name": "Adèle",
-                  "text": "Tu ne devrais pas laisser ça te décourager, Anna.",
+                  "text": "Tu ne devrais pas laisser ça te décourager, Anne.",
                   "timeLoading": 1000
                 },
                 {
@@ -114,12 +114,12 @@
                   "timeLoading": 500
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "Merci, Adèle.",
                   "timeLoading": 500
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "J'apprécie tes mots d'encouragement.",
                   "timeLoading": 1000
                 }
@@ -137,7 +137,7 @@
               ],
               "script": [
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "Salut Adèle, c’est rien. Je repensais juste à mon entretien annuel…",
                   "timeLoading": 1000
                 },
@@ -147,7 +147,7 @@
                   "timeLoading": 500
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "Comme un entretien annuel ! Sinon, toi ça va ?",
                   "timeLoading": 1000
                 },
@@ -170,7 +170,7 @@
               ],
               "script": [
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "A ton avis, ça à l’air d’aller d’après toi..?",
                   "timeLoading": 1000
                 },
@@ -185,12 +185,12 @@
                   "timeLoading": 1000
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "Désolé !",
                   "timeLoading": 500
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "C’est juste que j’ai pas trop la tête à discuter en ce moment.",
                   "timeLoading": 1000
                 },
@@ -210,7 +210,7 @@
                   "timeLoading": 1000
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "Merci Adèle.",
                   "timeLoading": 500
                 }
@@ -226,16 +226,16 @@
           [
             {
             "banner": true,
-              "text": "Adèle retourne à son bureau tandis que Damien, le manager d'Anna vient à son tour...",
+              "text": "Adèle retourne à son bureau tandis que Damien, le manager d'Anne vient à son tour...",
               "timeLoading": 3000
             },
             {
             "name": "Damien",
-            "text": "Anna, on peut se parler un instant?",
+            "text": "Anne, on peut se parler un instant?",
             "timeLoading": 500
             },
             {
-              "name": "Anna",
+              "name": "Anne",
               "text": "Bien sûr, Damien. Qu'y a-t-il?",
               "timeLoading": 500
             },
@@ -251,7 +251,7 @@
             },
             {
               "name": "Damien",           
-              "text": "Nous avons des plans pour toi, Anna.",
+              "text": "Nous avons des plans pour toi, Anne.",
               "timeLoading": 500
             },
             {
@@ -281,18 +281,18 @@
               ],
               "script": [
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "Je n’en doute pas.",
                   "timeLoading": 500
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "Je suis heureuse de savoir que tu as pris en considération mes attentes.",
                   "timeLoading": 1000
                 },
                 {
                   "name": "Damien",               
-                  "text": "Tu mérites une chance de briller, Anna.",
+                  "text": "Tu mérites une chance de briller, Anne.",
                   "timeLoading": 500
                 },
                 {
@@ -312,12 +312,12 @@
                   "timeLoading": 1000
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "C’est la 3ème fois qu’on décale ce rendez-vous…",
                   "timeLoading": 1000
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "Au bout d’un moment, ils vont finir par mal le prendre.",
                   "timeLoading": 1000
                 },
@@ -356,7 +356,7 @@
               ],
               "script": [
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "C’est ce que tu m’as dit l’an dernier…",
                   "timeLoading": 500
                 },
@@ -381,17 +381,17 @@
                   "timeLoading": 1500
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "Je l’espère.",
                   "timeLoading": 500
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "Quoiqu’il en soit, si les choses ne changent pas, il va falloir que j’envisage d’autres options.",
                   "timeLoading": 1000
                 },
                 {
-                  "name": "Anna",
+                  "name": "Anne",
                   "text": "Je tenais à ce que les choses soient claires entre nous Damien.",
                   "timeLoading": 1000
                 },
@@ -412,13 +412,88 @@
             }
           ]
         ]
+      }, 
+      {
+        "place": "Machine à café",
+        "status": "Active",
+        "characters": ["Anne", "Julie"],
+        "script": [
+          {
+            "name": "Julie",
+            "text": "Oh, Anne, ça va ? Tu as l'air préoccupée. On dirait que ton entretien annuel ne s’est pas tout à fait passé comme tu voulais, non ?",
+            "timeLoading": 1500
+          },
+          {
+            "flag": "green",
+            "text": "Prendre le contrôle",
+            "bunchNumber": 0,
+            "points": [
+              {"title": "Leadership", "point": 5},
+              {"title": "Audace", "point": 3}
+            ],
+            "script": [
+              {"name": "Anne", "text": "Honnêtement ? Je pense que j’ai fait mes preuves cette année, et je vais m’assurer que mes efforts soient reconnus.", "timeLoading": 1500},
+              {"name": "Anne", "text": "Ce n’est pas une question d’adaptation, c’est une question de valorisation du travail accompli.", "timeLoading": 1500},
+              {"name": "Julie", "text": "Bien sûr, je comprends. Après tout, la direction doit voir qui sait s’ajuster rapidement…", "timeLoading": 1500},
+              {"name": "Anne", "text": "L’adaptabilité ne doit pas être synonyme de complaisance.", "timeLoading": 1000},
+              {"name": "Anne", "text": "J’ai toujours été force de proposition, et je vais continuer dans ce sens.", "timeLoading": 1500},
+              {"name": "Anne", "text": "Les résultats parleront d’eux-mêmes.", "timeLoading": 1000},
+              {"name": "Julie", "text": "C’est une approche… intéressante. En tout cas, bonne chance pour la suite.", "timeLoading": 1500},
+              {"name": "Anne", "text": "Ce n'est pas une question de chance mais d'opportunités, Julie.", "timeLoading": 1500},
+              {"name": "Anne", "text": "On verra qui saura le mieux se démarquer pour les saisir.", "timeLoading": 1500}
+            ]
+          },
+          {
+            "flag": "blue",
+            "text": "Rester diplomate",
+            "bunchNumber": 0,
+            "points": [
+              {"title": "Lien social", "point": 3},
+              {"title": "Compétences", "point": 2}
+            ],
+            "script": [
+              {"name": "Anne", "text": "Oh, tu sais, chaque entretien apporte son lot de remarques constructives.", "timeLoading": 1500},
+              {"name": "Anne", "text": "J’ai eu quelques retours qui vont me permettre d’améliorer certaines choses.", "timeLoading": 1500},
+              {"name": "Julie", "text": "Ah bien sûr ! Mais c'est frustrant, non ? Avec tout ce que tu as fait cette année…", "timeLoading": 1500},
+              {"name": "Anne", "text": "Oui, je pensais que certains de mes projets auraient eu un peu plus de reconnaissance, mais je prends note des attentes de la direction.", "timeLoading": 1500},
+              {"name": "Anne", "text": "Après tout, l’important est d’évoluer dans la bonne direction.", "timeLoading": 1000},
+              {"name": "Julie", "text": "C’est vrai, et parfois, ça implique de faire preuve d’un peu plus de souplesse dans sa manière d’aborder les choses peut-être...", "timeLoading": 1500},
+              {"name": "Anne", "text": "Tout à fait. Mais je crois aussi en l’importance d’une vision claire et cohérente.", "timeLoading": 1500},
+              {"name": "Anne", "text": "Je vais ajuster mon approche tout en restant fidèle à mes principes.", "timeLoading": 1500},
+              {"name": "Anne", "text": "C'est important, tu ne penses pas ?", "timeLoading": 1000},
+              {"name": "Julie", "text": "Bien sûr, chacun sa méthode. Si tu veux en parler plus en détail, je suis là.", "timeLoading": 1500},
+              {"name": "Anne", "text": "C'est gentil, Julie. J'apprécie.", "timeLoading": 1000}
+            ]
+          },
+          {
+            "flag": "red",
+            "text": "Répliquer sèchement",
+            "bunchNumber": 0,
+            "points": [
+              {"title": "Lien social", "point": -5},
+              {"title": "Personal Branding", "point": -3}
+            ],
+            "script": [
+              {"name": "Anne", "text": "Julie, épargne-moi ton discours.", "timeLoading": 1000},
+              {"name": "Anne", "text": "Je sais très bien que tu es toujours la première à faire en sorte que la direction remarque ta \"souplesse\".", "timeLoading": 1500},
+              {"name": "Julie", "text": "Oh, je n’insinuais rien, Anne. Juste un constat !", "timeLoading": 1000},
+              {"name": "Anne", "text": "Je ne joue pas à ce petit jeu. Je travaille pour des résultats, pas pour plaire à qui que ce soit.", "timeLoading": 1500},
+              {"name": "Anne", "text": "Si certains préfèrent lécher les bottes de la direction, libre à eux.", "timeLoading": 1500},
+              {"name": "Julie", "text": "Tu devrais peut-être faire attention à ce que tu dis, Anne.", "timeLoading": 1500},
+              {"name": "Anne", "text": "Je préfère être du côté de l’intégrité et du travail bien fait.", "timeLoading": 1500},
+              {"name": "Julie", "text": "Je vois… Eh bien, bonne continuation.", "timeLoading": 1000},
+              {"name": "Anne", "text": "C’est ça, à bientôt.", "timeLoading": 1000}
+            ]
+          }
+        ]
       }
+      
     ]
   },
   {
-  "chapter": 3,
+  "chapter": 2,
   "title": "Une simple erreur de paie",
-  "story": "Anna décide de vérifier sa paie mensuellement pour s'assurer qu'elle est correctement rémunérée pour son travail. En examinant attentivement ses relevés de paie, elle découvre une erreur en sa faveur, où elle a été payée pour des heures supplémentaires non effectuées. Elle contacte immédiatement le service des ressources humaines pour rectifier l'erreur et rembourser le montant excédentaire. Cette expérience lui rappelle l'importance de surveiller de près sa rémunération et de signaler tout problème éventuel.",
+  "story": "Anne décide de vérifier sa paie mensuellement pour s'assurer qu'elle est correctement rémunérée pour son travail. En examinant attentivement ses relevés de paie, elle découvre une erreur en sa faveur, où elle a été payée pour des heures supplémentaires non effectuées. Elle contacte immédiatement le service des ressources humaines pour rectifier l'erreur et rembourser le montant excédentaire. Cette expérience lui rappelle l'importance de surveiller de près sa rémunération et de signaler tout problème éventuel.",
   "nextEvent": "Une fausse promotion",
   "duration": 50000,
   "scenes": [
@@ -430,31 +505,31 @@
         [
           {
             "banner": true,
-            "text": "Anna est assise devant son ordinateur, examinant attentivement ses relevés de paie.",
+            "text": "Anne est assise devant son ordinateur, examinant attentivement ses relevés de paie.",
             "timeLoading": 3000
           },
           {
-            "name": "Anna",               
+            "name": "Anne",               
             "text": "Alors, voyons voir !",
             "timeLoading": 500
           }, 
           {
-            "name": "Anna",               
+            "name": "Anne",               
             "text": "Tout semble en ordre jusqu'à présent...",
             "timeLoading": 1000
           },
           {
-            "name": "Anna",               
+            "name": "Anne",               
             "text": "Attendez, qu'est-ce que c'est ?",
             "timeLoading": 1000
           },
           {
             "banner": true,
-            "text": "Anna remarque une entrée pour des heures supplémentaires qu'elle n'a pas travaillées.",
+            "text": "Anne remarque une entrée pour des heures supplémentaires qu'elle n'a pas travaillées.",
             "timeLoading": 3000
           },
           {
-            "name": "Anna",               
+            "name": "Anne",               
             "text": "Oh, il semble qu'il y ait eu une erreur dans ma paie !",
             "timeLoading": 1000
           },
@@ -471,27 +546,27 @@
             "script": [
               {
                 "banner": true,
-                "text": "Anna compose rapidement le numéro du service des ressources humaines et attend qu'on réponde.",
+                "text": "Anne compose rapidement le numéro du service des ressources humaines et attend qu'on réponde.",
                 "timeLoading": 3000
               },
               {
-                "name": "Anna",               
-                "text": "Bonjour, c'est Anna de l'équipe du développement logiciel.",
+                "name": "Anne",               
+                "text": "Bonjour, c'est Anne de l'équipe du développement logiciel.",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Je viens de remarquer une erreur dans mes relevés de paie.",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Il semble qu'on m'ait payée pour des heures supplémentaires que je n'ai pas effectuées.",
                 "timeLoading": 1000
               },
               {
                 "name": "Ghislaine",               
-                "text": "Bonjour Anna !",
+                "text": "Bonjour Anne !",
                 "timeLoading": 500
               },
               {
@@ -506,7 +581,7 @@
               },
               {
                 "banner": true,
-                "text": "Anna est mise en attente quelques minutes...",
+                "text": "Anne est mise en attente quelques minutes...",
                 "timeLoading": 10000
               },
               {
@@ -525,12 +600,12 @@
                 "timeLoading": 1500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Merci beaucoup pour votre réactivité.",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Je suis reconnaissante que vous ayez pu résoudre ce problème si rapidement.",
                 "timeLoading": 500
               },
@@ -545,12 +620,12 @@
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Merci, je le ferai.",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Merci encore pour votre aide.",
                 "timeLoading": 500
               }, 
@@ -580,16 +655,16 @@
             "script": [
               {
                 "banner": true,
-                "text": "Anna se rend aussitôt au bureau d’Adèle",
+                "text": "Anne se rend aussitôt au bureau d’Adèle",
                 "timeLoading": 2000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Adèle, t’as 2 secondes..?",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "J’ai besoin de ton avis sur quelque chose.",
                 "timeLoading": 1000
               },
@@ -599,7 +674,7 @@
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Eh bien, il se trouve que l’on m’a payé ce mois-ci pour des heures supp’ que je n’ai pas effectuées.",
                 "timeLoading": 1500
               },
@@ -609,17 +684,17 @@
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Ben, je sais pas…",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Je sais que je ne dois pas le garder mais en même temps je suis un peu serrée ce mois-ci…",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Argh ! Qu’est-ce que tu ferais à ma place ?",
                 "timeLoading": 1000
               },
@@ -639,12 +714,12 @@
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Ah...Top !",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Enfin, je veux dire depuis quand t’es devenue une pro de la paie, toi ?",
                 "timeLoading": 1000
               },
@@ -674,12 +749,12 @@
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "CheckTaPaie tu dis?",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "On va checker ça !",
                 "timeLoading": 1000
               },
@@ -714,27 +789,27 @@
             ],
             "script": [
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Mais… impossible !",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Ces idiots m’ont payé pour des heures supp’ que je n’ai jamais faites.",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "En même temps, c’est pas comme si je ne les avais pas méritées.",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "C’est vrai ! Après toutes ces années où je me suis fait mener en bâteau.",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Qu’ils viennent me voir s’ils veulent récupérer leurs sous, ce n’est pas moi qui vais les contacter pour une faute qu’ils ont commise.",
                 "timeLoading": 1500
               }, 
@@ -751,7 +826,7 @@
   {
   "chapter": 4,
   "title": "Une fausse promotion",
-  "story": "Anna décide de vérifier sa paie mensuellement pour s'assurer qu'elle est correctement rémunérée pour son travail. En examinant attentivement ses relevés de paie, elle découvre une erreur en sa faveur, où elle a été payée pour des heures supplémentaires non effectuées. Elle contacte immédiatement le service des ressources humaines pour rectifier l'erreur et rembourser le montant excédentaire. Cette expérience lui rappelle l'importance de surveiller de près sa rémunération et de signaler tout problème éventuel.",
+  "story": "Anne décide de vérifier sa paie mensuellement pour s'assurer qu'elle est correctement rémunérée pour son travail. En examinant attentivement ses relevés de paie, elle découvre une erreur en sa faveur, où elle a été payée pour des heures supplémentaires non effectuées. Elle contacte immédiatement le service des ressources humaines pour rectifier l'erreur et rembourser le montant excédentaire. Cette expérience lui rappelle l'importance de surveiller de près sa rémunération et de signaler tout problème éventuel.",
   "nextEvent": "Mentorat et développement professionnel",
   "duration": 50000,
   "scenes": [
@@ -763,16 +838,16 @@
         [
           {
             "banner": true,
-            "text": "Anna entre dans le bureau de Damien, son manager. Elle prend place sur une chaise face à ce dernier.",
+            "text": "Anne entre dans le bureau de Damien, son manager. Elle prend place sur une chaise face à ce dernier.",
             "timeLoading": 3000
           },
           {
             "name": "Damien",               
-            "text": "Anna, j'ai une bonne nouvelle à t'annoncer.",
+            "text": "Anne, j'ai une bonne nouvelle à t'annoncer.",
             "timeLoading": 1000
           },
           {
-            "name": "Anna",               
+            "name": "Anne",               
             "text": "Vraiment ? Qu'est-ce qui se passe ?",
             "timeLoading": 500
           },
@@ -787,13 +862,13 @@
             "timeLoading": 1500
           },
           {
-            "name": "Anna",               
+            "name": "Anne",               
             "text": "Sérieusement ? Je ne sais pas quoi dire...",
             "timeLoading": 1000
           },
           {
             "name": "Damien",               
-            "text": "C'est mérité, Anna.",
+            "text": "C'est mérité, Anne.",
             "timeLoading": 500
           },
           {
@@ -813,23 +888,23 @@
             ],
             "script": [
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Wow, je ne m'attendais pas du tout à ça.",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Merci beaucoup, Damien.",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "C'est vraiment une grande opportunité pour moi.",
                 "timeLoading": 1000
               },
               {
                 "name": "Damien",               
-                "text": "Tu le mérites amplement, Anna.",
+                "text": "Tu le mérites amplement, Anne.",
                 "timeLoading": 500
               },
               {
@@ -843,18 +918,18 @@
                 "timeLoading": 1500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Je ferai de mon mieux, Damien.",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Je suis vraiment reconnaissante pour cette promotion et pour la confiance que vous avez en moi.",
                 "timeLoading": 1500
               },
               {
                 "name": "Damien",               
-                "text": "Encore félicitations, Anna.",
+                "text": "Encore félicitations, Anne.",
                 "timeLoading": 500
               },
               {
@@ -864,7 +939,7 @@
               }, 
               {
                 "banner": true,
-                "text": "Anna se lève pour quitter le bureau lorsque Damien l'interpèle...",
+                "text": "Anne se lève pour quitter le bureau lorsque Damien l'interpèle...",
                 "timeLoading": 2000
               },
               {
@@ -883,7 +958,7 @@
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Compte sur moi, je ferai au mieux",
                 "timeLoading": 500
               },
@@ -908,17 +983,17 @@
             ],
             "script": [
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Wow, je ne m'attendais pas du tout à ça.",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Merci beaucoup, Damien.",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Cela semble vraiment intéressant mais en quoi consiste réellement ce nouveau poste ?",
                 "timeLoading": 1500
               },
@@ -958,12 +1033,12 @@
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "J’en dis que ça a l’air super !",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Et j’imagine que cette promotion s’accompagne d’une augmentation salariale, n’est-ce pas?",
                 "timeLoading": 1000
               },
@@ -978,17 +1053,17 @@
                 "timeLoading": 1500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Eh bien, écoute !",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Je te laisse voir avec la direction et quand vous aurez une offre claire et définitive, tu pourras me l’envoyer par mail afin que je vous réponde rapidement.",
                 "timeLoading": 1500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Qu'est-ce que t'en dis ?",
                 "timeLoading": 500
               },
@@ -999,17 +1074,17 @@
               },
               {
                 "name": "Damien",               
-                "text": "Mais tu sais, Anna, dans la vie il faut savoir saisir rapidement les opportunités qui s’offrent à nous…",
+                "text": "Mais tu sais, Anne, dans la vie il faut savoir saisir rapidement les opportunités qui s’offrent à nous…",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Et c’est très exactement ce que je compte faire, Damien.",
                 "timeLoading": 1000
               }, 
               {
                 "banner": true,
-                "text": "Anna quitte le bureau en laissant son manager sans voix.",
+                "text": "Anne quitte le bureau en laissant son manager sans voix.",
                 "timeLoading": 2000
               },
               {
@@ -1033,12 +1108,12 @@
             ],
             "script": [
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "C'est...intéressant !",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "En quoi consiste exactement ce nouveau...poste ?",
                 "timeLoading": 1000
               },
@@ -1078,7 +1153,7 @@
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "J’apprécie grandement le geste mais je ne suis pas très fan des “évolutions horizontales”",
                 "timeLoading": 1000
               },
@@ -1093,7 +1168,7 @@
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Oui, c’est comme ça que j’appelle les promotions qui alourdissent ton périmètre de responsabilités sans pour autant faire gonfler ta rémunération ou ton statut.",
                 "timeLoading": 1500
               }, 
@@ -1118,28 +1193,28 @@
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Entre nous, je pense que le profil de Julie colle parfaitement au poste.",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Et puis, je t’ai déjà fait part de mes aspirations en termes d’évolution de carrière…",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "On est plutôt dans la verticalité pour le coup !",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Merci, pour l’offre mais non merci.",
                 "timeLoading": 500
               },
               {
                 "banner": true,
-                "text": "Anna quitte le bureau en laissant son manager dépité.",
+                "text": "Anne quitte le bureau en laissant son manager dépité.",
                 "timeLoading": 2000
               },
               {
@@ -1155,38 +1230,38 @@
   {
   "chapter": 5,
   "title": "Mentorat et développement professionnel",
-  "story": "Anna recherche des opportunités de mentorat et de développement professionnel pour continuer à progresser dans sa carrière. Elle identifie des mentors potentiels dans son entreprise et dans son réseau professionnel, et cherche à établir des relations significatives avec eux. Elle participe également à des programmes de développement professionnel et à des formations pour renforcer ses compétences et acquérir de nouvelles perspectives. Ce mentorat et ce développement professionnel lui permettent de bénéficier de conseils avisés et de conseils d'experts pour guider sa croissance professionnelle.",
+  "story": "Anne recherche des opportunités de mentorat et de développement professionnel pour continuer à progresser dans sa carrière. Elle identifie des mentors potentiels dans son entreprise et dans son réseau professionnel, et cherche à établir des relations significatives avec eux. Elle participe également à des programmes de développement professionnel et à des formations pour renforcer ses compétences et acquérir de nouvelles perspectives. Ce mentorat et ce développement professionnel lui permettent de bénéficier de conseils avisés et de conseils d'experts pour guider sa croissance professionnelle.",
   "nextEvent": "Licenciement massif dans l'entreprise",
   "duration": 50000,
   "scenes": [
     {
       "place": "Machine à café",
       "status": "active",
-      "characters": ["Sophie"],
+      "characters": ["Émilie"],
       "script": [
         [
           {
             "banner": true,
-            "text": "Sophie du service paie arrive à la machine à café. Elle y trouve une Anna perdue dans ses pensées.",
+            "text": "Émilie du service paie arrive à la machine à café. Elle y trouve une Anne perdue dans ses pensées.",
             "timeLoading": 3000
           },
           {
-            "name": "Sophie",               
-            "text": "Salut Anna, comment ça se passe dans ton service ?",
+            "name": "Émilie",               
+            "text": "Salut Anne, comment ça se passe dans ton service ?",
             "timeLoading": 1000
           },
           {
-            "name": "Anna",               
-            "text": "Oh…salut Emily !",
+            "name": "Anne",               
+            "text": "Oh…salut Émilie !",
             "timeLoading": 500
           },
           {
-            "name": "Anna",               
+            "name": "Anne",               
             "text": "Euh… oui, ça se passe bien !",
             "timeLoading": 500
           },
           {
-            "name": "Sophie",               
+            "name": "Émilie",               
             "text": "Wow, toi t’as besoin d’un café, t’as vraiment une sale mine !",
             "timeLoading": 1500
           },
@@ -1206,83 +1281,83 @@
             ],
             "script": [
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Je suis juste perdu dans mes pensées.",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "En fait, j’ai assisté récemment à une conférence professionnelle pendant laquelle un intervenant préconisait à quiconque souhaite booster sa carrière de trouver un mentor qui le fera avancer plus vite…",
                 "timeLoading": 2000
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "T’as pensé au programme LeadHer que propose la boîte !",
                 "timeLoading": 1000
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "C'est un programme conçu afin de promouvoir le leadership féminin en milieu professionnel.",
                 "timeLoading": 500
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "As-tu envisagé de contacter certaines des personnes plus expérimentées dans notre entreprise ?",
                 "timeLoading": 1000
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "Ils pourraient être d'excellents mentors.",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "LeadHer ?",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Jamais entendu parlé !",
                 "timeLoading": 500
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "En gros, tu contactes un profil expérimenté au sein de la boîte qui accepte de te prendre sous son aile et la boîte vous aménage des temps d’échanges et des sessions de mentorship afin que tu puisses monter en compétence le plus rapidement possible et dans les meilleures conditions.",
                 "timeLoading": 2000
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "Ils ont mis ça en place l’an dernier, c’est assez récent.",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "C'est une bonne idée.",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "J'ai déjà quelques noms en tête. Tu connais des gens qui y ont participé ?",
                 "timeLoading": 1000
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "Ben, il se trouve que j’étais l’une des seuls à y participer.",
                 "timeLoading": 1000
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "De mémoire, on devait être 3 ou 4 inscrits pour la première promotion.",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Top !",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
-                "text": "Je vais y jeter un œil. Merci pour l’info Sophie.",
+                "name": "Anne",               
+                "text": "Je vais y jeter un œil. Merci pour l’info Émilie.",
                 "timeLoading": 500
               },
               {
@@ -1302,83 +1377,83 @@
             ],
             "script": [
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Mdr, non mais tu t’es regardé ?",
                 "timeLoading": 1000
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "Oookay !",
                 "timeLoading": 500
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "Madame n’a pas l’air d’être dans un bon jour…",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Désolé !",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "C’est juste que je suis un peu stressée en ce moment…",
                 "timeLoading": 1000
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "T’as essayé de participer aux ateliers de gestion du stress proposés par la boîte..?",
                 "timeLoading": 1000
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "J’ai commencé l’an dernier et je t’avoue qu’au début j’y suis allée à reculons mais au bout de quelques séances…",
                 "timeLoading": 1500
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "ça m’a fait un bien fou, je t’assure !",
                 "timeLoading": 1000
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "Tu devrais essayer…",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Ouais, pourquoi pas !",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Après tout, ça ne peut pas me faire de mal.",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "C’est quel jour ?",
                 "timeLoading": 500
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "On fait ça tous les mercredi soir à partir de 19h dans la salle de réunion.",
                 "timeLoading": 1000
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "Si ça t’intéresse, passe nous voir un de ces soirs.",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "J’y penserais.",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
-                "text": "Merci pour l’info, Sophie.",
+                "name": "Anne",               
+                "text": "Merci pour l’info, Émilie.",
                 "timeLoading": 500
               },
               {
@@ -1398,62 +1473,62 @@
             ],
             "script": [
               {
-                "name": "Anna",               
-                "text": "J’ai pas la tête à supporter tes remarques déplacées, Sophie !",
+                "name": "Anne",               
+                "text": "J’ai pas la tête à supporter tes remarques déplacées, Émilie !",
                 "timeLoading": 1000
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "Oookay !",
                 "timeLoading": 500
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "Madame n’a pas l’air d’être dans un bon jour…",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Sans blague !",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Et t’as déduis ça toute seule..?",
                 "timeLoading": 500
               },
               {
-                "name": "Sophie",               
-                "text": "Tu sais, Anna…la boîte dispense des ateliers de gestion des émotions en milieu professionnel !",
+                "name": "Émilie",               
+                "text": "Tu sais, Anne…la boîte dispense des ateliers de gestion des émotions en milieu professionnel !",
                 "timeLoading": 1500
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "Je dis ça…",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Laisse-moi deviner !",
                 "timeLoading": 1000
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "Ils ont eu cette brillante idée après avoir eu une conversation avec toi, j’imagine ?!",
                 "timeLoading": 1000
               },
               {
-                "name": "Sophie",               
+                "name": "Émilie",               
                 "text": "J’ai compris !",
                 "timeLoading": 500
               },
               {
-                "name": "Sophie",               
-                "text": "Je vais te laisser, Anna.",
+                "name": "Émilie",               
+                "text": "Je vais te laisser, Anne.",
                 "timeLoading": 500
               },
               {
-                "name": "Anna",               
+                "name": "Anne",               
                 "text": "C’est ça !",
                 "timeLoading": 500
               },

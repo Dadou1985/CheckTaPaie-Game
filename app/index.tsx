@@ -58,7 +58,7 @@ export default function HomeScreen() {
             level: 10,
         },
         {
-            title: "Le personal branding",
+            title: "Leadership",
             level: 20
         }
       ]
