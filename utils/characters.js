@@ -1,7 +1,7 @@
 export const characters = [
     {
         name:"Anne",
-        lastName: "Bellamy",
+        lastName: "Boursier",
         role: "La Level Up Girl",
         job: "Assistante de direction",
         img: {
@@ -33,7 +33,7 @@ export const characters = [
         lastname: "Vernier",
         role: "Le N-2",  
         age: "46 ans",   
-        job: "Directeur marketing et communication",                         
+        job: "Directeur Qualité",                         
         image: {
             small: require('../assets/images/damien_portrait_resized.png'),
             large: require('../assets/images/damien_background.jpg'),
@@ -46,8 +46,8 @@ export const characters = [
         name: "Ghislaine",
         role: "Employée RH",               
         image: {
-            small: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-            large: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+            small: require('../assets/images/fellows/ghislaine_portrait.jpeg'),
+            large: require('../assets/images/fellows/ghislaine_portrait.jpeg'),
         }
     },
     {
@@ -56,9 +56,38 @@ export const characters = [
         age: "44 ans", 
         job: "Consultante en gestion de projet",
         image: {
-            small:"https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-            large:"https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"},
+            small: require('../assets/images/buddies/sophie_portrait.jpeg'),
+            large: require('../assets/images/buddies/sophie_portrait.jpeg'),
+        },
         story: ["Sophie est une professionnelle organisée et méthodique avec qui Anna entretient une relation de confiance et de collaboration au travail. En tant que Consultante en gestion de projet, elle apporte une grande expertise en matière de planification et de suivi des projets, ce qui en fait une interlocutrice privilégiée pour discuter des défis et des opportunités de développement de l'entreprise.", "Sophie est passionnée par son travail et aime relever de nouveaux défis et explorer de nouvelles perspectives pour améliorer les processus et les résultats de l'entreprise. Elle est toujours à l'écoute des besoins et des objectifs de ses clients, et elle met un point d'honneur à trouver des solutions pragmatiques et efficaces pour atteindre les objectifs fixés.", "En dehors du travail, Sophie est une sportive accomplie et une voyageuse invétérée, et elle aime partager ses expériences et ses découvertes avec ses collègues. Sa détermination et son enthousiasme en font une source d'inspiration et un modèle à suivre pour ceux qui aspirent à exceller dans leur carrière.", "En résumé, Sophie est une professionnelle compétente et motivée qui apporte une grande valeur ajoutée à l'entreprise grâce à son expertise en matière de gestion de projet. Sa rigueur et son engagement font d'elle un partenaire de confiance pour ses collègues et un atout précieux pour l'entreprise."],
+        duration: 50000,
+        displayStatus: true
+    },
+    {
+        name: "Angélique",
+        lastName: "Brito",
+        role: "La pote du taf",
+        age: "34 ans", 
+        job: "Analyste financier",
+        image: {
+            small: require('../assets/images/buddies/angelique_portrait.jpeg'),
+            large: require('../assets/images/buddies/angelique_portrait.jpeg'),
+        },
+        story: ["Angélique est une professionnelle analytique et rigoureuse avec qui Anna partage des échanges approfondis sur les aspects financiers de l'entreprise. En tant qu'Analyste financier, elle apporte une expertise pointue en matière d'analyse des données financières et de prévisions économiques, ce qui en fait une interlocutrice privilégiée pour discuter des performances et des perspectives de croissance de l'entreprise.", "Angélique est passionnée par son travail et aime plonger dans les chiffres pour comprendre les tendances et les indicateurs clés qui influencent la santé financière de l'entreprise. Elle est toujours à la recherche de solutions innovantes et de stratégies efficaces pour optimiser les investissements et maximiser les profits.", "En dehors du travail, Angélique est un amatrice de sport et de voyage, et elle aime partager ses connaissances et ses expériences avec ses collègues. Sa capacité à simplifier des concepts complexes et à fournir des conseils éclairés en fait un atout précieux pour l'équipe.", "En résumé, Angélique est une professionnelle compétente et fiable qui apporte une grande valeur ajoutée à l'entreprise grâce à son expertise en matière d'analyse financière. Sa rigueur et son engagement font d’elle une partenaire de confiance pour ses collègues et un atout précieux pour l'entreprise."],
+        duration: 50000,
+        displayStatus: true
+    },
+    {
+        name: "Thilbault",
+        lastName: "Leroy",
+        role: "Le pote du taf",
+        age: "38 ans", 
+        job: "Chef de projet en marketing",
+        image: {
+            small: require('../assets/images/buddies/thibault_portrait.jpeg'),
+            large: require('../assets/images/buddies/thibault_portrait.jpeg'),
+        },
+        story: ["Thibault est un professionnel créatif et stratégique avec qui Anna partage souvent des moments de réflexion et d'échange au bureau. En tant que Chef de projet en marketing, il apporte une grande expertise en matière de planification et de gestion de campagnes publicitaires, ce qui en fait un interlocuteur privilégié pour discuter des stratégies de communication et de promotion de l'entreprise.", "Thibault est passionné par son travail et aime explorer de nouvelles idées et tendances dans le domaine du marketing. Il est toujours à l'affût des dernières innovations et des meilleures pratiques pour optimiser la visibilité et la notoriété de l'entreprise. Son approche proactive et sa capacité à trouver des solutions créatives font de lui un membre précieux de l'équipe marketing.", "En dehors du travail, Thibault est un amateur d'art et de culture, et il participe parfois à des événements ou des expositions pour rester inspiré et informé des tendances du marché. Sa curiosité intellectuelle et son ouverture d'esprit en font un compagnon de choix pour les discussions et les brainstormings entre collègues.", "En résumé, Thibault est un professionnel passionné et innovant qui apporte une grande valeur ajoutée à l'entreprise grâce à son expertise en matière de marketing et de communication. Sa créativité et son engagement font de lui un modèle pour ses collègues et un atout précieux pour l'entreprise."],
         duration: 50000,
         displayStatus: true
     },

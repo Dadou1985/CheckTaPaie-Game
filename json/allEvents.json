@@ -415,296 +415,295 @@
         }, 
         {
           "place": "Machine à café",
-          "status": "Active",
+          "status": "active",
           "characters": ["Julie"],
           "script": [
-            {
-              "banner": true,
-              "text": "Anne prend un café à la machine visiblement déçue par son récent entretien annuel.",
-              "timeLoading": 1500
-            },
-            {
-              "banner": true,
-              "text": "Julie la rejoint, un sourire poli aux lèvres.",
-              "timeLoading": 1000
-            },
-            {
-              "name": "Julie",
-              "text": "Oh, Anne, ça va ?",
-              "timeLoading": 500
-            },
-            {
-              "name": "Julie",
-              "text": "Tu as l'air préoccupée.",
-              "timeLoading": 500
-            },
-            {
-              "name": "Julie",
-              "text": "On dirait que ton entretien annuel ne s’est pas tout à fait passé comme tu voulais, non ?",
-              "timeLoading": 1500
-            },
-            {
-              "flag": "green",
-              "text": "Se livrer",
-              "bunchNumber": 0,
-              "points": [
-                {"title": "Le Le leadership", "point": 5},
-                {"title": "L'audace", "point": 3}
-              ],
-              "script": [
-                  [
-                      {
-                        "name": "Anne",
-                        "text": "Honnêtement ?",
-                        "timeLoading": 500
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "Je pense que j’ai fait mes preuves cette année, et je vais m’assurer que mes efforts soient reconnus.",
-                        "timeLoading": 1500
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "Ce n’est pas une question d’adaptation, c’est une question de valorisation du travail accompli.",
-                        "timeLoading": 1500
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "Bien sûr, je comprends.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "Après tout, la direction doit voir qui sait s’ajuster rapidement…",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "L’adaptabilité ne doit pas être synonyme de complaisance.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "J’ai toujours été force de proposition, et je vais continuer dans ce sens.",
-                        "timeLoading": 1500
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "Les résultats parleront d’eux-mêmes.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "C’est une approche… intéressante.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "En tout cas, bonne chance pour la suite.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "Ce n'est pas une question de chance mais d'opportunités, Julie.",
-                        "timeLoading": 1500
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "On verra qui saura le mieux se démarquer pour les saisir.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "eventStatus": "end"
-                      }
-                  ]
-              ]
-            },
-            {
-              "flag": "blue",
-              "text": "Rester évasive",
-              "bunchNumber": 0,
-              "points": [
-                {"title": "Le lien social", "point": 3},
-                {"title": "Les compétences", "point": 2}
-              ],
-              "script": [
-                  [
-                      {
-                        "name": "Anne",
-                        "text": "Oh, tu sais, chaque entretien apporte son lot de remarques constructives.",
-                        "timeLoading": 1500
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "J’ai eu quelques retours qui vont me permettre d’améliorer certaines choses.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "Ah bien sûr !",
-                        "timeLoading": 500
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "Mais c'est frustrant, non ?",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "Avec tout ce que tu as fait cette année…",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "Oui, je pensais que certains de mes projets auraient eu un peu plus de reconnaissance,",
-                        "timeLoading": 1500
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "Mais je prends note des attentes de la direction.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "Après tout, l’important est d’évoluer dans la bonne direction.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "C’est vrai, et parfois, ça implique de faire preuve d’un peu plus de souplesse dans sa manière d’aborder les choses peut-être...",
-                        "timeLoading": 1500
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "Tout à fait.",
-                        "timeLoading": 500
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "Mais je crois aussi en l’importance d’une vision claire et cohérente.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "Je vais ajuster mon approche tout en restant fidèle à mes principes.",
-                        "timeLoading": 1500
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "C'est important, tu ne penses pas ?",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "Bien sûr, chacun sa méthode.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "Si tu veux en parler plus en détail, je suis là.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "C'est gentil, Julie.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "J'apprécie.",
-                        "timeLoading": 500
-                      },
-                      {
-                        "eventStatus": "end"
-                      }
-                  ]
-              ]
-            },
-            {
-              "flag": "red",
-              "text": "Recadrer sèchement",
-              "bunchNumber": 0,
-              "points": [
-                {"title": "Le lien social", "point": -5}
-              ],
-              "script": [
-                  [
-                      {
-                        "name": "Anne",
-                        "text": "Julie, épargne-moi ton discours.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "Je sais très bien que tu es toujours la première à faire en sorte que la direction remarque ta « souplesse ».",
-                        "timeLoading": 1500
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "Oh, je n’insinuais rien, Anne.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "Juste un constat !",
-                        "timeLoading": 500
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "Je ne joue pas à ce petit jeu.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "Je travaille pour des résultats, pas pour plaire à qui que ce soit.",
-                        "timeLoading": 1500
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "Si certains préfèrent lécher les bottes de la direction, libre à eux.",
-                        "timeLoading": 1500
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "Tu devrais peut-être faire attention à ce que tu dis, Anne.",
-                        "timeLoading": 1500
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "Dans un environnement qui change, il vaut mieux être du bon côté.",
-                        "timeLoading": 1500
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "Je préfère être du côté de l’intégrité et du travail bien fait.",
-                        "timeLoading": 1500
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "À chacun ses priorités.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "Je vois…",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Julie",
-                        "text": "Eh bien, bonne continuation.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "name": "Anne",
-                        "text": "C’est ça, à bientôt.",
-                        "timeLoading": 1000
-                      },
-                      {
-                        "eventStatus": "end"
-                      }
-                  ]
-              ]
-            }
+            [
+              {
+                "banner": true,
+                "text": "Anne prend un café à la machine visiblement déçue par son récent entretien annuel.",
+                "timeLoading": 1500
+              },
+              {
+                "banner": true,
+                "text": "Julie la rejoint, un sourire poli aux lèvres.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Julie",
+                "text": "Oh, Anne, ça va ?",
+                "timeLoading": 500
+              },
+              {
+                "name": "Julie",
+                "text": "Tu as l'air préoccupée.",
+                "timeLoading": 500
+              },
+              {
+                "name": "Julie",
+                "text": "On dirait que ton entretien annuel ne s’est pas tout à fait passé comme tu voulais, non ?",
+                "timeLoading": 1500
+              },
+              {
+                "flag": "green",
+                "text": "Se livrer",
+                "bunchNumber": 0,
+                "points": [
+                  {"title": "Le leadership", "point": 5},
+                  {"title": "L'audace", "point": 3}
+                ],
+                "script": [
+                        {
+                          "name": "Anne",
+                          "text": "Honnêtement ?",
+                          "timeLoading": 500
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "Je pense que j’ai fait mes preuves cette année, et je vais m’assurer que mes efforts soient reconnus.",
+                          "timeLoading": 1500
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "Ce n’est pas une question d’adaptation, c’est une question de valorisation du travail accompli.",
+                          "timeLoading": 1500
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "Bien sûr, je comprends.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "Après tout, la direction doit voir qui sait s’ajuster rapidement…",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "L’adaptabilité ne doit pas être synonyme de complaisance.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "J’ai toujours été force de proposition, et je vais continuer dans ce sens.",
+                          "timeLoading": 1500
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "Les résultats parleront d’eux-mêmes.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "C’est une approche… intéressante.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "En tout cas, bonne chance pour la suite.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "Ce n'est pas une question de chance mais d'opportunités, Julie.",
+                          "timeLoading": 1500
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "On verra qui saura le mieux se démarquer pour les saisir.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "eventStatus": "end"
+                        }
+                    ]
+                
+              },
+              {
+                "flag": "blue",
+                "text": "Rester évasive",
+                "bunchNumber": 0,
+                "points": [
+                  {"title": "Le lien social", "point": 3},
+                  {"title": "Les compétences", "point": 2}
+                ],
+                "script": [
+                        {
+                          "name": "Anne",
+                          "text": "Oh, tu sais, chaque entretien apporte son lot de remarques constructives.",
+                          "timeLoading": 1500
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "J’ai eu quelques retours qui vont me permettre d’améliorer certaines choses.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "Ah bien sûr !",
+                          "timeLoading": 500
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "Mais c'est frustrant, non ?",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "Avec tout ce que tu as fait cette année…",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "Oui, je pensais que certains de mes projets auraient eu un peu plus de reconnaissance,",
+                          "timeLoading": 1500
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "Mais je prends note des attentes de la direction.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "Après tout, l’important est d’évoluer dans la bonne direction.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "C’est vrai, et parfois, ça implique de faire preuve d’un peu plus de souplesse dans sa manière d’aborder les choses peut-être...",
+                          "timeLoading": 1500
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "Tout à fait.",
+                          "timeLoading": 500
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "Mais je crois aussi en l’importance d’une vision claire et cohérente.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "Je vais ajuster mon approche tout en restant fidèle à mes principes.",
+                          "timeLoading": 1500
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "C'est important, tu ne penses pas ?",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "Bien sûr, chacun sa méthode.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "Si tu veux en parler plus en détail, je suis là.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "C'est gentil, Julie.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "J'apprécie.",
+                          "timeLoading": 500
+                        },
+                        {
+                          "eventStatus": "end"
+                        }
+                    ]
+                
+              },
+              {
+                "flag": "red",
+                "text": "Recadrer sèchement",
+                "bunchNumber": 0,
+                "points": [
+                  {"title": "Le lien social", "point": -5}
+                ],
+                "script": [
+                        {
+                          "name": "Anne",
+                          "text": "Julie, épargne-moi ton discours.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "Je sais très bien que tu es toujours la première à faire en sorte que la direction remarque ta « souplesse ».",
+                          "timeLoading": 1500
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "Oh, je n’insinuais rien, Anne.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "Juste un constat !",
+                          "timeLoading": 500
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "Je ne joue pas à ce petit jeu.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "Je travaille pour des résultats, pas pour plaire à qui que ce soit.",
+                          "timeLoading": 1500
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "Si certains préfèrent lécher les bottes de la direction, libre à eux.",
+                          "timeLoading": 1500
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "Tu devrais peut-être faire attention à ce que tu dis, Anne.",
+                          "timeLoading": 1500
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "Dans un environnement qui change, il vaut mieux être du bon côté.",
+                          "timeLoading": 1500
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "Je préfère être du côté de l’intégrité et du travail bien fait.",
+                          "timeLoading": 1500
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "À chacun ses priorités.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "Je vois…",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Julie",
+                          "text": "Eh bien, bonne continuation.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "name": "Anne",
+                          "text": "C’est ça, à bientôt.",
+                          "timeLoading": 1000
+                        },
+                        {
+                          "eventStatus": "end"
+                        }
+                    ]
+                
+              }
+            ]
           ]
         }
         
@@ -714,9 +713,9 @@
   },
   {
       "chapter": 2,
-      "title": "Mentorat et développement professionnel",
+      "title": "Le programme Level Up",
       "story": "Anne recherche des opportunités de mentorat et de développement professionnel pour continuer à progresser dans sa carrière. Elle identifie des mentors potentiels dans son entreprise et dans son réseau professionnel, et cherche à établir des relations significatives avec eux. Elle participe également à des programmes de développement professionnel et à des formations pour renforcer ses compétences et acquérir de nouvelles perspectives. Ce mentorat et ce développement professionnel lui permettent de bénéficier de conseils avisés et de conseils d'experts pour guider sa croissance professionnelle.",
-      "nextEvent": "Licenciement massif dans l'entreprise",
+      "nextEvent": "La mentor",
       "duration": 50000,
       "scenes": [
         {
@@ -1038,9 +1037,10 @@
         }, 
         {
           "place": "Cantine",
-          "status": "Active",
+          "status": "active",
           "characters": ["Thibault", "Sophie", "Angélique"],
           "script": [
+            [
             {
               "banner": true,
               "text": "Assis à la cantine, les quatre collègues déjeunent tranquillement lorsque la conversation prend une tournure plus personnelle.",
@@ -1418,6 +1418,7 @@
                   }
                 ]
             }
+            ]
           ]
         }                   
       ]
@@ -1431,9 +1432,10 @@
       "scenes": [
           {
               "place": "Cantine",
-              "status": "Active",
+              "status": "active",
               "characters": ["Micheline"],
               "script": [
+                [
                 {
                   "banner": true,
                   "text": "Dans la cafétéria, Anne aperçoit Micheline, qui termine tranquillement son repas.",
@@ -1781,6 +1783,7 @@
                       }
                     ]
                 }
+                ]
               ]
           }              
       ]
@@ -1794,9 +1797,10 @@
       "scenes": [
           {
               "place": "Bureau de la direction",
-              "status": "Active",
+              "status": "active",
               "characters": ["Micheline"],
               "script": [
+                [
                 {
                   "banner": true,
                   "text": "Après leur première conversation, Anne retrouve Micheline dans son bureau afin que celle-ci l’aide à affiner sa vision de carrière.",
@@ -2135,12 +2139,14 @@
                     ]
                 }
               ]
+            ]
           },
           {
               "place": "Réunion",
-              "status": "Active",
+              "status": "active",
               "characters": ["Damien", "Pascal", "Aurélie", "Haby"],
               "script": [
+                [
                 {
                   "banner": true,
                   "text": "Anne entre en réunion hebdomadaire avec Damien et les chefs d'équipe pour évaluer l'avancement des projets...",
@@ -2524,6 +2530,7 @@
                     ]
                 }
               ]
+            ]
             }             
       ]
   },
@@ -2936,7 +2943,7 @@
           },
           {
               "place": "Cantine",
-              "status": "Active",
+              "status": "active",
               "characters": ["Laurent", "Emma"],
               "script": [
                 {
@@ -3269,7 +3276,7 @@
       "scenes": [
           {
               "place": "Cantine",
-              "status": "Active",
+              "status": "active",
               "characters": ["Thibault", "Sophie", "Angélique"],
               "script": [
                   {
@@ -3696,7 +3703,7 @@
       "scenes": [
           {
               "place": "Bureau de la direction",
-              "status": "Active",
+              "status": "active",
               "characters": ["Micheline"],
               "script": [
                 {
@@ -4095,7 +4102,7 @@
           },
           {
               "place": "Machine à café",
-              "status": "Active",
+              "status": "active",
               "characters": ["Thibault", "Sophie", "Julie"],
               "script": [
                 {
@@ -4458,7 +4465,7 @@
       "scenes": [
           {
               "place": "Open Space",
-              "status": "Active",
+              "status": "active",
               "characters": ["Adèle"],
               "script": [
                 {
@@ -4841,7 +4848,7 @@
       "scenes": [
         {
         "place": "Cantine",
-        "status": "Active",
+        "status": "active",
         "characters": ["Thibault", "Sophie", "Angélique"],
         "script": [
           {
@@ -5200,7 +5207,7 @@
         },
         {
           "place": "Bureau de la direction",
-          "status": "Active",
+          "status": "active",
           "characters": ["Damien"],
           "script": [
             {
@@ -5503,7 +5510,7 @@
       "scenes": [
         {
           "place": "Machine à café",
-          "status": "Active",
+          "status": "active",
           "characters": ["Adèle"],
           "script": [
             {
@@ -5782,7 +5789,7 @@
         },
         {
           "place": "Cantine",
-          "status": "Active",
+          "status": "active",
           "characters": ["Thibault", "Sophie", "Angélique"],
           "script": [
             {
@@ -6165,7 +6172,7 @@
       "scenes": [
         {
           "place": "Open Space",
-          "status": "Active",
+          "status": "active",
           "characters": ["Adèle"],
           "script": [
             {
@@ -6483,7 +6490,7 @@
       "scenes": [
         {
           "place": "Bureau de la direction",
-          "status": "Active",
+          "status": "active",
           "characters": ["Micheline"],
           "script": [
             {
@@ -6816,7 +6823,7 @@
       "scenes": [
         {
           "place": "Bureau de la direction",
-          "status": "Active",
+          "status": "active",
           "characters": ["Michel"],
           "script": [
             {
@@ -7107,7 +7114,7 @@
       "scenes": [
         {
           "place": "Cantine",
-          "status": "Active",
+          "status": "active",
           "characters": ["Thibault", "Sophie", "Angélique"],
           "script": [
             {
@@ -7445,7 +7452,7 @@
       "scenes": [
         {
           "place": "Machine à café",
-          "status": "Active",
+          "status": "active",
           "characters": ["Adèle"],
           "script": [
             {
@@ -7738,7 +7745,7 @@
       "scenes": [
         {
           "place": "Machine à café",
-          "status": "Active",
+          "status": "active",
           "characters": ["Julie"],
           "script": [
             {
@@ -8021,7 +8028,7 @@
       "scenes": [
         {
         "place": "Open Space",
-        "status": "Active",
+        "status": "active",
         "characters": ["Adèle"],
         "script": [
           {
@@ -8344,7 +8351,7 @@
       "scenes": [
         {
           "place": "Open Space",
-          "status": "Active",
+          "status": "active",
           "characters": ["Julie"],
           "script": [
             {
@@ -8568,7 +8575,7 @@
         },
         {
           "place": "Cantine",
-          "status": "Active",
+          "status": "active",
           "characters": ["Adèle"],
           "script": [
             {
@@ -8791,7 +8798,7 @@
       "scenes": [
         {
           "place": "Open Space",
-          "status": "Active",
+          "status": "active",
           "characters": ["Julie"],
           "script": [
             {
@@ -9089,7 +9096,7 @@
       "scenes": [
         {
           "place": "Cantine",
-          "status": "Active",
+          "status": "active",
           "characters": ["Angélique", "Thibault", "Sophie"],
           "script": [
             {
@@ -9408,7 +9415,7 @@
         },
         {
           "place": "Open Space",
-          "status": "Active",
+          "status": "active",
           "characters": ["Jérôme"],
           "script": [
             {
@@ -9724,7 +9731,7 @@
       "scenes": [
         {
           "place": "Réunion",
-          "status": "Active",
+          "status": "active",
           "characters": ["Adèle", "Thibault", "Sophie"],
           "script": [
             {
@@ -10025,7 +10032,7 @@
       "scenes": [
         {
           "place": "Bureau de la direction",
-          "status": "Active",
+          "status": "active",
           "characters": ["Julie"],
           "script": [
             {
@@ -10396,7 +10403,7 @@
       "scenes": [
         {
           "place": "Cantine",
-          "status": "Active",
+          "status": "active",
           "characters": ["Micheline"],
           "script": [
             {
@@ -10734,7 +10741,7 @@
       "scenes": [
         {
           "place": "Open Space",
-          "status": "Active",
+          "status": "active",
           "characters": ["Jean-François", "Une employée"],
           "script": [
             {
@@ -11029,7 +11036,7 @@
       "scenes": [
         {
           "place": "Bureau de la direction",
-          "status": "Active",
+          "status": "active",
           "characters": [ "Nora"],
           "script": [
             {
@@ -11299,7 +11306,7 @@
       "scenes": [
         {
           "place": "Cantine",
-          "status": "Active",
+          "status": "active",
           "characters": ["Adèle"],
           "script": [
             {
@@ -11554,7 +11561,7 @@
       "scenes": [
         {
           "place": "Bureau de la direction",
-          "status": "Active",
+          "status": "active",
           "characters": ["Nora"],
           "script": [
             {
@@ -11750,7 +11757,7 @@
         },
         {
           "place": "Cantine",
-          "status": "Active",
+          "status": "active",
           "characters": ["Thibault", "Sophie", "Angélique"],
           "script": [
             {
@@ -12283,7 +12290,7 @@
       "scenes": [
         {
           "place": "Bureau de la direction",
-          "status": "Active",
+          "status": "active",
           "characters": ["Olivier"],
           "script": [
             {
@@ -12554,7 +12561,7 @@
         },
         {
           "place": "Réunion",
-          "status": "Active",
+          "status": "active",
           "characters": ["Laura", "Sarah", "Nicolas", "Martin"],
           "script": [
             {
@@ -12859,7 +12866,7 @@
       "scenes": [
         {
           "place": "Bureau de la direction",
-          "status": "Active",
+          "status": "active",
           "characters": ["Olivier"],
           "script": [
             {
@@ -13134,7 +13141,7 @@
       "scenes": [
         {
           "place": "Open Space",
-          "status": "Active",
+          "status": "active",
           "characters": ["Luc", "Claire"],
           "script": [
             {
@@ -13480,7 +13487,7 @@
       "scenes": [
         {
           "place": "Machine à café",
-          "status": "Active",
+          "status": "active",
           "characters": ["Mathilde", "Céline"],
           "script": [
             {
@@ -13885,7 +13892,7 @@
       "scenes": [
         {
           "place": "Bureau de la direction",
-          "status": "Active",
+          "status": "active",
           "characters": ["Nora"],
           "script": [
             {
@@ -14175,7 +14182,7 @@
       "scenes": [
         {
           "place": "Réunion",
-          "status": "Active",
+          "status": "active",
           "characters": ["Marc"],
           "script": [
             {
@@ -14471,7 +14478,7 @@
       "scenes": [
         {
           "place": "Bureau de la direction",
-          "status": "Active",
+          "status": "active",
           "characters": ["Olivier"],
           "script": [
             {
@@ -14665,7 +14672,7 @@
         },
         {
           "place": "Cantine",
-          "status": "Active",
+          "status": "active",
           "characters": ["Thibault", "Angélique", "Sophie"],
           "script": [
             {
@@ -14913,7 +14920,7 @@
       "scenes": [
         {
           "place": "Bureau de la direction",
-          "status": "Active",
+          "status": "active",
           "characters": ["Olivier"],
           "script": [
             {
@@ -15111,7 +15118,7 @@
       "scenes": [
         {
           "place": "Bureau de la direction",
-          "status": "Active",
+          "status": "active",
           "characters": ["Michel"],
           "script": [
             {
@@ -15501,7 +15508,7 @@
       "scenes": [
         {
           "place": "Open space",
-          "status": "Active",
+          "status": "active",
           "characters": ["Adèle", "Sophie", "Marc", "Thibault"],
           "script": [
             {

@@ -762,10 +762,6 @@
                   "bunchNumber": 0,
                   "points": [
                     {
-                      "title": "Le personal branding",
-                      "point": 3
-                    },
-                    {
                       "title": "Le lien social",
                       "point": 3
                     }
@@ -1802,6 +1798,7 @@
                 "status": "Active",
                 "characters": ["Micheline"],
                 "script": [
+                  [
                   {
                     "banner": true,
                     "text": "Après leur première conversation, Anne retrouve Micheline dans son bureau afin que celle-ci l’aide à affiner sa vision de carrière.",
@@ -2140,12 +2137,14 @@
                       ]
                   }
                 ]
+              ]
             },
             {
                 "place": "Réunion",
                 "status": "Active",
                 "characters": ["Damien", "Manager Process", "Manager Audit", "Manager Risk"],
                 "script": [
+                  [
                   {
                     "banner": true,
                     "text": "Anne entre en réunion hebdomadaire avec Damien et les chefs d'équipe pour évaluer l'avancement des projets...",
@@ -2529,6 +2528,7 @@
                       ]
                   }
                 ]
+              ]
               }             
         ]
     },
