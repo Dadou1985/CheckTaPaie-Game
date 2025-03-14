@@ -1,6 +1,6 @@
 export const characters = [
     {
-        name:"Anna",
+        name:"Anne",
         lastName: "Bellamy",
         role: "La Level Up Girl",
         job: "Assistante de direction",

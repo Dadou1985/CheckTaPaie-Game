@@ -25,7 +25,7 @@ export const keyPerformanceIndicator = [
       img: require('../assets/images/logo_audacity.png'),
     },
     {
-      title: "Le personal branding",
+      title: "Le leadership",
       text: "Le personal branding est une composante essentielle de la réussite professionnelle et personnelle d'Anna. En travaillant activement sur sa marque personnelle, elle peut augmenter sa visibilité, créer des réseaux solides, aligner ses actions avec ses valeurs, renforcer sa confiance en soi, se différencier dans un marché concurrentiel, et saisir de nombreuses opportunités de développement. En définitive, un personal branding fort permet à Anna de prendre en main son avenir professionnel, d'attirer des opportunités précieuses, et de réaliser ses aspirations avec clarté, motivation et détermination.",
       img: require('../assets/images/logo_branding.png'),
     }

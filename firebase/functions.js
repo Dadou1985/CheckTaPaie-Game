@@ -37,7 +37,7 @@ export function CreateUser(userData) {
                     level: 10,
                 },
                 {
-                    title: "Le personal branding",
+                    title: "Le leadership",
                     level: 20
                 }
             ],

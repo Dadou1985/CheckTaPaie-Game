@@ -79,7 +79,7 @@ export default function OfficeScreen() {
           </Link>
             {roomData.map((room, index) => {
               const isActiveScene = user && user.scenes && user.scenes.length > 0 && user.scenes.find((scene: any) => (scene.place === room.title) && (scene.status === 'active'))
-                console.log('$$$$$$$$$$$', roomData.length) 
+                console.log('$$$$$$$$$$$', isActiveScene) 
                 return <Link key={index} href={isActiveScene === undefined ? "/OfficeScreen" : {
                     pathname: "/RoomScreen",
                     params: {index: index}
