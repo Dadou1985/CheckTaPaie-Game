@@ -51,7 +51,7 @@ const SceneComponent = ({data, handleSceneScrene, setMessageTimeLoading, handleS
                     </Pressable>
                     <Avatar>
                         <AvatarImage style={{ width: 40, height: 40, zIndex: 10, marginLeft: 15 }}
-                        source={characters[8].image?.small}
+                        source={characters[10].image?.small}
                         borderRadius={150}
                         />
                     </Avatar>

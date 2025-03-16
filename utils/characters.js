@@ -10,7 +10,7 @@ export const characters = [
         },
         age: '34 ans',
         story: [
-            "Anna est une femme de 30 ans, dynamique, persévérante et engagée dans sa carrière professionnelle. Titulaire d'un Bac +2, elle travaille depuis plusieurs années dans le secteur tertiaire, où elle s'est forgée une solide expérience, notamment dans des rôles à responsabilités administratives. Anna occupe actuellement le poste de directrice administrative adjointe, un rôle qu'elle a mérité après avoir longuement prouvé sa valeur au sein de son entreprise. Cette promotion est le fruit de ses compétences, de son sens du leadership et de sa capacité à surmonter les nombreux obstacles auxquels elle a été confrontée.","Sur le plan personnel, Anna vit en couple et est mère de deux jeunes enfants. Elle habite en banlieue, où elle jongle habilement entre sa vie familiale et ses responsabilités professionnelles. Malgré son emploi du temps chargé, elle fait en sorte de consacrer du temps à sa famille, tout en prenant soin de s'occuper de l'administratif de la maison, en plus de ses tâches au travail. Elle est également une personne très organisée, soucieuse de maintenir un équilibre entre sa carrière, ses enfants et son couple.","En termes de loisirs, Anna s'accorde des moments de détente avec ses amis ou collègues, que ce soit autour d'un verre dans un bar ou au restaurant. Sportive, elle pratique également des activités collectives comme la zumba, ce qui lui permet de se ressourcer et de rester active physiquement. Toujours à la recherche de bons plans, elle fait preuve d'une grande économie dans sa gestion des dépenses, que ce soit dans sa vie quotidienne ou dans sa gestion de projets professionnels.","Au sein de l'entreprise, Anna est reconnue pour son éthique de travail irréprochable et son intégrité. Elle est une figure de confiance, à la fois pour ses supérieurs et ses subordonnés. Cependant, son parcours n'a pas toujours été sans embûches. Elle a dû composer avec un manager toxique, un défi qu'elle a su relever avec beaucoup de dignité et de stratégie. Ce manager, qui remettait sans cesse en question ses décisions et ses compétences, a finalement été licencié pour insuffisance professionnelle, ouvrant la voie à la promotion d'Anna, qui, de facto, assurait déjà depuis un certain temps la gestion des équipes."
+            "Anna est une femme de 34 ans, dynamique, persévérante et engagée dans sa carrière professionnelle. Titulaire d'un Bac +2, elle travaille depuis plusieurs années dans le secteur tertiaire, où elle s'est forgée une solide expérience. Anna occupe actuellement le poste de directrice administrative adjointe, un rôle qu'elle a mérité après avoir longuement prouvé sa valeur au sein de son entreprise. Cette promotion est le fruit de ses compétences, de son sens du leadership et de sa capacité à surmonter les nombreux obstacles auxquels elle a été confrontée.","Sur le plan personnel, Anna vit en couple et est mère de deux jeunes enfants. Elle habite en banlieue, où elle jongle habilement entre sa vie familiale et ses responsabilités professionnelles. Malgré son emploi du temps chargé, elle fait en sorte de consacrer du temps à sa famille, tout en prenant soin de s'occuper de l'administratif de la maison, en plus de ses tâches au travail. Elle est également une personne très organisée, soucieuse de maintenir un équilibre entre sa carrière, ses enfants et son couple.","En termes de loisirs, Anna s'accorde des moments de détente avec ses amis ou collègues, que ce soit autour d'un verre dans un bar ou au restaurant. Sportive, elle pratique également des activités collectives comme la zumba, ce qui lui permet de se ressourcer et de rester active physiquement. Toujours à la recherche de bons plans, elle fait preuve d'une grande économie dans sa gestion des dépenses, que ce soit dans sa vie quotidienne ou dans sa gestion de projets professionnels.","Au sein de l'entreprise, Anna est reconnue pour son éthique de travail irréprochable et son intégrité. Elle est une figure de confiance, à la fois pour ses supérieurs et ses subordonnés. Cependant, son parcours n'a pas toujours été sans embûches. Elle a dû composer avec un manager toxique, un défi qu'elle a su relever avec beaucoup de dignité et de stratégie. Ce manager, qui remettait sans cesse en question ses décisions et ses compétences, a finalement été licencié pour insuffisance professionnelle, ouvrant la voie à la promotion d'Anna, qui, de facto, assurait déjà depuis un certain temps la gestion des équipes."
         ]
     },
     {
@@ -78,7 +78,7 @@ export const characters = [
         displayStatus: true
     },
     {
-        name: "Thilbault",
+        name: "Thibault",
         lastName: "Leroy",
         role: "Le pote du taf",
         age: "38 ans", 
@@ -139,6 +139,166 @@ export const characters = [
         image: {
             small: require("../assets/images/hawa_portrait_resized.png"),
             large: require("../assets/images/hawa_background.png")
+        }
+    },
+    {
+        name: "Jean-François",
+        role: "PDG d'Innovatech",               
+        image: {
+            small: require('../assets/images/management/jean_francois_portrait.jpg'),
+            large: require('../assets/images/management/jean_francois_portrait.jpg'),
+        }
+    },
+    {
+        name: "Marc",
+        role: "DRH DataFin",               
+        image: {
+            small: require('../assets/images/management/marc_portrait.jpeg'),
+            large: require('../assets/images/management/marc_portrait.jpeg'),
+        }
+    },
+    {
+        name: "Michel",
+        role: "Le DRH",               
+        image: {
+            small: require('../assets/images/management/michel_portrait.jpeg'),
+            large: require('../assets/images/management/michel_portrait.jpeg'),
+        }
+    },
+    {
+        name: "Nora",
+        role: "Responsable RH",               
+        image: {
+            small: require('../assets/images/management/nora_portrait.jpg'),
+            large: require('../assets/images/management/nora_portrait.jpg'),
+        }
+    },
+    {
+        name: "Aurélie",
+        role: "Cheffe de projet Audit",               
+        image: {
+            small: require('../assets/images/fellows/aurelie_portrait.jpeg'),
+            large: require('../assets/images/fellows/aurelie_portrait.jpeg'),
+        }
+    },
+    {
+        name: "Céline",
+        role: "La stagiaire",               
+        image: {
+            small: require('../assets/images/fellows/celine_portrait.jpeg'),
+            large: require('../assets/images/fellows/celine_portrait.jpeg'),
+        }
+    },
+    {
+        name: "Claire",
+        role: "CP Marketing digital",               
+        image: {
+            small: require('../assets/images/fellows/claire_portrait.jpg'),
+            large: require('../assets/images/fellows/claire_portrait.jpg'),
+        }
+    },
+    {
+        name: "Émilie",
+        role: "UX Designer",               
+        image: {
+            small: require('../assets/images/fellows/emilie_portrait.jpeg'),
+            large: require('../assets/images/fellows/emilie_portrait.jpeg'),
+        }
+    },
+    {
+        name: "Emma",
+        role: "Commerciale",               
+        image: {
+            small: require('../assets/images/fellows/emma_portrait.jpg'),
+            large: require('../assets/images/fellows/emma_portrait.jpg'),
+        }
+    },
+    {
+        name: "Une employée",
+        role: "UI Designer",               
+        image: {
+            small: require('../assets/images/fellows/employee_portrait.jpeg'),
+            large: require('../assets/images/fellows/employee_portrait.jpeg'),
+        }
+    },
+    {
+        name: "Haby",
+        role: "Cheffe de projet Risk",               
+        image: {
+            small: require('../assets/images/fellows/haby_portrait.jpeg'),
+            large: require('../assets/images/fellows/haby_portrait.jpeg'),
+        }
+    },
+    {
+        name: "Jérôme",
+        role: "Data Analyst",               
+        image: {
+            small: require('../assets/images/fellows/jerome_portrait.png'),
+            large: require('../assets/images/fellows/jerome_portrait.png'),
+        }
+    },
+    {
+        name: "Laura",
+        role: "Assistante de direction en communication",               
+        image: {
+            small: require('../assets/images/fellows/laura_portrait.jpg'),
+            large: require('../assets/images/fellows/laura_portrait.jpg'),
+        }
+    },
+    {
+        name: "Laurent",
+        role: "Commercial",               
+        image: {
+            small: require('../assets/images/fellows/laurent_portrait.jpg'),
+            large: require('../assets/images/fellows/laurent_portrait.jpg'),
+        }
+    },
+    {
+        name: "Luc",
+        role: "Product Owner",               
+        image: {
+            small: require('../assets/images/fellows/luc_portrait.jpg'),
+            large: require('../assets/images/fellows/luc_portrait.jpg'),
+        }
+    },
+    {
+        name: "Martin",
+        role: "CP marketing digital",               
+        image: {
+            small: require('../assets/images/fellows/martin_portrait.jpg'),
+            large: require('../assets/images/fellows/martin_portrait.jpg'),
+        }
+    },
+    {
+        name: "Mathilde",
+        role: "L'alternante",               
+        image: {
+            small: require('../assets/images/fellows/mathilde_portrait.jpeg'),
+            large: require('../assets/images/fellows/mathilde_portrait.jpeg'),
+        }
+    },
+    {
+        name: "Nicolas",
+        role: "CP Marketing digital",               
+        image: {
+            small: require('../assets/images/fellows/nicolas_portrait.jpeg'),
+            large: require('../assets/images/fellows/nicolas_portrait.jpeg'),
+        }
+    },
+    {
+        name: "Pascal",
+        role: "Chef de projet Process",               
+        image: {
+            small: require('../assets/images/fellows/aurelie_portrait.jpeg'),
+            large: require('../assets/images/fellows/aurelie_portrait.jpeg'),
+        }
+    },
+    {
+        name: "Sarah",
+        role: "CP Communication",               
+        image: {
+            small: require('../assets/images/fellows/sarah_portrait.jpg'),
+            large: require('../assets/images/fellows/sarah_portrait.jpg'),
         }
     }
 ]
