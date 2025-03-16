@@ -30,7 +30,7 @@ export const characters = [
     },
     {
         name: "Damien",
-        lastname: "Vernier",
+        lastName: "Vernier",
         role: "Le N-2",  
         age: "46 ans",   
         job: "Directeur Qualité",                         
@@ -93,10 +93,10 @@ export const characters = [
     },
     {
         name: "Olivier",
-        lastname: "Dos Santos",
-        role: "Le manager toxique",
+        lastName: "Dos Santos",
+        role: "Le crotale",
         age: "45 ans", 
-        job: "Directeur administratif",
+        job: "Directeur de la communication",
         image: {
             small: require('../assets/images/olivier_portrait_resized.png'),
             large: require('../assets/images/olivier_background.jpg')
@@ -107,7 +107,7 @@ export const characters = [
     },
     {
         name: "Julie",
-        lastname: "Nguyen",
+        lastName: "Nguyen",
         role: "La rivale",
         age: "36 ans", 
         job: "Assistante exécutive",
@@ -121,7 +121,7 @@ export const characters = [
     },
     {
         name: "Micheline",
-        lastname: "Lefebrve",
+        lastName: "Lefebrve",
         role: "La mentor en or",
         age: "55 ans", 
         job: "Directrice des opérations",
@@ -239,7 +239,7 @@ export const characters = [
     },
     {
         name: "Laura",
-        role: "Assistante de direction en communication",               
+        role: "Assistante de direction",               
         image: {
             small: require('../assets/images/fellows/laura_portrait.jpg'),
             large: require('../assets/images/fellows/laura_portrait.jpg'),

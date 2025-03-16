@@ -43,8 +43,13 @@ const RoomScreen = () => {
       router.navigate('/OfficeScreen')
       // UpdateUserInfo(user.userId, { scenes: scenesUpdate})
       return setUser({...user, scenes: scenesUpdate})
-    }, 3000);
+    }, 1000);
+  }
 
+  const handleShowGoBackButton = () => {
+    setTimeout(() => {
+      setShowExitButton(true)
+    }, 1000);
   }
 
   const handleSceneScrene = (characterName: any) => {
@@ -84,14 +89,14 @@ const RoomScreen = () => {
             width: "100%", 
             position: "relative",
             }}>
-              {showExitButton && <Link style={{position: "absolute", left: 20, paddingTop: 20}} href={"/OfficeScreen"}>
+              {showExitButton && <Pressable style={{position: "absolute", left: 20, paddingTop: 20}} onPress={handleGoBackToOfficeScreen}>
                 <FontAwesome5 name="arrow-circle-left" size={35} color="#022845" />
-              </Link>}
+              </Pressable>}
             <Text style={{fontSize: 18, color:"#022845"}}>{roomData[index].title}</Text>
           </View>
         </LinearGradient>
           <Animated.ScrollView style={{width: "100%", height: "70%"}}>
-              <ChatRoomComponent setShowExitButton={setShowExitButton} currentScene={currentScene} goBack={handleGoBackToOfficeScreen} handleSceneScrene={handleSceneScrene} handleSceneScreneHint={handleSceneScreneHint} />
+              <ChatRoomComponent setShowExitButton={setShowExitButton} currentScene={currentScene} goBack={handleShowGoBackButton} handleSceneScrene={handleSceneScrene} handleSceneScreneHint={handleSceneScreneHint} />
           </Animated.ScrollView>
           <SceneScreen 
               displayStatus={currentCharacter.displayStatus} 

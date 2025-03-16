@@ -2798,7 +2798,7 @@
                       },
                       {
                         "name": "Damien",               
-                        "text": "e ne te cache pas qu’on hésitait entre toi et Julie mais j’ai beaucoup insisté pour que ton profil soit choisi.",
+                        "text": "Je ne te cache pas qu’on hésitait entre toi et Julie mais j’ai beaucoup insisté pour que ton profil soit choisi.",
                         "timeLoading": 3000
                       },
                       {
@@ -6865,12 +6865,12 @@
           "script": [[
             {
               "banner": true,
-              "text": "Anne entre dans le bureau de la Directrice Générale Adjointe. Le bureau est élégant, avec des fenêtres laissant passer la lumière naturelle.",
+              "text": "Anne entre dans le bureau du directeur des ressources humaines. Le bureau est élégant, avec des fenêtres laissant passer la lumière naturelle.",
               "timeLoading": 2000
             },
             {
               "banner": true,
-              "text": "Michel, une femme dans la cinquantaine, se tient derrière son bureau, avec une expression sérieuse mais ouverte.",
+              "text": "Michel, un homme dans la cinquantaine, se tient derrière son bureau, avec une expression sérieuse mais ouverte.",
               "timeLoading": 2000
             },
             {
@@ -8393,7 +8393,7 @@
           "script": [[
             {
               "banner": true,
-              "text": "L'open space est décoré pour le pot de départ. Les membres de l'équipe sont rassemblés dans une ambiance mêlant rires et émotions.",
+              "text": "L'open space est décoré pour un pot de départ. Les membres de l'équipe sont rassemblés dans une ambiance mêlant rires et émotions.",
               "timeLoading": 2000
             },
             {
@@ -8614,7 +8614,7 @@
           "place": "Cantine",
           "status": "active",
           "characters": ["Adèle"],
-          "script": [
+          "script": [[
             {
               "banner": true,
               "text": "La cantine est animée, les tables sont occupées par des collègues qui discutent et mangent.",
@@ -8652,7 +8652,7 @@
             },
             {
               "name": "Anne",
-              "text": "Toi ? Mme FinTeam ?",
+              "text": "Toi ? Miss FinTeam ?",
               "timeLoading": 1000
             },
             {
@@ -8822,7 +8822,7 @@
                 }
               ]
             }
-          ]
+          ]]
         }
       ]
   },
@@ -10868,7 +10868,7 @@
               "script": [
                 {
                   "name": "Anne",
-                  "text": "Monsieur Le Luc, merci pour ces précisions.",
+                  "text": "Monsieur Veil, merci pour ces précisions.",
                   "timeLoading": 1500
                 },
                 {
@@ -10915,6 +10915,9 @@
                   "name": "Jean-François",
                   "text": "Effectivement, c’est l’état d’esprit dont nous avons besoin pour franchir cette étape dans les meilleures conditions.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -10935,7 +10938,7 @@
               "script": [
                 {
                   "name": "Anne",
-                  "text": "Monsieur Le Luc, merci pour ces précisions.",
+                  "text": "Monsieur Veil, merci pour ces précisions.",
                   "timeLoading": 1500
                 },
                 {
@@ -10977,6 +10980,9 @@
                   "name": "Jean-François",
                   "text": "Nous allons nous assurer que chaque évolution soit expliquée en amont et que vous soyez impliqués dans le processus.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -10997,7 +11003,7 @@
               "script": [
                 {
                   "name": "Anne",
-                  "text": "Monsieur Le Luc, vous dites que TechCorp n’a pas prévu de restructuration immédiate, mais cela ne signifie pas qu’elle n’aura pas lieu plus tard.",
+                  "text": "Monsieur Veil, vous dites que TechCorp n’a pas prévu de restructuration immédiate, mais cela ne signifie pas qu’elle n’aura pas lieu plus tard.",
                   "timeLoading": 2000
                 },
                 {
@@ -11054,11 +11060,11 @@
                   "name": "Jean-François",
                   "text": "C’est pour cela que nous allons organiser des réunions spécifiques pour répondre à toutes vos interrogations.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         }
@@ -11175,6 +11181,9 @@
                   "name": "Nora",
                   "text": "Bienvenue dans cette nouvelle étape, Anne !",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -11257,6 +11266,9 @@
                   "name": "Anne",
                   "text": "Je vais bien y réfléchir et je reviens vers toi très vite.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -11324,11 +11336,11 @@
                   "name": "Anne",
                   "text": "Je reviendrai vers vous incessement sous peu.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         }
@@ -11507,6 +11519,9 @@
                   "name": "Anne",
                   "text": "Super ! Ne te précipite pas mais si après réflexion, tu sens que c’est la bonne direction, alors tu pourras partir en étant mieux préparée.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -11579,11 +11594,11 @@
                   "name": "Anne",
                   "text": "Exactement. Prends du recul et assure-toi de faire un choix éclairé.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         }
@@ -11680,6 +11695,9 @@
                   "name": "Nora",
                   "text": "J’en suis convaincue ! Félicitations encore, Anne.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -11727,6 +11745,9 @@
                   "name": "Nora",
                   "text": "Nous serons là pour t'accompagner, Anne. Après tout, c’est un investissement sur notre avenir.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -11784,11 +11805,11 @@
                   "name": "Anne",
                   "text": "Puisque la direction a décidé de me faire confiance alors... j'accepte.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         },
@@ -11876,6 +11897,9 @@
                   "name": "Anne",
                   "text": "Exactement. Le verre à moitié plein, Thibault ! Le verre à moitié plein !",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -11923,6 +11947,9 @@
                   "name": "Anne",
                   "text": "L’important, c’est de garder une oreille sur le marché du travail et de ne pas subir la situation.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -11975,11 +12002,11 @@
                   "name": "Anne",
                   "text": "Je ne sais pas combien de temps je vais tenir comme ça. J’ai envie de bien faire mon travail, mais pas à n’importe quel prix.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         }
@@ -11996,7 +12023,7 @@
           "place": "Open Space",
           "status": "active",
           "characters": ["Adèle", "Ghislaine"],
-          "script": [[
+          "script": [
             [
               {
                 "banner": true,
@@ -12046,12 +12073,12 @@
                   },
                   {
                     "name": "Anne",               
-                    "text": "Bonjour, c'est Anne de l'équipe du développement logiciel.",
+                    "text": "Bonjour, c'est Anne du pôle Qualité.",
                     "timeLoading": 1500
                   },
                   {
                     "name": "Anne",               
-                    "text": "Je viens de remarquer une erreur dans mes relevés de paie.",
+                    "text": "Je viens de remarquer une erreur dans mon bulletin de paie de ce mois-ci.",
                     "timeLoading": 1500
                   },
                   {
@@ -12091,8 +12118,13 @@
                   },
                   {
                     "name": "Ghislaine",               
-                    "text": "Nous allons rectifier cela immédiatement et vous rembourser le montant excédentaire sur votre prochain salaire.",
+                    "text": "Nous allons rectifier cela immédiatement et vous récupérer le montant excédentaire sur votre prochain salaire.",
                     "timeLoading": 2000
+                  },
+                  {
+                    "name": "Anne",               
+                    "text": "Très bien !",
+                    "timeLoading": 1000
                   },
                   {
                     "name": "Anne",               
@@ -12100,28 +12132,13 @@
                     "timeLoading": 1000
                   },
                   {
-                    "name": "Anne",               
-                    "text": "Je suis reconnaissante que vous ayez pu résoudre ce problème si rapidement.",
-                    "timeLoading": 1000
-                  },
-                  {
                     "name": "Ghislaine",               
-                    "text": "Bien sûr, c'est notre devoir de veiller à ce que votre rémunération soit correcte.",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Ghislaine",               
-                    "text": "N'hésitez pas à nous contacter si vous rencontrez d'autres problèmes à l'avenir.",
+                    "text": "Merci à vous et surtout n'hésitez pas à nous contacter si vous rencontrez d'autres problèmes à l'avenir.",
                     "timeLoading": 1500
                   },
                   {
                     "name": "Anne",               
-                    "text": "Merci, je le ferai.",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "Merci encore pour votre aide.",
+                    "text": "Je le ferai. Bonne journée !",
                     "timeLoading": 1000
                   }, 
                   {
@@ -12314,7 +12331,7 @@
                 ]
               }
             ]
-          ]]
+          ]
         }
       ]
   },
@@ -12384,6 +12401,12 @@
               "name": "Olivier",
               "text": "Ici, on est entre nous, tu peux me tutoyer. Pas besoin de tant de formalités.",
               "timeLoading": 2000
+            },
+            {
+              "eventStatus": "character introduction",
+              "characterName": "Olivier",
+              "text": "Voir le profil d'Olivier",
+              "displayStatus": true
             },
             {
               "flag": "green",
@@ -12489,6 +12512,9 @@
                   "name": "Olivier",
                   "text": "Bienvenue dans notre équipe, Anne et surtout, si jamais tu ressens le besoin de me voir, n'oublie pas que ma porte sera toujours ouverte pour toi.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -12541,6 +12567,9 @@
                   "name": "Olivier",
                   "text": "Mais vraiment, ne te mets pas trop de pression dès le début.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -12588,11 +12617,11 @@
                   "name": "Anne",
                   "text": "Pareillement.",
                   "timeLoading": 1000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         },
@@ -12755,6 +12784,9 @@
                   "name": "Laura",
                   "text": "Bienvenue dans l’équipe !",
                   "timeLoading": 1500
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -12837,6 +12869,9 @@
                   "name": "Laura",
                   "text": "Alors surtout, n'hésite pas à nous poser toutes tes questions au fur et à mesure.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -12884,11 +12919,11 @@
                   "name": "Laura",
                   "text": "D’accord, on te laisse découvrir à ton rythme.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         }
@@ -13010,6 +13045,9 @@
                   "name": "Anne",
                   "text": "Merci, Olivier. Je vais m'assurer que tout soit bien géré avant mon départ.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -13082,6 +13120,9 @@
                   "name": "Olivier",
                   "text": "Non-non. Une fois que c'est fait, passe à mon bureau, histoire que l'on valide ça ensemble.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -13159,11 +13200,11 @@
                   "name": "Olivier",
                   "text": "Très bien. Je te fais confiance mais je veux que tu organises une réunion avant de partir pour t'assurer que tout est clair.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         }
@@ -13355,6 +13396,9 @@
                   "name": "Anne",
                   "text": "En attendant, retournez à vos postes. On a des projets à terminer et j’ai besoin que toute l'équipe soit sur la même longueur d’onde.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -13428,6 +13472,9 @@
                   "name": "Anne",
                   "text": "Super ! On part là-dessus. Claire, je te laisse organiser ça.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -13505,11 +13552,11 @@
                   "name": "Anne",
                   "text": "De rien, Luc. Reprenons le travail à présent.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         }
@@ -13751,6 +13798,9 @@
                   "name": "Anne",
                   "text": "Je vais préparer un plan pour aborder cela et je vous tiendrai informées. Prenez soin de vous en attendant.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -13838,6 +13888,9 @@
                   "name": "Anne",
                   "text": "Prenez soin de vous et surtout, ne gardez pas ça pour vous. Il y a toujours des solutions.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -13910,11 +13963,11 @@
                   "name": "Mathilde",
                   "text": "Ok Anne ! On a compris ! On va se débrouiller toutes seules. Merci pour ces... \"précieux\" conseils.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         }
@@ -14046,6 +14099,9 @@
                   "name": "Nora",
                   "text": "La direction ne veut pas faire grand bruit de cette affaire.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -14138,6 +14194,9 @@
                   "name": "Anne",
                   "text": "Entendu ! Je vais faire ce qu'il faut.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -14200,11 +14259,11 @@
                   "name": "Anne",
                   "text": "Merci pour ton temps, Nora.",
                   "timeLoading": 1500
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         }
@@ -14332,6 +14391,9 @@
                   "name": "Anne",
                   "text": "Une vision commune est essentielle pour la réussite d’un projet...",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -14404,6 +14466,9 @@
                   "name": "Anne",
                   "text": "Nous avons amélioré notre taux de conversion de 15 % grâce à une meilleure structuration des pages et un suivi analytique régulier...",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -14496,11 +14561,11 @@
                   "name": "Marc",
                   "text": "Nous avons encore plusieurs candidats à voir, nous te tiendrons informée.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         }
@@ -14511,7 +14576,7 @@
       "title": "Le pacte",
       "story": "Anne est convoquée dans le bureau de son manager pour apprendre que Laure a posé sa démission et qu’elle va désormais prendre en charge le pôle communication.",
       "displayStatus": true,
-      "nextEvent": "En instance de divorce",
+      "nextEvent": "Instance de divorce",
       "scenes": [
         {
           "place": "Bureau de la direction",
@@ -14622,6 +14687,9 @@
                   "name": "Anne",
                   "text": "Il va falloir qu'on discute des détails mais dans les grandes lignes, je signe.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -14699,11 +14767,11 @@
                   "name": "Anne",
                   "text": "C'est tout réfléchi ! Je refuse ton offre !",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         },
@@ -14836,6 +14904,9 @@
                   "name": "Angélique",
                   "text": "Alors, espérons que tu parviennes à les convaincre !",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -14938,11 +15009,11 @@
                   "name": "Anne",
                   "text": "Bien sûr ! On se voit après le boulot pour en discuter si tu veux ?",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         }
@@ -14950,10 +15021,10 @@
   },
   {
       "chapter": 36,
-      "title": "En instance de divorce",
+      "title": "Instance de divorce",
       "story": "Anne sollicite un entretien avec Olivier afin de lui faire part de sa volonté de quitter l’entreprise.",
       "displayStatus": true,
-      "nextEvent": "Un bras de fer dans un gant de velours",
+      "nextEvent": "Un bras de fer dans un manchon de velours",
       "scenes": [
         {
           "place": "Bureau de la direction",
@@ -15059,6 +15130,9 @@
                   "name": "Olivier",
                   "text": "Lorsque vous aurez convenu d'une date de fin de contrat, envoie-moi ta demande par mail et je la confirmerai aussitôt afin que tu puisses partir en congés le plus tôt possible.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -15136,11 +15210,11 @@
                   "name": "Olivier",
                   "text": "Nora reviendra vers toi pour que vous puissiez discuter des détails.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         }
@@ -15307,6 +15381,9 @@
                   "name": "Anne",
                   "text": "Ok, faisons ça !",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -15389,6 +15466,9 @@
                   "name": "Michel",
                   "text": "Laisse-moi voir avec Olivier pour ta demande et une fois que j'ai le GO, on signe les documents.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },
@@ -15526,11 +15606,11 @@
                   "name": "Michel",
                   "text": "Entendu ! Je reviens vers toi dès que j'ai une réponse.",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
-            },
-            {
-              "eventStatus": "end"
             }
           ]]
         }
@@ -15544,7 +15624,7 @@
       "nextEvent": "",
       "scenes": [
         {
-          "place": "Open space",
+          "place": "Open Space",
           "status": "active",
           "characters": ["Adèle", "Sophie", "Marc", "Thibault"],
           "script": [[
@@ -15622,6 +15702,9 @@
               "name": "Tous ensemble",
               "text": "À Anne !",
               "timeLoading": 2000
+            },
+            {
+              "eventStatus": "end"
             }
           ]]
         }
