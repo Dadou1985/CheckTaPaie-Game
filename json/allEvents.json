@@ -215,12 +215,6 @@
                     "timeLoading": 1000
                   }
                 ]
-              }, 
-              {
-                "eventStatus": "hint",
-                "title": "La déception de trop",
-                "text":["A ton avis, ça à l’air d’aller d’après toi..?"],
-                "displayStatus": true
               }
             ],
             [
@@ -272,7 +266,7 @@
                 "points": [
                   {
                     "title": "L'épanouissement",
-                    "point": -10
+                    "point": -5
                   },
                   {
                     "title": "Le lien social",
@@ -343,7 +337,7 @@
                 "points": [
                   {
                     "title": "L'épanouissement",
-                    "point": -10
+                    "point": -5
                   },
                   {
                     "title": "Le lien social",
@@ -530,8 +524,7 @@
                 "text": "Rester évasive",
                 "bunchNumber": 0,
                 "points": [
-                  {"title": "Le lien social", "point": 3},
-                  {"title": "Les compétences", "point": 2}
+                  {"title": "Le lien social", "point": 3}
                 ],
                 "script": [
                         {
@@ -1234,7 +1227,8 @@
               "bunchNumber": 0,
               "points": [
                 {"title": "Le leadership", "point": 5},
-                {"title": "L'audace", "point": 3}
+                {"title": "L'audace", "point": 3},
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                   {
@@ -1292,7 +1286,6 @@
               "text": "Analyser calmement",
               "bunchNumber": 0,
               "points": [
-                {"title": "Les compétences", "point": 3},
                 {"title": "Le lien social", "point": 2}
               ],
               "script": [
@@ -1548,14 +1541,14 @@
                   "characterName": "Micheline",
                   "text": "Voir le profil de Micheline",
                   "displayStatus": true
-                },
+                }, 
                 {
                   "flag": "green",
                   "text": "Prendre l’initiative",
                   "bunchNumber": 0,
                   "points": [
                     {"title": "Le leadership", "point": 5},
-                    {"title": "Les compétences", "point": 3}
+                    {"title": "L'épanouissement", "point": 3}
                   ],
                   "script": [
                       {
@@ -1638,8 +1631,7 @@
                   "text": "Demander humblement",
                   "bunchNumber": 0,
                   "points": [
-                    {"title": "Le lien social", "point": 4},
-                    {"title": "Les compétences", "point": 2}
+                    {"title": "Le lien social", "point": 4}
                   ],
                   "script": [
                       {
@@ -1815,6 +1807,12 @@
                         "eventStatus": "end"
                       }
                     ]
+                },
+                {
+                  "eventStatus": "hint",
+                  "title": "Les dangers de l'immobilisme professionnel",
+                  "text":["L’immobilisme n’existe pas dans le monde professionnel : Soit on avance, soit on recule. Dans le monde du travail, l’idée que l’on puisse simplement « rester à sa place » sans évoluer est une illusion. Le marché, les technologies et les compétences requises évoluent en permanence. Ainsi, un professionnel qui ne progresse pas finit par devenir obsolète face aux nouvelles attentes. Cette réalité impose un impératif clair : continuer à se développer et à se former pour garantir son employabilité et saisir les opportunités de carrière.","Les évolutions technologiques, la transformation numérique et les nouvelles méthodes de travail modifient constamment les exigences des entreprises. Un métier qui semblait stable il y a dix ans peut aujourd’hui être remplacé par l’intelligence artificielle ou l’automatisation. Par exemple, dans le secteur tertiaire, les logiciels de gestion automatisent des tâches autrefois manuelles. Dans l’industrie, la robotisation a transformé de nombreux métiers. Le travail hybride et le digital ont bouleversé les compétences attendues en communication et collaboration. Ne pas évoluer, c’est donc risquer de se retrouver dépassé et moins compétitif sur le marché du travail.","Un professionnel qui ne cherche pas à progresser finit par reculer, même sans s’en rendre compte. Cela se manifeste par plusieurs signes : une stagnation salariale et un manque de promotions, une perte d’intérêt des employeurs face à un profil qui ne suit pas les tendances du marché, une diminution des opportunités, car les nouvelles compétences deviennent essentielles. Sans formation continue ni remise en question, il devient difficile de s’adapter aux nouvelles attentes des entreprises.","Pour éviter de reculer, il est crucial d’adopter une dynamique d’apprentissage. Cela peut passer par les formations certifiantes qui permettent d’acquérir de nouvelles compétences techniques et d’ajouter de la valeur à son profil. L’autoformation, grâce aux plateformes en ligne, aux livres et aux conférences, offre la possibilité d’apprendre en continu. Le réseautage, en participant à des événements professionnels, en rejoignant des groupes d’experts et en échangeant avec des collègues, permet de rester informé des évolutions du secteur. Maîtriser les outils numériques et suivre les tendances technologiques renforce également la compétitivité professionnelle.","La clé pour avancer est d’adopter une mentalité de croissance qui repose sur l’acceptation du changement en le voyant comme une opportunité plutôt qu’une menace. La remise en question est essentielle pour être prêt à apprendre de ses erreurs et à s’adapter en permanence. L’initiative personnelle joue un rôle majeur : ne pas attendre que l’entreprise impose une formation, mais prendre les devants pour enrichir ses compétences.","L’idée d’immobilisme dans le monde du travail est un mythe : soit on évolue en s’adaptant aux nouvelles exigences, soit on se laisse dépasser. Investir dans son développement personnel et professionnel est donc une nécessité pour sécuriser son avenir et maximiser les opportunités. Dans un environnement aussi compétitif, se former et progresser est la seule manière de rester pertinent et performant."],
+                  "displayStatus": true
                 }
                 ]
               ]
@@ -1910,7 +1908,8 @@
                   "bunchNumber": 0,
                   "points": [
                     {"title": "Le leadership", "point": 5},
-                    {"title": "L'audace", "point": 3}
+                    {"title": "L'audace", "point": 3},
+                    {"title": "L'épanouissement", "point": 3}
                   ],
                   "script": [
                       {
@@ -1993,7 +1992,6 @@
                   "text": "Définir un plan réaliste",
                   "bunchNumber": 0,
                   "points": [
-                    {"title": "Les compétences", "point": 3},
                     {"title": "Le lien social", "point": 2}
                   ],
                   "script": [
@@ -2170,6 +2168,17 @@
                         "eventStatus": "end"
                       }
                     ]
+                },
+                {
+                  "eventStatus": "hint",
+                  "title": "Comment créer une vision claire de ses objectifs professionnels ?",
+                  "text": [
+                    "Avoir une vision claire de ses objectifs professionnels est essentiel pour naviguer avec succès dans le monde du travail. C'est comme avoir une boussole qui vous guide à travers les défis et les opportunités qui se présentent à vous. Sans cette vision, vous risquez de vous égarer, de perdre votre motivation et de stagner dans votre carrière. Une vision claire vous permet de définir vos priorités, car savoir ce que vous voulez vraiment vous aide à concentrer votre énergie et vos ressources sur les activités qui comptent le plus. Elle vous aide également à prendre des décisions éclairées, car elle sert de référence pour évaluer les opportunités et les choix qui s'offrent à vous. De plus, elle maintient votre motivation, car lorsque vous savez où vous allez, il est plus facile de rester motivé et de persévérer face aux obstacles. Enfin, elle vous permet de communiquer vos aspirations, car une vision claire vous permet de partager vos objectifs avec les autres et de solliciter leur soutien.",
+                    "Pour clarifier votre vision, commencez par créer une fiche persona de vous-même. Imaginez que vous êtes un personnage de fiction et décrivez-vous en détail. Dans l'en-tête, incluez votre nom et prénom, votre âge et votre profession actuelle. Dans le corps, décrivez votre contexte de départ, c'est-à-dire où vous en êtes actuellement dans votre carrière, vos forces et vos faiblesses. Ensuite, décrivez vos motivations, ce qui vous pousse à vouloir évoluer, vos passions et vos valeurs. Identifiez également les défis et les obstacles qui se dressent sur votre chemin et comment vous comptez les surmonter. Précisez les valeurs qui guident vos choix professionnels et vos objectifs financiers à court, moyen et long terme. Cet exercice vous aidera à mieux vous connaître et à identifier les éléments clés de votre vision professionnelle.",
+                    "Une autre façon de clarifier votre vision est d'écrire une lettre à votre moi du futur. Imaginez que vous vous adressez à vous-même dans quelques années et décrivez les étapes que vous devrez accomplir pour atteindre vos objectifs. Fixez-vous une date précise dans le futur et décrivez les réalisations que vous souhaitez avoir accomplies à cette date. Détaillez les actions que vous devez entreprendre pour atteindre ces réalisations et exprimez votre confiance en votre capacité à atteindre vos objectifs. Cette lettre vous servira de feuille de route et vous aidera à rester concentré sur vos objectifs à long terme.",
+                    "En intégrant ces deux exercices pratiques dans votre démarche de développement professionnel, vous serez en mesure de mieux définir votre vision, de prendre des décisions éclairées et de progresser vers la carrière de vos rêves."
+                  ],
+                  "displayStatus": true
                 }
               ]
             ]
@@ -2241,7 +2250,7 @@
                   "bunchNumber": 0,
                   "points": [
                     {"title": "Le leadership", "point": 5},
-                    {"title": "Les compétences", "point": 3}
+                    {"title": "L'épanouissement", "point": 3}
                   ],
                   "script": [
                       {
@@ -2369,7 +2378,6 @@
                   "text": "Rester discrète",
                   "bunchNumber": 0,
                   "points": [
-                    {"title": "Les compétences", "point": 3},
                     {"title": "Le lien social", "point": 2}
                   ],
                   "script": [
@@ -2970,6 +2978,12 @@
                         "eventStatus": "end"
                       }
                     ]
+                  },
+                  {
+                    "eventStatus": "hint",
+                    "title": "Les fausses promotions en entreprise : comprendre et s’en prémunir",
+                    "text":["Dans le milieu professionnel, certaines promotions ne sont pas réellement avantageuses pour les employés. Derrière une apparente évolution, elles cachent souvent une charge de travail accrue sans réelles contreparties. Voici comment les identifier et éviter ces pièges.","Une fausse promotion se manifeste lorsque l’employé est officiellement promu à un poste avec davantage de responsabilités, mais sans augmentation salariale significative, avantages supplémentaires ou reconnaissance réelle. Ce type de promotion peut être une tactique managériale pour déléguer davantage de travail sans véritable engagement financier ou statutaire.","Plusieurs signes permettent d’identifier une fausse promotion. D’abord, l’absence ou la faiblesse de l’augmentation salariale, où le nouvel intitulé de poste ne s’accompagne pas d’une rémunération en adéquation avec les responsabilités. Ensuite, une charge de travail accrue sans support ni compensation. Un autre indicateur est le manque de reconnaissance officielle, avec une annonce floue sans mise à jour des fiches de poste ou du contrat. L’absence de perspectives d’évolution est également un signe révélateur, lorsque le poste ne mène pas à de nouvelles opportunités ou à une progression concrète. Enfin, une pression pour accepter l’offre, en suggérant qu’il s’agit d’une opportunité unique ou qu’un refus pourrait nuire à l’avenir professionnel.","Les entreprises adoptent cette stratégie pour diverses raisons. L’un des principaux objectifs est la réduction des coûts, en évitant d’augmenter les salaires tout en jouant sur la reconnaissance symbolique. Elles cherchent aussi à augmenter la productivité en attribuant plus de responsabilités sans revalorisation. Parfois, elles testent un employé sur un poste plus important avant d’investir réellement en lui, sans engagement immédiat.","Pour se prémunir contre ces fausses promotions, il est crucial d’analyser l’offre en détail. Avant d’accepter, il convient de poser des questions précises : quel est le salaire associé ? Y a-t-il des avantages supplémentaires comme des primes, une formation ou des congés ? Quelles seront les nouvelles responsabilités ? Le titre de poste sera-t-il mis à jour officiellement ? Une clarification préalable permet d’éviter les mauvaises surprises.","Exiger un cadre officiel est également essentiel. Il est recommandé de demander un avenant au contrat ou une mise à jour de la fiche de poste, ainsi qu’un engagement écrit des conditions de la promotion. Cela évite toute ambiguïté et garantit que les promesses seront tenues.","Évaluer les bénéfices à long terme permet aussi de prendre une décision éclairée. Une promotion peut être stratégique même si l’augmentation immédiate est faible, à condition qu’elle ouvre des opportunités futures. À l’inverse, si elle ne mène à rien de concret, mieux vaut négocier ou refuser.","Savoir dire non est une compétence précieuse dans ces situations. Accepter une fausse promotion peut créer un précédent où l’on se voit confier davantage de responsabilités sans contrepartie. Il est donc préférable de refuser poliment mais fermement, en expliquant que l’offre ne correspond pas aux attentes et à l’engagement professionnel.","Les fausses promotions peuvent être des pièges qui exploitent l’ambition des employés. Il est essentiel d’analyser l’offre, d’exiger des engagements écrits et de ne pas avoir peur de négocier ou refuser si elle ne correspond pas à une réelle progression."],
+                    "displayStatus": true
                   }
                 ]
               ]
@@ -3154,7 +3168,6 @@
                   "text": "Détourner la conversation",
                   "bunchNumber": 0,
                   "points": [
-                    {"title": "Les compétences", "point": 3},
                     {"title": "Le lien social", "point": 2}
                   ],
                   "script": [
@@ -3401,7 +3414,7 @@
                   "bunchNumber": 0,
                   "points": [
                     {"title": "Le leadership", "point": 5},
-                    {"title": "Les compétences", "point": 3}
+                    {"title": "L'épanouissement", "point": 3}
                   ],
                   "script": [
                       {
@@ -3499,7 +3512,6 @@
                   "text": "Explorer avec prudence",
                   "bunchNumber": 0,
                   "points": [
-                    {"title": "Les compétences", "point": 3},
                     {"title": "Le lien social", "point": 2}
                   ],
                   "script": [
@@ -3725,6 +3737,12 @@
                           }
                       
                   ]
+                },
+                {
+                  "eventStatus": "hint",
+                  "title": "Comprendre sa valeur sur le marché du travail : un impératif pour la négociation salariale",
+                  "text":["Cette idée centrale souligne l'importance de distinguer deux types de valeurs. La valeur intrinsèque est inhérente à chaque individu, indépendamment de son emploi ou de ses compétences. Elle est liée à la dignité humaine et est, par définition, inestimable. Elle ne doit pas être confondue avec la valeur marchande. La valeur sur le marché du travail est déterminée par les compétences, l'expérience et l'expertise qu'un individu peut offrir à un employeur. Elle est influencée par l'offre et la demande, les tendances du secteur et la localisation géographique. Elle peut être évaluée en utilisant des outils et des méthodes spécifiques.","Connaître sa valeur marchande est essentiel pour plusieurs raisons. Dans une négociation salariale, une connaissance précise de sa valeur permet de négocier un salaire équitable et compétitif. Elle donne confiance lors des discussions avec les employeurs et évite de se sous-évaluer ou de se surévaluer. Pour le développement de carrière, elle aide à identifier les compétences à développer pour augmenter sa valeur sur le marché, permet de cibler les opportunités d'emploi les plus rémunératrices et facilite la planification de sa trajectoire professionnelle. Enfin, pour la prise de décision, elle éclaire les choix concernant les formations, les certifications et les expériences professionnelles, aide à évaluer les offres d'emploi et permet de rester en phase avec les évolutions du marché du travail.","Évaluer sa valeur sur le marché du travail nécessite l'utilisation de plusieurs méthodes complémentaires. Les études de rémunération constituent une source précieuse d'informations, en s'appuyant sur des cabinets de recrutement, des associations professionnelles, des sites spécialisés et des instituts de statistiques. Elles fournissent des données sur les salaires moyens par secteur, fonction, niveau d'expérience et localisation, ainsi que sur les tendances du marché et les avantages sociaux. Pour une utilisation efficace, il convient de comparer les données de différentes sources, de prendre en compte les spécificités de son profil et d'adapter ces informations à sa situation géographique et au type d'entreprise ciblé.","L'analyse des offres d'emploi est une autre méthode clé pour évaluer sa valeur. Examiner les offres similaires permet d'identifier les compétences et qualifications recherchées, d'observer les niveaux de rémunération proposés et d'analyser les tendances du marché. Une veille régulière sur les sites d'emploi et les réseaux professionnels permet de suivre les évolutions et d'identifier les entreprises qui recrutent dans son domaine. Le réseautage ciblé, en contactant des recruteurs et des professionnels du secteur, offre également des informations précieuses sur les salaires et les opportunités.","Le réseautage est un levier essentiel pour affiner son évaluation. Échanger avec des professionnels permet d’obtenir des informations sur les pratiques du marché, de recueillir des conseils et des témoignages et d’identifier des opportunités d’emploi. La participation à des événements professionnels et des salons permet d'élargir son réseau et de se tenir informé des tendances. Les réseaux sociaux professionnels offrent aussi un moyen efficace de développer sa visibilité et de partager son expertise.","Définir une fourchette de salaire réaliste repose sur une synthèse des différentes sources d’information. Croiser les données des études de rémunération, des offres d’emploi et du réseautage permet d’identifier une fourchette cohérente avec son profil. Il est important d’adapter cette estimation à son niveau d’expérience, ses compétences et ses réalisations, en tenant compte du contexte géographique et sectoriel. Une mise à jour régulière de ces informations est nécessaire pour rester aligné avec les évolutions du marché et maximiser ses opportunités professionnelles.","L’utilisation combinée de ces outils permet de se forger une vision précise de sa valeur sur le marché et de définir une fourchette de salaire argumentée. Une démarche méthodique et une actualisation constante sont les clés d’une évaluation pertinente et efficace."],
+                  "displayStatus": true
                 }
               ]
             ]
@@ -3809,7 +3827,7 @@
                   "bunchNumber": 0,
                   "points": [
                     {"title": "Le leadership", "point": 5},
-                    {"title": "Les compétences", "point": 3}
+                    {"title": "L'épanouissement", "point": 3}
                   ],
                   "script": [
                       {
@@ -3952,7 +3970,6 @@
                   "text": "Prendre du recul",
                   "bunchNumber": 0,
                   "points": [
-                    {"title": "Les compétences", "point": 3},
                     {"title": "Le lien social", "point": 2}
                   ],
                   "script": [
@@ -4134,7 +4151,14 @@
                         "eventStatus": "end"
                       }
                     ]
+                },
+                {
+                  "eventStatus": "hint",
+                  "title": "L’analyse SWOT : Un outil stratégique clé",
+                  "text":["L’analyse SWOT est un outil stratégique utilisé pour évaluer la position d’une entreprise, d’un projet ou d’un individu dans son environnement. Cet acronyme anglais signifie Strengths (Forces), Weaknesses (Faiblesses), Opportunities (Opportunités) et Threats (Menaces). Il permet d’identifier les éléments internes et externes influençant une situation donnée, facilitant ainsi la prise de décisions et l’élaboration de stratégies adaptées.","L’analyse SWOT repose sur deux axes principaux. D’une part, les facteurs internes englobent les forces et les faiblesses propres à l’entreprise ou à l’individu. D’autre part, les facteurs externes comprennent les opportunités et les menaces qui découlent de l’environnement extérieur.","Les forces représentent les atouts qui donnent un avantage concurrentiel ou facilitent la réussite d’un projet. Elles peuvent être financières, humaines, techniques ou organisationnelles. Parmi ces forces, on retrouve une marque reconnue et une bonne réputation, une technologie innovante, une équipe qualifiée et motivée, une situation financière stable ou encore un réseau de partenaires solide.","Les faiblesses, quant à elles, constituent des points de vulnérabilité internes pouvant freiner le développement ou impacter la performance. Elles incluent un manque de compétences dans certains domaines, des ressources financières limitées, une faible notoriété, une organisation interne inefficace ou une dépendance excessive à un seul fournisseur.","Les opportunités désignent les éléments externes qui, s’ils sont bien exploités, peuvent favoriser la croissance et la réussite. Elles proviennent de tendances économiques, de l’évolution du marché ou de nouvelles réglementations. Un marché en forte croissance, l’émergence d’un nouveau besoin chez les consommateurs, des avancées technologiques permettant d’améliorer l’offre, des aides gouvernementales ou des subventions, ainsi que le retrait d’un concurrent du marché, sont autant d’opportunités à saisir.","Les menaces, en revanche, sont des facteurs externes pouvant freiner la réussite ou créer des difficultés. Elles sont souvent liées à la concurrence, à l’évolution du marché ou à des contraintes réglementaires. L’arrivée d’un nouveau concurrent plus compétitif, une crise économique impactant le pouvoir d’achat, une évolution technologique rendant un produit obsolète, des changements législatifs défavorables ou une mauvaise réputation due à un scandale ou une crise médiatique sont des menaces potentielles.","L’analyse SWOT est un outil polyvalent, utilisé dans de nombreux domaines. En entreprise, elle aide à définir une stratégie de développement, à lancer un nouveau produit ou à identifier des axes d’amélioration. Dans la gestion de carrière, elle permet d’évaluer ses compétences, d’identifier les opportunités d’évolution et d’anticiper les défis professionnels. Pour les projets personnels, elle sert à mieux planifier ses objectifs et à prendre des décisions éclairées.","Pour réaliser une analyse SWOT efficace, il est essentiel de lister les éléments de chaque catégorie de manière honnête et précise. Il convient ensuite de prioriser les points les plus impactants pour orienter la réflexion stratégique. Enfin, l’élaboration d’un plan d’action doit s’appuyer sur les forces et les opportunités, tout en atténuant les faiblesses et en minimisant les menaces.","En conclusion, l’analyse SWOT est un outil simple mais puissant pour mieux comprendre une situation et prendre des décisions stratégiques efficaces."],
+                  "displayStatus": true
                 }
+
               ]]
           },
           {
@@ -4263,7 +4287,8 @@
                   "bunchNumber": 0,
                   "points": [
                     {"title": "Le leadership", "point": 5},
-                    {"title": "Le lien social", "point": 3}
+                    {"title": "Le lien social", "point": 3},
+                    {"title": "L'épanouissement", "point": 3}
                   ],
                   "script": [
                       {
@@ -4351,7 +4376,6 @@
                   "text": "Rester diplomate",
                   "bunchNumber": 0,
                   "points": [
-                    {"title": "Les compétences", "point": 3},
                     {"title": "Le lien social", "point": 2}
                   ],
                   "script": [
@@ -4556,7 +4580,7 @@
                   "bunchNumber": 0,
                   "points": [
                     {"title": "Le leadership", "point": 5},
-                    {"title": "Les compétences", "point": 3}
+                    {"title": "L'épanouissement", "point": 3}
                   ],
                   "script": [
                       {
@@ -4659,7 +4683,6 @@
                   "text": "Explorer avec prudence",
                   "bunchNumber": 0,
                   "points": [
-                    {"title": "Les compétences", "point": 3},
                     {"title": "Le lien social", "point": 2}
                   ],
                   "script": [
@@ -4871,7 +4894,14 @@
                         "eventStatus": "end"
                       }
                     ]
+                },
+                {
+                  "eventStatus": "hint",
+                  "title": "L’importance d’une roadmap pour atteindre ses objectifs professionnels",
+                  "text":["L’évolution de carrière ne se fait pas au hasard. Pour avancer efficacement vers ses ambitions professionnelles, il est essentiel d’établir une roadmap, ou feuille de route. Il s’agit d’un plan structuré qui définit les étapes, les actions et les délais nécessaires pour atteindre un objectif précis. Une roadmap bien conçue permet d’avoir une vision claire de son évolution, d’anticiper les obstacles et d’optimiser son parcours professionnel.","L’établissement d’une roadmap est crucial pour plusieurs raisons. Tout d’abord, elle donne une direction claire. Sans objectif défini et plan structuré, on risque de stagner dans sa carrière ou de manquer des opportunités. Elle permet de savoir où l’on veut aller et comment y parvenir. Ensuite, elle structure la progression en aidant à découper un objectif en étapes intermédiaires, rendant le chemin plus accessible et motivant. De plus, une roadmap optimise la gestion du temps en permettant de prioriser les actions et d’éviter de perdre du temps sur des tâches non essentielles. Elle facilite également l’évaluation des progrès, rendant plus simple l’ajustement du parcours si nécessaire. Enfin, elle renforce la motivation en offrant une visualisation des avancées et un sentiment d’accomplissement.","La première étape de la création d’une roadmap consiste à définir son objectif final. Il peut s’agir d’obtenir une promotion, de changer de métier, de créer son entreprise ou d’acquérir une nouvelle compétence. Cet objectif doit être précis, mesurable, atteignable, réaliste et temporel (SMART). Par exemple, vouloir devenir manager d’équipe dans son entreprise d’ici cinq ans est un objectif bien défini.","Il est ensuite nécessaire d’identifier les compétences et qualifications requises pour atteindre cet objectif. Cela peut inclure des formations, des certifications, des expériences pratiques ou le développement de soft skills comme le leadership, la gestion du stress ou la communication.","Une fois les compétences identifiées, il faut décomposer l’objectif en étapes intermédiaires pour rendre le processus plus concret. Par exemple, un futur manager pourrait structurer son parcours ainsi : suivre une formation en management la première année, obtenir plus de responsabilités dans son équipe la deuxième année, encadrer un projet la troisième année, postuler à un poste de leader la quatrième année et atteindre son objectif de manager à la cinquième année.","Chaque étape doit être accompagnée d’un délai réaliste et d’indicateurs permettant d’évaluer la progression. Par exemple, un indicateur pourrait être d’avoir suivi une formation en leadership et appliqué ses connaissances dans son travail d’ici six mois.","Il est essentiel d’anticiper les obstacles et de trouver des solutions pour y faire face. Les imprévus sont inévitables, et il convient d’identifier les éventuelles difficultés comme le manque de temps, le coût des formations ou la difficulté à obtenir une promotion. Des solutions alternatives, comme l’autoformation, le mentorat ou un changement d’entreprise, peuvent être envisagées.","Une roadmap n’est pas figée. Il est important de l’adapter en fonction des évolutions du marché, des opportunités professionnelles ou des aspirations personnelles. Un suivi régulier permet d’ajuster le plan en fonction des besoins et des réalités du terrain.","Établir une roadmap professionnelle est une démarche essentielle pour toute personne souhaitant évoluer dans sa carrière. En structurant son parcours en étapes claires et réalisables, en anticipant les obstacles et en suivant ses progrès, on maximise ses chances de réussite. C’est un outil puissant qui permet de transformer une ambition en réalité, en apportant clarté, motivation et efficacité."],
+                  "displayStatus": true
                 }
+
               ]]
           }
       ]
@@ -4984,7 +5014,7 @@
             "bunchNumber": 0,
             "points": [
               {"title": "Le leadership", "point": 5},
-              {"title": "Les compétences", "point": 3}
+              {"title": "L'épanouissement", "point": 3}
             ],
             "script": [
               {
@@ -5052,7 +5082,6 @@
             "text": "Rassurer l’équipe",
             "bunchNumber": 0,
             "points": [
-              {"title": "Les compétences", "point": 3},
               {"title": "Le lien social", "point": 2}
             ],
             "script": [
@@ -5312,8 +5341,7 @@
               "text": "Négocier des conditions",
               "bunchNumber": 0,
               "points": [
-                {"title": "Le leadership", "point": 5},
-                {"title": "Les compétences", "point": 3}
+                {"title": "Le leadership", "point": 5}
               ],
               "script": [
                 {
@@ -5391,7 +5419,6 @@
               "text": "Accepter sans résistance",
               "bunchNumber": 0,
               "points": [
-                {"title": "Les compétences", "point": 3},
                 {"title": "Le lien social", "point": 2}
               ],
               "script": [
@@ -5533,7 +5560,14 @@
                   "eventStatus": "end"
                 }
               ]
+            },
+            {
+              "eventStatus": "hint",
+              "title": "3 astuces imparables pour dire NON à son supérieur !",
+              "text":["L’ignorance stratégique peut parfois être une solution, notamment dans des situations où la demande ne présente aucun enjeu significatif, comme lorsqu’elle émane d’un collègue sans autorité hiérarchique. Cependant, cette méthode peut s’avérer risquée lorsqu’elle est appliquée face à un supérieur, car elle pourrait nuire à la réputation et à la relation professionnelle.","L’utilisation des excuses et du cadre personnel permet d’éviter certaines demandes sans confrontation directe. Planifier des rendez-vous fictifs pour esquiver les heures supplémentaires peut être une stratégie efficace, à condition de ne pas en abuser. Il est préférable d’expliquer son refus de manière simple et posée, sans justification excessive. Exposer trop d’éléments de sa vie privée peut aussi se retourner contre soi à long terme. Il est donc recommandé de rester factuel et d’exprimer un refus clair et calme, sans avoir recours à des excuses inventées.","Reformuler la demande du supérieur est une autre approche efficace. Répéter sa requête sous forme de question peut mettre en évidence son caractère abusif ou absurde, ce qui amène parfois le supérieur à reconsidérer sa demande de lui-même.","Exiger une contrepartie est une manière légitime de répondre aux exigences supplémentaires du travail. Présenter la rémunération des heures supplémentaires comme une évidence dans la discussion permet de valoriser son travail. Il est aussi possible de demander une reconnaissance, qu’elle soit financière ou sous une autre forme, pour compenser l’effort demandé.","Comprendre le point de vue de l’employeur aide à maintenir une relation professionnelle saine. Les managers ne sont pas nécessairement malveillants, mais ils peuvent être soumis à une forte pression. Leur rappeler gentiment les limites et faire valoir ses droits permet de poser ses conditions sans créer de tension inutile.","Négocier plutôt que menacer reste la meilleure approche pour préserver une atmosphère constructive. Plutôt que d’opter pour le conflit ou la menace de recours juridiques, privilégier le dialogue permet d’arriver à une entente équilibrée respectant les besoins des deux parties.","Ces astuces offrent des moyens efficaces de poser ses limites au travail sans confrontation directe, en favorisant une communication assertive et une approche diplomatique."],
+              "displayStatus": true
             }
+
           ]]
         }
       ]
@@ -5586,7 +5620,7 @@
               "bunchNumber": 0,
               "points": [
                 {"title": "Le leadership", "point": 5},
-                {"title": "Les compétences", "point": 3}
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -5664,7 +5698,6 @@
               "text": "Explorer sans pression",
               "bunchNumber": 0,
               "points": [
-                {"title": "Les compétences", "point": 3},
                 {"title": "Le lien social", "point": 2}
               ],
               "script": [
@@ -5821,7 +5854,14 @@
                   "eventStatus": "end"
                 }
               ]
+            },
+            {
+              "eventStatus": "hint",
+              "title": "Le réseautage : un accélérateur de carrière",
+              "text":["Élargir son cercle professionnel permet de rencontrer des personnes influentes, des experts et des décideurs dans son domaine. Il ouvre des portes à des opportunités cachées, des offres d'emploi non publiées et des projets intéressants. Il favorise également les échanges d'informations, les conseils et le mentorat, facilitant ainsi l’évolution professionnelle.","Développer sa visibilité et sa notoriété contribue à se faire connaître et à valoriser son expertise. Cela renforce la crédibilité et la réputation professionnelle, tout en facilitant l’accès à de nouvelles responsabilités et à des postes à plus haute valeur ajoutée.","Créer des opportunités permet de rester informé des tendances du marché, des évolutions technologiques et des nouvelles perspectives. Il facilite la recherche de partenaires, de clients et de collaborateurs, tout en développant un réseau utile pour accéder à des informations stratégiques.","Le développement de compétences spécifiques est un investissement rentable. Acquérir des compétences recherchées permet de se différencier et de valoriser son profil. Cela augmente l’employabilité et le potentiel de rémunération, tout en aidant à s’adapter aux évolutions du marché et aux nouvelles exigences des employeurs.","Se perfectionner dans son domaine renforce l’expertise et permet de devenir un professionnel reconnu. Cette amélioration continue de la performance et de la productivité facilite l’accès à des postes à plus haute responsabilité et à des projets complexes.","S’adapter aux évolutions est essentiel pour rester compétitif sur le marché du travail. Le développement de compétences spécifiques permet de se tenir informé des dernières technologies et des méthodes de travail, garantissant ainsi une meilleure anticipation des changements et une sécurisation du parcours professionnel.","La synergie entre le réseautage et le développement de compétences est un facteur clé de succès. Le réseautage permet d’identifier les compétences recherchées et les besoins du marché, tandis que l’acquisition de nouvelles compétences répond à ces besoins et valorise le professionnel auprès de son réseau. Ces deux approches se renforcent mutuellement et accélèrent la progression de carrière.","Une stratégie efficace repose sur la définition d’objectifs professionnels clairs et l’identification des compétences clés à développer. Il est essentiel de cibler les événements et les personnes pertinentes pour optimiser son réseautage et de maintenir son réseau actif en cultivant des relations professionnelles durables.","En résumé, le réseautage et le développement de compétences spécifiques sont deux leviers essentiels pour réussir sa carrière et augmenter son salaire. Ils permettent de se démarquer, d’accéder à des opportunités et de s’adapter aux évolutions du marché du travail."],
+              "displayStatus": true
             }
+
           ]]
         },
         {
@@ -6013,8 +6053,7 @@
               "text": "Ignorer et avancer",
               "bunchNumber": 0,
               "points": [
-                {"title": "Les compétences", "point": 3},
-                {"title": "L'épanouissement", "point": 2}
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -6242,8 +6281,7 @@
               "text": "Prendre les devants",
               "bunchNumber": 0,
               "points": [
-                {"title": "Le leadership", "point": 5},
-                {"title": "Les compétences", "point": 3}
+                {"title": "Le leadership", "point": 5}
               ],
               "script": [
                 {
@@ -6341,7 +6379,6 @@
               "text": "Chercher une solution",
               "bunchNumber": 0,
               "points": [
-                {"title": "Les compétences", "point": 3},
                 {"title": "Le lien social", "point": 2}
               ],
               "script": [
@@ -6576,7 +6613,7 @@
               "bunchNumber": 0,
               "points": [
                 {"title": "Le leadership", "point": 5},
-                {"title": "Les compétences", "point": 3}
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -6669,8 +6706,7 @@
               "text": "Douter et analyser",
               "bunchNumber": 0,
               "points": [
-                {"title": "Les compétences", "point": 3},
-                {"title": "L'épanouissement", "point": 2}
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -6918,7 +6954,8 @@
               "text": "Saisir l’opportunité",
               "bunchNumber": 0,
               "points": [
-                {"title": "Le leadership", "point": 5}              ],
+                {"title": "Le leadership", "point": 5}              
+              ],
               "script": [
                 {
                   "name": "Anne",
@@ -7000,7 +7037,6 @@
               "text": "Rester prudente",
               "bunchNumber": 0,
               "points": [
-                {"title": "Les compétences", "point": 3},
                 {"title": "L'intégrité", "point": 2}
               ],
               "script": [
@@ -7220,7 +7256,7 @@
               "bunchNumber": 0,
               "points": [
                 {"title": "Le leadership", "point": 5},
-                {"title": "Les compétences", "point": 3}
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -7298,7 +7334,6 @@
               "text": "Rester mesurée",
               "bunchNumber": 0,
               "points": [
-                {"title": "Les compétences", "point": 3},
                 {"title": "Le lien social", "point": 2}
               ],
               "script": [
@@ -7475,7 +7510,14 @@
                   "eventStatus": "end"
                 }
               ]
+            },
+            {
+              "eventStatus": "hint",
+              "title": "L'approche axée sur les solutions : un facteur de différenciation majeur",
+              "text":["Dans un environnement professionnel compétitif et en constante évolution, la capacité à résoudre les problèmes de manière proactive est une compétence très prisée. Les employés qui se distinguent sont ceux qui ne se contentent pas de signaler les difficultés, mais qui proposent également des solutions concrètes et réalisables.","Adopter une approche axée sur les solutions offre de nombreux avantages. Proposer des solutions démontre une compréhension approfondie des enjeux et une capacité à analyser les situations complexes. Cela renforce la crédibilité et la réputation de l'employé en tant qu'expert dans son domaine. En contribuant à l'efficacité de l’entreprise, les solutions permettent d'améliorer les processus, de réduire les coûts et d'optimiser les performances, favorisant ainsi la réussite collective.","Le développement du leadership est également un bénéfice majeur. Prendre l’initiative de résoudre les problèmes témoigne d’un esprit d’initiative et d’une capacité à prendre des responsabilités, ouvrant des perspectives d’évolution de carrière. Par ailleurs, cette approche renforce la confiance des managers et des collègues envers un employé capable de trouver des solutions et de surmonter les obstacles, facilitant ainsi la collaboration et la communication au sein de l’équipe.","Développer une approche axée sur les solutions nécessite une analyse approfondie des causes du problème et l’identification des facteurs contributifs. Recueillir des informations auprès de différentes sources et analyser les données pertinentes permet de mieux comprendre la situation. La créativité et l’innovation jouent également un rôle clé : explorer différentes options et envisager des solutions alternatives, sans hésiter à sortir des sentiers battus, permet d’apporter des idées nouvelles et efficaces.","La collaboration et la communication sont essentielles pour impliquer les parties prenantes et recueillir des avis pertinents. Exposer clairement les solutions proposées et les avantages attendus favorise leur acceptation et leur mise en œuvre. Une fois la solution définie, un plan d’action détaillé doit être élaboré avec des étapes précises à suivre. Il est ensuite nécessaire d’assurer un suivi pour évaluer son efficacité et apporter les ajustements nécessaires.","L’apprentissage continu est un élément fondamental de cette approche. Tirer des leçons des succès comme des échecs permet d’adapter les solutions en fonction des retours et des évolutions de la situation, garantissant ainsi une amélioration constante.","L’état d’esprit joue un rôle déterminant dans cette démarche. Une attitude positive permet d’aborder les problèmes avec optimisme et confiance, renforçant ainsi la capacité à trouver des solutions. L’esprit d’initiative est essentiel pour ne pas attendre passivement que d’autres prennent en charge la résolution des problèmes. Enfin, la responsabilité est un pilier de cette approche : assumer la mise en œuvre des solutions et être prêt à rendre des comptes sur les résultats obtenus est indispensable pour inspirer confiance et crédibilité.","En résumé, l'approche axée sur les solutions est une compétence essentielle pour réussir dans le monde professionnel. Elle permet de se démarquer, de contribuer à l'efficacité de l'entreprise et de développer son leadership."],
+              "displayStatus": true
             }
+
           ]]
         }
       ]
@@ -7533,7 +7575,8 @@
               "bunchNumber": 0,
               "points": [
                 {"title": "Le leadership", "point": 5},
-                {"title": "L'intégrité", "point": 3}
+                {"title": "L'intégrité", "point": 3},
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -7626,7 +7669,6 @@
               "text": "Chercher du soutien",
               "bunchNumber": 0,
               "points": [
-                {"title": "Les compétences", "point": 3},
                 {"title": "Le lien social", "point": 2}
               ],
               "script": [
@@ -7768,7 +7810,14 @@
                   "eventStatus": "end"
                 }
               ]
+            },
+            {
+              "eventStatus": "hint",
+              "title": "Cas et conditions d’abus d’un supérieur hiérarchique",
+              "text":["Un supérieur hiérarchique peut abuser de son pouvoir et s’approprier le travail de son subordonné dans plusieurs situations. L’appropriation des idées et du travail se manifeste lorsque le supérieur présente à la direction ou aux clients le travail d’un subordonné sans le mentionner, ou lorsqu’il modifie légèrement un projet pour s’en attribuer tout le mérite. Une surcharge de travail sans reconnaissance se traduit par la délégation systématique de tâches complexes ou valorisantes sans aucune récompense ni reconnaissance officielle des contributions.","Le blocage des opportunités d’évolution peut être observé lorsque le supérieur empêche un employé de prendre la parole en réunion, retient des informations essentielles ou refuse de promouvoir le mérite. Dans certains cas, un supérieur utilise son subordonné pour masquer ses propres lacunes en lui confiant des tâches stratégiques et techniques afin de camoufler son incompétence, tout en prenant du crédit pour des décisions fondées sur les recommandations de son équipe. La pression et la manipulation se manifestent à travers des menaces implicites, comme suggérer qu’il serait préférable pour l’avenir de l’employé de le laisser gérer une présentation, ou en jouant sur la peur du licenciement et des évaluations négatives.","Face à ces abus, plusieurs solutions peuvent être mises en place. Documenter et prouver son travail est essentiel. Il est recommandé de conserver des traces écrites des échanges, livrables et preuves de contribution, tels que des mails, documents datés et captures d’écran, ainsi que de demander des validations écrites à chaque étape importante.","Faire valoir son travail publiquement est une autre approche efficace. Il est préférable de présenter soi-même ses idées en réunion et d’éviter de passer uniquement par son supérieur. Proposer directement ses contributions aux parties prenantes concernées permet également d’assurer une meilleure visibilité.","Établir un dialogue avec le supérieur peut parfois être une solution constructive. Exprimer calmement son ressenti et demander plus de visibilité et de reconnaissance, en s’appuyant sur des arguments factuels plutôt qu’émotionnels, peut favoriser un échange productif.","Chercher du soutien auprès des collègues et d’autres managers permet de construire un réseau interne qui reconnaît son travail et d’obtenir du feedback externe pour renforcer sa visibilité.","Si la situation persiste, il peut être nécessaire d’impliquer les ressources humaines en remontant les faits de manière formelle et en demandant un suivi ou un médiateur en cas d’abus répétés.","Enfin, explorer des alternatives professionnelles peut être une option lorsque les abus deviennent fréquents et impactent la motivation. Envisager un changement de service ou d’entreprise, ainsi que valoriser son travail sur des plateformes professionnelles comme LinkedIn, peut ouvrir de nouvelles opportunités.","Faire face à un supérieur abusif demande une approche stratégique, basée sur la preuve, la visibilité et, si nécessaire, des recours internes ou externes."],
+              "displayStatus": true
             }
+
           ]]
         }
       ]
@@ -7944,7 +7993,6 @@
               "text": "Détourner la conversation",
               "bunchNumber": 0,
               "points": [
-                {"title": "Les compétences", "point": 3},
                 {"title": "Le lien social", "point": 2}
               ],
               "script": [
@@ -8051,7 +8099,14 @@
                   "eventStatus": "end"
                 }
               ]
+            },
+            {
+              "eventStatus": "hint",
+              "title": "Les contraintes de la grossesse sur la carrière professionnelle et comment y remédier",
+              "text":["La grossesse est un moment important dans la vie d’une femme, mais elle peut aussi engendrer plusieurs contraintes sur sa carrière. Entre les défis physiques, les préjugés en entreprise et la gestion de l’équilibre entre vie professionnelle et personnelle, de nombreuses femmes doivent adapter leur parcours.","Les contraintes physiques et la fatigue sont des défis majeurs. La grossesse entraîne des symptômes tels que la fatigue et les nausées, qui peuvent affecter la productivité. Certains postes impliquant des déplacements fréquents ou des tâches physiques deviennent plus difficiles à assumer.","L’impact sur l’évolution de carrière est également une réalité pour de nombreuses femmes. Certaines constatent un ralentissement de leur progression professionnelle en raison du congé maternité. Des opportunités de promotion ou de formation peuvent être mises en attente, et des préjugés persistent sur leur disponibilité ou leur engagement après la naissance de l’enfant.","La pression et le stress liés à l’image professionnelle peuvent être un autre obstacle. La peur d’être perçue comme moins impliquée par les collègues ou la hiérarchie, la difficulté à concilier travail et rendez-vous médicaux sans être jugée, ainsi que le sentiment de culpabilité de ne pas pouvoir tout gérer à la perfection sont des préoccupations fréquentes.","Le risque de discrimination est bien réel. Certaines femmes subissent une mise à l’écart progressive ou une diminution de responsabilités. Dans certains cas, des contrats précaires ne sont pas renouvelés en raison d’une grossesse.","Ces contraintes engendrent différentes attitudes et comportements. Certaines femmes compensent en s’investissant davantage dans leur travail pour prouver leur engagement. D’autres, au contraire, préfèrent réduire leur implication par manque de motivation ou de reconnaissance. La crainte de perdre son emploi ou de ne pas retrouver sa place après le congé maternité peut provoquer un stress accru. Pour certaines, ces difficultés mènent à une réflexion sur leur avenir professionnel et une éventuelle reconversion vers un métier plus compatible avec la maternité.","Pour mieux gérer ces contraintes, plusieurs solutions peuvent être mises en place. La communication et l’anticipation sont essentielles. Discuter avec son employeur pour organiser son travail et anticiper l’après-congé maternité permet de mieux préparer la transition. Proposer un plan pour assurer la continuité des missions peut faciliter cette période.","L’aménagement du poste et des horaires est une autre option. Demander du télétravail, si possible, permet de réduire la fatigue liée aux déplacements. Adapter les horaires ou alléger certaines responsabilités de manière provisoire peut également être bénéfique.","La mobilisation des droits légaux est une démarche clé. Il est important de connaître et de faire valoir ses droits en matière de congé maternité, de protection contre le licenciement et d’aménagement du temps de travail. Faire appel aux ressources des ressources humaines ou aux syndicats en cas de discrimination peut être une solution efficace.","Le maintien du réseau professionnel joue un rôle crucial. Garder le contact avec ses collègues et supérieurs facilite le retour après l’accouchement. Se former ou s’informer sur les évolutions du poste durant l’absence permet de rester à jour et de mieux préparer la reprise.","La grossesse peut poser des défis à la carrière d’une femme, mais une bonne anticipation et une communication proactive permettent de mieux gérer cette période. L’entreprise a aussi un rôle à jouer en instaurant des politiques favorisant l’égalité professionnelle et l’accompagnement des femmes enceintes."],
+              "displayStatus": true
             }
+
           ]]
         }
       ]
@@ -8247,7 +8302,6 @@
             "text": "S’adapter prudemment",
             "bunchNumber": 0,
             "points": [
-              {"title": "Les compétences", "point": 3},
               {"title": "Le lien social", "point": 2}
             ],
             "script": [
@@ -8515,7 +8569,6 @@
               "text": "Trouver un compromis",
               "bunchNumber": 0,
               "points": [
-                {"title": "Les compétences", "point": 3},
                 {"title": "Le lien social", "point": 2}
               ],
               "script": [
@@ -8675,8 +8728,7 @@
               "text": "Encourager activement",
               "bunchNumber": 0,
               "points": [
-                {"title": "Le lien social", "point": 5},
-                {"title": "Les compétences", "point": 3}
+                {"title": "Le lien social", "point": 5}
               ],
               "script": [
                 {
@@ -8729,8 +8781,7 @@
               "text": "Rester prudente",
               "bunchNumber": 0,
               "points": [
-                {"title": "Les compétences", "point": 3},
-                {"title": "L'épanouissement", "point": 2}
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -8821,6 +8872,21 @@
                   "eventStatus": "end"
                 }
               ]
+            },
+            {
+              "eventStatus": "hint",
+              "title": "La reconversion professionnelle en étant en poste : enjeux et dispositifs existants",
+              "text": [
+                "Changer de métier tout en étant salarié est un défi, mais c’est une réalité pour de nombreux professionnels qui souhaitent évoluer, s’épanouir ou s’adapter aux mutations du marché. La reconversion peut être motivée par divers facteurs : manque d’épanouissement, évolution du secteur, quête de sens ou volonté d’un meilleur équilibre de vie. Heureusement, plusieurs dispositifs permettent d’effectuer cette transition tout en conservant son emploi.",
+                "Les défis de la reconversion en étant en poste sont nombreux. Trouver du temps pour se former tout en honorant ses engagements professionnels peut être compliqué. La sécurisation financière est un autre enjeu, car quitter un emploi stable pour une formation ou un nouveau poste implique des risques économiques. De plus, un manque d’information sur les dispositifs d’accompagnement peut freiner les salariés, tout comme la résistance au changement, alimentée par la peur de l’échec, la pression de l’entourage ou l’incertitude face au nouvel emploi.",
+                "Différents dispositifs d’accompagnement existent pour faciliter cette transition. Le Compte Personnel de Formation (CPF) permet de financer des formations qualifiantes ou certifiantes en lien avec un projet de reconversion. Accessible à tous les salariés, il est crédité en euros chaque année et certaines formations peuvent être suivies en parallèle de l’emploi.",
+                "Le Projet de Transition Professionnelle (PTP, ex-CIF) permet de suivre une formation longue tout en percevant son salaire. Financé par les Transitions Pro, il doit être validé par l’employeur avec un préavis de demande. La Validation des Acquis de l’Expérience (VAE) offre la possibilité de transformer l’expérience professionnelle en diplôme ou certification reconnue, facilitant ainsi l’accès à un nouveau poste sans reprise d’études longues.",
+                "Le Congé de Mobilité est une option offerte par certaines entreprises en cas de réorganisation. Il permet aux salariés de se reconvertir tout en conservant une partie de leur salaire. La Démission pour Reconversion avec Allocation Chômage donne la possibilité de quitter son poste tout en bénéficiant des allocations chômage si la reconversion est validée par un Conseiller en Évolution Professionnelle (CEP).",
+                "Une autre solution est la Formation en Alternance ou CPF de Transition, où certaines entreprises acceptent que leurs employés suivent une alternance dans un nouveau secteur tout en restant partiellement en poste.",
+                "Pour réussir sa reconversion en étant en poste, il est recommandé de faire un bilan de compétences afin d’identifier ses atouts, ses motivations et les métiers compatibles. Se renseigner sur le marché est essentiel pour vérifier les débouchés et opportunités dans le secteur ciblé. Construire un plan progressif, se former en parallèle et tester le métier via des stages ou missions ponctuelles permet de limiter les risques. Mobiliser son réseau en échangeant avec des professionnels du domaine visé offre des perspectives et des conseils précieux. Enfin, anticiper la transition financière en vérifiant les aides disponibles et en préparant un plan financier assure une reconversion plus sereine.",
+                "Une reconversion en étant en poste demande préparation, stratégie et recours aux dispositifs existants. En mobilisant les aides adaptées et en avançant progressivement, il est possible de changer de voie sans mettre en péril sa stabilité financière."
+              ],
+              "displayStatus": true
             }
           ]]
         }
@@ -8914,7 +8980,7 @@
               "bunchNumber": 0,
               "points": [
                 { "title": "Le leadership", "point": 5 },
-                { "title": "Les compétences", "point": 3 }
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -8982,7 +9048,6 @@
               "text": "Rester diplomate",
               "bunchNumber": 0,
               "points": [
-                { "title": "Les compétences", "point": 3 },
                 { "title": "Le lien social", "point": 2 }
               ],
               "script": [
@@ -9192,7 +9257,7 @@
               "bunchNumber": 0,
               "points": [
                 { "title": "Le leadership", "point": 5 },
-                { "title": "Les compétences", "point": 3 }
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -9290,7 +9355,6 @@
               "text": "Rester prudente",
               "bunchNumber": 0,
               "points": [
-                { "title": "Les compétences", "point": 3 },
                 { "title": "Le lien social", "point": 2 }
               ],
               "script": [
@@ -9447,6 +9511,24 @@
                   "eventStatus": "end"
                 }
               ]
+            },
+            {
+              "eventStatus": "hint",
+              "title": "Les opportunités et dangers d’un rachat d’entreprise pour les salariés",
+              "text": [
+                "Lorsqu’une entreprise est rachetée, cela entraîne des changements majeurs qui peuvent impacter les employés, tant positivement que négativement. Ce type de transition peut offrir des opportunités de croissance, mais aussi générer des incertitudes et des risques.",
+                "Un rachat d’entreprise peut ouvrir de nouvelles perspectives de carrière. L’arrivée d’un nouvel investisseur peut signifier un développement accru, facilitant la création de nouveaux postes et responsabilités. L’intégration à de nouvelles équipes peut aussi offrir des opportunités internes intéressantes.",
+                "L’amélioration des conditions de travail est un autre bénéfice possible. Certains rachats s’accompagnent d’investissements qui modernisent les outils, les infrastructures et les formations. Une nouvelle politique des ressources humaines peut aussi introduire des avantages supplémentaires tels qu’une meilleure mutuelle, des primes ou des options de télétravail.",
+                "L’expansion et la stabilisation financière peuvent également être des effets positifs d’un rachat. Si l’entreprise rachetée était en difficulté, une restructuration bien menée peut assurer sa pérennité et sécuriser les emplois. L’accès à de nouveaux marchés et innovations peut aussi renforcer la compétitivité de l’entreprise.",
+                "L’apprentissage et la montée en compétences sont favorisés par cette transition. Une nouvelle culture d’entreprise, des méthodes de travail modernisées et des outils innovants permettent aux salariés de se former et d’échanger avec de nouveaux collègues, enrichissant ainsi leur expertise.",
+                "Toutefois, un rachat d’entreprise peut aussi comporter des dangers. Le risque de licenciements ou de restructuration est une menace réelle, notamment si des doublons de postes existent entre l’ancienne et la nouvelle organisation. Une réorganisation interne peut aussi entraîner des modifications importantes des missions et conditions de travail.",
+                "Le changement de culture d’entreprise peut être déstabilisant. Une nouvelle direction peut imposer des valeurs et une gestion différente, modifiant profondément les habitudes des employés. L’adaptation peut être difficile si l’approche managériale devient plus stricte ou si de nouvelles attentes sont imposées.",
+                "L’incertitude et le stress sont des conséquences fréquentes d’un rachat. Une période d’instabilité peut susciter des craintes quant à l’avenir de l’emploi et aux nouvelles attentes. Un manque de communication de la direction peut aussi engendrer une démobilisation des équipes.",
+                "La remise en cause des avantages sociaux est un autre risque potentiel. Certains avantages acquis, tels que les primes, les RTT ou l’organisation du travail, peuvent être remis en question. La renégociation des contrats ou conventions collectives peut entraîner des changements peu favorables aux employés.",
+                "Pour mieux s’adapter à un rachat d’entreprise, il est essentiel de se renseigner en suivant les annonces officielles et en comprenant la stratégie du nouvel acquéreur. Évaluer son positionnement au sein de l’entreprise permet de savoir si son poste est menacé ou s’il existe des opportunités de mobilité interne. Rester flexible et proactif en montrant son engagement et en s’adaptant aux changements facilite l’intégration dans le nouvel environnement. Enfin, maintenir son réseau professionnel permet d’anticiper d’autres options en cas de restructuration négative.",
+                "Un rachat d’entreprise peut être une opportunité de croissance ou une source d’instabilité. Se tenir informé, être adaptable et anticiper les changements permet de mieux naviguer cette transition."
+              ],
+              "displayStatus": true
             }
           ]]
         },
@@ -9514,10 +9596,7 @@
                   "title": "Le leadership",
                   "point": 5
                 },
-                {
-                  "title": "Les compétences",
-                  "point": 3
-                }
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -9608,10 +9687,6 @@
                 {
                   "title": "Le lien social",
                   "point": 3
-                },
-                {
-                  "title": "Les compétences",
-                  "point": 2
                 }
               ],
               "script": [
@@ -9754,6 +9829,21 @@
                   "eventStatus": "end"
                 }
               ]
+            },
+            {
+              "eventStatus": "hint",
+              "title": "Comment gérer un manager toxique ?",
+              "text": [
+                "Travailler sous les ordres d’un manager toxique peut nuire à la motivation, à la performance et au bien-être des employés. Un mauvais management peut prendre plusieurs formes : abus d’autorité, manipulation, favoritisme, manque de reconnaissance ou communication agressive. Il est donc essentiel d’adopter une stratégie efficace pour se protéger et maintenir un environnement de travail sain.",
+                "Un manager toxique peut se manifester de différentes manières. Le micromanagement excessif se traduit par un contrôle minutieux de chaque détail et un manque de confiance envers les employés. Le manque de reconnaissance est également un signe révélateur, lorsque les efforts et réussites des employés sont ignorés. Un comportement agressif se manifeste par des critiques humiliantes, des remarques blessantes ou une attitude autoritaire. La manipulation et le favoritisme peuvent aussi être présents, lorsqu’un manager utilise les employés à son avantage ou privilégie certains au détriment des autres. Enfin, une absence de communication peut rendre le travail difficile, avec des directives floues et des changements de décisions sans explication.",
+                "Pour gérer cette situation, il est important de garder son calme et de prendre du recul. Ne pas réagir à chaud face aux provocations et analyser objectivement la situation permet d’éviter des décisions impulsives. Fixer des limites claires est essentiel : il faut refuser les abus tout en restant professionnel et assertif, et savoir dire “non” lorsque c’est justifié, sans culpabiliser.",
+                "Documenter les comportements toxiques est une stratégie précieuse. Noter les remarques, comportements ou décisions problématiques avec des dates et des preuves (emails, messages) peut être utile en cas de recours auprès des ressources humaines. Chercher du soutien en échangeant avec des collègues pour comprendre s’ils vivent la même situation permet de ne pas se sentir isolé. Consulter un mentor ou une personne de confiance en interne, voire alerter les ressources humaines si nécessaire, peut aussi aider à mieux gérer la situation.",
+                "Adapter sa communication avec un manager toxique est une approche clé. Il est conseillé d’utiliser un ton factuel et neutre, de reformuler les demandes et attentes pour éviter toute ambiguïté, et de poser des questions directes pour clarifier les consignes. Préserver son bien-être est tout aussi important : pratiquer des activités déstressantes permet de ne pas subir mentalement la situation et de séparer vie professionnelle et personnelle.",
+                "Si la situation persiste, il est essentiel de préparer une issue. Envisager un changement de service ou rechercher de nouvelles opportunités peut être une solution. Mettre à jour son CV et renforcer son réseau professionnel permet d’anticiper un éventuel départ et d’explorer d’autres options.",
+                "Si le comportement du manager devient invivable, il est possible de demander un entretien avec un supérieur ou les ressources humaines en s’appuyant sur des preuves concrètes. Il est préférable d’exposer les conséquences sur la performance et l’ambiance de travail plutôt que d’attaquer la personne directement. Proposer des solutions pour améliorer la situation, comme un changement d’équipe ou une médiation, peut également être une démarche constructive.",
+                "Gérer un manager toxique demande du recul, de la diplomatie et de la stratégie. Il est essentiel de se protéger, de documenter les abus et d’explorer des solutions, que ce soit en interne ou en envisageant un changement professionnel."
+              ],
+              "displayStatus": true
             }
           ]]
         }
@@ -9810,10 +9900,7 @@
                   "title": "Le leadership",
                   "point": 5
                 },
-                {
-                  "title": "Les compétences",
-                  "point": 3
-                }
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -9896,10 +9983,6 @@
               "text": "Rester humble",
               "bunchNumber": 0,
               "points": [
-                {
-                  "title": "Les compétences",
-                  "point": 3
-                },
                 {
                   "title": "Le lien social",
                   "point": 2
@@ -10135,10 +10218,6 @@
                 {
                   "title": "L'intégrité",
                   "point": 5
-                },
-                {
-                  "title": "Les compétences",
-                  "point": 3
                 }
               ],
               "script": [
@@ -10242,10 +10321,6 @@
               "text": "Prudence et distance",
               "bunchNumber": 0,
               "points": [
-                {
-                  "title": "Les compétences",
-                  "point": 3
-                },
                 {
                   "title": "Le lien social",
                   "point": 2
@@ -10589,10 +10664,6 @@
               "bunchNumber": 0,
               "points": [
                 {
-                  "title": "Les compétences",
-                  "point": 3
-                },
-                {
                   "title": "L'intégrité",
                   "point": 2
                 }
@@ -10764,6 +10835,21 @@
                 }
               ]
               
+            },
+            {
+              "eventStatus": "hint",
+              "title": "Comment analyser une offre d’embauche quand on est déjà en poste ?",
+              "text": [
+                "Recevoir une offre d’emploi alors qu’on est déjà en poste peut être une opportunité de progression, mais elle doit être analysée avec rigueur avant de prendre une décision. Plusieurs critères clés permettent d’évaluer si elle représente une réelle avancée professionnelle.",
+                "Comparer la rémunération et les avantages est une première étape essentielle. Il convient d’examiner si le salaire fixe et variable proposé est supérieur à celui du poste actuel, tout en tenant compte des primes et bonus éventuels. Les avantages sociaux, tels que la mutuelle, les tickets-restaurants, les congés payés et les RTT, doivent être pris en considération. Il est aussi important de vérifier s’il existe un plan d’évolution salariale clair. Toutefois, un salaire plus élevé peut parfois dissimuler une augmentation des responsabilités ou des conditions de travail plus exigeantes.",
+                "L’intérêt du poste et ses perspectives doivent également être évalués. Les missions et responsabilités doivent correspondre aux compétences et aux aspirations professionnelles du candidat. L’existence d’opportunités de montée en compétences ou de promotion interne constitue un atout. La stabilité du poste est un facteur clé : s’agit-il d’un poste pérenne ou d’une mission temporaire ? Il convient de rester vigilant, car une offre séduisante peut cacher une charge de travail excessive ou un fort turnover.",
+                "La culture d’entreprise et l’environnement de travail jouent un rôle déterminant dans l’épanouissement professionnel. Les valeurs et l’ambiance de travail doivent être en adéquation avec les attentes et le mode de fonctionnement du candidat. L’équilibre entre vie professionnelle et personnelle, notamment en matière de télétravail et de flexibilité des horaires, doit être pris en compte. Il est conseillé de rencontrer son futur supérieur afin d’évaluer si son style de management correspond aux attentes. Un bon salaire ne compense pas un environnement de travail toxique ou un stress excessif.",
+                "Les conditions pratiques, telles que la localisation et les frais annexes, doivent aussi être examinées. La durée du trajet domicile-travail, les modalités de travail (présentiel, hybride, full remote) et les éventuels frais supplémentaires (transport, stationnement, déménagement) sont autant de facteurs pouvant influencer la décision. Un salaire plus élevé peut être rapidement absorbé par ces coûts additionnels.",
+                "La solidité et la réputation de l’entreprise sont des éléments à ne pas négliger. Il est important de s’assurer que l’entreprise évolue dans un secteur stable et porteur. Consulter les avis des employés sur des plateformes telles que Glassdoor ou LinkedIn, ainsi que les articles de presse et les résultats financiers, peut fournir des indications précieuses. Un fort turnover du personnel peut être un signal d’alerte, tout comme un recrutement urgent, qui peut cacher un climat de crise ou une mauvaise gestion.",
+                "Prendre le temps de la réflexion est essentiel avant de prendre une décision. Il est recommandé de négocier un délai de réponse pour bien peser les avantages et les inconvénients. Un second entretien peut être demandé afin de poser des questions plus précises et dissiper d’éventuels doutes. Comparer l’offre avec le poste actuel permet de s’assurer qu’elle représente un véritable gain en termes de salaire, de carrière et de bien-être.",
+                "Une offre d’embauche intéressante doit apporter une valeur ajoutée réelle par rapport à la situation actuelle. Avant d’accepter, il est crucial d’analyser tous les aspects, des conditions de travail aux perspectives de carrière, et d’écouter son intuition."
+              ],
+              "displayStatus": true
             }
           ]]
         }
@@ -10863,7 +10949,8 @@
                 {
                   "title": "Le lien social",
                   "point": 3
-                }
+                },
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -10926,10 +11013,6 @@
               "text": "Questionner avec prudence",
               "bunchNumber": 0,
               "points": [
-                {
-                  "title": "Les compétences",
-                  "point": 3
-                },
                 {
                   "title": "L'intégrité",
                   "point": 2
@@ -11471,10 +11554,6 @@
               "bunchNumber": 0,
               "points": [
                 {
-                  "title": "Les compétences",
-                  "point": 3
-                },
-                {
                   "title": "L'intégrité",
                   "point": 2
                 }
@@ -11707,10 +11786,6 @@
               "bunchNumber": 0,
               "points": [
                 {
-                  "title": "Les compétences",
-                  "point": 3
-                },
-                {
                   "title": "Le lien social",
                   "point": 2
                 }
@@ -11862,10 +11937,7 @@
                   "title": "Le leadership",
                   "point": 5
                 },
-                {
-                  "title": "Les compétences",
-                  "point": 3
-                }
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -11910,11 +11982,7 @@
               "points": [
                 {
                   "title": "L'épanouissement",
-                  "point": 2
-                },
-                {
-                  "title": "Les compétences",
-                  "point": 2
+                  "point": 3
                 }
               ],
               "script": [
@@ -12154,10 +12222,6 @@
                   {
                     "title": "L'intégrité",
                     "point": 10
-                  },
-                  {
-                    "title": "Les compétences",
-                    "point": 2
                   },
                   {
                     "title": "Le lien social",
@@ -12414,10 +12478,6 @@
               "bunchNumber": 0,
               "points": [
                 {
-                  "title": "Les compétences",
-                  "point": 5
-                },
-                {
                   "title": "L'intégrité",
                   "point": 3
                 }
@@ -12526,10 +12586,6 @@
                 {
                   "title": "Le lien social",
                   "point": 2
-                },
-                {
-                  "title": "Les compétences",
-                  "point": 1
                 }
               ],
               "script": [
@@ -12704,10 +12760,7 @@
                   "title": "Le leadership",
                   "point": 5
                 },
-                {
-                  "title": "Les compétences",
-                  "point": 3
-                }
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -12796,10 +12849,6 @@
               "bunchNumber": 0,
               "points": [
                 {
-                  "title": "Les compétences",
-                  "point": 3
-                },
-                {
                   "title": "Le lien social",
                   "point": 2
                 }
@@ -12883,10 +12932,6 @@
                 {
                   "title": "Le lien social",
                   "point": -3
-                },
-                {
-                  "title": "Les compétences",
-                  "point": 1
                 }
               ],
               "script": [
@@ -12977,10 +13022,6 @@
               "bunchNumber": 0,
               "points": [
                 {
-                  "title": "Les compétences",
-                  "point": 3
-                },
-                {
                   "title": "Le leadership",
                   "point": 2
                 }
@@ -13056,10 +13097,6 @@
               "text": "Négocier un compromis",
               "bunchNumber": 0,
               "points": [
-                {
-                  "title": "Les compétences",
-                  "point": 2
-                },
                 {
                   "title": "Le lien social",
                   "point": 2
@@ -13205,6 +13242,20 @@
                   "eventStatus": "end"
                 }
               ]
+            },
+            {
+              "eventStatus": "hint",
+              "title": "Comment poser des congés payés pendant une période de forte activité ?",
+              "text": [
+                "Demander des congés payés pendant une période de forte activité peut être délicat, mais c’est parfois nécessaire pour des raisons personnelles ou de bien-être. Adopter une approche stratégique et organisée permet de maximiser ses chances d’obtenir une approbation tout en respectant les besoins de l’entreprise.",
+                "Anticiper et planifier à l’avance est essentiel. Faire sa demande le plus tôt possible permet à l’employeur d’organiser la répartition des tâches en conséquence. Respecter le calendrier interne est également important, certaines entreprises limitant les congés durant certaines périodes. Observer les tendances en identifiant les périodes où d’autres collègues prennent déjà des congés peut aider à éviter une demande refusée. S’informer sur les périodes de forte activité permet de mieux choisir son moment.",
+                "Préparer un argumentaire solide facilite l’acceptation de la demande. Justifier son besoin en expliquant pourquoi ces dates sont importantes, que ce soit pour des raisons familiales, médicales ou un événement planifié, renforce la demande. Montrer sa flexibilité en proposant des dates alternatives si nécessaire et valoriser ses efforts en mettant en avant un engagement intense durant les périodes difficiles sont des stratégies efficaces. Adopter un ton professionnel et une attitude constructive peut favoriser une réponse positive.",
+                "Proposer une solution pour limiter l’impact de son absence est une approche clé. Anticiper et déléguer ses tâches, former un collègue pour assurer la continuité du travail et terminer les dossiers urgents avant le départ sont des éléments qui rassurent le manager. Un employeur sera plus enclin à accorder un congé si l’absence ne perturbe pas le bon fonctionnement du service.",
+                "Faire une demande formelle et respecter la hiérarchie augmente les chances de succès. Utiliser la procédure officielle en passant par l’outil RH ou un e-mail selon les règles de l’entreprise est essentiel. Il est aussi recommandé d’aborder le sujet avec son manager en amont afin d’éviter un refus immédiat et de montrer sa volonté de trouver une solution adaptée.",
+                "Accepter un compromis si nécessaire permet d’éviter un refus catégorique. Être flexible et accepter un léger ajustement des dates proposé par le manager peut faciliter la négociation. Trouver un terrain d’entente en optant pour une réduction de la durée demandée peut également être une solution satisfaisante.",
+                "Poser des congés en pleine période de forte activité demande anticipation, flexibilité et organisation. En proposant une solution adaptée et en montrant son engagement, il est possible d’obtenir un accord sans compromettre l’équilibre du service."
+              ],
+              "displayStatus": true
             }
           ]]
         }
@@ -13557,6 +13608,19 @@
                   "eventStatus": "end"
                 }
               ]
+            },
+            {
+              "eventStatus": "hint",
+              "title": "Astuces pour la résolution de conflits en tant que manager",
+              "text": [
+                "En tant que manager, gérer les conflits est une compétence essentielle pour maintenir un climat de travail sain et productif. Adopter une posture neutre et à l’écoute est primordial. Il est important de ne pas prendre parti afin de rester objectif et éviter d’alimenter le conflit. Laisser chaque partie s’exprimer permet de mieux comprendre la situation, et poser des questions ouvertes encourage les collaborateurs à exprimer calmement leurs ressentis. Reformuler leurs propos aide à montrer que le message a bien été compris et évite tout malentendu.",
+                "Identifier la cause réelle du conflit est une étape essentielle. Il convient d’analyser les faits pour déterminer s’il s’agit d’un problème de communication, de répartition des tâches, de reconnaissance ou de divergence de personnalité. Il est important de distinguer les émotions des faits, car certains conflits reposent sur des perceptions erronées plutôt que sur des problèmes concrets. Évaluer l’impact du conflit sur l’équipe permet de mieux mesurer son ampleur et de savoir s’il affecte la productivité ou le climat de travail.",
+                "Favoriser un dialogue constructif facilite la résolution du conflit. Organiser une discussion dans un cadre neutre, comme un bureau calme ou une salle de réunion, aide à établir un échange serein. Définir des règles de communication, telles que l’interdiction des interruptions et des accusations directes, garantit un respect mutuel. Encourager les solutions collaboratives en demandant aux parties concernées de proposer des compromis favorise un dénouement positif. Rappeler l’objectif final, qui est de restaurer une dynamique efficace et constructive, permet de garder la discussion centrée sur des solutions.",
+                "Trouver une solution équilibrée et durable est crucial pour éviter que le conflit ne se répète. Proposer des compromis où chaque partie fait un effort renforce l’engagement des collaborateurs à résoudre le problème. Définir un plan d’action précisant les responsabilités de chacun contribue à la mise en place d’un accord clair. Un suivi régulier permet de s’assurer que les décisions prises sont respectées et efficaces sur le long terme. Mettre par écrit les engagements de chacun aide à éviter toute ambiguïté future.",
+                "Prévenir les conflits futurs est une approche proactive essentielle. Encourager une communication ouverte par le biais d’échanges réguliers évite l’accumulation de frustrations. Clarifier les attentes et les rôles de chaque membre de l’équipe réduit les malentendus à l’origine de nombreuses tensions. Développer l’intelligence émotionnelle permet de détecter les signes de tension avant qu’ils ne dégénèrent. Se former et former ses équipes à la gestion des conflits améliore la cohésion et la dynamique collective.",
+                "Un manager efficace doit savoir gérer les conflits avec calme, diplomatie et méthode. En adoptant une approche neutre, en favorisant le dialogue et la collaboration, et en mettant en place des solutions durables, il peut transformer une situation tendue en une opportunité d’amélioration collective."
+              ],
+              "displayStatus": true
             }
           ]]
         }
@@ -13968,6 +14032,19 @@
                   "eventStatus": "end"
                 }
               ]
+            },
+            {
+              "eventStatus": "hint",
+              "title": "Que faire en tant que chef de projet face à une situation de harcèlement impliquant un directeur ?",
+              "text": [
+                "Apprendre que deux employés subissent du harcèlement et des avances de la part d’un directeur est une situation délicate qui nécessite une réaction rapide, professionnelle et rigoureuse. En tant que chef de projet, il est essentiel d’assurer un rôle de soutien et de protection tout en respectant la confidentialité et les procédures légales.",
+                "Recueillir les témoignages avec prudence est la première étape. Il est important d’écouter attentivement et sans jugement, en laissant les victimes s’exprimer librement sans les interrompre. Exprimer son soutien et sa neutralité permet de créer un climat de confiance. Vérifier les faits en demandant des détails précis sur les événements (dates, lieux, circonstances) et en notant les informations avec leur accord est crucial. Encourager la collecte de preuves, telles que des emails, messages, enregistrements ou témoignages d’autres collègues, renforce la crédibilité des plaintes. Si les victimes hésitent à parler, leur proposer de rédiger un témoignage écrit qu’elles pourront transmettre plus tard peut les aider à franchir le pas.",
+                "Informer et accompagner les victimes permet de les rassurer et de les orienter vers les bonnes démarches. Il est essentiel de leur rappeler leurs droits, en précisant que le harcèlement moral ou sexuel est puni par la loi et que l’entreprise a l’obligation légale d’agir. Les orienter vers les bons interlocuteurs, tels que le service des ressources humaines, le Comité Social et Économique (CSE), un référent harcèlement (obligatoire dans les entreprises de plus de 250 salariés), ou encore l’inspection du travail et un avocat spécialisé en cas de non-action de l’entreprise, leur offre des solutions adaptées. Les accompagner dans leurs démarches en suggérant de rédiger une plainte interne et en proposant d’être témoin ou intermédiaire si elles le souhaitent constitue un soutien précieux. Toutefois, il ne faut jamais forcer une victime à témoigner, mais plutôt proposer des solutions pour garantir sa sécurité.",
+                "Signaler officiellement la situation est une étape incontournable. Il convient d’alerter en interne en transmettant le problème à un responsable RH ou un supérieur compétent, en dehors de l’influence du directeur concerné. Un rapport écrit détaillant les faits objectifs et les plaintes recueillies doit être rédigé. Une enquête interne doit être demandée afin de déclencher une procédure formelle conforme aux règles de l’entreprise. Il est essentiel que le directeur ne soit pas informé directement par le chef de projet afin d’éviter toute pression sur les victimes. Si l’entreprise ne réagit pas ou tente de couvrir les faits, contacter l’inspection du travail ou un avocat spécialisé devient une option nécessaire.",
+                "Protéger les victimes et prévenir les représailles est primordial. Il faut s’assurer que l’environnement de travail reste sécurisé en évitant toute mise en contact entre les victimes et le directeur et en surveillant d’éventuelles sanctions déguisées, telles qu’une mutation forcée ou une pression accrue. Encourager la sensibilisation en promouvant des formations sur le harcèlement contribue à renforcer la prévention et à éviter de futurs incidents. Un suivi régulier avec les victimes permet de s’assurer qu’elles ne subissent pas de nouvelles pressions et qu’elles se sentent en sécurité.",
+                "Face à un cas de harcèlement impliquant un directeur, il est crucial d’agir rapidement en soutenant les victimes, en alertant les instances compétentes et en garantissant un cadre de travail sûr. Si l’entreprise ne réagit pas, il est nécessaire d’escalader le problème à l’extérieur en contactant l’inspection du travail, un avocat ou les autorités compétentes. La passivité peut aggraver la situation, il est donc essentiel d’adopter une position ferme et responsable."
+              ],
+              "displayStatus": true
             }
           ]]
         }
@@ -14337,7 +14414,7 @@
               "bunchNumber": 0,
               "points": [
                 {
-                  "title": "Les compétences",
+                  "title": "L'audace",
                   "point": 5
                 }
               ],
@@ -14369,28 +14446,148 @@
                 },
                 {
                   "name": "Marc",
-                  "text": "Ici, on apprécie les profils proactifs qui savent s’adapter et proposer des initiatives.",
+                  "text": "Ici, on apprécie les profils proactifs qui savent s’adapter et proposer des initiatives...",
                   "timeLoading": 2000
                 },
                 {
                   "name": "Marc",
-                  "text": "Comment gères-tu la collaboration avec différentes équipes dans un projet transverse ?",
+                  "text": "D'ailleurs, je ne t'ai pas dit ce que nous faisions ici..",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Anne",
+                  "text": "Ce n'est rien !",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Anne",
+                  "text": "J’ai pris le temps de me renseigner sur DataFin et j’apprécie votre approche innovante dans la fintech.",
                   "timeLoading": 2000
                 },
                 {
                   "name": "Anne",
-                  "text": "Je privilégie une communication ouverte et des réunions de synchronisation régulières.",
+                  "text": "Ce qui m’attire particulièrement, c’est votre volonté de rendre les services financiers plus accessibles grâce à la digitalisation.",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Anne",
+                  "text": "Avec mon expérience en marketing digital, je suis convaincue que je peux apporter une réelle valeur ajoutée à votre équipe.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Marc",
+                  "text": "C’est très intéressant !",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Marc",
+                  "text": "Chez DataFin, nous cherchons justement à renforcer notre stratégie de contenu digital et à améliorer notre acquisition client via des leviers numériques performants.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Marc",
+                  "text": "Peux-tu me parler d’un projet récent sur lequel tu as travaillé et qui pourrait être pertinent pour nous ?",
                   "timeLoading": 2000
                 },
                 {
                   "name": "Anne",
-                  "text": "J’ai l’habitude de coordonner les équipes produit et commerciale pour aligner les objectifs.",
+                  "text": "Bien sûr !",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Anne",
+                  "text": "J’ai récemment piloté une campagne de refonte SEO et de content marketing au sein de ma boîte actuelle.",
                   "timeLoading": 2000
                 },
                 {
                   "name": "Anne",
-                  "text": "Une vision commune est essentielle pour la réussite d’un projet...",
+                  "text": "Nous avons optimisé les contenus en utilisant la méthode A/B testing et l’intelligence artificielle pour analyser les tendances du marché.",
                   "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Résultat : nous avons augmenté le trafic organique de 40 % et amélioré le taux de conversion de 20 %.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Je pense que ces stratégies peuvent être adaptées à DataFin pour attirer davantage de prospects qualifiés.",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Marc",
+                  "text": "C’est exactement ce vers quoi nous souhaitons aller !",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Marc",
+                  "text": "Comment gères-tu les défis liés à l’évolution rapide des algorithmes et des comportements utilisateurs ?",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "L’adaptabilité est essentielle.",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Anne",
+                  "text": "Je fais une veille constante sur les évolutions SEO et les tendances digitales.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Par exemple, sur mon dernier projet, nous avons anticipé un changement d’algorithme en renforçant la qualité et la structuration des contenus, ce qui nous a permis de maintenir un bon positionnement.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "J’aime aussi tester et ajuster les stratégies en fonction des données analytiques pour rester performant.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Marc",
+                  "text": "C’est une approche pragmatique et efficace !",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Marc",
+                  "text": "Une dernière question : comment envisages-tu ton évolution chez DataFin ?",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Je vois ce poste comme une opportunité d’apporter mes compétences tout en continuant à évoluer dans un environnement innovant.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "J’aimerais à terme piloter une équipe et contribuer à la mise en place d’une stratégie digitale globale alignée avec les ambitions de DataFin.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Marc",
+                  "text": "J’apprécie ta vision !",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Marc",
+                  "text": "Merci pour cet échange, nous allons étudier ta candidature avec attention et reviendrons vers toi très bientôt.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Merci beaucoup, Marc !",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Anne",
+                  "text": "Je suis ravie d’avoir pu échanger avec vous et j’espère pouvoir contribuer au succès de DataFin.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "À bientôt !",
+                  "timeLoading": 1000
                 },
                 {
                   "eventStatus": "end"
@@ -14399,27 +14596,18 @@
             },
             {
               "flag": "blue",
-              "text": "Adopter une posture humble",
+              "text": "Avoir le succès modeste",
               "bunchNumber": 0,
               "points": [
                 {
                   "title": "Le lien social",
                   "point": 4
-                },
-                {
-                  "title": "Les compétences",
-                  "point": 2
                 }
               ],
               "script": [
                 {
                   "name": "Anne",
-                  "text": "Merci !",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Anne",
-                  "text": "J’ai eu l’opportunité de participer à un programme d'accompagnement en évolution de carrière.",
+                  "text": "Merci ! J’ai eu l’opportunité de participer à un programme d'accompagnement en évolution de carrière.",
                   "timeLoading": 2000
                 },
                 {
@@ -14434,13 +14622,13 @@
                 },
                 {
                   "name": "Anne",
-                  "text": "A présent, grâce au poste que j'occupe et aux compétences acquises, je sais que je peux apporter énormément de valeur à une entreprise qui, comme moi, est en constante évolution.",
+                  "text": "À présent, grâce au poste que j'occupe et aux compétences acquises, je sais que je peux apporter énormément de valeur à une entreprise qui, comme moi, est en constante évolution.",
                   "timeLoading": 2000
                 },
                 {
                   "name": "Marc",
                   "text": "Eh ben laisse-moi te dire que tu as frappé à la bonne porte !",
-                  "timeLoading": 2000
+                  "timeLoading": 1500
                 },
                 {
                   "name": "Marc",
@@ -14449,23 +14637,148 @@
                 },
                 {
                   "name": "Marc",
-                  "text": "Nous cherchons actuellement à renforcer notre visibilité en ligne.",
+                  "text": "D'ailleurs, ça me fait penser... Je ne t'ai pas dit ce que l'on fait ici...",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Oh, pas de souci !",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Anne",
+                  "text": "J’ai pris le temps de me renseigner sur DataFin et… enfin, ce que j’ai vu m’a vraiment intéressée.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "J’aime beaucoup l’idée d’utiliser la digitalisation pour rendre les services financiers plus accessibles.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "J’ai travaillé sur des projets en marketing digital, et… je pense que mon expérience pourrait peut-être être utile à votre équipe.",
                   "timeLoading": 2000
                 },
                 {
                   "name": "Marc",
-                  "text": "Peux-tu me parler d’un projet sur lequel tu as travaillé et qui pourrait être pertinent ici ?",
+                  "text": "C’est un bon point !",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Marc",
+                  "text": "Justement, nous cherchons à renforcer notre présence en ligne et à optimiser notre acquisition client.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Marc",
+                  "text": "Est-ce que tu pourrais me parler d’un projet récent que tu as mené et qui pourrait être pertinent ici ?",
                   "timeLoading": 2000
                 },
                 {
                   "name": "Anne",
-                  "text": "J’ai participé à une refonte de contenu digital pour optimiser le référencement naturel via des outils d'intelligence artificielle.",
+                  "text": "Bien sûr… Alors, dans mon poste actuel, j’ai eu l'occasion de participer à une refonte de contenu digital.",
                   "timeLoading": 2000
                 },
                 {
                   "name": "Anne",
-                  "text": "Nous avons amélioré notre taux de conversion de 15 % grâce à une meilleure structuration des pages et un suivi analytique régulier...",
+                  "text": "L’objectif était d’améliorer notre référencement naturel.",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Anne",
+                  "text": "Avec l’équipe, on a testé plusieurs approches et… finalement, on a réussi à augmenter le trafic organique.",
                   "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Je crois que c’était autour de… 40 % d’augmentation.",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Anne",
+                  "text": "On a aussi amélioré le taux de conversion… d’environ 20 %, si je me souviens bien.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Marc",
+                  "text": "C’est une belle réussite !",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Marc",
+                  "text": "Comment as-tu géré les défis liés aux évolutions constantes des algorithmes et des comportements utilisateurs ?",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Alors… pour être honnête, ce n’est pas toujours évident.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "J’essaie de suivre les tendances et de m’informer régulièrement, mais les choses évoluent très vite.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Sur mon dernier projet, par exemple, on a eu une mise à jour d’algorithme qui nous a un peu pris de court…",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Mais, avec l’équipe, on a ajusté la stratégie en améliorant la qualité des contenus et ça a fini par porter ses fruits.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Marc",
+                  "text": "C’est normal, personne ne peut tout anticiper à 100 %. Ce qui compte, c’est la capacité d’adaptation !",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Marc",
+                  "text": "Une dernière question : comment envisages-tu ton évolution chez DataFin ?",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Eh bien… Je cherche surtout un environnement où je peux continuer à apprendre et progresser.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "J’aimerais… peut-être, à terme, prendre plus de responsabilités, pourquoi pas encadrer une équipe…",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Mais je préfère d’abord bien maîtriser mon poste et voir comment je peux apporter quelque chose d’utile.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Marc",
+                  "text": "C’est une bonne approche !",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Marc",
+                  "text": "Merci pour cet échange, Anne. Nous allons étudier ta candidature et nous reviendrons vers toi rapidement.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Merci beaucoup, Marc !",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Anne",
+                  "text": "J’ai apprécié cette discussion… et j’espère avoir l’opportunité de travailler avec vous.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "À bientôt !",
+                  "timeLoading": 1000
                 },
                 {
                   "eventStatus": "end"
@@ -14474,13 +14787,9 @@
             },
             {
               "flag": "red",
-              "text": "Manquer d'assurance",
+              "text": "Faire de l'improvisation",
               "bunchNumber": 0,
               "points": [
-                {
-                  "title": "Les compétences",
-                  "point": -5
-                },
                 {
                   "title": "Le leadership",
                   "point": -4
@@ -14504,68 +14813,152 @@
                 },
                 {
                   "name": "Marc",
-                  "text": "En l'occurence, passer d'assistante de direction à cheffe de projet en si peu de temps tout en ayant mené autant de projets: c'est révélateur d'une certaine résilience et surtout, d'une volonté de progresser.",
+                  "text": "En l'occurrence, passer d'assistante de direction à cheffe de projet en si peu de temps tout en ayant mené autant de projets : c'est révélateur d'une certaine résilience et surtout, d'une volonté de progresser.",
                   "timeLoading": 2000
                 },
                 {
                   "name": "Marc",
                   "text": "Et c'est précisément ce qu'on cherche ici.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Marc",
-                  "text": "Peux-tu me donner un exemple de projet où tu as eu un impact significatif ?",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Anne",
-                  "text": "Euh… Je n'ai pas vraiment de souvenir de projet où j'ai pu avoir à titre personnel un impact significatif.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Anne",
-                  "text": "La plupart du temps, les erreurs sont individuelles mais les succès sont toujours collectifs donc...",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Marc",
-                  "text": "Je vois.",
-                  "timeLoading": 1000
-                },
-                {
-                  "name": "Marc",
-                  "text": "Et comment gères-tu le travail avec différentes équipes ?",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Anne",
-                  "text": "J’essaie de mettre en place des process transverses pour les tâches communes à tout projet et qui ne changent pas quelque soit l'équipe.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Anne",
-                  "text": "Ces process forment le socle structurel sur lequel mes équipes viendront bâtir leur propre workflow.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Anne",
-                  "text": "Voilà comment je gère le travail avec mes différentes équipes.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Marc",
-                  "text": "D’accord, merci pour ton retour.",
                   "timeLoading": 1500
                 },
                 {
                   "name": "Marc",
-                  "text": "Nous avons encore plusieurs candidats à voir, nous te tiendrons informée.",
+                  "text": "Qu’est-ce qui vous attire particulièrement dans notre entreprise ?",
                   "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Alors… eh bien… j’aime bien le marketing digital, et… enfin, j’ai vu que vous étiez une fintech, donc j’imagine que c’est un secteur en croissance…",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Oui, c’est ça.",
+                  "timeLoading": 1000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Et je trouve ça intéressant.",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Marc",
+                  "text": "D’accord… Et pouvez-vous me parler d’un projet récent sur lequel vous avez travaillé et qui pourrait être pertinent pour nous ?",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Ah oui… Alors, hum, récemment, j’ai travaillé sur plusieurs trucs…",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Notamment des campagnes digitales et… du contenu aussi, je crois.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "J’étais surtout sur les réseaux sociaux.",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Anne",
+                  "text": "On a fait des publications et des posts sponsorisés…",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Je ne me rappelle plus trop des résultats exacts, mais c’était plutôt bien, je pense.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Marc",
+                  "text": "Je vois. Et comment gérez-vous les évolutions des algorithmes et les changements de comportement des utilisateurs ?",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Ah, oui… C’est vrai que ça change souvent…",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Je regarde un peu les tendances quand j’ai le temps, et parfois je fais des recherches sur Google pour voir ce qui marche.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Mais c’est pas toujours facile de suivre tout ça…",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Marc",
+                  "text": "Bien sûr, ça demande une veille constante.",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Marc",
+                  "text": "Et comment envisagez-vous votre évolution chez DataFin ?",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Euh… Je ne sais pas trop…",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Anne",
+                  "text": "J’aimerais bien progresser, bien sûr.",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Anne",
+                  "text": "Peut-être évoluer vers un poste avec plus de responsabilités…",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "Enfin, je ne sais pas encore exactement, mais je veux apprendre.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Marc",
+                  "text": "D’accord, merci Anne.",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Marc",
+                  "text": "Nous allons examiner votre candidature et nous reviendrons vers vous prochainement.",
+                  "timeLoading": 2000
+                },
+                {
+                  "name": "Anne",
+                  "text": "D’accord, merci…",
+                  "timeLoading": 1500
+                },
+                {
+                  "name": "Anne",
+                  "text": "Euh, bonne journée !",
+                  "timeLoading": 1500
                 },
                 {
                   "eventStatus": "end"
                 }
               ]
+            },
+            {
+              "eventStatus": "hint",
+              "title": "Conseils pour réussir un entretien d’embauche",
+              "text": [
+                "Un entretien d’embauche est une étape clé pour décrocher un poste. Pour maximiser ses chances, il faut être préparé, confiant et professionnel. Adopter une approche structurée permet de convaincre efficacement un recruteur.",
+                "Se préparer en amont est essentiel. Se renseigner sur l’entreprise en comprenant son secteur, ses valeurs et ses projets récents permet d’anticiper les attentes du poste. Analyser l’offre d’emploi aide à décrypter les missions et responsabilités pour associer ses expériences et compétences aux exigences demandées. Préparer ses réponses aux questions classiques est une autre étape clé : savoir se présenter en moins de deux minutes, expliquer pourquoi on postule, mettre en avant ses forces et axes d’amélioration, et anticiper la question sur l’évolution de carrière. Illustrer ses propos avec des exemples concrets de réussites professionnelles renforce la crédibilité. S’entraîner devant un miroir ou avec un proche permet de gagner en fluidité.",
+                "Adopter une attitude professionnelle est tout aussi important. Soigner son apparence en choisissant une tenue adaptée au secteur d’activité sans excès favorise une première impression positive. Être ponctuel, que ce soit en visio ou en présentiel, démontre du sérieux et du respect envers l’interlocuteur. Un langage corporel positif, comme le sourire, le contact visuel et une posture ouverte, contribue à établir une relation de confiance. Gérer son stress en respirant profondément avant de répondre aide à maintenir une communication fluide.",
+                "Valoriser son profil passe par une mise en avant pertinente de ses compétences et expériences. Utiliser des faits concrets et la méthode STAR (Situation, Tâche, Action, Résultat) pour illustrer ses propos est une approche efficace. Montrer son intérêt pour l’entreprise en posant des questions pertinentes sur l’équipe et les projets futurs démontre une motivation sincère. Remplacer l’approche passive “je cherche un travail” par “je veux apporter mes compétences à votre équipe” peut faire une différence notable.",
+                "Gérer les points sensibles de manière stratégique permet d’éviter les écueils. Expliquer une période d’inactivité en mettant en avant des formations ou des projets personnels valorise cette expérience. Aborder la question du salaire en proposant une fourchette réaliste basée sur le marché et son expérience montre une bonne préparation. Face aux questions pièges, choisir un défaut améliorable, comme le perfectionnisme en expliquant les efforts pour mieux prioriser, permet de tourner la réponse à son avantage.",
+                "Après l’entretien, il est recommandé d’envoyer un email de remerciement pour rappeler son intérêt pour le poste et reprendre un point marquant de la discussion. Une relance polie après une semaine en cas d’absence de réponse permet de manifester son engagement sans paraître insistant.",
+                "Un entretien réussi repose sur une préparation solide, une attitude positive et une communication claire. En mettant en avant sa motivation, sa valeur ajoutée et son aisance relationnelle, il est possible de maximiser ses chances d’être sélectionné."
+              ],
+              "displayStatus": true
             }
           ]]
         }
@@ -14642,10 +15035,7 @@
                   "title": "Le leadership",
                   "point": 5
                 },
-                {
-                  "title": "Les compétences",
-                  "point": 4
-                }
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -14916,10 +15306,6 @@
               "bunchNumber": 0,
               "points": [
                 {
-                  "title": "Les compétences",
-                  "point": 5
-                },
-                {
                   "title": "Le lien social",
                   "point": -2
                 }
@@ -15098,7 +15484,8 @@
                 {
                   "title": "Le leadership",
                   "point": -3
-                }
+                },
+                {"title": "L'épanouissement", "point": 3}
               ],
               "script": [
                 {
@@ -15394,7 +15781,7 @@
               "points": [
                 {
                   "title": "L'épanouissement",
-                  "point": 3
+                  "point": 4
                 },
                 {
                   "title": "L'audace",
@@ -15477,6 +15864,10 @@
               "text": "Faire une contre-proposition",
               "bunchNumber": 0,
               "points": [
+                {
+                  "title": "L'épanouissement",
+                  "point": 5
+                },
                 {
                   "title": "L'audace",
                   "point": 5
@@ -15611,6 +16002,20 @@
                   "eventStatus": "end"
                 }
               ]
+            },
+            {
+              "eventStatus": "hint",
+              "title": "Rupture conventionnelle à l’initiative de l’employeur : Quand est-ce avantageux et comment bien la négocier ?",
+              "text": [
+                "La rupture conventionnelle permet à un salarié et à son employeur de mettre fin au contrat de travail d’un commun accord, ouvrant droit aux indemnités de rupture et à l’allocation chômage. Si l’employeur prend l’initiative de cette démarche, il est possible d’en tirer profit à condition de bien la négocier.",
+                "Une rupture conventionnelle est avantageuse pour le salarié dans plusieurs cas. Elle permet d’accéder aux allocations chômage, contrairement à une démission, offrant ainsi une sécurité financière en période de transition. L’employeur peut également proposer une indemnité de rupture plus élevée que l’indemnité légale de licenciement. Cette option préserve l’employabilité du salarié, car elle ne laisse pas de traces négatives sur le CV et n’implique pas de justification pour faute ou insuffisance professionnelle. Elle évite également un climat de tension, permettant un départ en bons termes, ce qui peut être utile pour de futures recommandations. Enfin, elle offre l’opportunité de faciliter une reconversion ou un nouveau projet en permettant de cumuler l’ARE avec une formation via Pôle emploi.",
+                "Pour bien négocier sa rupture conventionnelle, il est essentiel de préparer ses arguments. Il faut valoriser son expérience et son impact dans l’entreprise, mettre en avant ses motivations (projet personnel, réorientation, formation) et montrer que cette solution est bénéfique pour les deux parties. Si l’employeur souhaite réellement le départ du salarié, il sera plus enclin à proposer des compensations financières.",
+                "La négociation des indemnités de départ est une étape clé. Comparer l’indemnité proposée avec l’indemnité légale, qui correspond à un quart de mois de salaire par année d’ancienneté (puis un tiers après dix ans), permet d’établir une base de discussion. Il est recommandé de demander des indemnités complémentaires, telles qu’une prime exceptionnelle ou le paiement des congés non pris et des primes en attente. Lorsque l’entreprise réalise des bénéfices, elle peut se montrer plus flexible sur le montant de l’indemnité.",
+                "Assurer une transition avantageuse est un autre levier de négociation. Il est possible de négocier le préavis, soit en demandant à rester en poste quelques mois le temps de retrouver un emploi, soit en sollicitant un départ immédiat pour faciliter une reconversion. Un accompagnement peut aussi être acté, incluant une formation ou une aide à la reconversion financée par l’entreprise, ainsi que l’accès aux contacts et recommandations internes. Il est essentiel d’obtenir ces engagements par écrit afin d’éviter toute mauvaise surprise.",
+                "Enfin, il convient d’éviter certains pièges. Un salarié ne doit pas accepter une rupture conventionnelle sous pression, car l’employeur ne peut l’y contraindre. Vérifier le montant des indemnités avant signature est indispensable. Il est également crucial de s’assurer que Pôle emploi valide bien la convention pour ne pas perdre ses droits.",
+                "Une rupture conventionnelle initiée par l’employeur peut être très avantageuse si elle est bien négociée. En valorisant son départ, en obtenant une indemnité supérieure et en garantissant une transition sereine, le salarié peut transformer cette séparation en une opportunité professionnelle."
+              ],
+              "displayStatus": true
             }
           ]]
         }

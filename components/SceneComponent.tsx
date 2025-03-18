@@ -1,5 +1,5 @@
 import { Pressable, Text, View } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Animated, { FadeInRight } from 'react-native-reanimated'
 import { LinearGradient } from 'expo-linear-gradient'
 import {
@@ -7,14 +7,21 @@ import {
     AvatarImage,
 } from '@gluestack-ui/themed';
 import { characters } from '@/utils/characters'
+import { UserContext } from '@/context/UserContext';
 
 const SceneComponent = ({data, handleSceneScrene, setMessageTimeLoading, handleSceneScreneHint}: any) => {
     const [isShow, setIsShow] = useState(false)
+    const {user, setUser} = useContext<any>(UserContext)
 
     useEffect(() => {
         setIsShow(data.displayStatus)
         setMessageTimeLoading(500)
     }, [])
+
+    const handleUpdateSingleUserKpi = (number: Number) => {
+        const targetKpi = user && user.keyPerformanceIndicator && user.keyPerformanceIndicator.find((kpi: any) => kpi.title === "Les compétences")
+        return targetKpi.level += number
+    }
     
         if (isShow) {
             if (data.eventStatus === 'character introduction') {
@@ -46,8 +53,9 @@ const SceneComponent = ({data, handleSceneScrene, setMessageTimeLoading, handleS
                     <Pressable onPress={() => {
                         setIsShow(false)
                         handleSceneScreneHint(data)
+                        handleUpdateSingleUserKpi(5)
                         }} style={{width:"80%"}}>
-                        <Text style={{flex: 1, textAlign: "center", fontSize: 12}}>Besoin d'aide ?</Text>
+                        <Text style={{flex: 1, textAlign: "center", fontSize: 12}}>Bon à savoir</Text>
                     </Pressable>
                     <Avatar>
                         <AvatarImage style={{ width: 40, height: 40, zIndex: 10, marginLeft: 15 }}

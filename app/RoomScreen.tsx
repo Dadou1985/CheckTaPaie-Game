@@ -62,7 +62,7 @@ const RoomScreen = () => {
         displayStatus: data.displayStatus,
         story: data.text,
         name: data.title,
-        image: characters[8].image
+        image: characters[10].image
       })
   }
 

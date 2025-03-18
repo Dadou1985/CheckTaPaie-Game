@@ -67,7 +67,7 @@ export default function HomeScreen() {
                           params: {index: index, kpiSelectedLevel: kpi.level} as any
                         }}
                         asChild>
-                          <Pressable style={{width: "30%", height: "30%", flexDirection: "column", justifyContent: "space-around", alignItems: "center", marginBottom: "5%"}}>
+                          <Pressable style={{width: "30%", height: "35%", flexDirection: "column", justifyContent: "space-around", alignItems: "center", marginBottom: "5%"}}>
                           <Image 
                             style={styles.image}
                             source={keyPerformanceIndicator[index].img} />

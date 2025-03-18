@@ -10,7 +10,7 @@ export const characters = [
         },
         age: '34 ans',
         story: [
-            "Anna est une femme de 34 ans, dynamique, persévérante et engagée dans sa carrière professionnelle. Titulaire d'un Bac +2, elle travaille depuis plusieurs années dans le secteur tertiaire, où elle s'est forgée une solide expérience. Anna occupe actuellement le poste de directrice administrative adjointe, un rôle qu'elle a mérité après avoir longuement prouvé sa valeur au sein de son entreprise. Cette promotion est le fruit de ses compétences, de son sens du leadership et de sa capacité à surmonter les nombreux obstacles auxquels elle a été confrontée.","Sur le plan personnel, Anna vit en couple et est mère de deux jeunes enfants. Elle habite en banlieue, où elle jongle habilement entre sa vie familiale et ses responsabilités professionnelles. Malgré son emploi du temps chargé, elle fait en sorte de consacrer du temps à sa famille, tout en prenant soin de s'occuper de l'administratif de la maison, en plus de ses tâches au travail. Elle est également une personne très organisée, soucieuse de maintenir un équilibre entre sa carrière, ses enfants et son couple.","En termes de loisirs, Anna s'accorde des moments de détente avec ses amis ou collègues, que ce soit autour d'un verre dans un bar ou au restaurant. Sportive, elle pratique également des activités collectives comme la zumba, ce qui lui permet de se ressourcer et de rester active physiquement. Toujours à la recherche de bons plans, elle fait preuve d'une grande économie dans sa gestion des dépenses, que ce soit dans sa vie quotidienne ou dans sa gestion de projets professionnels.","Au sein de l'entreprise, Anna est reconnue pour son éthique de travail irréprochable et son intégrité. Elle est une figure de confiance, à la fois pour ses supérieurs et ses subordonnés. Cependant, son parcours n'a pas toujours été sans embûches. Elle a dû composer avec un manager toxique, un défi qu'elle a su relever avec beaucoup de dignité et de stratégie. Ce manager, qui remettait sans cesse en question ses décisions et ses compétences, a finalement été licencié pour insuffisance professionnelle, ouvrant la voie à la promotion d'Anna, qui, de facto, assurait déjà depuis un certain temps la gestion des équipes."
+            "Anne, 34 ans, est assistante de direction en marketing et communication chez InnovatTech, une PME spécialisée dans le développement de logiciels sur mesure pour les entreprises de divers secteurs.","Mariée et deux enfants, elle vit en banlieue où elle a su trouver un équilibre entre sa vie professionnelle et sa vie de famille. Avec un salaire de 1 800 euros, son foyer bénéficie d’un revenu global supérieur à 4 000 euros, lui offrant ainsi une certaine assise financière.","Professionnellement, Anne est une 'bosseuse' hors pair. Son sérieux, son organisation et sa capacité à gérer plusieurs tâches à la fois sont des atouts qui font d'elle une collaboratrice précieuse et respectée par ses collègues. Cependant, elle peine à gravir les échelons malgré les années et cherche à briser le plafond de verre qui empêche sa carrière de décoller. En tant que femme ambitieuse, elle aspire à occuper un poste à responsabilités et est prête à fournir les efforts nécessaires pour atteindre ses objectifs. ","Pourras-tu l'aider à y parvenir ?"
         ]
     },
     {
@@ -18,27 +18,27 @@ export const characters = [
         lastName: "Monteiro",
         role: "La Bestie",
         age: "38 ans",
-        job: "Analyste financier senior",
+        job: "Data analyst senior",
         image: {
             small: require('../assets/images/adele_portrait_resized.png'),
             large: require('../assets/images/adele_background.jpg')
         },
         story: [
-            "Adèle est une professionnelle accomplie dans le domaine de la finance, possédant une expertise approfondie dans l'analyse des marchés et des investissements. Elle et Anna se sont rencontrées il y a plusieurs années lorsqu'elles ont toutes deux commencé leur carrière dans l'entreprise en tant qu'assistantes. Depuis lors, elles sont devenues des amies proches et des collègues de confiance, partageant non seulement leur travail mais aussi de nombreux moments de leur vie personnelle.", "Adèle a gravi les échelons de l'entreprise grâce à son dévouement et à ses compétences exceptionnelles en matière d'analyse financière. En tant qu'Analyste financier senior, elle joue un rôle crucial dans la prise de décision stratégique de l'entreprise, en fournissant des analyses approfondies et des recommandations éclairées pour soutenir la croissance et la rentabilité de l'entreprise.", "Outre ses qualités professionnelles, Adèle est également une amie fidèle et attentionnée. Toujours là pour soutenir Anna dans les bons moments comme dans les mauvais, elle est un véritable pilier de soutien dans sa vie. Leur amitié repose sur une confiance mutuelle et une compréhension profonde, renforcées par les épreuves qu'elles ont surmontées ensemble au fil des ans.", "Adèle est également une épouse aimante et une mère dévouée. Elle jongle habilement entre sa carrière exigeante et sa vie de famille, trouvant un équilibre entre ses différentes responsabilités avec grâce et détermination. Malgré son emploi du temps chargé, elle trouve toujours du temps pour ses proches et sait apprécier les petits plaisirs de la vie.", "En résumé, Adèle incarne l'exemple même d'une femme forte, intelligente et bienveillante, qui inspire ceux qui l'entourent par sa détermination et sa générosité. Sa présence dans la vie d'Anna est une source de réconfort et de soutien constant, et leur amitié est un trésor précieux qui enrichit leur vie à bien des égards."
+            "Adèle est une professionnelle accomplie dans le domaine de la data, possédant une expertise approfondie dans l'analyse de données. Elle et Anne se sont rencontrées il y a plusieurs années lorsqu'elles ont toutes deux intégrées le pôle communication et marketing de l'entreprise InnovaTech. Depuis lors, elles sont devenues des amies proches et des collègues de confiance, partageant non seulement leur travail mais aussi de nombreux moments de leur vie personnelle.","Adèle a gravi les échelons de l'entreprise grâce à son dévouement et à ses compétences exceptionnelles en matière d'analyse de données. En tant que Data analyst senior, elle joue un rôle crucial dans la prise de décision stratégique de l'entreprise, en fournissant des analyses approfondies sur les tendances et comportements des utilisateurs.","Outre ses qualités professionnelles, Adèle est également une amie fidèle et attentionnée. Toujours là pour soutenir Anne dans les bons moments comme dans les mauvais, elle est un véritable pilier de soutien dans sa vie. Leur amitié repose sur une confiance mutuelle et une compréhension profonde, renforcées par les épreuves qu'elles ont surmontées ensemble au fil des ans.","En résumé, Adèle incarne l'exemple même d'une femme forte, intelligente et bienveillante, qui inspire ceux qui l'entourent par sa détermination et sa générosité. Sa présence dans la vie d'Anne est une source de réconfort et de soutien constant, et leur amitié est un trésor précieux qui enrichit leur vie à bien des égards."
         ],
         displayStatus: true
     },
     {
         name: "Damien",
         lastName: "Vernier",
-        role: "Le N-2",  
+        role: "Le N-1",  
         age: "46 ans",   
-        job: "Directeur Qualité",                         
+        job: "Directeur de la Communication",                         
         image: {
             small: require('../assets/images/damien_portrait_resized.png'),
             large: require('../assets/images/damien_background.jpg'),
         },
-        story: ["Damien est le supérieur hiérarchique direct d'Anna, chargée de superviser plusieurs équipes au sein du département. Malheureusement, Damien est largement perçu comme incompétent et irresponsable dans son rôle de manager.", "Dotée d'un manque flagrant de compétences en gestion et de leadership, Damien peine à prendre des décisions éclairées et à fournir une direction claire à son équipe. Son approche désorganisée et son manque de suivi conduisent souvent à des retards et des erreurs dans les projets, ce qui frustre Anna et ses collègues.", "En plus de son incapacité à gérer efficacement son équipe, Damien est également connu pour son manque de professionnalisme et son comportement irresponsable. Il est souvent en retard aux réunions et aux échéances importantes, ce qui compromet la réputation du département et entrave la progression des projets.", "Face à cette situation, Anna se retrouve confrontée à un défi supplémentaire : comment réussir dans un environnement de travail où la direction est incompétente et irresponsable ? Malgré les obstacles, Anna cherche des moyens de contourner les lacunes de Damien et de maintenir un niveau de performance élevé au sein de son équipe."],
+        story: ["Damien est le directeur du pôle marketing et communication de l'entreprise et, par conséquent, le supérieur hiérarchique direct d'Anne. Malheureusement, Damien est largement perçu comme incompétent et irresponsable dans son rôle de directeur.", "Dotée d'un manque flagrant de compétences en gestion et de leadership, Damien peine à prendre des décisions éclairées et à fournir une direction claire à son équipe. Son approche désorganisée et son manque de suivi conduisent souvent à des retards et des erreurs dans les projets, ce qui frustre Anne et ses collègues.", "En plus de son incapacité à gérer efficacement son équipe, Damien est également connu pour son manque de professionnalisme et son comportement irresponsable. Il est souvent en retard aux réunions et aux échéances importantes, ce qui compromet la réputation du département et entrave la progression des projets.", "Face à cette situation, Anne se retrouve confrontée à un défi supplémentaire : comment réussir dans un environnement de travail où la direction est incompétente et irresponsable ? Malgré les obstacles, Anne cherche des moyens de contourner les lacunes de Damien et de maintenir un niveau de performance élevé au sein de son équipe."],
         duration: 50000,
         displayStatus: true
     },
@@ -53,13 +53,13 @@ export const characters = [
     {
         name: "Sophie",
         role: "La pote du taf",
-        age: "44 ans", 
-        job: "Consultante en gestion de projet",
+        age: "35 ans", 
+        job: "UX Designer",
         image: {
             small: require('../assets/images/buddies/sophie_portrait.jpeg'),
             large: require('../assets/images/buddies/sophie_portrait.jpeg'),
         },
-        story: ["Sophie est une professionnelle organisée et méthodique avec qui Anna entretient une relation de confiance et de collaboration au travail. En tant que Consultante en gestion de projet, elle apporte une grande expertise en matière de planification et de suivi des projets, ce qui en fait une interlocutrice privilégiée pour discuter des défis et des opportunités de développement de l'entreprise.", "Sophie est passionnée par son travail et aime relever de nouveaux défis et explorer de nouvelles perspectives pour améliorer les processus et les résultats de l'entreprise. Elle est toujours à l'écoute des besoins et des objectifs de ses clients, et elle met un point d'honneur à trouver des solutions pragmatiques et efficaces pour atteindre les objectifs fixés.", "En dehors du travail, Sophie est une sportive accomplie et une voyageuse invétérée, et elle aime partager ses expériences et ses découvertes avec ses collègues. Sa détermination et son enthousiasme en font une source d'inspiration et un modèle à suivre pour ceux qui aspirent à exceller dans leur carrière.", "En résumé, Sophie est une professionnelle compétente et motivée qui apporte une grande valeur ajoutée à l'entreprise grâce à son expertise en matière de gestion de projet. Sa rigueur et son engagement font d'elle un partenaire de confiance pour ses collègues et un atout précieux pour l'entreprise."],
+        story: ["Sophie bosse au sein du pôle marketing digital en tant qu'UX Designer. Elle et Anne ont bossé ensemble sur un projet et ont très vite sympathisé. Sophie est passionnée par son travail et aime relever de nouveaux défis. Elle est très talentueuse dans ce qu'elle même son côté créatif la pousse parfois à l'excentricité. Elle est toujours à l'affût des dernières tendances et technologies pour améliorer l'expérience utilisateur.", "Sophie est une personne très sociable et ouverte d'esprit. Elle aime partager ses idées et ses connaissances avec ses collègues et est toujours prête à aider ceux qui en ont besoin. Son approche collaborative et son esprit d'équipe en font une collègue appréciée et respectée par tous.", "En dehors du travail, Sophie est une amatrice de musique et de danse. Elle participe parfois à des événements culturels et artistiques pour se ressourcer et s'inspirer. Sa passion pour l'art et la créativité se reflète dans son travail, où elle apporte une touche unique et innovante à chaque projet.", "En résumé, Sophie est une professionnelle talentueuse et passionnée qui apporte une grande valeur ajoutée à l'entreprise grâce à son expertise en matière d'UX design. Sa amitié avec Anne dure depuis des années et elle est un soutien précieux pour elle dans son parcours professionnel."],
         duration: 50000,
         displayStatus: true
     },
@@ -67,13 +67,13 @@ export const characters = [
         name: "Angélique",
         lastName: "Brito",
         role: "La pote du taf",
-        age: "34 ans", 
-        job: "Analyste financier",
+        age: "37 ans", 
+        job: "Community manager",
         image: {
             small: require('../assets/images/buddies/angelique_portrait.jpeg'),
             large: require('../assets/images/buddies/angelique_portrait.jpeg'),
         },
-        story: ["Angélique est une professionnelle analytique et rigoureuse avec qui Anna partage des échanges approfondis sur les aspects financiers de l'entreprise. En tant qu'Analyste financier, elle apporte une expertise pointue en matière d'analyse des données financières et de prévisions économiques, ce qui en fait une interlocutrice privilégiée pour discuter des performances et des perspectives de croissance de l'entreprise.", "Angélique est passionnée par son travail et aime plonger dans les chiffres pour comprendre les tendances et les indicateurs clés qui influencent la santé financière de l'entreprise. Elle est toujours à la recherche de solutions innovantes et de stratégies efficaces pour optimiser les investissements et maximiser les profits.", "En dehors du travail, Angélique est un amatrice de sport et de voyage, et elle aime partager ses connaissances et ses expériences avec ses collègues. Sa capacité à simplifier des concepts complexes et à fournir des conseils éclairés en fait un atout précieux pour l'équipe.", "En résumé, Angélique est une professionnelle compétente et fiable qui apporte une grande valeur ajoutée à l'entreprise grâce à son expertise en matière d'analyse financière. Sa rigueur et son engagement font d’elle une partenaire de confiance pour ses collègues et un atout précieux pour l'entreprise."],
+        story: ["Angélique est Community manager au sein du pôle marketing et communication de l'entreprise. Dans le cadre de ses missions, elle a souvent été amenée à chercher consulter Anne sur des sujets d'ordre administratif et a depuis noué une véritable amitié avec celle-ci.", "Angélique est une professionnelle dynamique et créative, qui apporte une grande expertise en matière de gestion des réseaux sociaux et de communication digitale. Son approche innovante et sa capacité à engager la communauté en font un atout précieux pour l'entreprise, qui bénéficie de sa présence pour renforcer sa visibilité et son engagement en ligne.", "En dehors de son travail, Angélique est une amatrice de voyage et de découverte. Elle aime explorer de nouveaux horizons et découvrir de nouvelles cultures, ce qui lui permet de rester inspirée et informée des tendances du marché. Son ouverture d'esprit et sa curiosité intellectuelle en font une compagne de choix pour les discussions et les brainstormings entre collègues.", "En résumé, Angélique est une collaboratrice engagée et sérieuse aussi bien qu'une collègue soucieuse et de bon conseil. Sa rigueur professionnelle et son intégrité font d'elle un membre apprécié de l'équipe marketing."],
         duration: 50000,
         displayStatus: true
     },
@@ -87,7 +87,7 @@ export const characters = [
             small: require('../assets/images/buddies/thibault_portrait.jpeg'),
             large: require('../assets/images/buddies/thibault_portrait.jpeg'),
         },
-        story: ["Thibault est un professionnel créatif et stratégique avec qui Anna partage souvent des moments de réflexion et d'échange au bureau. En tant que Chef de projet en marketing, il apporte une grande expertise en matière de planification et de gestion de campagnes publicitaires, ce qui en fait un interlocuteur privilégié pour discuter des stratégies de communication et de promotion de l'entreprise.", "Thibault est passionné par son travail et aime explorer de nouvelles idées et tendances dans le domaine du marketing. Il est toujours à l'affût des dernières innovations et des meilleures pratiques pour optimiser la visibilité et la notoriété de l'entreprise. Son approche proactive et sa capacité à trouver des solutions créatives font de lui un membre précieux de l'équipe marketing.", "En dehors du travail, Thibault est un amateur d'art et de culture, et il participe parfois à des événements ou des expositions pour rester inspiré et informé des tendances du marché. Sa curiosité intellectuelle et son ouverture d'esprit en font un compagnon de choix pour les discussions et les brainstormings entre collègues.", "En résumé, Thibault est un professionnel passionné et innovant qui apporte une grande valeur ajoutée à l'entreprise grâce à son expertise en matière de marketing et de communication. Sa créativité et son engagement font de lui un modèle pour ses collègues et un atout précieux pour l'entreprise."],
+        story: ["Thibault est un professionnel créatif et stratégique avec qui Anna partage souvent des moments de réflexion et d'échange au bureau. En tant que Chef de projet en marketing, il apporte une grande expertise en matière de planification et de gestion de campagnes publicitaires, ce qui en fait un interlocuteur privilégié pour discuter des stratégies de communication et de promotion de l'entreprise.", "Thibault est passionné par son travail et aime explorer de nouvelles idées et tendances dans le domaine du marketing. Il est toujours à l'affût des dernières innovations et des meilleures pratiques pour optimiser la visibilité et la notoriété de l'entreprise. Son approche proactive et sa capacité à trouver des solutions créatives font de lui un membre précieux de l'équipe marketing.", "En dehors du travail, Thibault est un amateur de sport et de musique. Il participe régulièrement à des événements culturels et sportifs pour se détendre et se ressourcer. Son énergie positive et son enthousiasme contagieux en font un collègue apprécié et respecté par tous."],
         duration: 50000,
         displayStatus: true
     },
@@ -101,7 +101,7 @@ export const characters = [
             small: require('../assets/images/olivier_portrait_resized.png'),
             large: require('../assets/images/olivier_background.jpg')
         },
-        story: ["Olivier est le manager direct d'Anna, responsable de superviser son équipe au quotidien. Il est connu pour son style de gestion autoritaire et parfois tyrannique, ce qui lui a valu le surnom de 'manager toxique' parmi ses subordonnés.", "Arrogant et dominateur, Olivier a tendance à exercer un contrôle excessif sur ses employés, dictant leurs actions et minimisant leurs contributions. Il favorise un environnement de travail compétitif et stressant, où la pression pour atteindre les objectifs est constante.", "Sous sa direction, Anna se retrouve confrontée à un climat de travail hostile et démotivant, où ses idées sont souvent ignorées ou rejetées. Marc exerce un pouvoir indéniable sur son équipe, ce qui rend difficile pour Anna et les autres membres de s'exprimer librement et de contribuer de manière significative.", "Bien que ses méthodes de gestion puissent générer des résultats à court terme, Olivier crée également des tensions et des conflits au sein de l'équipe, ce qui nuit à la productivité et à la satisfaction au travail. Sa présence représente un défi majeur pour Anna et ses collègues, qui doivent trouver des moyens de travailler efficacement malgré les obstacles qu'il pose."],
+        story: ["Olivier est le nouveau directeur du marketing et de la communication de l'entreprise, suite au rachat d'Innovatech par TechCorp. D'un naturel enjoué, il est très charismatique et sait se montrer convaincant. Il exerce une approche très souple et ouverte dans son management et a tendance à ne pas respecter les codes.", "Cependant, derrière son sourire charmeur se cache un homme manipulateur prêt à tout pour obtenir ce qu'il désire quitte à franchir les limites de l'éthique. Son assise au sein de la direction de TechCorp lui permet de bénéficier d'une certaine impunité et de contourner les règles de l'entreprise."],
         duration: 50000,
         displayStatus: true
     },
@@ -110,12 +110,12 @@ export const characters = [
         lastName: "Nguyen",
         role: "La rivale",
         age: "36 ans", 
-        job: "Assistante exécutive",
+        job: "Manager de proximité",
         image: {
             small: require('../assets/images/julie_portrait_resized.png'),
             large: require('../assets/images/julie_background.jpg')
         },
-        story: ["Julie Martin est une assistante exécutive dynamique et déterminée, qui occupe un poste clé au sein de l'entreprise. Connaissant bien les rouages de l'entreprise, elle est réputée pour son efficacité et son professionnalisme dans l'exécution de ses tâches.", "Cependant, derrière son apparence polie et serviable, Julie entretient secrètement une rivalité avec Anna, qu'elle considère comme une menace pour sa propre position au sein de l'entreprise. Elle voit en Anna une concurrente potentielle pour les promotions et les opportunités professionnelles, ce qui alimente sa jalousie et son ressentiment à son égard.", "Julie adopte une approche subtile pour affaiblir la position d'Anna, utilisant des remarques sarcastiques et des actions en coulisses pour miner sa réputation et sa crédibilité. Elle cherche à se présenter comme une alliée en apparence, tout en travaillant secrètement à saper les efforts d'Anna et à renforcer sa propre influence au sein de l'entreprise.", "Malgré ses intentions cachées, Julie reste une professionnelle compétente et dévouée, dont les compétences en tant qu'assistante exécutive sont appréciées par ses supérieurs. Cependant, sa rivalité avec Anna représente un obstacle potentiel à la collaboration et à la cohésion au sein de l'équipe."],
+        story: ["Julie Martin est une manager de proximité dynamique et déterminée qui occupe un poste clé au sein de l'entreprise. Connaissant bien les rouages de l'entreprise, elle est réputée pour son efficacité et son professionnalisme dans l'exécution de ses tâches.", "Cependant, derrière son apparence polie et serviable, Julie entretient secrètement une rivalité avec Anne, qu'elle considère comme une menace pour sa propre position au sein de l'entreprise. Elle travaille depuis des années à devenir aussi populaire que Anne sans vraiment y parvenir, ce qui alimente sa jalousie et son ressentiment à son égard.", "Julie adopte une approche subtile pour affaiblir la position d'Anne, utilisant des remarques sarcastiques et des actions en coulisses pour miner sa réputation et sa crédibilité. Elle cherche à se présenter comme une alliée en apparence, tout en travaillant secrètement à saper les efforts d'Anne et à renforcer sa propre influence au sein de l'entreprise.", "Malgré ses intentions cachées, Julie reste une professionnelle compétente et dévouée, dont les compétences en tant que manager de proximité sont appréciées par ses supérieurs. Cependant, sa rivalité avec Anne représente un obstacle potentiel à la collaboration et à la cohésion au sein du pôle marketing."],
         duration: 50000,
         displayStatus: true
     },
@@ -129,7 +129,7 @@ export const characters = [
             small: require('../assets/images/micheline_portrait_resized.png'),
             large: require('../assets/images/micheline_background.jpg')
         },
-        story: ["Micheline Lefebvre est le mentor d'Anna, un cadre expérimenté et respecté au sein de l'entreprise. Avec des décennies d'expérience dans le domaine, Micheline a gravi les échelons pour devenir Directrice des opérations, où elle supervise l'ensemble des activités de l'entreprise.", "Doté d'une grande sagesse et d'une expertise approfondie dans son domaine, Micheline est un guide précieux pour Anna, l'aidant à naviguer dans les défis de sa carrière et à tirer parti de ses forces. Elle partage volontiers ses connaissances et son expérience avec elle, lui fournissant des conseils perspicaces et des perspectives éclairantes sur les enjeux complexes auxquels elle est confrontée.", "En plus de son rôle de mentor, Micheline est également un leader inspirant pour toute l'entreprise. Son approche équilibrée et sa capacité à prendre des décisions éclairées font de lui un modèle pour ses collègues et ses subordonnés. Elle incarne les valeurs de l'entreprise et cherche toujours à promouvoir un environnement de travail positif et collaboratif.", "Grâce à la guidance et au soutien de Micheline, Anna est en mesure de relever les défis avec confiance et détermination, sachant qu'elle peut compter sur son mentor pour la conseiller dans les moments difficiles et la guider vers le succès."],
+        story: ["Micheline Lefebvre est le mentor d'Anne, un cadre expérimenté et respecté au sein de l'entreprise. Avec des décennies d'expérience dans le domaine, Micheline a gravi les échelons pour devenir Directrice des opérations, où elle supervise l'ensemble des activités de l'entreprise.", "Doté d'une grande sagesse et d'une expertise approfondie dans son domaine, Micheline est un guide précieux pour Anne, l'aidant à naviguer dans les défis de sa carrière et à tirer parti de ses forces. Elle partage volontiers ses connaissances et son expérience avec elle, lui fournissant des conseils perspicaces et des perspectives éclairantes sur les enjeux complexes auxquels elle est confrontée.", "En plus de son rôle de mentor, Micheline est également un leader inspirant pour toute l'entreprise. Son approche équilibrée et sa capacité à prendre des décisions éclairées font de lui un modèle pour ses collègues et ses subordonnés. Elle incarne les valeurs de l'entreprise et cherche toujours à promouvoir un environnement de travail positif et collaboratif.", "Grâce à la guidance et au soutien de Micheline, Anne est en mesure de relever les défis avec confiance et détermination, sachant qu'elle peut compter sur son mentor pour la conseiller dans les moments difficiles et la guider vers le succès."],
         duration: 50000,
         displayStatus: true
     },
@@ -175,7 +175,7 @@ export const characters = [
     },
     {
         name: "Aurélie",
-        role: "Cheffe de projet Audit",               
+        role: "CP Marketing digital",               
         image: {
             small: require('../assets/images/fellows/aurelie_portrait.jpeg'),
             large: require('../assets/images/fellows/aurelie_portrait.jpeg'),
@@ -207,7 +207,7 @@ export const characters = [
     },
     {
         name: "Emma",
-        role: "Commerciale",               
+        role: "Growth Hacker",               
         image: {
             small: require('../assets/images/fellows/emma_portrait.jpg'),
             large: require('../assets/images/fellows/emma_portrait.jpg'),
@@ -223,7 +223,7 @@ export const characters = [
     },
     {
         name: "Haby",
-        role: "Cheffe de projet Risk",               
+        role: "CP Marketing digital",               
         image: {
             small: require('../assets/images/fellows/haby_portrait.jpeg'),
             large: require('../assets/images/fellows/haby_portrait.jpeg'),
@@ -247,7 +247,7 @@ export const characters = [
     },
     {
         name: "Laurent",
-        role: "Commercial",               
+        role: "Product Owner",               
         image: {
             small: require('../assets/images/fellows/laurent_portrait.jpg'),
             large: require('../assets/images/fellows/laurent_portrait.jpg'),
@@ -287,15 +287,15 @@ export const characters = [
     },
     {
         name: "Pascal",
-        role: "Chef de projet Process",               
+        role: "CP Marketing digital",               
         image: {
-            small: require('../assets/images/fellows/aurelie_portrait.jpeg'),
-            large: require('../assets/images/fellows/aurelie_portrait.jpeg'),
+            small: require('../assets/images/fellows/pascal_portrait.jpeg'),
+            large: require('../assets/images/fellows/pascal_portrait.jpeg'),
         }
     },
     {
         name: "Sarah",
-        role: "CP Communication",               
+        role: "CP Marketing digital",               
         image: {
             small: require('../assets/images/fellows/sarah_portrait.jpg'),
             large: require('../assets/images/fellows/sarah_portrait.jpg'),

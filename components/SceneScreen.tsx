@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   },
   textHeadingFont: {
     fontSize: 22, 
-    marginBottom: 0, 
-    fontWeight: 700
+    marginBottom: 20, 
+    fontWeight: 700,
   }
 })
