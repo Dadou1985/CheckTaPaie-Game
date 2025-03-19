@@ -20,8 +20,7 @@ export default function HomeScreen() {
     lastName: "",
     email: "",
     password: "",    
-    passwordConfirmation: "",
-    phone: ""
+    passwordConfirmation: ""
   })
   const [stepNumber, setStepNumber] = useState(0)
   const [showErrorMessage, setShowErrorMessage] = useState({
@@ -90,7 +89,8 @@ export default function HomeScreen() {
       value: formValue.email,
       placeholder: "camille.marchand@gmail.com",
       type: "email",
-      errorMessage: "Vous avez oublié de renseigner votre adresse e-mail"
+      errorMessage: "Vous avez oublié de renseigner votre adresse e-mail",
+      errorMailMessage: "Veuillez entrer une adresse e-mail valide"
     },
     {
       quote: "A présent, créez votre mot de passe",
@@ -107,13 +107,6 @@ export default function HomeScreen() {
       placeholder: "Confirmation du mot de passe",
       type: "password",
       errorMessage: "Ce mot de passe ne correspond pas au précédent"
-    },
-    {
-      quote: "Avez-vous un numéro de téléphone ?",
-      property: "phone",
-      value: formValue.phone,
-      placeholder: "0687249631",
-      type: "number",
     }
   ]
 
@@ -122,6 +115,27 @@ export default function HomeScreen() {
         ...currentValue,
         [property]: e
         }))
+  }
+
+  const handleValidateEmail = (email: string) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
+  const handleErrorMessage = (details: any) => {
+    if(showErrorMessage.registration) {
+      if(details.value !== "") {
+        if(!handleValidateEmail(formValue.email)) {
+          return <Text style={{color: 'red', fontSize: 10, textAlign: "center"}}>{details.errorMailMessage}</Text>
+        }
+
+        if(formValue.password !== formValue.passwordConfirmation) {
+          return <Text style={{color: 'red', fontSize: 10, textAlign: "center"}}>{details.errorMessage}</Text>
+        }
+      } else {
+        return <Text style={{color: 'red', fontSize: 10, textAlign: "center"}}>{details.errorMessage}</Text>
+      }
+    }
   }
 
   const handleRegistrationSteps = (stepDetails: any) => {
@@ -145,9 +159,7 @@ export default function HomeScreen() {
         type={stepDetails.type}
         isRequired />
       </FormControl>
-      {showErrorMessage.registration && (stepDetails.value === "") && <Text style={{color: 'red', fontSize: 10, textAlign: "center"}}>
-          {stepDetails.errorMessage && stepDetails.errorMessage}
-        </Text>}
+      {handleErrorMessage(stepDetails)}
     </>
   }
 
@@ -161,8 +173,18 @@ export default function HomeScreen() {
   }
 
   const handleRegistrationSubmit = () => {
-    CreateUser(formValue)
-    return handleLoadUserInfo()
+    if (stepDetails[4].value !== "") {
+        const password = formValue.password
+        const passwordConfirmation = formValue.passwordConfirmation
+        if (password !== passwordConfirmation) {
+          return setShowErrorMessage({...showErrorMessage, registration: true})
+        } else {
+        CreateUser(formValue)
+        return handleLoadUserInfo()
+      }
+    } else {
+      setShowErrorMessage({...showErrorMessage, registration: true})
+    }
   }
 
   // console.log("USER:::", user)
@@ -256,15 +278,22 @@ export default function HomeScreen() {
             <Center>
               <Stack space={5} w="75%" mx="auto">
                 {handleRegistrationSteps(stepDetails[stepNumber])}
-                  {stepNumber === 5 ? <Button onPress={() => handleRegistrationSubmit()} size="md">Terminer</Button> : <Button onPress={() => {
-                    if (stepDetails[stepNumber].value !== "") {
-                      if (showErrorMessage) {
-                        setShowErrorMessage({...showErrorMessage, registration: false})
+                  {stepNumber === 4 ? <Button onPress={() => handleRegistrationSubmit()} size="md">Terminer</Button> : <Button onPress={() => {
+                    if (stepDetails[stepNumber]?.value !== "") {
+                      const userEmail = stepDetails[2]?.value;
+                  
+                      if (stepNumber === 2 && !handleValidateEmail(userEmail)) {
+                        return setShowErrorMessage(prevState => ({ ...prevState, registration: true }));
+                      } else {
+                        if (showErrorMessage?.registration) {
+                          setShowErrorMessage(prevState => ({ ...prevState, registration: false }));
+                        }
+                        setStepNumber(stepNumber + 1);
                       }
-                      setStepNumber(stepNumber + 1)
                     } else {
-                      setShowErrorMessage({...showErrorMessage, registration: true})
+                      setShowErrorMessage(prevState => ({ ...prevState, registration: true }));
                     }
+                  
                 }} size="md">Suivant</Button>}
               </Stack>
             </Center>
@@ -325,13 +354,13 @@ export default function HomeScreen() {
                 setShowErrorMessage({...showErrorMessage,
                   registration: false
                 })
+                setStepNumber(0)
                 setFormValue({
                   firstName: "",
                   lastName: "",
                   email: "",
                   password: "",    
-                  passwordConfirmation: "",
-                  phone: ""
+                  passwordConfirmation: ""
                 })
                 }} size="sm">Se connecter</Button>}
               {isConnexionUI && <Button onPress={() => {
@@ -347,9 +376,9 @@ export default function HomeScreen() {
                   lastName: "",
                   email: "",
                   password: "",    
-                  passwordConfirmation: "",
-                  phone: ""
+                  passwordConfirmation: ""
                 })
+                setStepNumber(0)
               }} size="sm">
                 Mot de passe oublié
               </Button>}

@@ -12,7 +12,6 @@ export function CreateUser(userData) {
             firstName: userData.firstName,
             lastName: userData.lastName,
             email: userData.email,
-            phone: userData.phone,
             stage: "La déception de trop",
             scenes: [],
             keyPerformanceIndicator: [

@@ -10,17 +10,19 @@ import React, { useEffect, useState, useContext } from 'react';
 import { EventContext } from '@/context/EventContext'
 import { UserContext } from '@/context/UserContext'
 import TransitionScreen from '@/components/TransitionScreen'
-import Animated, { FadeIn } from 'react-native-reanimated'
+import Animated, { FadeIn, FadeInLeft, FadeInUp, FadeOut } from 'react-native-reanimated'
 import SceneScreen from '@/components/SceneScreen'
 import allEvents from '@/json/allEvents.json'
 import { characters } from '@/utils/characters'
 import { UpdateUserInfo } from '@/firebase/functions';
 import { roomData } from '@/utils/room';
+import TutoStep from '@/json/tutoStep.json'
 
 export default function OfficeScreen() {  
   const {user, setUser} = useContext<any>(UserContext)  
   const {event, setEvent} = useContext<any>(EventContext)
   const [isShown, setIsShown] = useState<Boolean>(true)
+  const [step, setStep] = useState(0)
 
   useEffect(() => {
     const checkSceneStatus = (scene: any) => {
@@ -38,7 +40,9 @@ export default function OfficeScreen() {
     }
   }, [user.scenes])
 
-  console.log('++++++++++++', user)
+  const isFirstStage = user && user.stage && user.stage === "Le contexte" ? true : false
+
+  console.log('++++++++++++', step)
 
 
   useEffect(() => {
@@ -65,6 +69,27 @@ export default function OfficeScreen() {
           style={styles.background}
         >
         <NativeBaseProvider config={config}>
+           {isFirstStage && <Animated.View entering={FadeInLeft.duration(2000)} exiting={FadeOut.duration(3000)} style={{position: "absolute", top: 240, width: "90%", flexDirection: "row", zIndex: 10}}>
+                  <LinearGradient
+                  // Background Linear Gradient
+                  colors={['#FF3131', '#FF914D']}
+                  start={[0, 0]}
+                  end={[1, 0]}
+                  style={{width: "100%", padding: 5}}
+                  >
+                    <Text style={{fontSize: 12, padding: 5, paddingLeft: 15, width: "85%"}}>{TutoStep[step]?.content}</Text>
+                    <Pressable onPress={() => {
+                      if (step === 6) {
+                        setEvent({...event, scenes: [{status: "inactive"}]})
+                        setUser({...user, scenes: [{status: "inactive"}]})
+                      } else {
+                        setStep(step + 1)
+                      }
+                    }}>
+                      <Text style={{width: "95%", textAlign: "right", color: "#cdffd8"}}>{step === 6 ? 'Commencer la partie' : 'Suivant'}</Text>
+                    </Pressable>
+                  </LinearGradient>
+              </Animated.View>}
           <Animated.View entering={FadeIn.duration(2000)} style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', height: '100%', width: "100%", position: 'absolute'}}>
           <Link href="/HomeScreen" asChild>
             <Pressable style={{position: "absolute", zIndex: 10, borderWidth: 2, borderStyle: "solid", borderColor: "#5DE0E6", borderRadius: 100, alignSelf: "center"}}>
@@ -125,7 +150,8 @@ export default function OfficeScreen() {
             role={characters[0].role}
             age={characters[0].age}
             job={characters[0].job}
-            title />}
+            title
+            startTuto={setStep} />}
         </NativeBaseProvider>
       </LinearGradient>
     )

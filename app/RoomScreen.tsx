@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation, useRouter, useLocalSearchParams } from "expo-router";
 import { FontAwesome5 } from '@expo/vector-icons';
 import ChatRoomComponent from '@/components/ChatRoomComponent'
-import Animated, { FadeOut } from 'react-native-reanimated';
+import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 import { EventContext } from '@/context/EventContext'
 import { UserContext } from '@/context/UserContext';
 import { characters } from '@/utils/characters'
@@ -89,9 +89,9 @@ const RoomScreen = () => {
             width: "100%", 
             position: "relative",
             }}>
-              {showExitButton && <Pressable style={{position: "absolute", left: 20, paddingTop: 20}} onPress={handleGoBackToOfficeScreen}>
+              {showExitButton && <Animated.View entering={FadeIn.duration(2500)} style={{position: "absolute", left: 20}}><Pressable onPress={handleGoBackToOfficeScreen}>
                 <FontAwesome5 name="arrow-circle-left" size={35} color="#022845" />
-              </Pressable>}
+              </Pressable></Animated.View>}
             <Text style={{fontSize: 18, color:"#022845"}}>{roomData[index].title}</Text>
           </View>
         </LinearGradient>

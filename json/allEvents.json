@@ -725,7 +725,7 @@
             [
               {
                 "banner": true,
-                "text": "Émilie du service paie arrive à la machine à café.",
+                "text": "Émilie de l'équipe Design arrive à la machine à café.",
                 "timeLoading": 2000
               },
               {
@@ -1197,7 +1197,7 @@
             },
             {
               "name": "Sophie",
-              "text": "Tu es quelqu’un de méthodique, Anne. Peut-être qu’il serait utile d’écrire ce que tu souhaites accomplir à court terme, et si tu vois que l’entreprise ne répond pas à tes attentes…",
+              "text": "Peut-être qu’il serait utile d’écrire ce que tu souhaites accomplir à court terme, et si tu vois que l’entreprise ne répond pas à tes attentes…",
               "timeLoading": 3000
             },
             {
@@ -1459,6 +1459,11 @@
                 {
                   "banner": true,
                   "text": "Dans la cafétéria, Anne aperçoit Micheline, qui termine tranquillement son repas.",
+                  "timeLoading": 2000
+                },
+                {
+                  "banner": true,
+                  "text": "Anne a récemment appris que Micheline avait bénéficié du programme Level Up et qu’elle en était devenue l'un des mentors.",
                   "timeLoading": 2000
                 },
                 {
@@ -10918,7 +10923,7 @@
               "timeLoading": 2000
             },
             {
-              "name": "Une employée",
+              "name": "Émilie",
               "text": "Mais, concrètement, qu’est-ce que cela implique pour nous ? Les équipes seront-elles réduites ou fusionnées ?",
               "timeLoading": 2000
             },

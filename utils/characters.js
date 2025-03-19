@@ -5,6 +5,7 @@ export const characters = [
         role: "La Level Up Girl",
         job: "Assistante de direction",
         img: {
+            introduction: require('../assets/images/anna_portrait.jpg'),
             office: require('../assets/images/anna_portrait_resized.png'),
             home: require('../assets/images/anna_home_portrait_resized.png')
         },
@@ -46,18 +47,18 @@ export const characters = [
         name: "Ghislaine",
         role: "Employée RH",               
         image: {
-            small: require('../assets/images/fellows/ghislaine_portrait.jpeg'),
-            large: require('../assets/images/fellows/ghislaine_portrait.jpeg'),
+            small: require('../assets/images/fellows/ghislaine_portrait.png'),
+            large: require('../assets/images/fellows/ghislaine_portrait.png'),
         }
     },
     {
         name: "Sophie",
         role: "La pote du taf",
         age: "35 ans", 
-        job: "UX Designer",
+        job: "UI Designer",
         image: {
-            small: require('../assets/images/buddies/sophie_portrait.jpeg'),
-            large: require('../assets/images/buddies/sophie_portrait.jpeg'),
+            small: require('../assets/images/buddies/Sophie/sophie_portrait.png'),
+            large: require('../assets/images/buddies/Sophie/sophie_portrait.jpeg'),
         },
         story: ["Sophie bosse au sein du pôle marketing digital en tant qu'UX Designer. Elle et Anne ont bossé ensemble sur un projet et ont très vite sympathisé. Sophie est passionnée par son travail et aime relever de nouveaux défis. Elle est très talentueuse dans ce qu'elle même son côté créatif la pousse parfois à l'excentricité. Elle est toujours à l'affût des dernières tendances et technologies pour améliorer l'expérience utilisateur.", "Sophie est une personne très sociable et ouverte d'esprit. Elle aime partager ses idées et ses connaissances avec ses collègues et est toujours prête à aider ceux qui en ont besoin. Son approche collaborative et son esprit d'équipe en font une collègue appréciée et respectée par tous.", "En dehors du travail, Sophie est une amatrice de musique et de danse. Elle participe parfois à des événements culturels et artistiques pour se ressourcer et s'inspirer. Sa passion pour l'art et la créativité se reflète dans son travail, où elle apporte une touche unique et innovante à chaque projet.", "En résumé, Sophie est une professionnelle talentueuse et passionnée qui apporte une grande valeur ajoutée à l'entreprise grâce à son expertise en matière d'UX design. Sa amitié avec Anne dure depuis des années et elle est un soutien précieux pour elle dans son parcours professionnel."],
         duration: 50000,
@@ -70,8 +71,8 @@ export const characters = [
         age: "37 ans", 
         job: "Community manager",
         image: {
-            small: require('../assets/images/buddies/angelique_portrait.jpeg'),
-            large: require('../assets/images/buddies/angelique_portrait.jpeg'),
+            small: require('../assets/images/buddies/Angelique/angelique_portrait.png'),
+            large: require('../assets/images/buddies/Angelique/angelique_portrait.jpeg'),
         },
         story: ["Angélique est Community manager au sein du pôle marketing et communication de l'entreprise. Dans le cadre de ses missions, elle a souvent été amenée à chercher consulter Anne sur des sujets d'ordre administratif et a depuis noué une véritable amitié avec celle-ci.", "Angélique est une professionnelle dynamique et créative, qui apporte une grande expertise en matière de gestion des réseaux sociaux et de communication digitale. Son approche innovante et sa capacité à engager la communauté en font un atout précieux pour l'entreprise, qui bénéficie de sa présence pour renforcer sa visibilité et son engagement en ligne.", "En dehors de son travail, Angélique est une amatrice de voyage et de découverte. Elle aime explorer de nouveaux horizons et découvrir de nouvelles cultures, ce qui lui permet de rester inspirée et informée des tendances du marché. Son ouverture d'esprit et sa curiosité intellectuelle en font une compagne de choix pour les discussions et les brainstormings entre collègues.", "En résumé, Angélique est une collaboratrice engagée et sérieuse aussi bien qu'une collègue soucieuse et de bon conseil. Sa rigueur professionnelle et son intégrité font d'elle un membre apprécié de l'équipe marketing."],
         duration: 50000,
@@ -84,8 +85,8 @@ export const characters = [
         age: "38 ans", 
         job: "Chef de projet en marketing",
         image: {
-            small: require('../assets/images/buddies/thibault_portrait.jpeg'),
-            large: require('../assets/images/buddies/thibault_portrait.jpeg'),
+            small: require('../assets/images/buddies/Thibault/thibault_portrait.png'),
+            large: require('../assets/images/buddies/Thibault/thibault_portrait.jpeg'),
         },
         story: ["Thibault est un professionnel créatif et stratégique avec qui Anna partage souvent des moments de réflexion et d'échange au bureau. En tant que Chef de projet en marketing, il apporte une grande expertise en matière de planification et de gestion de campagnes publicitaires, ce qui en fait un interlocuteur privilégié pour discuter des stratégies de communication et de promotion de l'entreprise.", "Thibault est passionné par son travail et aime explorer de nouvelles idées et tendances dans le domaine du marketing. Il est toujours à l'affût des dernières innovations et des meilleures pratiques pour optimiser la visibilité et la notoriété de l'entreprise. Son approche proactive et sa capacité à trouver des solutions créatives font de lui un membre précieux de l'équipe marketing.", "En dehors du travail, Thibault est un amateur de sport et de musique. Il participe régulièrement à des événements culturels et sportifs pour se détendre et se ressourcer. Son énergie positive et son enthousiasme contagieux en font un collègue apprécié et respecté par tous."],
         duration: 50000,
@@ -98,8 +99,8 @@ export const characters = [
         age: "45 ans", 
         job: "Directeur de la communication",
         image: {
-            small: require('../assets/images/olivier_portrait_resized.png'),
-            large: require('../assets/images/olivier_background.jpg')
+            small: require('../assets/images/management/Olivier/olivier_portrait.png'),
+            large: require('../assets/images/management/Olivier/olivier_large.jpeg')
         },
         story: ["Olivier est le nouveau directeur du marketing et de la communication de l'entreprise, suite au rachat d'Innovatech par TechCorp. D'un naturel enjoué, il est très charismatique et sait se montrer convaincant. Il exerce une approche très souple et ouverte dans son management et a tendance à ne pas respecter les codes.", "Cependant, derrière son sourire charmeur se cache un homme manipulateur prêt à tout pour obtenir ce qu'il désire quitte à franchir les limites de l'éthique. Son assise au sein de la direction de TechCorp lui permet de bénéficier d'une certaine impunité et de contourner les règles de l'entreprise."],
         duration: 50000,
@@ -153,16 +154,16 @@ export const characters = [
         name: "Marc",
         role: "DRH DataFin",               
         image: {
-            small: require('../assets/images/management/marc_portrait.jpeg'),
-            large: require('../assets/images/management/marc_portrait.jpeg'),
+            small: require('../assets/images/management/marc_portrait.png'),
+            large: require('../assets/images/management/marc_portrait.png'),
         }
     },
     {
         name: "Michel",
         role: "Le DRH",               
         image: {
-            small: require('../assets/images/management/michel_portrait.jpeg'),
-            large: require('../assets/images/management/michel_portrait.jpeg'),
+            small: require('../assets/images/management/michel_portrait.png'),
+            large: require('../assets/images/management/michel_portrait.png'),
         }
     },
     {
@@ -177,16 +178,16 @@ export const characters = [
         name: "Aurélie",
         role: "CP Marketing digital",               
         image: {
-            small: require('../assets/images/fellows/aurelie_portrait.jpeg'),
-            large: require('../assets/images/fellows/aurelie_portrait.jpeg'),
+            small: require('../assets/images/fellows/aurelie_portrait.png'),
+            large: require('../assets/images/fellows/aurelie_portrait.png'),
         }
     },
     {
         name: "Céline",
         role: "La stagiaire",               
         image: {
-            small: require('../assets/images/fellows/celine_portrait.jpeg'),
-            large: require('../assets/images/fellows/celine_portrait.jpeg'),
+            small: require('../assets/images/fellows/celine_portrait.png'),
+            large: require('../assets/images/fellows/celine_portrait.png'),
         }
     },
     {
@@ -199,10 +200,10 @@ export const characters = [
     },
     {
         name: "Émilie",
-        role: "UX Designer",               
+        role: "Lead UX Designer",               
         image: {
-            small: require('../assets/images/fellows/emilie_portrait.jpeg'),
-            large: require('../assets/images/fellows/emilie_portrait.jpeg'),
+            small: require('../assets/images/fellows/emilie_portrait.png'),
+            large: require('../assets/images/fellows/emilie_portrait.png'),
         }
     },
     {
@@ -214,19 +215,11 @@ export const characters = [
         }
     },
     {
-        name: "Une employée",
-        role: "UI Designer",               
-        image: {
-            small: require('../assets/images/fellows/employee_portrait.jpeg'),
-            large: require('../assets/images/fellows/employee_portrait.jpeg'),
-        }
-    },
-    {
         name: "Haby",
         role: "CP Marketing digital",               
         image: {
-            small: require('../assets/images/fellows/haby_portrait.jpeg'),
-            large: require('../assets/images/fellows/haby_portrait.jpeg'),
+            small: require('../assets/images/fellows/haby_portrait.png'),
+            large: require('../assets/images/fellows/haby_portrait.png'),
         }
     },
     {
@@ -246,11 +239,11 @@ export const characters = [
         }
     },
     {
-        name: "Laurent",
+        name: "Thierno",
         role: "Product Owner",               
         image: {
-            small: require('../assets/images/fellows/laurent_portrait.jpg'),
-            large: require('../assets/images/fellows/laurent_portrait.jpg'),
+            small: require('../assets/images/fellows/thierno_portrait.jpg'),
+            large: require('../assets/images/fellows/thierno_portrait.jpg'),
         }
     },
     {
@@ -273,24 +266,24 @@ export const characters = [
         name: "Mathilde",
         role: "L'alternante",               
         image: {
-            small: require('../assets/images/fellows/mathilde_portrait.jpeg'),
-            large: require('../assets/images/fellows/mathilde_portrait.jpeg'),
+            small: require('../assets/images/fellows/mathilde_portrait.png'),
+            large: require('../assets/images/fellows/mathilde_portrait.png'),
         }
     },
     {
         name: "Nicolas",
         role: "CP Marketing digital",               
         image: {
-            small: require('../assets/images/fellows/nicolas_portrait.jpeg'),
-            large: require('../assets/images/fellows/nicolas_portrait.jpeg'),
+            small: require('../assets/images/fellows/nicolas_portrait.png'),
+            large: require('../assets/images/fellows/nicolas_portrait.png'),
         }
     },
     {
         name: "Pascal",
         role: "CP Marketing digital",               
         image: {
-            small: require('../assets/images/fellows/pascal_portrait.jpeg'),
-            large: require('../assets/images/fellows/pascal_portrait.jpeg'),
+            small: require('../assets/images/fellows/pascal_portrait.png'),
+            large: require('../assets/images/fellows/pascal_portrait.png'),
         }
     },
     {

@@ -10,21 +10,22 @@
     "splash": {
       "image": "./assets/images/CTP_splash-screen.png",
       "resizeMode": "cover",
-      "backgroundColor": "transparent",
+      "backgroundColor": "transparent"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/CTP_logo.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/CTP_logo.png"
+      "favicon": "./assets/images/CTP_logo.png",
+      "display": "fullscreen"
     },
     "plugins": [
       "expo-router"

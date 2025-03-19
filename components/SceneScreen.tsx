@@ -6,7 +6,7 @@ import { characters } from '@/utils/characters';
 import { UserContext } from '@/context/UserContext'
 import { EventContext } from '@/context/EventContext'
 
-const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, title} : any) => {
+const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, title, startTuto} : any) => {
   const [isShow, setisShow] = useState(false)
   const [story, setStory] = useState([])
   const [storyBunchNumber, setStoryBunchNumber] = useState<any>(0)
@@ -21,12 +21,12 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, 
     setStoryBunchNumber(0)
   }, [text])
 
-  console.log("TEXT++++++++++", story)
+  console.log("TEXT++++++++++", (text.length - 2), storyBunchNumber)
 
   if (isShow) {
     return (
       <Animated.View exiting={FadeOut.duration(3000)} style={{position: "absolute", width: "100%", height: "100%", zIndex: 10}}>
-        <ImageBackground style={{width: "100%", height: "100%"}} source={name === characters[0].name ? img.office : img.large}>
+        <ImageBackground style={{width: "100%", height: "100%"}} source={name === characters[0].name ? img.introduction : img.large}>
         <ScrollView contentContainerStyle={{height: "100%", flexDirection: "column", justifyContent: "flex-end"}}>
           <LinearGradient
             colors={['transparent', '#94b9ff']}
@@ -43,8 +43,7 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, 
                   <Pressable onPress={() => {
                     if (storyBunchNumber > (text.length - 2)) {
                       if (name === characters[0].name) {
-                        setEvent({...event, scenes: [{status: "inactive"}]})
-                        setUser({...user, scenes: [{status: "inactive"}]})
+                        startTuto(1)
                       }
                       return handleIsHidden()
                     } else {

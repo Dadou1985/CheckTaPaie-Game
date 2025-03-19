@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "content": "Quelques informations avant de démarrer..."
+    },
+    {
+        "id": 2,
+        "content": "Cet écran représente l'environnement de travail d'Anne."
+    },
+    {
+        "id": 3,
+        "content": "Chaque image en fond d'écran représente un lieu de travail/vie différent."
+    },
+    {
+        "id": 4,
+        "content": "Lorsque une image est colorée, cela signifie que l'on peut cliquer dessus pour accéder au lieu dans lequel Anne va avoir un dialogue."
+    },
+    {
+        "id": 5,
+        "content": "Les avatars qur les images indiquent les personnes avec lesquelles Anne va dialoguer."
+    },
+    {
+        "id": 6,
+        "content": "Si vous cliquez sur la photo de profil d'Anne, vous pourrez accéder à son profil pour avoir plus d'informations sur son évolution."
+    },
+    {
+        "id": 7,
+        "content": "Maintenant que vous avez toutes les cartes en mains, il est temps de démarrer la partie !"
+    }
+]
