@@ -25,7 +25,7 @@ export function CreateUser(userData) {
                 },
                 {
                     title: "Le lien social",
-                    level: 50
+                    level: 80
                 },
                 {
                     title: "L'intégrité",

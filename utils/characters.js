@@ -5,14 +5,35 @@ export const characters = [
         role: "La Level Up Girl",
         job: "Assistante de direction",
         img: {
-            introduction: require('../assets/images/anna_portrait.jpg'),
-            office: require('../assets/images/anna_portrait_resized.png'),
-            home: require('../assets/images/anna_home_portrait_resized.png')
+            large: require('../assets/images/Anne/anne_portrait.jpeg'),
+            office: require('../assets/images/Anne/anne_portrait.jpeg'),
+            home: require('../assets/images/Anne/anne_portrait.jpeg')
         },
         age: '34 ans',
         story: [
             "Anne, 34 ans, est assistante de direction en marketing et communication chez InnovatTech, une PME spécialisée dans le développement de logiciels sur mesure pour les entreprises de divers secteurs.","Mariée et deux enfants, elle vit en banlieue où elle a su trouver un équilibre entre sa vie professionnelle et sa vie de famille. Avec un salaire de 1 800 euros, son foyer bénéficie d’un revenu global supérieur à 4 000 euros, lui offrant ainsi une certaine assise financière.","Professionnellement, Anne est une 'bosseuse' hors pair. Son sérieux, son organisation et sa capacité à gérer plusieurs tâches à la fois sont des atouts qui font d'elle une collaboratrice précieuse et respectée par ses collègues. Cependant, elle peine à gravir les échelons malgré les années et cherche à briser le plafond de verre qui empêche sa carrière de décoller. En tant que femme ambitieuse, elle aspire à occuper un poste à responsabilités et est prête à fournir les efforts nécessaires pour atteindre ses objectifs. ","Pourras-tu l'aider à y parvenir ?"
-        ]
+        ],
+        burnout: {
+            title: "Anne a fait un burnout",
+            story: ["Malheureusement, la succession de choix que vous avez fait au cours de la partie a conduit Anne a faire un burn-out.","Elle a été contrainte de s'arrêter de travailler pendant plusieurs mois pour se reposer et se ressourcer. Cette période difficile a eu un impact significatif sur sa santé mentale et son bien-être, la laissant épuisée et démotivée.","Anne a dû suivre une thérapie et un traitement médical pour se remettre de son burn-out, ce qui a nécessité du temps et des ressources supplémentaires. Elle a également dû revoir ses priorités et son mode de vie pour éviter de retomber dans un état d'épuisement professionnel."],
+            img: {
+                large: require('../assets/images/Anne/anne_burnout.png')
+            }
+        },
+        layoff: {
+            title: "Anne s'est fait licencier",
+            story: ["Malheureusement, la succession de choix que vous avez fait au cours de la partie a conduit Anne a faire se faire licencier.","Elle a été contrainte de quitter son poste chez Innovatech en raison de son incapacité à répondre aux attentes de l'entreprise et à s'adapter aux changements organisationnels. Cette situation a eu un impact significatif sur sa carrière et sa confiance en elle, la laissant sans emploi et incertaine de son avenir professionnel.","Anne a dû faire face à des difficultés financières et émotionnelles suite à son licenciement, ce qui a nécessité un soutien supplémentaire de la part de ses proches et de ses collègues. Elle a dû revoir ses objectifs professionnels et ses priorités pour trouver un nouveau sens à sa carrière et rebondir après cette épreuve."],
+            img: {
+                large: require('../assets/images/Anne/anne_layoff.png')
+            }
+        },
+        endGame: {
+            title: "Anne a réussi",
+            story: ["Après avoir négocié sa rupture conventionnelle, Anne se lance dans une nouvelle aventure. Elle décide de suivre ses passions et, forte de son expérience, obtient un master en marketing digital pour renforcer ses compétences. Ce diplôme devient la clé qui lui ouvre les portes des grandes entreprises.","Anne postule pour un poste de directrice du pôle marketing digital dans une entreprise internationale. Bien que la concurrence soit rude, elle est déterminée. Ses années en tant que chef de projet l’ont dotée d’une expertise solide et d’une confiance en elle qu’elle n’avait pas auparavant. Les échecs passés ont été des leçons, et elle sait qu’il est temps de saisir sa chance.","Quelques semaines plus tard, elle reçoit un appel : l’entreprise est impressionnée par son parcours et son potentiel. L’entretien qu’elle passe est un succès. Anne parle avec assurance de ses idées, de ses projets passés et de sa vision pour l’avenir du marketing digital. Elle décroche le poste tant convoité.","Anne est désormais directrice du pôle marketing digital, un rôle qui lui permet de mettre en pratique ses compétences et son expertise pour développer des stratégies innovantes et percutantes. Elle est entourée d’une équipe talentueuse et motivée, avec laquelle elle collabore pour atteindre les objectifs ambitieux de l’entreprise. Son leadership, sa créativité et sa détermination sont des atouts précieux qui lui permettent de réussir dans son nouveau rôle et de s’épanouir professionnellement.","Félicitations, vous avez aidé Anne à réaliser son rêve et à atteindre le succès qu'elle mérite !"],
+            img: {
+                large: require('../assets/images/Anne/anne_endgame.jpeg')
+            }
+        }
     },
     {
         name: "Adèle",
@@ -53,6 +74,7 @@ export const characters = [
     },
     {
         name: "Sophie",
+        lastName: "Mercier",
         role: "La pote du taf",
         age: "35 ans", 
         job: "UI Designer",
@@ -80,7 +102,7 @@ export const characters = [
     },
     {
         name: "Thibault",
-        lastName: "Leroy",
+        lastName: "Baillard",
         role: "Le pote du taf",
         age: "38 ans", 
         job: "Chef de projet en marketing",

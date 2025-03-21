@@ -5,6 +5,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { characters } from '@/utils/characters';
 import { UserContext } from '@/context/UserContext'
 import { EventContext } from '@/context/EventContext'
+import { router } from 'expo-router';
+import { UpdateUserInfo } from '@/firebase/functions';
 
 const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, title, startTuto} : any) => {
   const [isShow, setisShow] = useState(false)
@@ -21,12 +23,45 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, 
     setStoryBunchNumber(0)
   }, [text])
 
-  console.log("TEXT++++++++++", (text.length - 2), storyBunchNumber)
+  const handleGameOver = () => {
+    UpdateUserInfo(user.userId, {
+      stage: "La déception de trop",
+      keyPerformanceIndicator: [
+        {
+          title: "Les compétences",
+          level: 0
+        },
+        {
+            title: "L'épanouissement",
+            level: 40
+        },
+        {
+            title: "Le lien social",
+            level: 80
+        },
+        {
+            title: "L'intégrité",
+            level: 90
+        },
+        {
+            title: "L'audace",
+            level: 10,
+        },
+        {
+            title: "Le leadership",
+            level: 20
+        }
+      ] 
+    })
+    return router.navigate("/")
+  }
+
+  console.log("TEXT++++++++++", img)
 
   if (isShow) {
     return (
       <Animated.View exiting={FadeOut.duration(3000)} style={{position: "absolute", width: "100%", height: "100%", zIndex: 10}}>
-        <ImageBackground style={{width: "100%", height: "100%"}} source={name === characters[0].name ? img.introduction : img.large}>
+        <ImageBackground style={{width: "100%", height: "100%"}} source={img.large}>
         <ScrollView contentContainerStyle={{height: "100%", flexDirection: "column", justifyContent: "flex-end"}}>
           <LinearGradient
             colors={['transparent', '#94b9ff']}
@@ -45,12 +80,15 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, 
                       if (name === characters[0].name) {
                         startTuto(1)
                       }
+                      if ((name === characters[0].burnout?.title) || (name === characters[0].layoff?.title) || (name === characters[0].endGame?.title)) {                          
+                        handleGameOver()
+                      }
                       return handleIsHidden()
                     } else {
                       return setStoryBunchNumber(storyBunchNumber + 1)
                     }
                     }}>
-                    <Text style={{width: "90%", textAlign: "right"}}>{storyBunchNumber > (text.length - 2) ? 'Fermer' : 'Continuer'}</Text>
+                    <Text style={{width: "90%", textAlign: "right"}}>{storyBunchNumber > (text.length - 2) ? (name === characters[0].burnout?.title) || (name === characters[0].layoff?.title) || (name === characters[0].endGame?.title) ? 'Commencer une nouvelle partie' : 'Fermer' : 'Continuer'}</Text>
                   </Pressable>
               </Animated.ScrollView>
             </LinearGradient>

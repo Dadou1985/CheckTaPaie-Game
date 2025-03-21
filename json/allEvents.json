@@ -21,6 +21,16 @@
           "script": [
             [
               {
+                "banner": true,
+                "text": "Anne est assise à son poste, l'air contrarié.",
+                "timeLoading": 2000
+              },
+              {
+                "banner": true,
+                "text": "L'apercevant ainsi, Adèle décide d'aller lui parler.",
+                "timeLoading": 1500
+              },
+              {
                 "name": "Adèle",
                 "text": "Salut Anne !",
                 "timeLoading": 1000
@@ -729,23 +739,23 @@
                 "timeLoading": 2000
               },
               {
-                  "banner": true,
-                  "text": "Elle y trouve une Anne perdue dans ses pensées.",
-                  "timeLoading": 2000
-                },
+                "banner": true,
+                "text": "Elle y trouve une Anne perdue dans ses pensées.",
+                "timeLoading": 2000
+              },
               {
                 "name": "Émilie",               
-                "text": "Salut Anne, comment ça se passe dans ton service ?",
+                "text": "Salut Anne, comment tu vas ?",
                 "timeLoading": 1500
               },
               {
                 "name": "Anne",               
-                "text": "Oh…salut Émilie !",
+                "text": "Oh… Salut Émilie !",
                 "timeLoading": 1000
               },
               {
                 "name": "Anne",               
-                "text": "Euh… oui, ça se passe bien !",
+                "text": "Euh… oui, ça va, merci !",
                 "timeLoading": 1000
               },
               {
@@ -754,287 +764,102 @@
                 "timeLoading": 2000
               },
               {
-                "flag": "green",
-                "text": "Se livrer",
-                "bunchNumber": 0,
-                "points": [
-                  {
-                    "title": "Le lien social",
-                    "point": 3
-                  }
-                ],
-                "script": [
-                  {
-                    "name": "Anne",               
-                    "text": "Je suis juste perdu dans mes pensées.",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "En fait, j’ai assisté récemment à une conférence professionnelle pendant laquelle un intervenant préconisait à quiconque souhaite booster sa carrière de trouver un mentor qui le fera avancer plus vite…",
-                    "timeLoading": 3000
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "T’as pensé au programme Level Up que propose la boîte ?",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "C'est un programme conçu afin de promouvoir le leadership féminin en milieu professionnel.",
-                    "timeLoading": 2000
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "As-tu envisagé de contacter certaines des personnes plus expérimentées dans notre entreprise ?",
-                    "timeLoading": 2000
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "Ils pourraient être d'excellents mentors.",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "Level Up ?",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "Jamais entendu parlé !",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "En gros, tu contactes un profil expérimenté au sein de la boîte qui accepte de te prendre sous son aile.",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "La boîte vous aménage des temps d’échanges et des sessions de mentorship afin que tu puisses monter en compétence le plus rapidement possible et dans les meilleures conditions.",
-                    "timeLoading": 3000
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "Ils ont mis ça en place l’an dernier, c’est assez récent.",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "C'est une bonne idée.",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "J'ai déjà quelques noms en tête.",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "Tu connais des gens qui y ont participé ?",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "Ben, il se trouve que j’étais l’une des seuls à y participer.",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "De mémoire, on devait être 3 ou 4 inscrits pour la première promotion.",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "Top !",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "Je vais y jeter un œil.",
-                    "timeLoading": 1000
-                  },
-                  {
-                      "name": "Anne",               
-                      "text": "Merci pour l’info Émilie.",
-                      "timeLoading": 1000
-                    },
-                  {
-                    "eventStatus": "end"
-                  }
-                ]
+                "name": "Anne",               
+                "text": "Je suis juste perdu dans mes pensées.",
+                "timeLoading": 1500
               },
               {
-                "flag": "blue",
-                "text": "Partager son stress",
-                "bunchNumber": 0,
-                "points": [
-                  {
-                    "title": "Le lien social",
-                    "point": 3
-                  }
-                ],
-                "script": [
-                  {
-                    "name": "Anne",               
-                    "text": "Mdr, non mais tu t’es regardé ?",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "Oookay !",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "Madame n’a pas l’air d’être dans un bon jour…",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "Désolé !",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "C’est juste que je suis un peu stressée en ce moment…",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "T’as essayé de participer aux ateliers de gestion du stress proposés par la boîte..?",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "J’ai commencé l’an dernier et je t’avoue qu’au début j’y suis allée à reculons mais au bout de quelques séances…",
-                    "timeLoading": 2000
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "ça m’a fait un bien fou, je t’assure !",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "Tu devrais essayer…",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "Ouais, pourquoi pas !",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "Après tout, ça ne peut pas me faire de mal.",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "C’est quel jour ?",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "On fait ça tous les mercredi soir à partir de 19h dans la salle de réunion.",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "Si ça t’intéresse, passe nous voir un de ces soirs.",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "J’y penserais.",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "Merci pour l’info, Émilie.",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "eventStatus": "end"
-                  }
-                ]
+                "name": "Anne",               
+                "text": "En fait, j’ai assisté récemment à une conférence professionnelle pendant laquelle un intervenant préconisait à quiconque souhaite booster sa carrière de trouver un mentor qui le ferait avancer plus vite…",
+                "timeLoading": 3000
               },
               {
-                "flag": "red",
-                "text": "L'envoyer ballader",
-                "bunchNumber": 0,
-                "points": [
-                  {
-                    "title": "Le lien social",
-                    "point": -3
-                  }
-                ],
-                "script": [
-                  {
-                    "name": "Anne",               
-                    "text": "J’ai pas la tête à supporter tes remarques déplacées, Émilie !",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "Oookay !",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "Madame n’a pas l’air d’être dans un bon jour…",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "Sans blague !",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "Et t’as déduis ça toute seule..?",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "Tu sais, Anne…la boîte dispense des ateliers de gestion des émotions en milieu professionnel !",
-                    "timeLoading": 2000
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "Je dis ça…",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "Laisse-moi deviner !",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "Ils ont eu cette brillante idée après avoir eu une conversation avec toi, j’imagine ?!",
-                    "timeLoading": 1500
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "J’ai compris !",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Émilie",               
-                    "text": "Je vais te laisser, Anne.",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "name": "Anne",               
-                    "text": "C’est ça !",
-                    "timeLoading": 1000
-                  },
-                  {
-                    "eventStatus": "end"
-                  }
-                ]
+                "name": "Émilie",               
+                "text": "T’as pensé au programme Level Up que propose la boîte ?",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Anne",               
+                "text": "Level Up ?",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anne",               
+                "text": "Jamais entendu parlé !",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Émilie",               
+                "text": "C'est un programme conçu afin de promouvoir le leadership féminin en milieu professionnel.",
+                "timeLoading": 2000
+              },
+              {
+                "name": "Émilie",               
+                "text": "As-tu envisagé de contacter certaines des personnes plus expérimentées dans notre entreprise ?",
+                "timeLoading": 2000
+              },
+              {
+                "name": "Émilie",               
+                "text": "Ils pourraient être d'excellents mentors.",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Anne",               
+                "text": "J'ai déjà quelques noms en tête.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Émilie",               
+                "text": "En gros, tu contactes un profil expérimenté au sein de la boîte qui accepte de te prendre sous son aile.",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Émilie",               
+                "text": "La boîte vous aménage des temps d’échanges et des sessions de mentorship afin que tu puisses monter en compétence le plus rapidement possible et dans les meilleures conditions.",
+                "timeLoading": 3000
+              },
+              {
+                "name": "Émilie",               
+                "text": "Ils ont mis ça en place l’an dernier, c’est assez récent.",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Anne",               
+                "text": "C'est exactement ce qu'il me faut !",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anne",               
+                "text": "Tu connais des gens qui y ont participé ?",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Émilie",               
+                "text": "Ben, il se trouve que j’étais l’une des seuls à y participer.",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Émilie",               
+                "text": "De mémoire, on devait être 3 ou 4 inscrits pour la première promotion.",
+                "timeLoading": 1500
+              },
+              {
+                "name": "Anne",               
+                "text": "Top !",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anne",               
+                "text": "Je vais y jeter un œil.",
+                "timeLoading": 1000
+              },
+              {
+                "name": "Anne",               
+                "text": "Merci pour l’info Émilie.",
+                "timeLoading": 1000
+              },
+              {
+                "eventStatus": "end"
               }
             ]
           ]
@@ -16031,7 +15856,7 @@
       "title": "Master and Commander",
       "story": "Anne fête son pot de départ avec ses collègues.",
       "displayStatus": true,
-      "nextEvent": "",
+      "nextEvent": "La consécration",
       "scenes": [
         {
           "place": "Open Space",
@@ -16119,5 +15944,12 @@
           ]]
         }
       ]
+  }, 
+  {
+    "title": "La consécration",
+    "duration": 50000,
+    "displayStatus": true,
+    "nextEvent": "",
+    "scenes": [{"status":"active"}]
   }
 ]

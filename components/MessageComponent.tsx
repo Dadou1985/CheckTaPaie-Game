@@ -31,7 +31,7 @@ const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
             style={{maxWidth: "70%", borderTopLeftRadius: 20,borderTopRightRadius: 20, borderBottomLeftRadius: 20}}
             >
                 <View style={{flexDirection: "row", padding: 10}}>
-                    {dotLoading ? <Flow size={30} color="#FFF" /> : <Text style={{fontSize: 12, textAlign: "right"}}>{data.text}</Text>}
+                    {dotLoading ? <Flow size={30} color="#FFF" /> : <Text style={{fontSize: 12, }}>{data.text}</Text>}
                 </View>
             </LinearGradient>
         </View>

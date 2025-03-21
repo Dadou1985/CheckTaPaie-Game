@@ -10,7 +10,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { EventContext } from '@/context/EventContext'
 import { UserContext } from '@/context/UserContext'
 import TransitionScreen from '@/components/TransitionScreen'
-import Animated, { FadeIn, FadeInLeft, FadeInUp, FadeOut } from 'react-native-reanimated'
+import Animated, { FadeIn, FadeInLeft, FadeInUp, FadeOut, FadeOutRight } from 'react-native-reanimated'
 import SceneScreen from '@/components/SceneScreen'
 import allEvents from '@/json/allEvents.json'
 import { characters } from '@/utils/characters'
@@ -42,8 +42,7 @@ export default function OfficeScreen() {
 
   const isFirstStage = user && user.stage && user.stage === "Le contexte" ? true : false
 
-  console.log('++++++++++++', step)
-
+  console.log('++++++++++++', user)
 
   useEffect(() => {
     const stage: any = allEvents && allEvents.find(event => event.title === (user && user.stage))
@@ -53,6 +52,11 @@ export default function OfficeScreen() {
       setIsShown(false)
     }, 10000);
   }, [user.stage])
+
+  useEffect(() => {
+    console.log('##################', event)
+  }, [step])
+  
 
   // console.log('++++++++++++', event)
 
@@ -69,7 +73,7 @@ export default function OfficeScreen() {
           style={styles.background}
         >
         <NativeBaseProvider config={config}>
-           {isFirstStage && <Animated.View entering={FadeInLeft.duration(2000)} exiting={FadeOut.duration(3000)} style={{position: "absolute", top: 240, width: "90%", flexDirection: "row", zIndex: 10}}>
+           {isFirstStage && <Animated.View key={step} entering={FadeInLeft.delay(step === 1 ? 5000 : 0).duration(3000)} exiting={FadeOutRight.duration(1000)} style={{position: "absolute", top: 240, width: "90%", flexDirection: "row", zIndex: 10}}>
                   <LinearGradient
                   // Background Linear Gradient
                   colors={['#FF3131', '#FF914D']}
@@ -103,9 +107,49 @@ export default function OfficeScreen() {
             
           </Link>
             {roomData.map((room, index) => {
-              const isActiveScene = user && user.scenes && user.scenes.length > 0 && user.scenes.find((scene: any) => (scene.place === room.title) && (scene.status === 'active'))
-                console.log('$$$$$$$$$$$', isActiveScene) 
-                return <Link key={index} href={isActiveScene === undefined ? "/OfficeScreen" : {
+                if (isFirstStage && (step > 2)) {
+                  return <Animated.View key={index} entering={step === 3 ? FadeIn.duration(3000) : FadeIn.duration(0)} style={index === (roomData.length - 1) ? styles.imageLastBox : styles.imageBox}>
+                      <ImageBackground 
+                      style={index !== 0 && index !== 4 ? styles.image : styles.activeImage}
+                      source={room.backgroundImage} resizeMode='cover' />
+                      <LinearGradient
+                        colors={['#5DE0E6', 'transparent']}
+                        start={[0, 1]}
+                        end={[1, 0]}
+                        style={styles.imageTextBox}
+                      >
+                        <Text style={index !== 0 && index !== 4 ? styles.imageText : styles.imageTextActive}>{room.title}</Text>
+                        <Center>
+                          <HStack space="md" reversed={false}>
+                            {index === 0 && <Avatar>
+                              <AvatarImage style={{ width: 25, height: 25, backgroundColor: 'green.500' }}
+                                source={characters && characters[1].image?.small}
+                                borderRadius={100}
+                              />
+                              </Avatar>
+                            }
+                            {index === 4 && <Avatar>
+                              <AvatarImage style={{ width: 25, height: 25, backgroundColor: 'green.500' }}
+                                source={characters && characters[2].image?.small}
+                                borderRadius={100}
+                              />
+                              </Avatar>
+                            }
+                            {index === 4 && <Avatar>
+                              <AvatarImage style={{ width: 25, height: 25, backgroundColor: 'green.500' }}
+                                source={characters && characters[8].image?.small}
+                                borderRadius={100}
+                              />
+                              </Avatar>
+                            }
+                          </HStack>
+                        </Center>
+                      </LinearGradient>
+                    </Animated.View>
+                } else {
+                  const isActiveScene = user && user.scenes && user.scenes.length > 0 && user.scenes.find((scene: any) => (scene.place === room.title) && (scene.status === 'active'))
+                  console.log('$$$$$$$$$$$', isActiveScene) 
+                  return <Link key={index} href={isActiveScene === undefined ? "/OfficeScreen" : {
                     pathname: "/RoomScreen",
                     params: {index: index}
                   }}
@@ -122,7 +166,7 @@ export default function OfficeScreen() {
                       >
                         <Text style={isActiveScene === undefined ? styles.imageText : styles.imageTextActive}>{room.title}</Text>
                         <Center>
-                          <HStack space="md" reversed={false}>
+                          <HStack space="xs" reversed={false}>
                             {isActiveScene && isActiveScene.characters.map((character: any) => {
                               const currentCharacter = characters.find((currentCharacter: any) => currentCharacter.name === character)
                               return <Avatar>
@@ -139,6 +183,7 @@ export default function OfficeScreen() {
                     </Pressable>
                   </Link>
                 }
+                }
             )}
           </Animated.View>
           {user.stage === allEvents[0].title && <SceneScreen 
@@ -152,6 +197,27 @@ export default function OfficeScreen() {
             job={characters[0].job}
             title
             startTuto={setStep} />}
+
+          {user?.keyPerformanceIndicator[1]?.level <= 0 && <SceneScreen 
+            displayStatus={true}
+            text={characters[0].burnout?.story}
+            img={characters[0].burnout?.img}
+            name={characters[0].burnout?.title}
+          />}
+
+          {user?.keyPerformanceIndicator[2]?.level <= 0 && <SceneScreen 
+            displayStatus={true}
+            text={characters[0].layoff?.story}
+            img={characters[0].layoff?.img}
+            name={characters[0].layoff?.title}
+          />}
+
+          {user.stage === allEvents[allEvents.length - 1].title && <SceneScreen 
+            displayStatus={true}
+            text={characters[0].endGame?.story}
+            img={characters[0].endGame?.img}
+            name={characters[0].endGame?.title}
+          />}
         </NativeBaseProvider>
       </LinearGradient>
     )

@@ -46,7 +46,7 @@ export default function HomeScreen() {
         },
         {
             title: "Le lien social",
-            level: 50
+            level: 80
         },
         {
             title: "L'intégrité",
@@ -57,7 +57,7 @@ export default function HomeScreen() {
             level: 10,
         },
         {
-            title: "Leadership",
+            title: "Le leadership",
             level: 20
         }
       ]
@@ -154,7 +154,7 @@ export default function HomeScreen() {
           md: "25%"
         }} 
         value={stepDetails.value}
-        onChange={(e) => handleChange(e, stepDetails.property)}
+        onChange={(e: NativeSyntheticEvent<TextInputChangeEventData>) => handleChange(e, stepDetails.property)}
         placeholder={stepDetails.placeholder}
         type={stepDetails.type}
         isRequired />
@@ -233,7 +233,7 @@ export default function HomeScreen() {
                   color="#25699B" />} 
                   value={formValue.email}
                   type='text'
-                  onChange={(e) => handleChange(e, "email")}
+                  onChange={(e: NativeSyntheticEvent<TextInputChangeEventData>) => handleChange(e, "email")}
                   placeholder="E-mail"
                   isRequired />
                 </FormControl>
@@ -258,7 +258,7 @@ export default function HomeScreen() {
                   color="#25699B" />} 
                   value={formValue.password}
                   type='password'
-                  onChange={(e) => handleChange(e, "password")}
+                  onChange={(e: NativeSyntheticEvent<TextInputChangeEventData>) => handleChange(e, "password")}
                   placeholder="Mot de passe"
                   isRequired />
                 </FormControl>
@@ -318,7 +318,7 @@ export default function HomeScreen() {
                   color="#25699B" />} 
                   value={formValue.email}
                   type='text'
-                  onChange={(e) => handleChange(e, "email")}
+                  onChange={(e: NativeSyntheticEvent<TextInputChangeEventData>) => handleChange(e, "email")}
                   placeholder="Veuillez renseigner votre e-mail"
                   isRequired />
                 </FormControl>
