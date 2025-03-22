@@ -5,7 +5,7 @@ import {
   AvatarImage,
 } from '@gluestack-ui/themed';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import React, { useEffect, useState, useContext } from 'react';
 import { EventContext } from '@/context/EventContext'
 import { UserContext } from '@/context/UserContext'
@@ -14,7 +14,7 @@ import Animated, { FadeIn, FadeInLeft, FadeInUp, FadeOut, FadeOutRight } from 'r
 import SceneScreen from '@/components/SceneScreen'
 import allEvents from '@/json/allEvents.json'
 import { characters } from '@/utils/characters'
-import { UpdateUserInfo } from '@/firebase/functions';
+import { UpdateUserInfo, storeData, getData, handleLoadUserInfo } from '@/firebase/functions';
 import { roomData } from '@/utils/room';
 import TutoStep from '@/json/tutoStep.json'
 
@@ -23,6 +23,16 @@ export default function OfficeScreen() {
   const {event, setEvent} = useContext<any>(EventContext)
   const [isShown, setIsShown] = useState<Boolean>(true)
   const [step, setStep] = useState(0)
+
+  useEffect(() => {
+    if (user === null) {
+      if (getData !== null) {
+        getData('userInfo').then((data: any) => {
+          setUser(data)
+        })
+      }
+    }
+  }, [])
 
   useEffect(() => {
     const checkSceneStatus = (scene: any) => {
@@ -38,7 +48,7 @@ export default function OfficeScreen() {
       })
       setIsShown(true)
     }
-  }, [user.scenes])
+  }, [user?.scenes])
 
   const isFirstStage = user && user.stage && user.stage === "Le contexte" ? true : false
 
@@ -48,10 +58,11 @@ export default function OfficeScreen() {
     const stage: any = allEvents && allEvents.find(event => event.title === (user && user.stage))
     setEvent(stage)
     setUser({...user, scenes: stage && stage.scenes})
+    storeData({...user, scenes: stage && stage.scenes}, 'userInfo')
     setTimeout(() => {
       setIsShown(false)
     }, 10000);
-  }, [user.stage])
+  }, [user?.stage])
 
   useEffect(() => {
     console.log('##################', event)
@@ -154,7 +165,7 @@ export default function OfficeScreen() {
                     params: {index: index}
                   }}
                   asChild>
-                    <Pressable style={index === (roomData.length - 1) ? styles.imageLastBox : styles.imageBox}>
+                    <Pressable style={index === (roomData.length - 1) ? styles.imageLastBox : styles.imageBox} onPress={() => storeData(isActiveScene, 'currentScene')}>
                       <ImageBackground 
                       style={isActiveScene === undefined ? styles.image : styles.activeImage}
                       source={room.backgroundImage} resizeMode='cover' />
@@ -167,9 +178,9 @@ export default function OfficeScreen() {
                         <Text style={isActiveScene === undefined ? styles.imageText : styles.imageTextActive}>{room.title}</Text>
                         <Center>
                           <HStack space="xs" reversed={false}>
-                            {isActiveScene && isActiveScene.characters.map((character: any) => {
+                            {isActiveScene && isActiveScene.characters.map((character: any, index: number) => {
                               const currentCharacter = characters.find((currentCharacter: any) => currentCharacter.name === character)
-                              return <Avatar>
+                              return <Avatar key={index}>
                                     <AvatarImage style={{ width: 25, height: 25, backgroundColor: 'green.500' }}
                                       source={currentCharacter && currentCharacter.image?.small}
                                       borderRadius={100}

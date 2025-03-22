@@ -4,18 +4,17 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState } from 'react';
 import 'react-native-reanimated';
-import OfficeScreen from './OfficeScreen';
 import { UserContext } from '@/context/UserContext';
 import { EventContext } from '@/context/EventContext';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
-  const [user, setUser] = useState<any>(null)
-  const [event, setEvent] = useState<any>(null)
+  const [user, setUser] = useState<any>(null);
+  const [event, setEvent] = useState<any>(null);
+
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/Roboto-Regular.ttf'),
   });
@@ -26,15 +25,14 @@ export default function RootLayout() {
     }
   }, [loaded]);
 
-  // if (!loaded) {
-  //   return null;
-  // }
+  if (!loaded) return null;
 
   return (
-    <UserContext.Provider value={{user, setUser} as any}>
-      <EventContext.Provider value={{event, setEvent} as any}>
+    <UserContext.Provider value={{ user, setUser } as any}>
+      <EventContext.Provider value={{ event, setEvent } as any}>
         <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-          <Stack>
+          <Stack initialRouteName="index">
+            {/* Les routes sont correctement déclarées ici */}
             <Stack.Screen name="index" options={{ headerShown: false }} />
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             <Stack.Screen name="+not-found" />

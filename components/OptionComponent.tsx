@@ -21,6 +21,8 @@ const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, b
             return setCurrentChatData(newChatDataLast)
         }
     }
+    console.log('++++++++++++', chatData)
+
 
     const handleUpdateUserKpi = async () => {
         data && data.points && data.points.map(async (point: any) => {

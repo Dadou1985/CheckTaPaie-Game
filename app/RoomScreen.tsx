@@ -42,6 +42,7 @@ const RoomScreen = () => {
       })
       router.navigate('/OfficeScreen')
       // UpdateUserInfo(user.userId, { scenes: scenesUpdate})
+      console.log("UserSceneUpdate============", scenesUpdate, user)
       return setUser({...user, scenes: scenesUpdate})
     }, 1000);
   }

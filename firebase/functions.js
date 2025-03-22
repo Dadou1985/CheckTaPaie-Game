@@ -1,14 +1,31 @@
 import { auth, db } from '@/firebase/config';
 import { characters } from '@/utils/characters';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+export const storeData = async (value, name) => {
+    try {
+      const jsonValue = JSON.stringify(value);
+      await AsyncStorage.setItem(name, jsonValue);
+    } catch (e) {
+      // saving error
+    }
+};
+
+export const getData = async (value) => {
+    try {
+      const jsonValue = await AsyncStorage.getItem(value);
+      return jsonValue != null ? JSON.parse(jsonValue) : null;
+    } catch (e) {
+      // error reading value
+    }
+};
 
 export function CreateUser(userData) {
     auth.createUserWithEmailAndPassword(userData.email, userData.password)
     .then(async (userCredential) => {
         // Signed up 
         const user = userCredential.user;
-        const docRef = await db.collection("users")
-        .doc(user.uid)
-        .set({
+        const userInfo = {
             firstName: userData.firstName,
             lastName: userData.lastName,
             email: userData.email,
@@ -41,12 +58,16 @@ export function CreateUser(userData) {
                 }
             ],
             userId: user.uid
-        }).then(() => {
+        }
+        const docRef = await db.collection("users")
+        .doc(user.uid)
+        .set(userInfo).then(() => {
             console.log("Document successfully written!");
         })
         .catch((error) => {
             console.error("Error adding document: ", error);
         })
+        storeData(userInfo,'userInfo')
     })
     .catch((error) => {
         const errorCode = error.code;
@@ -65,14 +86,16 @@ export function Login( email, password, redirectFunction ) {
             .get()
         if (doc.exists) {
             const freshData = doc.data()
-            redirectFunction({
+            const userInfo = {
                 name: characters[0].name,
                 job: characters[0].job,
                 stage: freshData.stage,
                 scenes: freshData.scenes,
                 keyPerformanceIndicator: freshData.keyPerformanceIndicator,
                 userId: freshData.userId
-            })
+            }
+            redirectFunction(userInfo)
+            storeData(userInfo,'userInfo')
         } else {
             // doc.data() will be undefined in this case
             console.log("No such document!")
@@ -85,6 +108,33 @@ export function Login( email, password, redirectFunction ) {
         // ..
     });
 } 
+
+export async function handleLoadUserInfo (userId, redirectFunction) {
+    try {
+        const doc = await db.collection('users')
+        .doc(userId)
+        .get()
+        if (doc.exists) {
+            const freshData = doc.data()
+            const userInfo = {
+                name: characters[0].name,
+                job: characters[0].job,
+                stage: freshData.stage,
+                scenes: freshData.scenes,
+                keyPerformanceIndicator: freshData.keyPerformanceIndicator,
+                userId: freshData.userId
+            }
+            redirectFunction(userInfo)
+            storeData(userInfo,'userInfo')
+        } else {
+            // doc.data() will be undefined in this case
+            console.log("No such document!")
+        }
+    } catch {(error) => {
+            console.log("Error getting document:", error);
+        }};
+
+}
 
 export function UpdateUserInfo(userId, newData) {
     db.collection("users")

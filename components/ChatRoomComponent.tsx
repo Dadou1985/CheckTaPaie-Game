@@ -9,6 +9,7 @@ import { UserContext } from '@/context/UserContext'
 import Animated, {Easing, ReduceMotion, useAnimatedStyle, withTiming} from 'react-native-reanimated'
 import { StyleSheet } from "react-native";
 import {Dimensions} from 'react-native'
+import { getData } from "@/firebase/functions";
 
 export default function ChatRoomComponent({setShowExitButton, currentScene, goBack, handleSceneScrene, handleSceneScreneHint}: any) {
     const {event, setEvent} = useContext<any>(EventContext)
@@ -17,12 +18,29 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
     const windowHeight = Math.round(Dimensions.get('window').height);
 
     const [currentChatData, setCurrentChatData] = useState<any>(currentScene && currentScene.script[0])
+    const [currentSceneStored, setcurrentSceneStored] = useState(null)
     const [count, setCount] = useState<number>(0)
     const [bunchNumber, setBunchNumber] = useState<any>(0)
     const [messageTimeLoading, setMessageTimeLoading] = useState(1000)
     const [scrollViewHeight, setscrollViewHeight] = useState(0)
 
     useEffect(() => {
+      if (currentChatData === null) {
+        if (getData('currentScene') !== null) {
+          getData('currentScene').then((data: any) => {
+            setCurrentChatData(data.script[0])
+            setcurrentSceneStored(data.script)
+          })
+        } 
+      }
+
+      if (user === null) {
+        if (getData('userInfo') !== null) {
+          getData('userInfo').then((data: any) => {
+            setUser(data)
+          })
+        } 
+      }
         let counter = count;
         const interval = setInterval(() => {
             if (counter >= currentChatData.length) {
@@ -56,7 +74,7 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
                     return <OptionComponent 
                     key={index}
                     data={data} 
-                    chatData={currentScene && currentScene.script} 
+                    chatData={currentScene ? currentScene.script : currentSceneStored} 
                     currentChatData={currentChatData} 
                     setCurrentChatData={setCurrentChatData} 
                     bunchNumber={bunchNumber} 
