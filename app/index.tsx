@@ -62,7 +62,7 @@ export default function HomeScreen() {
         }
       ]
     })
-    return router.navigate("/OfficeScreen")
+    return router.replace("/OfficeScreen")
   }
 
   const stepDetails = [
@@ -165,7 +165,7 @@ export default function HomeScreen() {
 
   const handleNavigateToHomePage = (freshUserData: any) => {
     setUser(freshUserData)
-    router.navigate("/OfficeScreen")
+    router.replace("/OfficeScreen")
   }
 
   const handleLoginSubmit = () => {

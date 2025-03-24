@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable, ImageBackground } from 'react-native';
 import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, VStack, Button, AspectRatio, Avatar } from "@gluestack-ui/themed-native-base";
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, router } from "expo-router";
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation, useRouter, useLocalSearchParams } from "expo-router";
@@ -12,7 +12,7 @@ import { UserContext } from '@/context/UserContext';
 import { characters } from '@/utils/characters'
 import SceneScreen from '@/components/SceneScreen'
 import { roomData } from '@/utils/room'
-import { UpdateUserInfo } from '@/firebase/functions';
+import { getData, handleLoadUserInfo, storeData, UpdateUserInfo } from '@/firebase/functions';
 
 const RoomScreen = () => {
   const params = useLocalSearchParams<any>();
@@ -31,19 +31,25 @@ const RoomScreen = () => {
   })
 
   const currentScene = event && event.scenes && event.scenes.find((currentEvent:  any) => currentEvent.place === roomData[index].title)
+  
+
   const handleGoBackToOfficeScreen = () => {
+    const scenesUpdate = user && user.scenes && user.scenes.length > 0 && user.scenes.map((scene: any) => {
+      if (scene.place === roomData[index].title) {
+        return {...scene, status: "inactive"}
+      } else {
+        return scene
+      }
+    })
+    storeData({...user, scenes: scenesUpdate}, 'userInfo')
+    // UpdateUserInfo(user.userId, { scenes: scenesUpdate})
+    console.log("UserSceneUpdate============", scenesUpdate, user)
+
+    setUser({...user, scenes: scenesUpdate})
     setTimeout(() => {
-      const scenesUpdate = user && user.scenes && user.scenes.length > 0 && user.scenes.map((scene: any) => {
-        if (scene.place === roomData[index].title) {
-          return {...scene, status: "inactive"}
-        } else {
-          return scene
-        }
-      })
+      
       router.navigate('/OfficeScreen')
-      // UpdateUserInfo(user.userId, { scenes: scenesUpdate})
-      console.log("UserSceneUpdate============", scenesUpdate, user)
-      return setUser({...user, scenes: scenesUpdate})
+      
     }, 1000);
   }
 
@@ -66,6 +72,9 @@ const RoomScreen = () => {
         image: characters[10].image
       })
   }
+
+  console.log('USER++++++++++++', currentScene)
+
 
   return (
     <KeyboardAvoidingView style={{ 

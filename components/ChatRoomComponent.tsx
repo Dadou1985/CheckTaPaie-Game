@@ -9,7 +9,8 @@ import { UserContext } from '@/context/UserContext'
 import Animated, {Easing, ReduceMotion, useAnimatedStyle, withTiming} from 'react-native-reanimated'
 import { StyleSheet } from "react-native";
 import {Dimensions} from 'react-native'
-import { getData } from "@/firebase/functions";
+import { getData, handleLoadUserInfo } from "@/firebase/functions";
+import { router } from "expo-router";
 
 export default function ChatRoomComponent({setShowExitButton, currentScene, goBack, handleSceneScrene, handleSceneScreneHint}: any) {
     const {event, setEvent} = useContext<any>(EventContext)
@@ -24,6 +25,12 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
     const [messageTimeLoading, setMessageTimeLoading] = useState(1000)
     const [scrollViewHeight, setscrollViewHeight] = useState(0)
 
+    const handleNavigateToHomePage = (freshUserData: any) => {
+        setUser(freshUserData)
+        setCount(0) 
+        router.replace("/OfficeScreen")
+      }
+
     useEffect(() => {
       if (currentChatData === null) {
         if (getData('currentScene') !== null) {
@@ -34,12 +41,22 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
         } 
       }
 
-      if (user === null) {
-        if (getData('userInfo') !== null) {
-          getData('userInfo').then((data: any) => {
-            setUser(data)
-          })
-        } 
+      // if (user === null) {
+      //   if (getData('userInfo') !== null) {
+      //     getData('userInfo').then((data: any) => {
+      //       setUser(data)
+      //     })
+      //   } 
+      // }
+
+      if (currentScene === null) {
+        async function reload() {
+          const userId = await getData('userInfo')
+          clearInterval(interval);
+          handleLoadUserInfo(userId.userId, handleNavigateToHomePage)
+       }
+  
+       reload()
       }
         let counter = count;
         const interval = setInterval(() => {
@@ -61,6 +78,9 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
         return { transform: [{translateY: 0}] };
       }
     })
+
+    console.log('CURRENT DATA', currentChatData)
+    console.log("COUNT@@@@@@@@@@@", count)
 
   return (
      <Animated.ScrollView onLayout={(event) => {

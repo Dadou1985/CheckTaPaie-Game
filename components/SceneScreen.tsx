@@ -53,7 +53,7 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, 
         }
       ] 
     })
-    return router.navigate("/")
+    return router.replace("/")
   }
 
   console.log("TEXT++++++++++", img)

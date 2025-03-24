@@ -62,7 +62,7 @@ export default function HomeScreen() {
                     <Animated.View entering={FadeIn.duration(2000)} style={{width: "100%", height: "35%", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-around"}}>
                       {user && user.keyPerformanceIndicator.length > 0 && user.keyPerformanceIndicator.map((kpi: any, index: number) => {
                         // const currentKpi = keyPerformanceIndicator.length > 0 && keyPerformanceIndicator.find((kpi: any) => kpi.title === kpi.title)
-                        return <Link href={{
+                        return <Link key={index} href={{
                           pathname: "/KpiScreen",
                           params: {index: index, kpiSelectedLevel: kpi.level} as any
                         }}

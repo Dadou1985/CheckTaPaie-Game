@@ -24,15 +24,26 @@ export default function OfficeScreen() {
   const [isShown, setIsShown] = useState<Boolean>(true)
   const [step, setStep] = useState(0)
 
+  const hasReloaded = getData('reloaded') !== null ? getData('reloaded') : 'true'
+
+  const handleLoadUser = (freshUserData: any) => {
+    setUser(freshUserData)
+  }
+
   useEffect(() => {
+
     if (user === null) {
-      if (getData !== null) {
-        getData('userInfo').then((data: any) => {
-          setUser(data)
-        })
-      }
+      console.log('USEEFFECT storage ACTIF$$$$$$$$$$$$')
+
+      getData('userInfo').then((data: any) => {
+        setUser(data)
+      })
+
+      // getData('userInfo').then((data: any) => {
+      //   handleLoadUserInfo(data.userId, handleLoadUser)
+      // })
     }
-  }, [])
+  }, [user])
 
   useEffect(() => {
     const checkSceneStatus = (scene: any) => {
@@ -55,6 +66,8 @@ export default function OfficeScreen() {
   console.log('++++++++++++', user)
 
   useEffect(() => {
+    console.log('USEEFFECT ACTIF+++++++')
+
     const stage: any = allEvents && allEvents.find(event => event.title === (user && user.stage))
     setEvent(stage)
     setUser({...user, scenes: stage && stage.scenes})
@@ -64,11 +77,12 @@ export default function OfficeScreen() {
     }, 10000);
   }, [user?.stage])
 
-  useEffect(() => {
-    console.log('##################', event)
-  }, [step])
-  
 
+  // useEffect(() => {
+  //   console.log('##################', event)
+  // }, [step])
+  
+  
   // console.log('++++++++++++', event)
 
   if (isShown) {
@@ -127,7 +141,7 @@ export default function OfficeScreen() {
                         colors={['#5DE0E6', 'transparent']}
                         start={[0, 1]}
                         end={[1, 0]}
-                        style={styles.imageTextBox}
+                        style={[styles.imageTextBox, {paddingRight: index === 2 ? '30%' : 0}, {paddingLeft: index === 2 ? '30%' : 0}]}
                       >
                         <Text style={index !== 0 && index !== 4 ? styles.imageText : styles.imageTextActive}>{room.title}</Text>
                         <Center>
@@ -173,7 +187,7 @@ export default function OfficeScreen() {
                         colors={['#5DE0E6', 'transparent']}
                         start={[0, 1]}
                         end={[1, 0]}
-                        style={styles.imageTextBox}
+                        style={[styles.imageTextBox, {paddingRight: index === 2 ? '30%' : 0}, {paddingLeft: index === 3 ? '30%' : 0}]}
                       >
                         <Text style={isActiveScene === undefined ? styles.imageText : styles.imageTextActive}>{room.title}</Text>
                         <Center>

@@ -25,13 +25,21 @@
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/CTP_logo.png",
-      "display": "fullscreen"
+      "display": "standalone"
     },
     "plugins": [
       "expo-router"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "0c12f8a2-56e2-4560-996a-3107963aae05"
+      }
     }
   }
 }

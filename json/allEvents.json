@@ -872,7 +872,7 @@
             [
             {
               "banner": true,
-              "text": "Assis à la cantine, les quatre collègues déjeunent tranquillement lorsque la conversation prend une tournure plus personnelle.",
+              "text": "Assis à la cantine, Anne et ses collègues, Angélique, Sophie et Thibault, déjeunent tranquillement lorsque la conversation prend une tournure plus personnelle.",
               "timeLoading": 2000
             },
             {
@@ -1262,6 +1262,12 @@
                     "eventStatus": "end"
                   }
                 ]
+            },
+            {
+              "eventStatus": "hint",
+              "title": "Les dangers de l'immobilisme professionnel",
+              "text":["L’immobilisme n’existe pas dans le monde professionnel : Soit on avance, soit on recule. Dans le monde du travail, l’idée que l’on puisse simplement « rester à sa place » sans évoluer est une illusion. Le marché, les technologies et les compétences requises évoluent en permanence. Ainsi, un professionnel qui ne progresse pas finit par devenir obsolète face aux nouvelles attentes. Cette réalité impose un impératif clair : continuer à se développer et à se former pour garantir son employabilité et saisir les opportunités de carrière.","Les évolutions technologiques, la transformation numérique et les nouvelles méthodes de travail modifient constamment les exigences des entreprises. Un métier qui semblait stable il y a dix ans peut aujourd’hui être remplacé par l’intelligence artificielle ou l’automatisation. Par exemple, dans le secteur tertiaire, les logiciels de gestion automatisent des tâches autrefois manuelles. Dans l’industrie, la robotisation a transformé de nombreux métiers. Le travail hybride et le digital ont bouleversé les compétences attendues en communication et collaboration. Ne pas évoluer, c’est donc risquer de se retrouver dépassé et moins compétitif sur le marché du travail.","Un professionnel qui ne cherche pas à progresser finit par reculer, même sans s’en rendre compte. Cela se manifeste par plusieurs signes : une stagnation salariale et un manque de promotions, une perte d’intérêt des employeurs face à un profil qui ne suit pas les tendances du marché, une diminution des opportunités, car les nouvelles compétences deviennent essentielles. Sans formation continue ni remise en question, il devient difficile de s’adapter aux nouvelles attentes des entreprises.","Pour éviter de reculer, il est crucial d’adopter une dynamique d’apprentissage. Cela peut passer par les formations certifiantes qui permettent d’acquérir de nouvelles compétences techniques et d’ajouter de la valeur à son profil. L’autoformation, grâce aux plateformes en ligne, aux livres et aux conférences, offre la possibilité d’apprendre en continu. Le réseautage, en participant à des événements professionnels, en rejoignant des groupes d’experts et en échangeant avec des collègues, permet de rester informé des évolutions du secteur. Maîtriser les outils numériques et suivre les tendances technologiques renforce également la compétitivité professionnelle.","La clé pour avancer est d’adopter une mentalité de croissance qui repose sur l’acceptation du changement en le voyant comme une opportunité plutôt qu’une menace. La remise en question est essentielle pour être prêt à apprendre de ses erreurs et à s’adapter en permanence. L’initiative personnelle joue un rôle majeur : ne pas attendre que l’entreprise impose une formation, mais prendre les devants pour enrichir ses compétences.","L’idée d’immobilisme dans le monde du travail est un mythe : soit on évolue en s’adaptant aux nouvelles exigences, soit on se laisse dépasser. Investir dans son développement personnel et professionnel est donc une nécessité pour sécuriser son avenir et maximiser les opportunités. Dans un environnement aussi compétitif, se former et progresser est la seule manière de rester pertinent et performant."],
+              "displayStatus": true
             }
             ]
           ]
@@ -1298,7 +1304,7 @@
                 },
                 {
                   "name": "Anne",
-                  "text": "Bonjour Micheline, je suis Anne du pôle Qualité.",
+                  "text": "Bonjour Micheline, je suis Anne du pôle Communication.",
                   "timeLoading": 1500
                 },
                 {
@@ -1637,12 +1643,6 @@
                         "eventStatus": "end"
                       }
                     ]
-                },
-                {
-                  "eventStatus": "hint",
-                  "title": "Les dangers de l'immobilisme professionnel",
-                  "text":["L’immobilisme n’existe pas dans le monde professionnel : Soit on avance, soit on recule. Dans le monde du travail, l’idée que l’on puisse simplement « rester à sa place » sans évoluer est une illusion. Le marché, les technologies et les compétences requises évoluent en permanence. Ainsi, un professionnel qui ne progresse pas finit par devenir obsolète face aux nouvelles attentes. Cette réalité impose un impératif clair : continuer à se développer et à se former pour garantir son employabilité et saisir les opportunités de carrière.","Les évolutions technologiques, la transformation numérique et les nouvelles méthodes de travail modifient constamment les exigences des entreprises. Un métier qui semblait stable il y a dix ans peut aujourd’hui être remplacé par l’intelligence artificielle ou l’automatisation. Par exemple, dans le secteur tertiaire, les logiciels de gestion automatisent des tâches autrefois manuelles. Dans l’industrie, la robotisation a transformé de nombreux métiers. Le travail hybride et le digital ont bouleversé les compétences attendues en communication et collaboration. Ne pas évoluer, c’est donc risquer de se retrouver dépassé et moins compétitif sur le marché du travail.","Un professionnel qui ne cherche pas à progresser finit par reculer, même sans s’en rendre compte. Cela se manifeste par plusieurs signes : une stagnation salariale et un manque de promotions, une perte d’intérêt des employeurs face à un profil qui ne suit pas les tendances du marché, une diminution des opportunités, car les nouvelles compétences deviennent essentielles. Sans formation continue ni remise en question, il devient difficile de s’adapter aux nouvelles attentes des entreprises.","Pour éviter de reculer, il est crucial d’adopter une dynamique d’apprentissage. Cela peut passer par les formations certifiantes qui permettent d’acquérir de nouvelles compétences techniques et d’ajouter de la valeur à son profil. L’autoformation, grâce aux plateformes en ligne, aux livres et aux conférences, offre la possibilité d’apprendre en continu. Le réseautage, en participant à des événements professionnels, en rejoignant des groupes d’experts et en échangeant avec des collègues, permet de rester informé des évolutions du secteur. Maîtriser les outils numériques et suivre les tendances technologiques renforce également la compétitivité professionnelle.","La clé pour avancer est d’adopter une mentalité de croissance qui repose sur l’acceptation du changement en le voyant comme une opportunité plutôt qu’une menace. La remise en question est essentielle pour être prêt à apprendre de ses erreurs et à s’adapter en permanence. L’initiative personnelle joue un rôle majeur : ne pas attendre que l’entreprise impose une formation, mais prendre les devants pour enrichir ses compétences.","L’idée d’immobilisme dans le monde du travail est un mythe : soit on évolue en s’adaptant aux nouvelles exigences, soit on se laisse dépasser. Investir dans son développement personnel et professionnel est donc une nécessité pour sécuriser son avenir et maximiser les opportunités. Dans un environnement aussi compétitif, se former et progresser est la seule manière de rester pertinent et performant."],
-                  "displayStatus": true
                 }
                 ]
               ]
@@ -2821,7 +2821,7 @@
           {
               "place": "Machine à café",
               "status": "active",
-              "characters": ["Laurent", "Emma"],
+              "characters": ["Thierno", "Emma"],
               "script": [
                 [
                 {
@@ -2845,12 +2845,12 @@
                   "timeLoading": 1500
                 },
                 {
-                  "name": "Laurent",
+                  "name": "Thierno",
                   "text": "Oh, Anne ! On discutait juste de… eh bien, du style de management de Damien.",
                   "timeLoading": 2000
                 },
                 {
-                  "name": "Laurent",
+                  "name": "Thierno",
                   "text": "Il a encore fait une sacrée impression ce matin.",
                   "timeLoading": 1500
                 },
@@ -2885,17 +2885,17 @@
                   "timeLoading": 1500
                 },
                 {
-                  "name": "Laurent",
+                  "name": "Thierno",
                   "text": "Frustrant, oui !",
                   "timeLoading": 1000
                 },
                 {
-                  "name": "Laurent",
+                  "name": "Thierno",
                   "text": "On dirait qu’il est toujours pris au dépourvu.",
                   "timeLoading": 1500
                 },
                 {
-                  "name": "Laurent",
+                  "name": "Thierno",
                   "text": "On passe des heures à travailler sur les projets, et parfois, il donne l’impression de découvrir tout ça pour la première fois en réunion.",
                   "timeLoading": 2000
                 },
@@ -2939,7 +2939,7 @@
                         "timeLoading": 2000
                       },
                       {
-                        "name": "Laurent",
+                        "name": "Thierno",
                         "text": "Tu veux dire qu’on doit l’aider à mieux faire son travail ?",
                         "timeLoading": 2000
                       },
@@ -2979,7 +2979,7 @@
                         "timeLoading": 2000
                       },
                       {
-                        "name": "Laurent",
+                        "name": "Thierno",
                         "text": "Bon, vu comme ça, autant trouver une solution plutôt que de perdre du temps à râler.",
                         "timeLoading": 2000
                       },
@@ -3017,7 +3017,7 @@
                         "timeLoading": 2000
                       },
                       {
-                        "name": "Laurent",
+                        "name": "Thierno",
                         "text": "Tu trouves vraiment que ça fonctionne bien ?",
                         "timeLoading": 2000
                       },
@@ -3047,7 +3047,7 @@
                         "timeLoading": 2000
                       },
                       {
-                        "name": "Laurent",
+                        "name": "Thierno",
                         "text": "De toi à moi, je pourrais discuter pendant des heures de l'incompétence de Damien.",
                         "timeLoading": 2000
                       },
@@ -3081,12 +3081,12 @@
                         "timeLoading": 2000
                       },
                       {
-                        "name": "Laurent",
+                        "name": "Thierno",
                         "text": "C’est exactement ça !",
                         "timeLoading": 1500
                       },
                       {
-                        "name": "Laurent",
+                        "name": "Thierno",
                         "text": "Mais comment tu fais pour supporter ça ?",
                         "timeLoading": 2000
                       },
@@ -3126,12 +3126,12 @@
                         "timeLoading": 2000
                       },
                       {
-                        "name": "Laurent",
+                        "name": "Thierno",
                         "text": "On est avec toi, Anne.",
                         "timeLoading": 1500
                       },
                       {
-                        "name": "Laurent",
+                        "name": "Thierno",
                         "text": "Si jamais tu veux qu’on soutienne ton message, on est là.",
                         "timeLoading": 2000
                       },
@@ -4977,12 +4977,12 @@
               },
               {
                 "name": "Angélique",
-                "text": "Tout le monde sait que les membres de la FinTeam sont intouchables.",
+                "text": "Tout le monde sait que les membres Community manager sont intouchables.",
                 "timeLoading": 2000
               },
               {
                 "name": "Angélique",
-                "text": "Demande à Adèle, on a le totem d'immunité, nous.",
+                "text": "On a le totem d'immunité, nous !",
                 "timeLoading": 2000
               },
               {
@@ -4997,7 +4997,7 @@
               },
               {
                 "name": "Anne",
-                "text": "Je vais essayer de creuser auprès de mon 'N-1'.",
+                "text": "Je vais essayer de creuser auprès de mon N-1.",
                 "timeLoading": 2000
               },
               {
@@ -5393,7 +5393,7 @@
             },
             {
               "eventStatus": "hint",
-              "title": "3 astuces imparables pour dire NON à son supérieur !",
+              "title": "Quelques astuces imparables pour dire NON à son supérieur !",
               "text":["L’ignorance stratégique peut parfois être une solution, notamment dans des situations où la demande ne présente aucun enjeu significatif, comme lorsqu’elle émane d’un collègue sans autorité hiérarchique. Cependant, cette méthode peut s’avérer risquée lorsqu’elle est appliquée face à un supérieur, car elle pourrait nuire à la réputation et à la relation professionnelle.","L’utilisation des excuses et du cadre personnel permet d’éviter certaines demandes sans confrontation directe. Planifier des rendez-vous fictifs pour esquiver les heures supplémentaires peut être une stratégie efficace, à condition de ne pas en abuser. Il est préférable d’expliquer son refus de manière simple et posée, sans justification excessive. Exposer trop d’éléments de sa vie privée peut aussi se retourner contre soi à long terme. Il est donc recommandé de rester factuel et d’exprimer un refus clair et calme, sans avoir recours à des excuses inventées.","Reformuler la demande du supérieur est une autre approche efficace. Répéter sa requête sous forme de question peut mettre en évidence son caractère abusif ou absurde, ce qui amène parfois le supérieur à reconsidérer sa demande de lui-même.","Exiger une contrepartie est une manière légitime de répondre aux exigences supplémentaires du travail. Présenter la rémunération des heures supplémentaires comme une évidence dans la discussion permet de valoriser son travail. Il est aussi possible de demander une reconnaissance, qu’elle soit financière ou sous une autre forme, pour compenser l’effort demandé.","Comprendre le point de vue de l’employeur aide à maintenir une relation professionnelle saine. Les managers ne sont pas nécessairement malveillants, mais ils peuvent être soumis à une forte pression. Leur rappeler gentiment les limites et faire valoir ses droits permet de poser ses conditions sans créer de tension inutile.","Négocier plutôt que menacer reste la meilleure approche pour préserver une atmosphère constructive. Plutôt que d’opter pour le conflit ou la menace de recours juridiques, privilégier le dialogue permet d’arriver à une entente équilibrée respectant les besoins des deux parties.","Ces astuces offrent des moyens efficaces de poser ses limites au travail sans confrontation directe, en favorisant une communication assertive et une approche diplomatique."],
               "displayStatus": true
             }
@@ -5431,12 +5431,17 @@
             },
             {
               "name": "Anne",
-              "text": "Je pense qu'il serait vraiment bénéfique de tisser un réseau solide dans notre domaine.",
+              "text": "Je pense qu'il serait vraiment bénéfique de tisser un réseau solide dans nos domaines respectifs.",
               "timeLoading": 1500
             },
             {
               "name": "Adèle",
-              "text": "J'ai toujours dit qu'un bon réseau c'est ce qui fait toute la différence.",
+              "text": "Ça fait un moment que j'y pense !",
+              "timeLoading": 1500
+            },
+            {
+              "name": "Adèle",
+              "text": "J'ai toujours dit que le networking faisait toute la différence !",
               "timeLoading": 1500
             },
             {
@@ -5446,7 +5451,7 @@
             },
             {
               "flag": "green",
-              "text": "Optimiser le réseautage",
+              "text": "Optimiser le networking",
               "bunchNumber": 0,
               "points": [
                 {"title": "Le leadership", "point": 5},
@@ -5602,92 +5607,8 @@
               ]
             },
             {
-              "flag": "red",
-              "text": "Douter du réseautage",
-              "bunchNumber": 0,
-              "points": [
-                {"title": "L'épanouissement", "point": -3},
-                {"title": "L'intégrité", "point": -2}
-              ],
-              "script": [
-                {
-                  "name": "Anne",
-                  "text": "Oui… J’ai vu qu’il y a un salon sur l'évolution professionnelle.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Anne",
-                  "text": "Après, je t'avoue que je ne sais pas ce que ça va donner.",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Adèle",
-                  "text": "Pourquoi tu dis ça ?",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Adèle",
-                  "text": "Ce genre d’événement peut être une bonne opportunité.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Anne",
-                  "text": "Peut-être… mais j’ai toujours eu du mal avec le réseautage.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Anne",
-                  "text": "J’ai l’impression que ce sont surtout des conversations superficielles et que ça ne mène pas forcément à grand-chose.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Adèle",
-                  "text": "C’est vrai qu’il y a beaucoup de monde et qu’il faut savoir se démarquer, mais parfois, une seule bonne rencontre peut faire la différence, crois-moi.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Anne",
-                  "text": "Oui, mais comment savoir si c’est la bonne ?",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Anne",
-                  "text": "Et puis, se vendre comme si on était sur un marché aux talents, ce n’est pas trop mon truc mais bon, il faut que je me force à faire les choses.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Adèle",
-                  "text": "Je comprends, mais peut-être qu’on peut y aller sans pression et juste voir comment ça se passe.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Anne",
-                  "text": "On verra… Y'a rien de sûr encore.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Anne",
-                  "text": "J'y réfléchis et je reviens vers toi.",
-                  "timeLoading": 2000
-                },
-                {
-                  "name": "Adèle",
-                  "text": "D’accord, tiens-moi au courant.",
-                  "timeLoading": 1500
-                },
-                {
-                  "name": "Adèle",
-                  "text": "Ça pourrait valoir le coup.",
-                  "timeLoading": 1500
-                },
-                {
-                  "eventStatus": "end"
-                }
-              ]
-            },
-            {
               "eventStatus": "hint",
-              "title": "Le réseautage : un accélérateur de carrière",
+              "title": "Le networking : un accélérateur de carrière",
               "text":["Élargir son cercle professionnel permet de rencontrer des personnes influentes, des experts et des décideurs dans son domaine. Il ouvre des portes à des opportunités cachées, des offres d'emploi non publiées et des projets intéressants. Il favorise également les échanges d'informations, les conseils et le mentorat, facilitant ainsi l’évolution professionnelle.","Développer sa visibilité et sa notoriété contribue à se faire connaître et à valoriser son expertise. Cela renforce la crédibilité et la réputation professionnelle, tout en facilitant l’accès à de nouvelles responsabilités et à des postes à plus haute valeur ajoutée.","Créer des opportunités permet de rester informé des tendances du marché, des évolutions technologiques et des nouvelles perspectives. Il facilite la recherche de partenaires, de clients et de collaborateurs, tout en développant un réseau utile pour accéder à des informations stratégiques.","Le développement de compétences spécifiques est un investissement rentable. Acquérir des compétences recherchées permet de se différencier et de valoriser son profil. Cela augmente l’employabilité et le potentiel de rémunération, tout en aidant à s’adapter aux évolutions du marché et aux nouvelles exigences des employeurs.","Se perfectionner dans son domaine renforce l’expertise et permet de devenir un professionnel reconnu. Cette amélioration continue de la performance et de la productivité facilite l’accès à des postes à plus haute responsabilité et à des projets complexes.","S’adapter aux évolutions est essentiel pour rester compétitif sur le marché du travail. Le développement de compétences spécifiques permet de se tenir informé des dernières technologies et des méthodes de travail, garantissant ainsi une meilleure anticipation des changements et une sécurisation du parcours professionnel.","La synergie entre le réseautage et le développement de compétences est un facteur clé de succès. Le réseautage permet d’identifier les compétences recherchées et les besoins du marché, tandis que l’acquisition de nouvelles compétences répond à ces besoins et valorise le professionnel auprès de son réseau. Ces deux approches se renforcent mutuellement et accélèrent la progression de carrière.","Une stratégie efficace repose sur la définition d’objectifs professionnels clairs et l’identification des compétences clés à développer. Il est essentiel de cibler les événements et les personnes pertinentes pour optimiser son réseautage et de maintenir son réseau actif en cultivant des relations professionnelles durables.","En résumé, le réseautage et le développement de compétences spécifiques sont deux leviers essentiels pour réussir sa carrière et augmenter son salaire. Ils permettent de se démarquer, d’accéder à des opportunités et de s’adapter aux évolutions du marché du travail."],
               "displayStatus": true
             }
@@ -5860,7 +5781,7 @@
                 },
                 {
                   "name": "Anne",
-                  "text": "Naan, je préfère ne pas en faire une affaire d’État.",
+                  "text": "Non, je n'ai pas envie d'en faire une affaire d’État.",
                   "timeLoading": 2000
                 },
                 {
@@ -6736,7 +6657,7 @@
             },
             {
               "banner": true,
-              "text": "Michel, un homme dans la cinquantaine, se tient derrière son bureau, avec une expression sérieuse mais ouverte.",
+              "text": "Michel, un homme dans la quarantaine, se tient derrière son bureau, avec une expression sérieuse mais ouverte.",
               "timeLoading": 2000
             },
             {
@@ -6751,7 +6672,7 @@
             },
             {
               "name": "Michel",
-              "text": "Disons que cela dépend de ce que l’on entend par « bien ». Nous avons des préoccupations concernant les qualités de Damien en tant que manager...",
+              "text": "Disons que cela dépend de ce que l’on entend par « bien ». Nous avons des préoccupations concernant les qualités de Damien en tant que directeur...",
               "timeLoading": 2000
             },
             {
@@ -6776,7 +6697,7 @@
             },
             {
               "name": "Michel",
-              "text": "Nous connaissons la qualité de votre engagement vis-à-vis de la boîte et il serait grand temps que votre travail soit reconnu à sa juste valeur.",
+              "text": "Nous connaissons la qualité de ton engagement vis-à-vis de la boîte et il serait grand temps que ton travail soit reconnu à sa juste valeur.",
               "timeLoading": 2000
             },
             {
@@ -7643,8 +7564,8 @@
             },
             {
               "eventStatus": "hint",
-              "title": "Cas et conditions d’abus d’un supérieur hiérarchique",
-              "text":["Un supérieur hiérarchique peut abuser de son pouvoir et s’approprier le travail de son subordonné dans plusieurs situations. L’appropriation des idées et du travail se manifeste lorsque le supérieur présente à la direction ou aux clients le travail d’un subordonné sans le mentionner, ou lorsqu’il modifie légèrement un projet pour s’en attribuer tout le mérite. Une surcharge de travail sans reconnaissance se traduit par la délégation systématique de tâches complexes ou valorisantes sans aucune récompense ni reconnaissance officielle des contributions.","Le blocage des opportunités d’évolution peut être observé lorsque le supérieur empêche un employé de prendre la parole en réunion, retient des informations essentielles ou refuse de promouvoir le mérite. Dans certains cas, un supérieur utilise son subordonné pour masquer ses propres lacunes en lui confiant des tâches stratégiques et techniques afin de camoufler son incompétence, tout en prenant du crédit pour des décisions fondées sur les recommandations de son équipe. La pression et la manipulation se manifestent à travers des menaces implicites, comme suggérer qu’il serait préférable pour l’avenir de l’employé de le laisser gérer une présentation, ou en jouant sur la peur du licenciement et des évaluations négatives.","Face à ces abus, plusieurs solutions peuvent être mises en place. Documenter et prouver son travail est essentiel. Il est recommandé de conserver des traces écrites des échanges, livrables et preuves de contribution, tels que des mails, documents datés et captures d’écran, ainsi que de demander des validations écrites à chaque étape importante.","Faire valoir son travail publiquement est une autre approche efficace. Il est préférable de présenter soi-même ses idées en réunion et d’éviter de passer uniquement par son supérieur. Proposer directement ses contributions aux parties prenantes concernées permet également d’assurer une meilleure visibilité.","Établir un dialogue avec le supérieur peut parfois être une solution constructive. Exprimer calmement son ressenti et demander plus de visibilité et de reconnaissance, en s’appuyant sur des arguments factuels plutôt qu’émotionnels, peut favoriser un échange productif.","Chercher du soutien auprès des collègues et d’autres managers permet de construire un réseau interne qui reconnaît son travail et d’obtenir du feedback externe pour renforcer sa visibilité.","Si la situation persiste, il peut être nécessaire d’impliquer les ressources humaines en remontant les faits de manière formelle et en demandant un suivi ou un médiateur en cas d’abus répétés.","Enfin, explorer des alternatives professionnelles peut être une option lorsque les abus deviennent fréquents et impactent la motivation. Envisager un changement de service ou d’entreprise, ainsi que valoriser son travail sur des plateformes professionnelles comme LinkedIn, peut ouvrir de nouvelles opportunités.","Faire face à un supérieur abusif demande une approche stratégique, basée sur la preuve, la visibilité et, si nécessaire, des recours internes ou externes."],
+              "title": "Le manager toxique",
+              "text":["Si vous êtes arrivez jusqu'ici, vous aurez compris que Damien abuse d'Anne depuis le début. Il est grand temps de mettre en lumière ce genre de profil toxique avec le lequel on doit entretenir un lien de subordination et plus largement, ces comportements nocifs que peuvent adopter certains collaborateurs dans l'exercice de leur management.","Parmis les pratiques connues d'un management vicieux, on peut retrouver les cas suivants: 1. L’appropriation des idées et du travail de son subordonné dans plusieurs situations. Celle-ci se manifeste lorsque le supérieur présente à la direction ou aux clients le travail d’un subordonné sans le mentionner, ou lorsqu’il modifie légèrement un projet pour s’en attribuer tout le mérite.","2. Une surcharge de travail sans reconnaissance qui se traduit généralement par la délégation systématique de tâches complexes ou valorisantes sans aucune récompense ni reconnaissance officielle des contributions.","3. Le blocage des opportunités d’évolution peut être observé lorsque le supérieur empêche un employé de prendre la parole en réunion, retient des informations essentielles ou refuse de promouvoir le mérite.","4. Le bouclier humain. Dans certains cas, un supérieur utilise son subordonné pour masquer ses propres lacunes en lui confiant des tâches stratégiques et techniques afin de camoufler son incompétence, tout en prenant du crédit pour des décisions fondées sur les recommandations de son équipe. La pression et la manipulation se manifestent à travers des menaces implicites, comme suggérer qu’il serait préférable pour l’avenir de l’employé de le laisser gérer une présentation, ou en jouant sur la peur du licenciement et des évaluations négatives.","Face à ces abus, plusieurs solutions peuvent être mises en place. 1. Documenter et prouver son travail est essentiel. Il est recommandé de conserver des traces écrites des échanges, livrables et preuves de contribution, tels que des mails, documents datés et captures d’écran, ainsi que de demander des validations écrites à chaque étape importante.","2. Faire valoir son travail publiquement est une autre approche efficace. Il est préférable de présenter soi-même ses idées en réunion et d’éviter de passer uniquement par son supérieur. Proposer directement ses contributions aux parties prenantes concernées permet également d’assurer une meilleure visibilité.","3. Établir un dialogue avec le supérieur peut parfois être une solution constructive. Exprimer calmement son ressenti et demander plus de visibilité et de reconnaissance, en s’appuyant sur des arguments factuels plutôt qu’émotionnels, peut favoriser un échange productif.","4. Chercher du soutien auprès des collègues et d’autres managers permet de construire un réseau interne qui reconnaît son travail et d’obtenir du feedback externe pour renforcer sa visibilité.","Si la situation persiste, il peut être nécessaire d’impliquer les ressources humaines en remontant les faits de manière formelle et en demandant un suivi ou un médiateur en cas d’abus répétés.","5. Enfin, explorer des alternatives professionnelles peut être une option lorsque les abus deviennent fréquents et impactent la motivation. Envisager un changement de service ou d’entreprise, ainsi que valoriser son travail sur des plateformes professionnelles comme LinkedIn, peut ouvrir de nouvelles opportunités.","Faire face à un supérieur abusif demande une approche stratégique, basée sur la preuve, la visibilité et, si nécessaire, des recours internes ou externes."],
               "displayStatus": true
             }
 
@@ -7932,7 +7853,7 @@
             },
             {
               "eventStatus": "hint",
-              "title": "Les contraintes de la grossesse sur la carrière professionnelle et comment y remédier",
+              "title": "Les 'contraintes' de la grossesse sur la carrière professionnelle et comment les contourner",
               "text":["La grossesse est un moment important dans la vie d’une femme, mais elle peut aussi engendrer plusieurs contraintes sur sa carrière. Entre les défis physiques, les préjugés en entreprise et la gestion de l’équilibre entre vie professionnelle et personnelle, de nombreuses femmes doivent adapter leur parcours.","Les contraintes physiques et la fatigue sont des défis majeurs. La grossesse entraîne des symptômes tels que la fatigue et les nausées, qui peuvent affecter la productivité. Certains postes impliquant des déplacements fréquents ou des tâches physiques deviennent plus difficiles à assumer.","L’impact sur l’évolution de carrière est également une réalité pour de nombreuses femmes. Certaines constatent un ralentissement de leur progression professionnelle en raison du congé maternité. Des opportunités de promotion ou de formation peuvent être mises en attente, et des préjugés persistent sur leur disponibilité ou leur engagement après la naissance de l’enfant.","La pression et le stress liés à l’image professionnelle peuvent être un autre obstacle. La peur d’être perçue comme moins impliquée par les collègues ou la hiérarchie, la difficulté à concilier travail et rendez-vous médicaux sans être jugée, ainsi que le sentiment de culpabilité de ne pas pouvoir tout gérer à la perfection sont des préoccupations fréquentes.","Le risque de discrimination est bien réel. Certaines femmes subissent une mise à l’écart progressive ou une diminution de responsabilités. Dans certains cas, des contrats précaires ne sont pas renouvelés en raison d’une grossesse.","Ces contraintes engendrent différentes attitudes et comportements. Certaines femmes compensent en s’investissant davantage dans leur travail pour prouver leur engagement. D’autres, au contraire, préfèrent réduire leur implication par manque de motivation ou de reconnaissance. La crainte de perdre son emploi ou de ne pas retrouver sa place après le congé maternité peut provoquer un stress accru. Pour certaines, ces difficultés mènent à une réflexion sur leur avenir professionnel et une éventuelle reconversion vers un métier plus compatible avec la maternité.","Pour mieux gérer ces contraintes, plusieurs solutions peuvent être mises en place. La communication et l’anticipation sont essentielles. Discuter avec son employeur pour organiser son travail et anticiper l’après-congé maternité permet de mieux préparer la transition. Proposer un plan pour assurer la continuité des missions peut faciliter cette période.","L’aménagement du poste et des horaires est une autre option. Demander du télétravail, si possible, permet de réduire la fatigue liée aux déplacements. Adapter les horaires ou alléger certaines responsabilités de manière provisoire peut également être bénéfique.","La mobilisation des droits légaux est une démarche clé. Il est important de connaître et de faire valoir ses droits en matière de congé maternité, de protection contre le licenciement et d’aménagement du temps de travail. Faire appel aux ressources des ressources humaines ou aux syndicats en cas de discrimination peut être une solution efficace.","Le maintien du réseau professionnel joue un rôle crucial. Garder le contact avec ses collègues et supérieurs facilite le retour après l’accouchement. Se former ou s’informer sur les évolutions du poste durant l’absence permet de rester à jour et de mieux préparer la reprise.","La grossesse peut poser des défis à la carrière d’une femme, mais une bonne anticipation et une communication proactive permettent de mieux gérer cette période. L’entreprise a aussi un rôle à jouer en instaurant des politiques favorisant l’égalité professionnelle et l’accompagnement des femmes enceintes."],
               "displayStatus": true
             }
@@ -7955,7 +7876,7 @@
         "script": [[
           {
             "banner": true,
-            "text": "Anne s'installe à son bureau, son ordinateur portable ouvert.",
+            "text": "De retour de son de maternité, Anne s'installe à son bureau et ouvre son ordinateur portable.",
             "timeLoading": 2000
           },
           {
@@ -8346,7 +8267,7 @@
                 },
                 {
                   "name": "Anne",
-                  "text": "En effet, il n'a pas de véritable succès qu'en équipe mais cela ne doit pas empêcher un bon leader de reconnaître la contribution de chacun.",
+                  "text": "En effet, il n'y a de véritable succès qu'en équipe mais cela ne doit pas empêcher un bon leader de reconnaître la contribution de chacun.",
                   "timeLoading": 2000
                 },
                 {
@@ -8535,7 +8456,7 @@
             },
             {
               "name": "Anne",
-              "text": "Toi ? Miss FinTeam ?",
+              "text": "Toi ? Miss DataMine ?",
               "timeLoading": 1000
             },
             {
@@ -9368,6 +9289,16 @@
           "characters": ["Jérôme"],
           "script": [[
             {
+              "banner": true,
+              "text": "C'est l'heure du déjeuner mais Anne est encore assise dans l'open space, plongée dans ses tâches.",
+              "timeLoading": 2000
+            },
+            {
+              "banner": true,
+              "text": "Jérôme, l'un des membres de l'équipe technique, en profite pour venir lui faire part de son malaise vis-à-vis de la nouvelle direction.",
+              "timeLoading": 2000
+            },
+            {
               "name": "Anne",
               "text": "Bonjour Jérôme. Prends un siège.",
               "timeLoading": 1000
@@ -9692,6 +9623,11 @@
           "characters": ["Adèle", "Thibault", "Sophie"],
           "script": [[
             {
+              "banner": true,
+              "text": "En fin de journée, Anne et ses collègues se réunissent dans une salle de réunion afin de célébrer l'obtention de son Bachelor en Marketing digital.",
+              "timeLoading": 2000
+            },
+            {
               "name": "Adèle",
               "text": "Allez, tout le monde !",
               "timeLoading": 1000
@@ -9985,6 +9921,16 @@
           "status": "active",
           "characters": ["Julie"],
           "script": [[
+            {
+              "banner": true,
+              "text": "Anne entre dans le bureau de Julie.",
+              "timeLoading": 1500
+            },
+            {
+              "banner": true,
+              "text": "Celle-ci aborde Anne d'un air inquiet.",
+              "timeLoading": 1500
+            },
             {
               "name": "Julie",
               "text": "Anne, merci d’être venue rapidement.",
@@ -10348,6 +10294,16 @@
           "status": "active",
           "characters": ["Micheline"],
           "script": [[
+            {
+              "banner": true,
+              "text": "Anne déjeune avec Micheline.",
+              "timeLoading": 1500
+            },
+            {
+              "banner": true,
+              "text": "Depuis la suppression du programme Level Up suite aux restrictions budgétaires, les deux femmes ont pris l'habitude de déjeuner ensemble une fois par mois.",
+              "timeLoading": 2000
+            },
             {
               "name": "Anne",
               "text": "Merci d'avoir accepté de déjeuner avec moi, Micheline.",
@@ -10749,8 +10705,13 @@
             },
             {
               "name": "Émilie",
-              "text": "Mais, concrètement, qu’est-ce que cela implique pour nous ? Les équipes seront-elles réduites ou fusionnées ?",
-              "timeLoading": 2000
+              "text": "Mais, concrètement, qu’est-ce que cela implique pour nous ?",
+              "timeLoading": 1500
+            },
+            {
+              "name": "Thierno",
+              "text": "Les équipes seront-elles réduites ou fusionnées ?",
+              "timeLoading": 1500
             },
             {
               "name": "Jean-François",
@@ -11122,7 +11083,7 @@
                 },
                 {
                   "name": "Anne",
-                  "text": "Le poste de directrice Qualité s'est libéré, suite au départ de Julie, et je dois vous avouer que ce poste correspond davantage à une montée en expertise.",
+                  "text": "Le poste de directrice de la Communication s'est libéré, suite au départ de Julie, et je dois vous avouer que ce poste correspond davantage à une montée en expertise.",
                   "timeLoading": 2000
                 },
                 {
@@ -11147,7 +11108,7 @@
                 },
                 {
                   "name": "Nora",
-                  "text": "Anne, nous sommes persuadé que ce poste de cheffe de projet te permettrait d’avoir une vision plus stratégique et opérationnelle des choses tout t'assurant une évolution de carrière confortable.",
+                  "text": "Anne, nous sommes persuadé que ce poste de cheffe de projet te permettrait d’avoir une vision plus stratégique et opérationnelle des choses tout en t'assurant une évolution de carrière confortable.",
                   "timeLoading": 2000
                 },
                 {
@@ -11375,6 +11336,9 @@
                   "name": "Anne",
                   "text": "Exactement ! Prends ton temps pour bien préparer ton projet mais si tu ressens que c’est la bonne voie, alors fonce !",
                   "timeLoading": 2000
+                },
+                {
+                  "eventStatus": "end"
                 }
               ]
             },

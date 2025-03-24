@@ -23,7 +23,7 @@ const TransitionScreen = ({chapter, title}: any) => {
             <Animated.View entering={FadeInUp.duration(3000)} exiting={FadeOut.duration(3000)}>
                 <Text style={{fontWeight: 300, fontSize: 24, color: "#DDF7F9", textShadowColor: 'rgba(0, 0, 0, 0.75)',
                 textShadowOffset: {width: -1, height: 1},
-                textShadowRadius: 10}}>{title}</Text>
+                textShadowRadius: 10, paddingLeft: 50, paddingRight: 50, textAlign: 'center'}}>{title}</Text>
             </Animated.View>
         </Animated.View>
     </LinearGradient>
