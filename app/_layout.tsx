@@ -9,7 +9,7 @@ import { UserContext } from '@/context/UserContext';
 import { EventContext } from '@/context/EventContext';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import Animated, { FadeIn } from 'react-native-reanimated';
-
+import '@/global.css'; // Chemin selon ton projet
 // Gardez cette ligne au tout début
 SplashScreen.preventAutoHideAsync();
 
@@ -99,21 +99,23 @@ export default function RootLayout() {
 
   // Rendez l'application une fois tout prêt
   return (
-    <UserContext.Provider value={{ user, setUser } as any}>
-      <EventContext.Provider value={{ event, setEvent } as any}>
-        <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-          <Stack initialRouteName="index">
-            <Stack.Screen name="index" options={{ headerShown: false }} />
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen name="+not-found" />
-            <Stack.Screen name="OfficeScreen" options={{ headerShown: false }} />
-            <Stack.Screen name="RoomScreen" options={{ headerShown: false }} />
-            <Stack.Screen name="HomeScreen" options={{ headerShown: false }} />
-            <Stack.Screen name="KpiScreen" options={{ headerShown: false }} />
-          </Stack>
-        </ThemeProvider>
-      </EventContext.Provider>
-    </UserContext.Provider>
+    <View style={styles.container}>
+      <UserContext.Provider value={{ user, setUser } as any}>
+        <EventContext.Provider value={{ event, setEvent } as any}>
+          <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+            <Stack initialRouteName="index">
+              <Stack.Screen name="index" options={{ headerShown: false }} />
+              <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+              <Stack.Screen name="+not-found" />
+              <Stack.Screen name="OfficeScreen" options={{ headerShown: false }} />
+              <Stack.Screen name="RoomScreen" options={{ headerShown: false }} />
+              <Stack.Screen name="HomeScreen" options={{ headerShown: false }} />
+              <Stack.Screen name="KpiScreen" options={{ headerShown: false }} />
+            </Stack>
+          </ThemeProvider>
+        </EventContext.Provider>
+      </UserContext.Provider>
+    </View>
   );
 }
 
@@ -128,4 +130,10 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
   },
+  container: {
+    flex: 1,
+    height: '100%',
+    width: '100%',
+    backgroundColor: '#fff' // optionnel
+  }
 });
