@@ -8,7 +8,7 @@
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/CTP_splash-screen.png",
+      "image": "./assets/images/Level-up_splash-screen.png",
       "resizeMode": "cover",
       "backgroundColor": "transparent"
     },

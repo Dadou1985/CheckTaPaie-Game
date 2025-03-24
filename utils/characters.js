@@ -161,7 +161,7 @@ export const characters = [
         job: "Experte en paie et négciation salariale",               
         image: {
             small: require("../assets/images/hawa_portrait_resized.png"),
-            large: require("../assets/images/hawa_background.png")
+            large: require("../assets/images/hawa_hint.png")
         }
     },
     {

@@ -211,7 +211,10 @@ export default function HomeScreen() {
             <Image 
             style={styles.image}
             source={require('../assets/images/CTP_logo.png')} />
-            <Text style={{color: '#DDF7F9', fontSize: 52}}>Login</Text>
+            <Image 
+            style={styles.imageMax}
+            source={require('../assets/images/Level-up_logo.png')} />
+            {/* <Text style={{color: '#DDF7F9', fontSize: 52}}>Login</Text> */}
           </Box>
         </Animated.View>
           
@@ -426,4 +429,9 @@ const styles = StyleSheet.create({
     height: 50,
     resizeMode: 'center'
   },
+  imageMax: {
+    width: 150,
+    height: 150,
+    resizeMode: 'center'
+  }
 });
