@@ -29,6 +29,7 @@ const RoomScreen = () => {
     age: "",
     img: ""
   })
+  const [showBlankScreen, setShowBlankScreen] = useState(false)
 
   const currentScene = event && event.scenes && event.scenes.find((currentEvent:  any) => currentEvent.place === roomData[index].title)
   
@@ -75,6 +76,17 @@ const RoomScreen = () => {
 
   console.log('USER++++++++++++', currentScene)
 
+  if (showBlankScreen) {
+    return <LinearGradient
+        // Background Linear Gradient
+        colors={['#cdffd8', '#94b9ff']}
+        start={[0, 0]}
+        end={[1, 0]}
+        style={styles.background}
+      >
+        
+    </LinearGradient>
+  }
 
   return (
     <KeyboardAvoidingView style={{ 
@@ -106,7 +118,7 @@ const RoomScreen = () => {
           </View>
         </LinearGradient>
           <Animated.ScrollView style={{width: "100%", height: "70%"}}>
-              <ChatRoomComponent setShowExitButton={setShowExitButton} currentScene={currentScene} goBack={handleShowGoBackButton} handleSceneScrene={handleSceneScrene} handleSceneScreneHint={handleSceneScreneHint} />
+              <ChatRoomComponent setShowExitButton={setShowExitButton} currentScene={currentScene} goBack={handleShowGoBackButton} handleSceneScrene={handleSceneScrene} handleSceneScreneHint={handleSceneScreneHint} showBlankScreen={setShowBlankScreen} />
           </Animated.ScrollView>
           <SceneScreen 
               displayStatus={currentCharacter.displayStatus} 

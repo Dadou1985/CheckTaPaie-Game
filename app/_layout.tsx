@@ -48,7 +48,7 @@ export default function RootLayout() {
           // Attendez un peu avant de considérer l'animation comme terminée
           setTimeout(() => {
             setSplashAnimationComplete(true);
-          }, 10000);
+          }, 5000);
         } catch (e) {
           // En cas d'erreur, considérez quand même l'animation comme terminée
           setSplashAnimationComplete(true);

@@ -57,4 +57,4 @@ const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, b
 }
 
 
-export default OptionComponent
+export default React.memo(OptionComponent)

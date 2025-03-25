@@ -1,3 +1,4 @@
+import React from 'react';
 import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable, ImageBackground } from 'react-native';
 import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, VStack, Button, AspectRatio } from "@gluestack-ui/themed-native-base";
 import { LinearGradient } from 'expo-linear-gradient';
@@ -13,7 +14,7 @@ import {
   AvatarImage,
 } from '@gluestack-ui/themed';
 
-export default function KpiScreen() {  
+function KpiScreen() {  
   const {user} = useContext<any>(UserContext)
   const params = useLocalSearchParams<any>()
   const {index, kpiSelectedLevel} = params
@@ -41,7 +42,7 @@ export default function KpiScreen() {
   console.log("LEVEL:::", index)
 
     return (        
-        <ImageBackground source={require("../assets/images/home.png")} style={{width: "100%", height: "100%", position: "relative", flex: 1}} resizeMode='cover'>
+        <ImageBackground source={require("../assets/images/places/home.png")} style={{width: "100%", height: "100%", position: "relative", flex: 1}} resizeMode='cover'>
             <KeyboardAvoidingView style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', width: "100%", height: '100%', position: 'absolute', zIndex: 10}}>
                 <NativeBaseProvider config={config}>
                   <Link style={{position: "absolute", left: 30, top: 70, zIndex: 10}} href={"/HomeScreen"}>
@@ -99,6 +100,7 @@ const config = {
   }
 };
 
+export default React.memo(KpiScreen);
 
 const styles = StyleSheet.create({
   background: {
@@ -117,3 +119,4 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.75)'
   }
 });
+

@@ -71,4 +71,4 @@ const SceneComponent = ({data, handleSceneScrene, setMessageTimeLoading, handleS
 }
 
 
-export default SceneComponent
+export default React.memo(SceneComponent)

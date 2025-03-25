@@ -42,8 +42,8 @@ export const characters = [
         age: "38 ans",
         job: "Data analyst senior",
         image: {
-            small: require('../assets/images/adele_portrait_resized.png'),
-            large: require('../assets/images/adele_background.jpg')
+            small: require('../assets/images/buddies/Adele/adele_portrait_resized.png'),
+            large: require('../assets/images/buddies/Adele/adele_background.jpg')
         },
         story: [
             "Adèle est une professionnelle accomplie dans le domaine de la data, possédant une expertise approfondie dans l'analyse de données. Elle et Anne se sont rencontrées il y a plusieurs années lorsqu'elles ont toutes deux intégrées le pôle communication et marketing de l'entreprise InnovaTech. Depuis lors, elles sont devenues des amies proches et des collègues de confiance, partageant non seulement leur travail mais aussi de nombreux moments de leur vie personnelle.","Adèle a gravi les échelons de l'entreprise grâce à son dévouement et à ses compétences exceptionnelles en matière d'analyse de données. En tant que Data analyst senior, elle joue un rôle crucial dans la prise de décision stratégique de l'entreprise, en fournissant des analyses approfondies sur les tendances et comportements des utilisateurs.","Outre ses qualités professionnelles, Adèle est également une amie fidèle et attentionnée. Toujours là pour soutenir Anne dans les bons moments comme dans les mauvais, elle est un véritable pilier de soutien dans sa vie. Leur amitié repose sur une confiance mutuelle et une compréhension profonde, renforcées par les épreuves qu'elles ont surmontées ensemble au fil des ans.","En résumé, Adèle incarne l'exemple même d'une femme forte, intelligente et bienveillante, qui inspire ceux qui l'entourent par sa détermination et sa générosité. Sa présence dans la vie d'Anne est une source de réconfort et de soutien constant, et leur amitié est un trésor précieux qui enrichit leur vie à bien des égards."
@@ -57,8 +57,8 @@ export const characters = [
         age: "46 ans",   
         job: "Directeur de la Communication",                         
         image: {
-            small: require('../assets/images/damien_portrait_resized.png'),
-            large: require('../assets/images/damien_background.jpg'),
+            small: require('../assets/images/management/Damien/damien_portrait_resized.png'),
+            large: require('../assets/images/management/Damien/damien_background.jpg'),
         },
         story: ["Damien est le directeur du pôle marketing et communication de l'entreprise et, par conséquent, le supérieur hiérarchique direct d'Anne. Malheureusement, Damien est largement perçu comme incompétent et irresponsable dans son rôle de directeur.", "Dotée d'un manque flagrant de compétences en gestion et de leadership, Damien peine à prendre des décisions éclairées et à fournir une direction claire à son équipe. Son approche désorganisée et son manque de suivi conduisent souvent à des retards et des erreurs dans les projets, ce qui frustre Anne et ses collègues.", "En plus de son incapacité à gérer efficacement son équipe, Damien est également connu pour son manque de professionnalisme et son comportement irresponsable. Il est souvent en retard aux réunions et aux échéances importantes, ce qui compromet la réputation du département et entrave la progression des projets.", "Face à cette situation, Anne se retrouve confrontée à un défi supplémentaire : comment réussir dans un environnement de travail où la direction est incompétente et irresponsable ? Malgré les obstacles, Anne cherche des moyens de contourner les lacunes de Damien et de maintenir un niveau de performance élevé au sein de son équipe."],
         duration: 50000,
@@ -135,8 +135,8 @@ export const characters = [
         age: "36 ans", 
         job: "Manager de proximité",
         image: {
-            small: require('../assets/images/julie_portrait_resized.png'),
-            large: require('../assets/images/julie_background.jpg')
+            small: require('../assets/images/management/Julie/julie_portrait_resized.png'),
+            large: require('../assets/images/management/Julie/julie_background.jpg')
         },
         story: ["Julie Martin est une manager de proximité dynamique et déterminée qui occupe un poste clé au sein de l'entreprise. Connaissant bien les rouages de l'entreprise, elle est réputée pour son efficacité et son professionnalisme dans l'exécution de ses tâches.", "Cependant, derrière son apparence polie et serviable, Julie entretient secrètement une rivalité avec Anne, qu'elle considère comme une menace pour sa propre position au sein de l'entreprise. Elle travaille depuis des années à devenir aussi populaire que Anne sans vraiment y parvenir, ce qui alimente sa jalousie et son ressentiment à son égard.", "Julie adopte une approche subtile pour affaiblir la position d'Anne, utilisant des remarques sarcastiques et des actions en coulisses pour miner sa réputation et sa crédibilité. Elle cherche à se présenter comme une alliée en apparence, tout en travaillant secrètement à saper les efforts d'Anne et à renforcer sa propre influence au sein de l'entreprise.", "Malgré ses intentions cachées, Julie reste une professionnelle compétente et dévouée, dont les compétences en tant que manager de proximité sont appréciées par ses supérieurs. Cependant, sa rivalité avec Anne représente un obstacle potentiel à la collaboration et à la cohésion au sein du pôle marketing."],
         duration: 50000,
@@ -149,8 +149,8 @@ export const characters = [
         age: "55 ans", 
         job: "Directrice des opérations",
         image: {
-            small: require('../assets/images/micheline_portrait_resized.png'),
-            large: require('../assets/images/micheline_background.jpg')
+            small: require('../assets/images/management/Micheline/micheline_portrait_resized.png'),
+            large: require('../assets/images/management/Micheline/micheline_background.jpg')
         },
         story: ["Micheline Lefebvre est le mentor d'Anne, un cadre expérimenté et respecté au sein de l'entreprise. Avec des décennies d'expérience dans le domaine, Micheline a gravi les échelons pour devenir Directrice des opérations, où elle supervise l'ensemble des activités de l'entreprise.", "Doté d'une grande sagesse et d'une expertise approfondie dans son domaine, Micheline est un guide précieux pour Anne, l'aidant à naviguer dans les défis de sa carrière et à tirer parti de ses forces. Elle partage volontiers ses connaissances et son expérience avec elle, lui fournissant des conseils perspicaces et des perspectives éclairantes sur les enjeux complexes auxquels elle est confrontée.", "En plus de son rôle de mentor, Micheline est également un leader inspirant pour toute l'entreprise. Son approche équilibrée et sa capacité à prendre des décisions éclairées font de lui un modèle pour ses collègues et ses subordonnés. Elle incarne les valeurs de l'entreprise et cherche toujours à promouvoir un environnement de travail positif et collaboratif.", "Grâce à la guidance et au soutien de Micheline, Anne est en mesure de relever les défis avec confiance et détermination, sachant qu'elle peut compter sur son mentor pour la conseiller dans les moments difficiles et la guider vers le succès."],
         duration: 50000,
@@ -160,7 +160,7 @@ export const characters = [
         name: "Hawa",
         job: "Experte en paie et négciation salariale",               
         image: {
-            small: require("../assets/images/hawa_portrait_resized.png"),
+            small: require("../assets/images/hawa_hint_portrait.jpeg"),
             large: require("../assets/images/hawa_hint.png")
         }
     },

@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native'
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useMemo} from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Flow } from 'react-native-animated-spinkit'
 import {
@@ -10,7 +10,9 @@ import { characters } from '@/utils/characters'
 
 const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
     const [dotLoading, setDotLoading] = useState(true)
-    const currentCharacter = characters.find((character: any) => character.name === data.name)
+    const currentCharacter = useMemo(() => {
+        return characters.find((character: any) => character.name === data.name);
+    }, [data.name]);
 
     useEffect(() => {
         setMessageTimeLoading(data.timeLoading + 1000)  
@@ -62,4 +64,4 @@ const MessageComponent = ({data, user, setMessageTimeLoading}: any) => {
     }
 }
 
-export default MessageComponent
+export default React.memo(MessageComponent)

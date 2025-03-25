@@ -60,7 +60,7 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, 
 
   if (isShow) {
     return (
-      <Animated.View exiting={FadeOut.duration(3000)} style={{position: "absolute", width: "100%", height: "100%", zIndex: 10}}>
+      <Animated.View entering={FadeIn.duration(1000)} exiting={FadeOut.duration(3000)} style={{position: "absolute", width: "100%", height: "100%", zIndex: 10}}>
         <ImageBackground style={{width: "100%", height: "100%"}} source={img.large}>
         <ScrollView contentContainerStyle={{height: "100%", flexDirection: "column", justifyContent: "flex-end"}}>
           <LinearGradient
@@ -69,7 +69,7 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, 
             end={[1, 1]}
             style={{flex: 1}}
             >
-              <Animated.ScrollView style={styles.slidingText} entering={FadeIn.duration(5000).delay(2000)} exiting={FadeOut.duration(3000)}>
+              <Animated.ScrollView style={styles.slidingText} entering={FadeIn.duration(3000).delay(2000)} exiting={FadeOut.duration(1000)}>
                 {(name || lastName) && <Text style={[styles.textStyle, styles.textHeadingFont]}>{name} {lastName}</Text>}
                 {(title) && <Text style={[styles.textStyle, styles.textHeadingFont]}>{title}</Text>}
                 {(age || job) && <Text style={[styles.textStyle, styles.textFont]}>{job} - {age}</Text>}
@@ -88,7 +88,7 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, 
                       return setStoryBunchNumber(storyBunchNumber + 1)
                     }
                     }}>
-                    <Text style={{width: "90%", textAlign: "right"}}>{storyBunchNumber > (text.length - 2) ? (name === characters[0].burnout?.title) || (name === characters[0].layoff?.title) || (name === characters[0].endGame?.title) ? 'Commencer une nouvelle partie' : 'Fermer' : 'Continuer'}</Text>
+                    <Text style={{width: "90%", textAlign: "right"}}>{storyBunchNumber > (text.length - 2) ? (name === characters[0].burnout?.title) || (name === characters[0].layoff?.title) || (name === characters[0].endGame?.title) ? 'Fin de la partie' : 'Fermer' : 'Continuer'}</Text>
                   </Pressable>
               </Animated.ScrollView>
             </LinearGradient>
@@ -99,7 +99,7 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, 
   }
 }
 
-export default SceneScreen
+export default React.memo(SceneScreen);
 
 const config = {
   dependencies: {

@@ -24,12 +24,6 @@ export default function OfficeScreen() {
   const [isShown, setIsShown] = useState<Boolean>(true)
   const [step, setStep] = useState(0)
 
-  const hasReloaded = getData('reloaded') !== null ? getData('reloaded') : 'true'
-
-  const handleLoadUser = (freshUserData: any) => {
-    setUser(freshUserData)
-  }
-
   useEffect(() => {
 
     if (user === null) {
@@ -66,16 +60,24 @@ export default function OfficeScreen() {
   console.log('++++++++++++', user)
 
   useEffect(() => {
-    console.log('USEEFFECT ACTIF+++++++')
-
-    const stage: any = allEvents && allEvents.find(event => event.title === (user && user.stage))
-    setEvent(stage)
-    setUser({...user, scenes: stage && stage.scenes})
-    storeData({...user, scenes: stage && stage.scenes}, 'userInfo')
-    setTimeout(() => {
-      setIsShown(false)
+    if (!user?.stage) return;
+ 
+    console.log('USEEFFECT ACTIF+++++++');
+ 
+    const stage = allEvents.find((event) => event.title === user?.stage);
+    if (!stage) return;
+ 
+    setEvent(stage);
+    // const updatedUser = { ...user, scenes: stage.scenes };
+    setUser({ ...user, scenes: stage.scenes });
+    storeData({ ...user, scenes: stage.scenes }, 'userInfo');
+ 
+    const timeout = setTimeout(() => {
+      setIsShown(false);
     }, 10000);
-  }, [user?.stage])
+ 
+    return () => clearTimeout(timeout);
+  }, [user?.stage]);
 
 
   // useEffect(() => {
@@ -98,7 +100,7 @@ export default function OfficeScreen() {
           style={styles.background}
         >
         <NativeBaseProvider config={config}>
-           {isFirstStage && <Animated.View key={step} entering={FadeInLeft.delay(step === 1 ? 5000 : 0).duration(3000)} exiting={FadeOutRight.duration(1000)} style={{position: "absolute", top: 240, width: "90%", flexDirection: "row", zIndex: 10}}>
+           {isFirstStage && step > 0 && <Animated.View key={step} entering={FadeInLeft.delay(step === 1 ? 2000 : 0).duration(3000)} exiting={FadeOutRight.duration(1000)} style={{position: "absolute", top: 240, width: "90%", flexDirection: "row", zIndex: 10}}>
                   <LinearGradient
                   // Background Linear Gradient
                   colors={['#FF3131', '#FF914D']}
@@ -133,17 +135,17 @@ export default function OfficeScreen() {
           </Link>
             {roomData.map((room, index) => {
                 if (isFirstStage && (step > 2)) {
-                  return <Animated.View key={index} entering={step === 3 ? FadeIn.duration(3000) : FadeIn.duration(0)} style={index === (roomData.length - 1) ? styles.imageLastBox : styles.imageBox}>
+                  return <Animated.View key={room.title} entering={step === 3 ? FadeIn.duration(3000) : FadeIn.duration(0)} style={room.title === 'Open Space' ? styles.imageLastBox : styles.imageBox}>
                       <ImageBackground 
-                      style={index !== 0 && index !== 4 ? styles.image : styles.activeImage}
+                      style={(room.title === 'Machine à café') || (room.title === 'Open Space') ? styles.activeImage : styles.image}
                       source={room.backgroundImage} resizeMode='cover' />
                       <LinearGradient
                         colors={['#5DE0E6', 'transparent']}
                         start={[0, 1]}
                         end={[1, 0]}
-                        style={[styles.imageTextBox, {paddingRight: index === 2 ? '30%' : 0}, {paddingLeft: index === 2 ? '30%' : 0}]}
+                        style={[styles.imageTextBox, {paddingRight: room.title === 'Réunion' ? '30%' : 0}, {paddingLeft: room.title === 'Cantine' ? '30%' : 0}]}
                       >
-                        <Text style={index !== 0 && index !== 4 ? styles.imageText : styles.imageTextActive}>{room.title}</Text>
+                        <Text style={(room.title === 'Machine à café') || (room.title === 'Open Space') ? styles.imageTextActive : styles.imageText}>{room.title}</Text>
                         <Center>
                           <HStack space="md" reversed={false}>
                             {index === 0 && <Avatar>
@@ -174,12 +176,12 @@ export default function OfficeScreen() {
                 } else {
                   const isActiveScene = user && user.scenes && user.scenes.length > 0 && user.scenes.find((scene: any) => (scene.place === room.title) && (scene.status === 'active'))
                   console.log('$$$$$$$$$$$', isActiveScene) 
-                  return <Link key={index} href={isActiveScene === undefined ? "/OfficeScreen" : {
+                  return <Link key={room.title} href={isActiveScene === undefined ? "/OfficeScreen" : {
                     pathname: "/RoomScreen",
-                    params: {index: index}
+                    params: {index: roomData.findIndex(r => r.title === room.title)}
                   }}
                   asChild>
-                    <Pressable style={index === (roomData.length - 1) ? styles.imageLastBox : styles.imageBox} onPress={() => storeData(isActiveScene, 'currentScene')}>
+                    <Pressable style={room.title === 'Open Space' ? styles.imageLastBox : styles.imageBox} onPress={() => storeData(isActiveScene, 'currentScene')}>
                       <ImageBackground 
                       style={isActiveScene === undefined ? styles.image : styles.activeImage}
                       source={room.backgroundImage} resizeMode='cover' />
@@ -187,7 +189,7 @@ export default function OfficeScreen() {
                         colors={['#5DE0E6', 'transparent']}
                         start={[0, 1]}
                         end={[1, 0]}
-                        style={[styles.imageTextBox, {paddingRight: index === 2 ? '30%' : 0}, {paddingLeft: index === 3 ? '30%' : 0}]}
+                        style={[styles.imageTextBox, {paddingRight: room.title === 'Réunion' ? '30%' : 0}, {paddingLeft: room.title === 'Cantine' ? '30%' : 0}]}
                       >
                         <Text style={isActiveScene === undefined ? styles.imageText : styles.imageTextActive}>{room.title}</Text>
                         <Center>

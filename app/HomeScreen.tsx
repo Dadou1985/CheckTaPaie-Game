@@ -39,7 +39,7 @@ export default function HomeScreen() {
   }
 
     return (        
-        <ImageBackground source={require("../assets/images/home.png")} style={{width: "100%", height: "100%", position: "relative"}} resizeMode='cover'>
+        <ImageBackground source={require("../assets/images/places/home.png")} style={{width: "100%", height: "100%", position: "relative"}} resizeMode='cover'>
             <KeyboardAvoidingView style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', width: "100%", height: '100%', position: 'absolute', zIndex: 10}}>
                 <NativeBaseProvider config={config}>
                   <Link style={{position: "absolute", left: 30, top: 70, zIndex: 10}} href={"/OfficeScreen"}>

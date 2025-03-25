@@ -7,12 +7,12 @@ import BannerMessage from './BannerMessage';
 import { EventContext } from '@/context/EventContext'
 import { UserContext } from '@/context/UserContext'
 import Animated, {Easing, ReduceMotion, useAnimatedStyle, withTiming} from 'react-native-reanimated'
-import { StyleSheet } from "react-native";
+import { ScrollView, StyleSheet } from "react-native";
 import {Dimensions} from 'react-native'
 import { getData, handleLoadUserInfo } from "@/firebase/functions";
 import { router } from "expo-router";
 
-export default function ChatRoomComponent({setShowExitButton, currentScene, goBack, handleSceneScrene, handleSceneScreneHint}: any) {
+function ChatRoomComponent({setShowExitButton, currentScene, goBack, handleSceneScrene, handleSceneScreneHint, showBlankScreen}: any) {
     const {event, setEvent} = useContext<any>(EventContext)
     const {user, setUser} = useContext<any>(UserContext)
     const animatedScrollView = useRef<any>()
@@ -26,30 +26,15 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
     const [scrollViewHeight, setscrollViewHeight] = useState(0)
 
     const handleNavigateToHomePage = (freshUserData: any) => {
-        setUser(freshUserData)
-        setCount(0) 
-        router.replace("/OfficeScreen")
-      }
+      setUser(freshUserData)
+      setCount(0) 
+      router.replace("/OfficeScreen")
+    }
 
     useEffect(() => {
-      if (currentChatData === null) {
-        if (getData('currentScene') !== null) {
-          getData('currentScene').then((data: any) => {
-            setCurrentChatData(data.script[0])
-            setcurrentSceneStored(data.script)
-          })
-        } 
-      }
 
-      // if (user === null) {
-      //   if (getData('userInfo') !== null) {
-      //     getData('userInfo').then((data: any) => {
-      //       setUser(data)
-      //     })
-      //   } 
-      // }
-
-      if (currentScene === null) {
+      if (!currentChatData && currentScene === null) {
+        showBlankScreen(true)
         async function reload() {
           const userId = await getData('userInfo')
           clearInterval(interval);
@@ -58,35 +43,45 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
   
        reload()
       }
-        let counter = count;
-        const interval = setInterval(() => {
-            if (counter >= currentChatData.length) {
-              clearInterval(interval);
-            } else {
-              setCount(count => count + 1);
-              counter++; // local variable that this closure will see
-            }
-          }, messageTimeLoading);
-          return () => clearInterval(interval) 
+
+      let counter = count;
+      const interval = setInterval(() => {
+        if (counter >= currentChatData.length) {
+          clearInterval(interval);
+        } else {
+          setCount((prev) => prev + 1);
+          counter++; // local variable that this closure will see
+        }
+      }, messageTimeLoading);
+      
+      return () => clearInterval(interval) 
     }, [currentChatData, messageTimeLoading])
 
-    const animatedStyles = useAnimatedStyle(() => {
-      const value = withTiming(Math.round(-(scrollViewHeight - (windowHeight - 100))))
-      if (scrollViewHeight > (windowHeight - 100)) {
-        return { transform: [{translateY: value}] };
-      } else {
-        return { transform: [{translateY: 0}] };
+    useEffect(() => {
+      if (animatedScrollView.current) {
+        animatedScrollView.current.scrollToEnd({ animated: true });
       }
-    })
+    }, [count]);
+
+    // const animatedStyles = useAnimatedStyle(() => {
+    //   const value = withTiming(Math.round(-(scrollViewHeight - (windowHeight - 100))))
+    //   if (scrollViewHeight > (windowHeight - 100)) {
+    //     return { transform: [{translateY: value}] };
+    //   } else {
+    //     return { transform: [{translateY: 0}] };
+    //   }
+    // })
 
     console.log('CURRENT DATA', currentChatData)
     console.log("COUNT@@@@@@@@@@@", count)
 
   return (
-     <Animated.ScrollView onLayout={(event) => {
-      const {height} = event.nativeEvent.layout;
-      setscrollViewHeight(height)
-    }} ref={animatedScrollView}  style={[styles.container, animatedStyles]} scrollToOverflowEnabled={true}>
+    <ScrollView
+  ref={animatedScrollView}
+  contentContainerStyle={{ flexGrow: 1, paddingBottom: 30 }}
+  keyboardShouldPersistTaps="handled"
+  showsVerticalScrollIndicator={true}
+>
       <NativeBaseProvider>
         <VStack space={5} px={5} py={5}>
             {currentChatData && currentChatData.length > 0 && currentChatData.slice(0, count).map((data: any, index: number) =>{
@@ -135,7 +130,7 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
                 }
 
                 return <MessageComponent 
-                key={index}
+                key={`${data.name ?? 'msg'}-${index}`}                
                 data={data} 
                 user={user} 
                 messageTimeLoading={messageTimeLoading} 
@@ -143,9 +138,10 @@ export default function ChatRoomComponent({setShowExitButton, currentScene, goBa
             })}
             </VStack>
         </NativeBaseProvider>   
-     </Animated.ScrollView>
+     </ScrollView>
   )
 }
+export default React.memo(ChatRoomComponent);
 
 const styles = StyleSheet.create({
   container: {
