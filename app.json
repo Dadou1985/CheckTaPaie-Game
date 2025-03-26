@@ -4,7 +4,7 @@
     "slug": "checkTaPaie-Game",
     "version": "1.1.0",
     "orientation": "portrait",
-    "icon": "./assets/images/CTP_logo.png",
+    "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
@@ -17,14 +17,14 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/CTP_logo.png",
+        "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/CTP_logo.png",
+      "favicon": "./assets/images/icon.png",
       "display": "fullscreen"
     },
     "plugins": [
