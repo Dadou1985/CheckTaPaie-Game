@@ -1,14 +1,17 @@
-import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable, NativeSyntheticEvent, TextInputChangeEventData } from 'react-native';
+import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable, NativeSyntheticEvent, TextInputChangeEventData, Dimensions, Linking } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, HStack, Button, FormControl, WarningOutlineIcon } from "@gluestack-ui/themed-native-base";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Link, router } from "expo-router";
 import { UserContext } from '@/context/UserContext';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Animated, { FadeIn, SlideOutLeft, SlideInRight, FadeOut, SlideInUp, SlideInDown, FadeInUp, FadeInDown } from 'react-native-reanimated';
-import { CreateUser, Login, ResetEmail } from '@/firebase/functions'
+import { CreateUser, Login, ResetEmail, CheckAppVerion } from '@/firebase/functions'
 import {keyPerformanceIndicator} from '@/utils/kpi'
 import { characters } from '@/utils/characters';
+import Constants from 'expo-constants';
+import SceneScreen from '@/components/SceneScreen';
+import UpdateScreenComponent from '@/components/UpdateScreenComponent';
 
 export default function HomeScreen() {
   const {user, setUser} = useContext<any>(UserContext)
@@ -28,6 +31,33 @@ export default function HomeScreen() {
     registration: false,
     resetPassword: false
   })
+  const [showUpdateScreen, setShowUpdateScreen] = useState(false)
+  const [showUpdateMessage, setShowUpdateMessage] = useState({
+    title: "",
+    text: "",
+    url: "",
+    buttonText: ""
+  })
+
+
+  const handleAppUpdate = (data: any) => {
+    if (data?.version !== Constants.expoConfig?.version) {
+      setShowUpdateScreen(true)
+      setShowUpdateMessage({
+        title: data?.title,
+        text: data?.text,
+        url: data?.activeUrl,
+        buttonText: data?.buttonText
+      })
+    } else {
+      console.log("The app is up to date !")
+    }
+  }
+
+  useEffect(() => {
+    CheckAppVerion(handleAppUpdate)
+  }, [])
+  
 
   const handleLoadUserInfo = () => {
     setUser({
@@ -187,7 +217,18 @@ export default function HomeScreen() {
     }
   }
 
-  // console.log("USER:::", user)
+  console.log("USER:::", Constants.expoConfig?.version)
+
+  if (showUpdateScreen) {
+    return <UpdateScreenComponent
+      displayStatus={true} 
+      text={showUpdateMessage?.text}
+      img={characters[10].image}
+      title={showUpdateMessage?.title}
+      url={showUpdateMessage?.url}
+      buttonText={showUpdateMessage?.buttonText}
+     />
+  }
 
   return (
     <LinearGradient
@@ -210,10 +251,10 @@ export default function HomeScreen() {
         }}>
             <Image 
             style={styles.image}
-            source={require('../assets/images/CTP_logo.png')} />
+            source={require('../assets/images/CTP_logo.webp')} />
             <Image 
             style={styles.imageMax}
-            source={require('../assets/images/Level-up_logo.png')} />
+            source={require('../assets/images/Level-up_logo.webp')} />
             {/* <Text style={{color: '#DDF7F9', fontSize: 52}}>Login</Text> */}
           </Box>
         </Animated.View>
@@ -433,5 +474,15 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     resizeMode: 'center'
+  },
+  updateContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'transparent', // Assurez-vous que cela correspond à votre app.json
+    },
+  updateImage: {
+    width: 400,
+    height: 400,
   }
 });

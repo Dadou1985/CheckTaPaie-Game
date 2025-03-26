@@ -1,6 +1,6 @@
 import { Pressable, Text, View } from 'react-native'
 import React, { useContext, useEffect, useState } from 'react'
-import Animated, { FadeInRight } from 'react-native-reanimated'
+import Animated, { FadeInLeft, FadeInRight, FadeOut, FadeOutDown, FadeOutLeft, FadeOutRight, FadeOutUp } from 'react-native-reanimated'
 import { LinearGradient } from 'expo-linear-gradient'
 import {
     Avatar,
@@ -25,7 +25,7 @@ const SceneComponent = ({data, handleSceneScrene, setMessageTimeLoading, handleS
     
         if (isShow) {
             if (data.eventStatus === 'character introduction') {
-                return <Animated.View entering={FadeInRight} style={{width: "100%", flexDirection: "row", justifyContent: "flex-start"}}>
+                return <Animated.View entering={FadeInLeft} exiting={FadeOutUp} style={{width: "100%", flexDirection: "row", justifyContent: "flex-start"}}>
                 <LinearGradient
                 // Background Linear Gradient
                 colors={['#0097B2', '#598EC8']}
@@ -42,7 +42,7 @@ const SceneComponent = ({data, handleSceneScrene, setMessageTimeLoading, handleS
                 </LinearGradient>
             </Animated.View>
             } else {
-                return <Animated.View entering={FadeInRight} style={{width: "100%", flexDirection: "row", justifyContent: "flex-end"}}>
+                return <Animated.View entering={FadeInRight} exiting={FadeOutDown} style={{width: "100%", flexDirection: "row", justifyContent: "flex-end"}}>
                 <LinearGradient
                 // Background Linear Gradient
                 colors={['#FF66C4', '#FFDE59']}

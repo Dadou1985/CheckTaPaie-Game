@@ -161,3 +161,20 @@ export function ResetEmail(email) {
         console.log("Error:::::", errorMessage)
     });
 }
+
+export async function CheckAppVerion(redirectFunction) {
+    try {
+        const doc = await db.collection('app')
+        .doc('infos')
+        .get()
+        if (doc.exists) {
+            const freshData = doc.data()
+            redirectFunction(freshData)
+        } else {
+            // doc.data() will be undefined in this case
+            console.log("No such document!")
+        }
+    } catch {(error) => {
+            console.log("Error getting document:", error);
+        }};
+}

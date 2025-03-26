@@ -13,6 +13,7 @@ import { characters } from '@/utils/characters'
 import SceneScreen from '@/components/SceneScreen'
 import { roomData } from '@/utils/room'
 import { getData, handleLoadUserInfo, storeData, UpdateUserInfo } from '@/firebase/functions';
+import Constants from 'expo-constants';
 
 const RoomScreen = () => {
   const params = useLocalSearchParams<any>();
@@ -70,11 +71,12 @@ const RoomScreen = () => {
         displayStatus: data.displayStatus,
         story: data.text,
         name: data.title,
+        lastName: characters[10].name,
         image: characters[10].image
       })
   }
 
-  console.log('USER++++++++++++', currentScene)
+  console.log('USER++++++++++++', Constants)
 
   if (showBlankScreen) {
     return <LinearGradient

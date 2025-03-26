@@ -56,7 +56,7 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, 
     return router.replace("/")
   }
 
-  console.log("TEXT++++++++++", img)
+  console.log("TEXT++++++++++", lastName)
 
   if (isShow) {
     return (
@@ -69,12 +69,12 @@ const SceneScreen = ({displayStatus, text, img, name, lastName, role, age, job, 
             end={[1, 1]}
             style={{flex: 1}}
             >
-              <Animated.ScrollView style={styles.slidingText} entering={FadeIn.duration(3000).delay(2000)} exiting={FadeOut.duration(1000)}>
-                {(name || lastName) && <Text style={[styles.textStyle, styles.textHeadingFont]}>{name} {lastName}</Text>}
+              <Animated.ScrollView style={styles.slidingText} entering={FadeIn.duration(3000).delay(2000)} exiting={FadeOut.duration(3000)}>
+                {(name || lastName) && <Text style={[lastName === 'Hawa' ? styles.hawaTextStyle : styles.textStyle, styles.textHeadingFont]}>{name} {lastName === 'Hawa' ? "" : lastName}</Text>}
                 {(title) && <Text style={[styles.textStyle, styles.textHeadingFont]}>{title}</Text>}
                 {(age || job) && <Text style={[styles.textStyle, styles.textFont]}>{job} - {age}</Text>}
                 {role && <Text style={[styles.textStyle, styles.textFont]}>{role}</Text>}
-                <Text style={[styles.textStyle]}>{story && story.length > 0 && story[storyBunchNumber]}</Text>
+                <Text style={[lastName === 'Hawa' ? styles.hawaTextStyle : styles.textStyle]}>{story && story.length > 0 && story[storyBunchNumber]}</Text>
                   <Pressable onPress={() => {
                     if (storyBunchNumber > (text.length - 2)) {
                       if (name === characters[0].name) {
@@ -119,11 +119,23 @@ const styles = StyleSheet.create({
     textAlign: "center", 
     lineHeight: 20, 
     textShadowOffset: {
-      width: 1, 
-      height: 1
+      width: 3, 
+      height: 3
     }, 
-    textShadowRadius: 1, 
+    textShadowRadius: 3, 
     color: 'white', 
+    marginBottom: "5%",
+    width: "100%",
+  },
+  hawaTextStyle: {
+    textAlign: "center", 
+    lineHeight: 20, 
+    textShadowOffset: {
+      width: 3, 
+      height: 3
+    }, 
+    textShadowRadius: 3, 
+    color: '#022845', 
     marginBottom: "5%",
     width: "100%",
   },

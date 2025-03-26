@@ -1,12 +1,13 @@
 import { Pressable, Text, View } from 'react-native'
-import React, { useEffect, useContext } from 'react'
-import Animated, { FadeInRight } from 'react-native-reanimated'
+import React, { useEffect, useContext, useState } from 'react'
+import Animated, { FadeInRight, FadeOut, FadeOutDown, FadeOutLeft, FadeOutRight, FadeOutUp } from 'react-native-reanimated'
 import { LinearGradient } from 'expo-linear-gradient'
 import { UserContext } from '@/context/UserContext'
 import { UpdateUserInfo } from '@/firebase/functions'
 
 const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, bunchNumber, setBunchNumber, setMessageTimeLoading, setShowExitButton}: any) => {
     const {user, setUser} = useContext<any>(UserContext)
+    const [selectedFlag, setSelectedFlag] = useState("")
 
     const handleChooseScriptOption = (optionScript: any) => {
         const arrayFromChatData = Array.from(currentChatData)
@@ -37,7 +38,7 @@ const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, b
     }, [])
     
     if (data.bunchNumber === bunchNumber) {
-        return <Animated.View entering={FadeInRight} style={{width: "100%", flexDirection: "row", justifyContent: "flex-end"}}>
+        return <Animated.View entering={FadeInRight} exiting={data?.flag === selectedFlag ? FadeOutLeft : FadeOut} style={{width: "100%", flexDirection: "row", justifyContent: "flex-end"}}>
             <LinearGradient
             // Background Linear Gradient
             colors={['#FFDE59', '#FF914D']}
@@ -46,6 +47,7 @@ const OptionComponent = ({data, chatData, currentChatData, setCurrentChatData, b
             style={{width: "70%", padding: 10}}
             >
             <Pressable onPress={async () => {
+                setSelectedFlag(data?.flag)
                 await handleUpdateUserKpi()
                 return handleChooseScriptOption(data.script)
                 }} style={{width:"100%"}}>

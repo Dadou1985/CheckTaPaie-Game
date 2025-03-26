@@ -8,7 +8,7 @@ import 'react-native-reanimated';
 import { UserContext } from '@/context/UserContext';
 import { EventContext } from '@/context/EventContext';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import Animated, { FadeIn } from 'react-native-reanimated';
+import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 import '@/global.css'; // Chemin selon ton projet
 // Gardez cette ligne au tout début
 SplashScreen.preventAutoHideAsync();
@@ -62,9 +62,9 @@ export default function RootLayout() {
 
   // Composant de splash screen personnalisé pour la transition
   const CustomSplashScreen = () => (
-    <Animated.View style={styles.splashContainer} entering={FadeIn.duration(3000)} exiting={FadeIn.duration(3000)} >
+    <Animated.View style={styles.splashContainer} entering={FadeIn.duration(2000)} exiting={FadeOut.duration(3000)} >
       <Image
-        source={require('../assets/images/Level-up_splash-screen.png')}
+        source={require('../assets/images/Level-up_splash-screen.webp')}
         style={styles.splashImage}
         resizeMode="cover"
       />
@@ -86,7 +86,7 @@ export default function RootLayout() {
   const DefaultLargeScreen = () => {
     return <View style={styles.splashContainer}>
       <Image
-        source={require('../assets/images/Level-up_splash-screen.png')}
+        source={require('../assets/images/Level-up_splash-screen.webp')}
         style={styles.splashImage}
         resizeMode="cover"
       />
