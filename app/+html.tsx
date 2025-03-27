@@ -12,6 +12,9 @@ export default function Root({ children }: PropsWithChildren) {
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="manifest" href="/manifest.json" />
+        <script dangerouslySetInnerHTML={{ __html: installPromptScript }} />
+        <script dangerouslySetInnerHTML={{ __html: sw }} />
 
         {/*
           Disable body scrolling on web. This makes ScrollView components work closer to how they do on native.
@@ -37,3 +40,40 @@ body {
     background-color: #000;
   }
 }`;
+
+const installPromptScript = `
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Empêche l'affichage automatique du prompt
+  e.preventDefault();
+  deferredPrompt = e;
+
+  // Affiche une alerte ou un bouton personnalisé
+  const userConfirmed = window.confirm("Souhaitez-vous installer cette application sur votre appareil ?");
+
+  if (userConfirmed && deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('✅ L\'utilisateur a accepté l\'installation');
+      } else {
+        console.log('❌ L\'utilisateur a refusé l\'installation');
+      }
+      deferredPrompt = null;
+    });
+  }
+});
+`;
+
+const sw = `
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('Service Worker registered with scope:', registration.scope);
+        }).catch(error => {
+            console.error('Service Worker registration failed:', error);
+        });
+    });
+}
+`;

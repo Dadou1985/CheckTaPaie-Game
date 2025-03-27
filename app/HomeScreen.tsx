@@ -38,14 +38,21 @@ export default function HomeScreen() {
     }
   }
 
+  console.log('USER&&&&&&&&&&', user)
+
     return (        
-        <ImageBackground source={require("../assets/images/places/home.png")} style={{width: "100%", height: "100%", position: "relative"}} resizeMode='cover'>
+        <ImageBackground source={require("../assets/images/places/home.webp")} style={{width: "100%", height: "100%", position: "relative"}} resizeMode='cover'>
             <KeyboardAvoidingView style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', width: "100%", height: '100%', position: 'absolute', zIndex: 10}}>
                 <NativeBaseProvider config={config}>
-                  <Link style={{position: "absolute", left: 30, top: 70, zIndex: 10}} href={"/OfficeScreen"}>
-                    <FontAwesome5 name="arrow-circle-left" size={35} color="#25699B" />
-                  </Link>
-                    <View style={{width: "100%", height: "50%", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", marginBottom: "10%"}}>
+                    <View style={{width: "95%", flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
+                      <Link style={{position: "relative"}} href={"/OfficeScreen"}>
+                        <FontAwesome5 name="arrow-circle-left" size={24} color="#25699B" />
+                      </Link>
+                      <Link style={{position: "relative"}} href={"/"}>
+                        <FontAwesome5 name="home" size={24} color="#25699B" />
+                      </Link>
+                    </View>
+                    <View style={{width: "100%", flexDirection: "column", justifyContent: "center", alignItems: "center", marginBottom: "10%"}}>
                         <Animated.View entering={FadeIn.duration(1000)}>
                             <Avatar>
                               <AvatarImage style={{ width: 300, height: 300, zIndex: 10, borderWidth: 5, borderColor: "#25699B", marginBottom: 15 }}
@@ -55,16 +62,16 @@ export default function HomeScreen() {
                             </Avatar>
                         </Animated.View>
                         <Text style={{fontSize: 25, textShadowOffset: {width: 1, height: 1},
-                          textShadowRadius: 1}}>{characters[0].name} Bellamy</Text>
+                          textShadowRadius: 1, color: "#25699B"}}>{characters[0].name} Bellamy</Text>
                         <Text style={{width: "80%", textShadowColor: 'gray', textShadowOffset: {width: 1, height: 1},
-                          textShadowRadius: 1, borderBottomWidth: 5, borderBottomColor: "#25699B", borderStyle: "solid", textAlign: "center", paddingBottom: 20}}>{characters[0].job}</Text>
+                          textShadowRadius: 1, borderBottomWidth: 5, borderBottomColor: "#25699B", borderStyle: "solid", textAlign: "center", paddingBottom: 20, color: "#fff"}}>{characters[0].job}</Text>
                     </View>
                     <Animated.View entering={FadeIn.duration(2000)} style={{width: "100%", height: "35%", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-around"}}>
                       {user && user.keyPerformanceIndicator.length > 0 && user.keyPerformanceIndicator.map((kpi: any, index: number) => {
                         // const currentKpi = keyPerformanceIndicator.length > 0 && keyPerformanceIndicator.find((kpi: any) => kpi.title === kpi.title)
                         return <Link key={index} href={{
                           pathname: "/KpiScreen",
-                          params: {index: index, kpiSelectedLevel: kpi.level} as any
+                          params: {index: index, kpiSelectedLevel: kpi?.level} as any
                         }}
                         asChild>
                           <Pressable style={{width: "30%", height: "35%", flexDirection: "column", justifyContent: "space-around", alignItems: "center", marginBottom: "5%"}}>
@@ -72,16 +79,17 @@ export default function HomeScreen() {
                             style={styles.image}
                             source={keyPerformanceIndicator[index].img} />
                           <AnimatedProgressWheel
-                            progress={kpi.level}
+                            progress={kpi?.level}
                             animateFromValue={0}
-                            duration={3000} color={handleKeyPerformanceIndicatorLevel(kpi.level) as string} 
+                            duration={3000} 
+                            color={handleKeyPerformanceIndicatorLevel(kpi?.level) as string} 
                             backgroundColor={'transparent'} 
                             size={50} 
                             width={5}
-                            rotation={'180deg'}
+                            rotation={'0deg'}
                             max={100}
                             showProgressLabel
-                            labelStyle={{fontSize: 15, color: handleKeyPerformanceIndicatorLevel(kpi.level) as string, fontWeight: "bold", textShadowOffset: {width: 1, height: 1},
+                            labelStyle={{fontSize: 15, color: handleKeyPerformanceIndicatorLevel(kpi?.level) as string, fontWeight: "bold", textShadowOffset: {width: 1, height: 1},
                             textShadowRadius: 1}}
                             showPercentageSymbol
                             />

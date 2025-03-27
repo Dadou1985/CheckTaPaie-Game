@@ -7,11 +7,10 @@ import { UserContext } from '@/context/UserContext';
 import { useContext, useEffect, useState } from 'react';
 import Animated, { FadeIn, SlideOutLeft, SlideInRight, FadeOut, SlideInUp, SlideInDown, FadeInUp, FadeInDown } from 'react-native-reanimated';
 import { CreateUser, Login, ResetEmail, CheckAppVerion } from '@/firebase/functions'
-import {keyPerformanceIndicator} from '@/utils/kpi'
 import { characters } from '@/utils/characters';
 import Constants from 'expo-constants';
-import SceneScreen from '@/components/SceneScreen';
 import UpdateScreenComponent from '@/components/UpdateScreenComponent';
+import InstallBanner from '@/components/InstallBanner';
 
 export default function HomeScreen() {
   const {user, setUser} = useContext<any>(UserContext)
@@ -430,6 +429,7 @@ export default function HomeScreen() {
           </Animated.View>
           </Animated.View>
         </KeyboardAvoidingView>
+        <InstallBanner />
       </NativeBaseProvider>
     </LinearGradient>
   );

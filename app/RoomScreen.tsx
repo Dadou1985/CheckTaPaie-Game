@@ -1,5 +1,4 @@
 import { Image, StyleSheet, Platform, ScrollView, View, Text, KeyboardAvoidingView, Pressable, ImageBackground } from 'react-native';
-import { Box, Center, Container, Spacer, Input, Icon, NativeBaseProvider, Stack, VStack, Button, AspectRatio, Avatar } from "@gluestack-ui/themed-native-base";
 import React, { useContext, useEffect, useState } from 'react'
 import { Link, router } from "expo-router";
 import { LinearGradient } from 'expo-linear-gradient';
@@ -48,6 +47,7 @@ const RoomScreen = () => {
     console.log("UserSceneUpdate============", scenesUpdate, user)
 
     setUser({...user, scenes: scenesUpdate})
+    setShowExitButton(false)
     setTimeout(() => {
       
       router.navigate('/OfficeScreen')
@@ -113,7 +113,7 @@ const RoomScreen = () => {
             width: "100%", 
             position: "relative",
             }}>
-              {showExitButton && <Animated.View entering={FadeIn.duration(2500)} style={{position: "absolute", left: 20}}><Pressable onPress={handleGoBackToOfficeScreen}>
+              {showExitButton && <Animated.View entering={FadeIn.duration(2500)} exiting={FadeOut.duration(500)} style={{position: "absolute", left: 20}}><Pressable onPress={handleGoBackToOfficeScreen}>
                 <FontAwesome5 name="arrow-circle-left" size={35} color="#022845" />
               </Pressable></Animated.View>}
             <Text style={{fontSize: 18, color:"#022845"}}>{roomData[index].title}</Text>

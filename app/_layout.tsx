@@ -28,60 +28,60 @@ export default function RootLayout() {
   });
 
   // Préparation de l'application
-  useEffect(() => {
-    async function prepare() {
-      // Indiquez que les préparations sont terminées
-      if (fontsLoaded || fontError) {
-        setAppIsReady(true);
-      }
-    }
+  // useEffect(() => {
+  //   async function prepare() {
+  //     // Indiquez que les préparations sont terminées
+  //     if (fontsLoaded || fontError) {
+  //       setAppIsReady(true);
+  //     }
+  //   }
 
-    prepare();
-  }, [fontsLoaded, fontError]);
+  //   prepare();
+  // }, [fontsLoaded, fontError]);
 
   // Gérer la fermeture du splash screen
-  useEffect(() => {
-    async function hideSplashScreen() {
-      if (appIsReady) {
-        try {
-          await SplashScreen.hideAsync();
-          // Attendez un peu avant de considérer l'animation comme terminée
-          setTimeout(() => {
-            setSplashAnimationComplete(true);
-          }, 5000);
-        } catch (e) {
-          // En cas d'erreur, considérez quand même l'animation comme terminée
-          setSplashAnimationComplete(true);
-          console.error("Erreur lors de la fermeture du splash screen:", e);
-        }
-      }
-    }
+  // useEffect(() => {
+  //   async function hideSplashScreen() {
+  //     if (appIsReady) {
+  //       try {
+  //         await SplashScreen.hideAsync();
+  //         // Attendez un peu avant de considérer l'animation comme terminée
+  //         setTimeout(() => {
+  //           setSplashAnimationComplete(true);
+  //         }, 5000);
+  //       } catch (e) {
+  //         // En cas d'erreur, considérez quand même l'animation comme terminée
+  //         setSplashAnimationComplete(true);
+  //         console.error("Erreur lors de la fermeture du splash screen:", e);
+  //       }
+  //     }
+  //   }
 
-    hideSplashScreen();
-  }, [appIsReady]);
+  //   hideSplashScreen();
+  // }, [appIsReady]);
 
   // Composant de splash screen personnalisé pour la transition
-  const CustomSplashScreen = () => (
-    <Animated.View style={styles.splashContainer} entering={FadeIn.duration(2000)} exiting={FadeOut.duration(3000)} >
-      <Image
-        source={require('../assets/images/Level-up_splash-screen.webp')}
-        style={styles.splashImage}
-        resizeMode="cover"
-      />
-    </Animated.View>
-  );
+  // const CustomSplashScreen = () => (
+  //   <Animated.View style={styles.splashContainer} entering={FadeIn.duration(2000)} exiting={FadeOut.duration(3000)} >
+  //     <Image
+  //       source={require('../assets/images/Level-up_splash-screen.webp')}
+  //       style={styles.splashImage}
+  //       resizeMode="cover"
+  //     />
+  //   </Animated.View>
+  // );
 
   // Si l'application n'est pas prête, ne rendez rien
   // Cela permet au SplashScreen natif de rester visible
-  if (!appIsReady) {
-    return null;
-  }
+  // if (!appIsReady) {
+  //   return null;
+  // }
 
   // Si l'application est prête mais l'animation de transition n'est pas terminée
   // Affichez le splash screen personnalisé
-  if (!splashAnimationComplete) {
-    return <CustomSplashScreen />;
-  }
+  // if (!splashAnimationComplete) {
+  //   return <CustomSplashScreen />;
+  // }
 
   const DefaultLargeScreen = () => {
     return <View style={styles.splashContainer}>

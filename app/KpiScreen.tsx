@@ -42,13 +42,15 @@ function KpiScreen() {
   console.log("LEVEL:::", index)
 
     return (        
-        <ImageBackground source={require("../assets/images/places/home.png")} style={{width: "100%", height: "100%", position: "relative", flex: 1}} resizeMode='cover'>
+        <ImageBackground source={require("../assets/images/places/home.webp")} style={{width: "100%", height: "100%", position: "relative", flex: 1}} resizeMode='cover'>
             <KeyboardAvoidingView style={{ flexDirection: 'row', flexWrap: "wrap", justifyContent: 'center', width: "100%", height: '100%', position: 'absolute', zIndex: 10}}>
                 <NativeBaseProvider config={config}>
-                  <Link style={{position: "absolute", left: 30, top: 70, zIndex: 10}} href={"/HomeScreen"}>
-                    <FontAwesome5 name="arrow-circle-left" size={35} color="#25699B" />
-                  </Link>
-                      <Animated.View style={{width: "100%", height: "50%", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", marginBottom: "5%"}} entering={FadeIn.duration(1500)}>
+                    <View style={{width: "95%", flexDirection: "row", justifyContent: "flex-start", alignItems: "center"}}>
+                      <Link style={{position: "relative"}} href={"/HomeScreen"}>
+                        <FontAwesome5 name="arrow-circle-left" size={24} color="#25699B" />
+                      </Link>
+                    </View>
+                      <Animated.View style={{width: "100%", flexDirection: "column", justifyContent: "center", alignItems: "center", marginBottom: "5%"}} entering={FadeIn.duration(1500)}>
                           <Avatar>
                             <AvatarImage style={{ width: 300, height: 300, zIndex: 10, borderWidth: 5, borderColor: "#25699B", marginBottom: 15 }}
                               source={keyPerformanceIndicator[index].img}
@@ -56,7 +58,7 @@ function KpiScreen() {
                             />
                           </Avatar>
                           <Text style={{width: "80%", fontSize: 25, textShadowColor: 'gray', textShadowOffset: {width: 1, height: 1},
-                            textShadowRadius: 1, borderBottomWidth: 5, borderBottomColor: "#25699B", borderStyle: "solid", textAlign: "center", paddingBottom: 20}}>{keyPerformanceIndicator[index].title}</Text>
+                            textShadowRadius: 1, borderBottomWidth: 5, borderBottomColor: "#25699B", borderStyle: "solid", textAlign: "center", paddingBottom: 20, color: "#25699B"}}>{keyPerformanceIndicator[index].title}</Text>
                       </Animated.View>
                     <Animated.View entering={FadeIn.duration(2000)} style={{width: "100%", height: "50%", flexDirection: "column", justifyContent: "space-around", paddingHorizontal: 20}}>
                         <View style={{width: "100%", flexDirection: "column", justifyContent: "space-around", alignItems: "center", marginBottom: "10%"}}>
@@ -77,7 +79,7 @@ function KpiScreen() {
                       </View>
                       <ScrollView>
                         <Text style={{textAlign: "center", fontSize: 14, lineHeight: 20, textShadowColor: 'gray', textShadowOffset: {width: 1, height: 1},
-                textShadowRadius: 1, paddingBottom: 50}}>{keyPerformanceIndicator[index].text}</Text>
+                textShadowRadius: 1, paddingBottom: 50, color: "#fff"}}>{keyPerformanceIndicator[index].text}</Text>
                       </ScrollView>
                     </Animated.View>
                 </NativeBaseProvider>
