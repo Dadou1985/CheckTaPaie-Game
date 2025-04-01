@@ -14,7 +14,8 @@
     "clean-fonts": "node scripts/clean-fonts.js",
     "predeploy": "expo export -p web --clear && npm run clean-fonts && npm run copy-manifest && npx workbox-cli generateSW workbox-config.js",
     "deploy-hosting": "npm run predeploy && firebase deploy --only hosting",
-    "deploy-eas-hosting": "npm run predeploy && eas deploy"
+    "deploy-eas-hosting": "npm run predeploy && eas deploy",
+    "deploy-eas-hosting-prod": "npm run predeploy && eas deploy --prod"
   },
   "jest": {
     "preset": "jest-expo"
@@ -55,6 +56,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^5.5.0",
+    "react-ios-pwa-prompt": "^2.0.6",
     "react-native": "0.74.1",
     "react-native-animated-spinkit": "^1.5.2",
     "react-native-dotenv": "^3.4.11",

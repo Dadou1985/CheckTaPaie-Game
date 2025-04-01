@@ -11,6 +11,7 @@ import { characters } from '@/utils/characters';
 import Constants from 'expo-constants';
 import UpdateScreenComponent from '@/components/UpdateScreenComponent';
 import InstallBanner from '@/components/InstallBanner';
+import PWAPrompt from 'react-ios-pwa-prompt'
 
 export default function HomeScreen() {
   const {user, setUser} = useContext<any>(UserContext)
@@ -37,6 +38,7 @@ export default function HomeScreen() {
     url: "",
     buttonText: ""
   })
+  const [showIosInstallPrompt, setShowIosInstallPrompt] = useState(false)
 
 
   const handleAppUpdate = (data: any) => {
@@ -54,6 +56,12 @@ export default function HomeScreen() {
   }
 
   useEffect(() => {
+    if (navigator.userAgent.match(/iPhone|iPad|iPod/i) !== null) {
+      const isAppInstallIos = localStorage.getItem('isAppInstallIos')
+      if (isAppInstallIos === null) {
+        setShowIosInstallPrompt(true)
+      }
+    }
     CheckAppVerion(handleAppUpdate)
   }, [])
   
@@ -216,7 +224,7 @@ export default function HomeScreen() {
     }
   }
 
-  console.log("USER:::", Constants.expoConfig?.version)
+  console.log("USER:::", navigator.userAgent.match(/iPhone|iPad|iPod/i))
 
   if (showUpdateScreen) {
     return <UpdateScreenComponent
@@ -429,7 +437,9 @@ export default function HomeScreen() {
           </Animated.View>
           </Animated.View>
         </KeyboardAvoidingView>
-        <InstallBanner />
+        {navigator.userAgent.match(/iPhone|iPad|iPod/i) !== null ? <InstallBanner isIos={true} /> :
+        <InstallBanner />}
+        {/* <InstallBanner /> */}
       </NativeBaseProvider>
     </LinearGradient>
   );

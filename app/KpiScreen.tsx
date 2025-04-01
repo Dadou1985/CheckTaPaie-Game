@@ -60,7 +60,7 @@ function KpiScreen() {
                           <Text style={{width: "80%", fontSize: 25, textShadowColor: 'gray', textShadowOffset: {width: 1, height: 1},
                             textShadowRadius: 1, borderBottomWidth: 5, borderBottomColor: "#25699B", borderStyle: "solid", textAlign: "center", paddingBottom: 20, color: "#25699B"}}>{keyPerformanceIndicator[index].title}</Text>
                       </Animated.View>
-                    <Animated.View entering={FadeIn.duration(2000)} style={{width: "100%", height: "50%", flexDirection: "column", justifyContent: "space-around", paddingHorizontal: 20}}>
+                    <Animated.View entering={FadeIn.duration(2000)} style={{width: "100%", height: "35%", flexDirection: "column", justifyContent: "space-around", paddingHorizontal: 20}}>
                         <View style={{width: "100%", flexDirection: "column", justifyContent: "space-around", alignItems: "center", marginBottom: "10%"}}>
                           <AnimatedProgressWheel
                             progress={kpiSelectedLevel && kpiSelectedLevel}
